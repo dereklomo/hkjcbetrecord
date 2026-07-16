@@ -200,7 +200,8 @@ In post-match review, do not:
 - overreact to a single bad beat or lucky win
 - loosen the defensive filters just because a rejected favorite covered once
 - rewrite the original logic after seeing the scoreline
-
+- rewrite a historical `PASS` into a retroactive `PLAY` after the result; correct future rule text instead, and label the old call as too strict or too loose in a cross-check note
+- treat a weak-observation side that later wins as proof the observation should have been a default `PLAY`
 Valid strategy-adjustment signals include:
 - repeated failure of the same rule branch under similar season-phase conditions
 - recurring misread of motivation or lifecycle mismatch inputs
@@ -289,6 +290,21 @@ Then:
 - avoid backing the stronger away team on deep handicap lines by default
 - only consider an away favorite handicap if the line is still shallow and the external benchmark clearly supports it
 
+#### Cup Favorite Medium-Deep Handicap Reject Zone
+
+Apply to single-leg cup ties (national cup, continental knockout single leg, Australia Cup, Korea Cup, and similar), not only two-legged ties.
+
+Default to `PASS` on the cup favorite when the quoted handicap is about `-0.75` to `-1` (inclusive of common half-lines in that band), unless a strong external benchmark still supports the favorite handicap after cup noise is considered.
+
+Reasons:
+- cup rotation, motivation asymmetry, and single-elimination variance inflate favorite-cover risk
+- low-to-mid favorite win prices plus a medium-deep handicap rarely meet the stable-profit standard
+- settled workspace samples (for example cup home favorites failing at `-1` or `-0.75`) re-validate this reject zone
+
+Do not treat a clear external favorite direction alone as permission to back cup favorite `-0.75` / `-1`. Direction and investable handicap are separate questions.
+
+If only incomplete external 1X2 is available and no usable external AH exists, keep cup favorite `-0.75` to `-1` as `PASS` rather than forcing a cover bet.
+
 ### 4. Apply Odds and Handicap Thresholds
 
 #### Anti-Low-Value Rule
@@ -319,6 +335,21 @@ For a parlay:
 - do not use `+1` in parlays when a push would reduce that leg to `1.00`
 - avoid void dilution that weakens real parlay progression
 
+#### Level-Ball / PK External-Lean Overlay
+
+HKJC (or other user-quoted) level ball / 平手 / PK is not automatically a coin-flip blacklist.
+
+Split the cases:
+
+1. True coin-flip: external 1X2 is symmetric or mixed with no usable lean, and no structural edge exists → keep absolute blacklist `PASS`
+2. External lean on a near-even market: external 1X2 does not support the home side as favorite, or mildly prefers the away/underdog side, while the executable line is still level ball or a very shallow underdog line → the external-preferred side on level ball may be a defensive `PLAY` candidate under Underdog Handicap Protection
+
+Execution rules for case 2:
+- form direction only from the external benchmark first; never from HKJC level ball alone
+- do not bias toward the home side merely because HKJC opened 平手
+- if external implies away/underdog is not weaker (or is slightly stronger) and HKJC still prices level ball, prefer the external-lean side on 平手 when the price clears a stable-profit screen
+- keep confidence at most `Medium`; if the external lean is tiny, noisy, or source-quality is weak, stay `PASS`
+- this is a capital-protection overlay, not a license to bet every balanced cup or league derby
 #### O/U Qualification Rules
 
 Only consider a full-match O/U bet when the total-goals environment is reasonably predictable.
@@ -357,18 +388,18 @@ Preferred composition:
 
 ### 6. Enforce Absolute Market Blacklists
 
-- balanced or coin-flip matches where both teams are in similar cycle state and no side has a strong structural edge
+- balanced or coin-flip matches where both teams are in similar cycle state, external pricing shows no usable lean, and no side has a strong structural edge
+- do not expand this blacklist to every level-ball quote: if external 1X2 rejects home advantage or mildly prefers one side, apply `Level-Ball / PK External-Lean Overlay` instead of forcing `PASS` by habit
 
 ## Decision Priorities
 
 When rules conflict, use this priority order:
 1. `FORCE PASS` rules
-2. market blacklist rules
-3. cup first-leg and logistics friction warnings
+2. market blacklist rules (true coin-flips only)
+3. cup favorite medium-deep handicap reject zone and cup first-leg / logistics friction warnings
 4. motivation distortion warnings
-5. underdog handicap protection rules
+5. underdog handicap protection rules, including level-ball external-lean overlay
 6. parlay construction preferences
-
 If a match triggers any high-risk exclusion and no strong compensating edge remains, keep the final answer as `PASS`.
 
 If a market passes the filters but still does not support a stable-profit profile, keep the final answer as `PASS`.
@@ -440,9 +471,13 @@ Before returning a recommendation, verify that:
 - missing primary-market direct win odds are disclosed as an unchecked filter, not silently ignored
 - HKJC-only analysis does not pretend to have external confirmation or a benchmarked directional edge when no benchmark could be obtained
 - chaotic even matches are not recommended unless the user explicitly asks to override the framework
+- true coin-flip blacklists are not applied to level-ball markets where external 1X2 already shows a usable lean against the home side
+- cup favorite handicaps around `-0.75` to `-1` default to `PASS` unless external support is unusually strong
+- a clear external favorite direction is not treated as permission to buy medium-deep cup favorite handicaps
 - O/U recommendations are made only when the total-goals environment is structurally predictable
 - O/U recommendations are not based only on recent overs, recent unders, or surface scoring trends
 - post-match reviews do not force a rule change from a single isolated result
+- historical `PASS` decisions are not rewritten into retroactive `PLAY` after settlement
 
 ## Response Style
 
