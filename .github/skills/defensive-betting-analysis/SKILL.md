@@ -147,7 +147,7 @@ Skip only for trivial identity-hold questions with no market decision.
 
 1. **Lock the current spot**
    - identity (teams, competition, leg)
-   - external lean and strength of lean
+   - external lean and **strength tier** of lean (for cup `-0.75`/`-1`: strong / medium / light gap — see Cup Favorite zone)
    - quoted line(s) under consideration
    - fundamentals snapshot (form, motivation, personnel, venue, travel, rotation, cup state)
 
@@ -186,10 +186,11 @@ Skip only for trivial identity-hold questions with no market decision.
 ```markdown
 Self Cross-Check:
 Branch: [tag]
+External gap tier (if cup-fav-0.75/1.0): Strong | Medium | Light | n/a
 Comparables: [2–5 named settled spots + W/L/P or PASS outcome]
 Similarity: High | Medium | Low
-Implication (Track A): confirm PASS | block PLAY | support PLAY (only if rules still clear)
-Implication (Track B): WR-inferred lean / none; confidence Low|Medium
+Implication (WR primary): WR-inferred lean / none; confidence Low|Medium
+Implication (aux filters): price/cup notes only; no thin-price-only veto if WR clear
 ```
 
 ### Hard anti-patterns (self cross-check)
@@ -208,9 +209,9 @@ These are patterns already stressed in local reviews — use as lookup keys, not
 
 | Branch idea | WR-first note (primary) | Auxiliary note |
 |-------------|-------------------------|----------------|
-| Cup favorite `-0.75` to `-1` | Mixed W/L in ledger; `-0.75` win-by-1 = W — evaluate case-by-case | Cup noise lowers confidence |
+| Cup favorite `-0.75` to `-1` | Mixed W/L; tier external gap (strong/medium/light); `-1` needs stronger tier than `-0.75` | Cup noise lowers confidence; no auto-reject / no auto-PLAY |
 | League strong favorite `-0.75` | Often solid WR path (win-by-1 = W) | Thin price is secondary |
-| Shallow league `-0.25` | Draw = W for favorite — often high WR | Price auxiliary |
+| Shallow league `-0.25` | Draw = W for favorite — often high WR; **do not veto solely for thin price** | Thin price only downgrades confidence |
 | Level ball + clear external lean | Prefer lean side on 0 for WR | Needs lean; not true coin-flip |
 | True / near coin-flip PK | No WR edge → PASS | — |
 | Aus semi-pro / NPL dog shallow | High variance; small n | Prefer deeper buffer (`+1`) for WR paths when possible |
@@ -527,6 +528,21 @@ When the quoted handicap is about `-0.75` to `-1`:
 - **Auxiliary:** cup rotation, motivation, and variance **lower confidence**; may push toward shallower dog buffer or `PASS` if WR edge is not clear after modifiers.
 - Do **not** auto-reject solely because “cup habit PASS” if external lean + WR path + branch history still favor the line.
 
+**External strength tier (required in self cross-check for this branch):**
+
+Classify the favorite’s external 1X2 (or sharp AH) lean before stating WR confidence:
+
+| Tier | Typical 1X2 band (guide) | WR-first default |
+|------|--------------------------|------------------|
+| **Strong gap** | favorite win roughly ≤`1.55` and clear gap vs draw/dog | Medium WR lean allowed only if not second-leg distortion and branch not pure kill history; still case-by-case |
+| **Medium gap** | favorite roughly `1.55`–`1.85` | Mixed branch → usually **Low** WR confidence; lean only if fundamentals clean |
+| **Light gap** | favorite roughly `>1.85` or near-even | Treat as weak WR edge → prefer `PASS` or dog buffer, not cup fav `-0.75`/`-1` |
+
+Also state in the cross-check block: first vs second leg, aggregate if any, and whether settled `cup-fav-0.75` / `cup-fav-1.0` is mixed / kill-heavy / cover-heavy.
+
+- `-1` is harsher than `-0.75` on Track B (win-by-1 = push, not W) — require a stronger external tier than `-0.75` for the same confidence.
+- Never upgrade confidence solely because a past cup favorite covered after a historical `PASS`.
+
 If only incomplete external 1X2 is available, lower WR confidence rather than inventing cover certainty.
 
 ### 4. Apply Odds and Handicap Thresholds
@@ -547,6 +563,23 @@ If primary-market direct win odds are unavailable:
 - do not guess or backfill them from a different market
 - do not let HKJC alone impersonate full external confirmation
 - mark the price filter as `not fully checked`
+
+#### League Shallow Favorite `-0.25` (WR-first soft band)
+
+Applies to **league** (or stable domestic league context), not cup/second-leg distortion spots.
+
+Track B path for favorite `-0.25`:
+- win → full W
+- **draw → half-win → W**
+- lose → L
+
+Settled local samples have often been WR-friendly on this line. Under win-rate-first:
+
+- Lead with the WR case when external 1X2 shows a **clear** favorite lean (not near-even).
+- **Do not reject a clear WR-preferred `-0.25` solely because the price is “thin” or “stable-profit insufficient.”** Thin price is auxiliary only (confidence / stake note).
+- Legitimate `PASS` reasons on this band: weak or missing external lean, true near-even, identity/data incomplete, fundamentals that materially cancel the lean, or WR edge not actually clear after modifiers.
+- If `PASS` despite a clear external lean + clean structure, state that the WR case was weak/absent — do not use capital wording as the only veto.
+- Confidence still capped by sample size and league noise; this is not “always PLAY every league `-0.25`.”
 
 #### Underdog Handicap Optimization
 
@@ -625,9 +658,10 @@ When rules conflict, use this priority order:
 1. **win-rate edge** (Track B: external lean + line settlement path + comparable branch WR)
 2. true coin-flip / no usable lean → `PASS` (no WR edge)
 3. auxiliary modifiers: fundamentals, cup/second-leg noise, logistics, motivation, anti-low-value price warning
-4. level-ball external-lean overlay and underdog buffer choice (prefer lines with better WR paths, e.g. `+1` over thin `+0.75` when similar)
-5. parlay construction preferences
-6. soft capital notes (thin price, variance) — annotate; do not override a clear WR-preferred line without stating that WR edge collapsed
+4. level-ball external-lean overlay and underdog buffer choice (prefer lines with better WR paths, e.g. `+1` over thin `+0.75` when similar); league shallow `-0.25` WR band when external lean is clear
+5. cup external gap tiering for medium-deep favorites (soft; does not auto-kill clear WR)
+6. parlay construction preferences
+7. soft capital notes (thin price, variance) — annotate; do not override a clear WR-preferred line without stating that WR edge collapsed
 
 If no side has a usable win-rate edge, keep the final answer as `PASS`.
 
@@ -654,6 +688,7 @@ Reasoning:
 
 Self Cross-Check:
 - Branch: [tag]
+- External gap tier (cup-fav): Strong | Medium | Light | n/a
 - Comparables: [settled spots + W/L/P]
 - Similarity: High | Medium | Low
 - Implication (WR primary / aux filters): [...]
@@ -709,6 +744,8 @@ Before returning a recommendation, verify that:
 - any rejection is tied to a named rule
 - the recommendation leads with **win-rate (Track B)**; price/capital/cup notes are labeled auxiliary
 - a clear WR-preferred line is not rejected solely for “thin price” or legacy stable-profit habit without showing WR edge is weak
+- **league favorite `-0.25` with clear external lean** is not rejected solely for thin price / stable-profit wording
+- **cup favorite `-0.75`/`-1`** states external gap tier (strong/medium/light) and mixed-branch honesty when self cross-check runs
 - shorthand-input analysis without direct win odds is labeled as incomplete screening, not a fully cleared recommendation
 - deep favorite lines are judged on WR cover paths first; lifecycle/personnel/travel act as confidence modifiers
 - anti-low-value and cup medium-deep zones are soft/auxiliary unless WR edge is absent
