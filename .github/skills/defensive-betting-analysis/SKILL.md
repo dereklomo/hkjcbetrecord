@@ -1,6 +1,6 @@
 ---
 name: defensive-betting-analysis
-description: 'Analyze football betting opportunities with a defensive, capital-protection-first strategy where external odds such as Pinnacle and bet365 drive the betting direction, while Hong Kong Jockey Club prices are usually user-supplied input used to judge whether the available HKJC line is worth investing in relative to the external benchmark. Football only. Use when evaluating 足球 or football matches, external bookmaker lines, Asian handicap lines, 讓球, 受讓, 串關, 賽前過濾, cross-book comparison, odds thresholds, season-phase mismatch, motivation distortion, blacklisted markets, synthetic handicap conversion, post-match result review, or whether the correct action is PASS.'
+description: 'Analyze football betting opportunities with a defensive, capital-protection-first strategy where external odds such as Pinnacle and bet365 drive the betting direction, while Hong Kong Jockey Club prices are usually user-supplied input used to judge whether the available HKJC line is worth investing in relative to the external benchmark. Includes dual-track capital vs win-rate ledger and self cross-check against similar settled spots in post-match reviews. Football only. Use when evaluating 足球 or football matches, external bookmaker lines, Asian handicap lines, 讓球, 受讓, 串關, 賽前過濾, cross-book comparison, self cross-check, historical branch comparison, odds thresholds, season-phase mismatch, motivation distortion, blacklisted markets, synthetic handicap conversion, post-match result review, or whether the correct action is PASS.'
 argument-hint: 'Preferred detailed input format: 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率. In this workspace, treat unlabeled quoted prices as HKJC prices unless they are explicitly labeled as external-market prices; then seek Pinnacle, bet365, or other major external benchmarks to determine direction. Use *讓球盤 when the handicap is synthetically converted from HKJC 3-way handicap.'
 user-invocable: true
 ---
@@ -34,6 +34,159 @@ Every recommendation must clear a stable-profit standard:
 - prefer repeatable, lower-variance edges over occasional high-payout shots
 - if the edge is unclear, fragile, or depends on too many assumptions, return `PASS`
 
+## Dual Track: Capital Decision vs Win-Rate Ledger
+
+This workspace runs **two parallel tracks**. Do not collapse them into one KPI.
+
+### Track A — Capital decision (`PLAY` / `PASS`)
+
+- Purpose: whether real money should be risked under the defensive framework.
+- Drivers: external odds direction, HKJC execution overlay, capital protection, stable-profit filters, blacklists, cup reject zones, identity gate.
+- High win-rate alone does **not** force `PLAY` (low price / high variance / cup noise can still be `PASS`).
+
+### Track B — Win-rate ledger (no profit weighting)
+
+- Purpose: measure **handicap settlement hit rate** and calibrate **line-push / similar-spot inference** for fixtures not yet played.
+- Ignores odds magnitude and staking returns for the score itself.
+- Settlement convention (mandatory for this ledger):
+  - **half-win (贏半) = Win**
+  - **half-loss (輸半) = Loss**
+  - **full win / full loss** as usual
+  - **push / void (走盤)** = exclude from win-rate denominator (or report push rate separately; never count as Win)
+
+Win-rate formula:
+
+```text
+WR = Wins / (Wins + Losses)
+Pushes excluded from denominator
+```
+
+### Half-line quick map (Track B)
+
+| Line (side bet) | Key outcome | Track B |
+|-----------------|-------------|---------|
+| `-0.25` | draw | **Win** (half-win) |
+| `+0.25` | draw | **Loss** (half-loss) |
+| `-0.75` | win by 1 | **Win** (half-win) |
+| `+0.75` | lose by 1 | **Loss** (half-loss) |
+| `-1` | win by 1 | Push (exclude) |
+| `+1` | lose by 1 | Push (exclude) |
+| `-1.25` | win by 1 | **Loss** (half-loss) |
+| `+1.25` | lose by 1 | **Win** (half-win) |
+
+Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts Win) and **harsher on underdog `+0.75`** (lose-by-1 counts Loss) than cash P&L under half-settlement.
+
+### Using Track B for unplayed matches (line push / inference)
+
+When inferring whether a **similar unplayed** market is more likely to settle Win under Track B:
+
+1. **External odds first** — 1X2 / AH lean and implied strength gap; do not invent lines.
+2. **Settled WR ledger** — only comparable branches (same band: e.g. cup favorite `-0.75`, league shallow `-0.25`, second-leg trailing home, NPL underdog `+0.75`).
+3. **Fundamentals (基本面)** — required, not optional: season phase, motivation, personnel integrity, home/away, travel, cup leg state, rotation risk, style matchup. High WR in a different structural context does not transfer.
+4. **Output as inference, not auto-PLAY** — may state `WR-inferred lean` / `line-push note` for a candidate handicap; capital `PLAY` still requires Track A filters.
+5. **Never** use Track B alone to override Force-PASS, identity failure, true coin-flip blacklist, or cup favorite reject zone for staking.
+
+### Do not over-filter half-lines on Track A
+
+- `±0.75` is **not** an automatic Track A blacklist.
+- Reject `-0.75` / `+0.75` only when a named rule applies (cup favorite reject zone, anti-low-value, thin stable-profit, noise/incomplete benchmark, reverse of external lean, etc.).
+- Track B may still **log** those lines for WR even when Track A is `PASS`.
+
+## Self Cross-Check Against Similar Settled Spots
+
+Before finalizing Track A `PLAY`/`PASS` (and when writing Track B `WR-inferred lean`), **run a self cross-check**: compare the current fixture to **comparable settled samples** in this workspace, then adjust confidence or decision only when the comparison is structurally valid.
+
+Primary local sources (in order):
+1. `post-match-review-grok.md` (and any dated post-match review files in the repo root)
+2. Branch tags / Track B ledger tables already written in those reviews
+3. Optional: `post-match-review-gpt.md` or other agent reviews for disagreement notes — never copy a decision without re-checking identity and external odds
+
+### When self cross-check is required
+
+Run it when **any** of these apply:
+- multi-match batch screening
+- borderline Track A call (could be PLAY or PASS)
+- Track B line-push / unplayed inference is stated
+- level-ball, `±0.75`, Australian semi-pro/NPL, cup favorite medium-deep, or second-leg spots
+- user asks to cross-check, re-analyze, or compare to history
+- prior agent (e.g. GPT) disagreed with a similar spot
+
+Skip only for trivial identity-hold questions with no market decision.
+
+### Self cross-check procedure (fixed order)
+
+1. **Lock the current spot**
+   - identity (teams, competition, leg)
+   - external lean and strength of lean
+   - quoted line(s) under consideration
+   - fundamentals snapshot (form, motivation, personnel, venue, travel, rotation, cup state)
+
+2. **Assign a branch tag** (examples — reuse existing tags when possible)
+   - `cup-fav-0.75` / `cup-fav-1.0`
+   - `league-fav-0.75` / `league-shallow-0.25`
+   - `dog-plus0.75` / `dog-plus1` / `aus-semi-dog-shallow`
+   - `level-ball-lean` vs `near-even` / `true-coin-flip`
+   - `second-leg` / `npl-aus` / `youth-or-B-team`
+   - Do **not** merge tags that only share the same number (e.g. all `-0.75`) if structure differs (cup vs league, strong gap vs bottom-table derby).
+
+3. **Pull comparable settled cases**
+   - Prefer same branch tag + similar external price band + similar competition tier.
+   - For each case note: original Track A decision, score, Track B W/L/P, and **why it is or is not comparable**.
+   - State sample size honestly (`n=0` / `n=1` / small / mixed).
+
+4. **Score similarity (qualitative is enough)**
+   - High: same branch, similar 1X2 band, similar competition noise, similar motivation/leg state.
+   - Medium: same line family but different tier or motivation.
+   - Low: only the handicap number matches (e.g. NPL `-0.75` vs Eliteserien blowout `-0.75`).
+   - **Low-similarity history must not drive PLAY.**
+
+5. **Apply outcomes correctly (no hindsight abuse)**
+   - Historical Track B **W** on a line the skill **PASS**ed does **not** mean current should be PLAY.
+   - Historical Track B **L** supports caution on that branch but does not alone invent new Force-PASS rules unless the adjustment gate is met.
+   - Distinguish: kill-line validation (PASS avoided a losing deep favorite) vs cover-after-PASS observation (favorite covered; still may stay PASS).
+   - Level-ball: only cite `level-ball-lean` samples (e.g. external away lean + PK) when current external lean exists; never cite them for true near-even PK.
+
+6. **Reconcile to dual track**
+   - Track A: cross-check may **confirm PASS**, **block a fragile PLAY**, or rarely **support PLAY** when history + external + fundamentals align with stable-profit rules.
+   - Track B: cross-check feeds `WR-inferred lean` strength (`Low` if n small, noise high, or similarity low).
+   - If history is mixed (branch has both W and L), default to **caution** and say so.
+
+7. **Write a short cross-check block in the analysis** (required when step was run)
+
+```markdown
+Self Cross-Check:
+Branch: [tag]
+Comparables: [2–5 named settled spots + W/L/P or PASS outcome]
+Similarity: High | Medium | Low
+Implication (Track A): confirm PASS | block PLAY | support PLAY (only if rules still clear)
+Implication (Track B): WR-inferred lean / none; confidence Low|Medium
+```
+
+### Hard anti-patterns (self cross-check)
+
+- Do not treat “same Chinese handicap wording” as same branch.
+- Do not use cup-fav cover rates to justify NPL bottom-table `-0.75` PLAY.
+- Do not use Australian `+1` hits to justify thin `+0.25`/`+0.75` PLAY without price and structure.
+- Do not use 牙山/Vancouver-style PK samples when current external 1X2 is symmetric.
+- Do not rewrite historical PASS into retroactive PLAY while cross-checking.
+- Do not skip fundamentals because a branch WR looks high.
+- Empty NPL/aus-semi ledger → label inference **Low** and keep Track A conservative.
+
+### Canonical branch reminders (workspace memory)
+
+These are patterns already stressed in local reviews — use as lookup keys, not as auto-bets:
+
+| Branch idea | Track A bias | Track B note |
+|-------------|--------------|--------------|
+| Cup favorite `-0.75` to `-1` | Default PASS | Mixed W/L; covers do not loosen reject zone |
+| League strong favorite `-0.75` | Case-by-case; often PASS if thin | Win-by-1 = W |
+| Shallow league `-0.25` | Often PASS if thin price | Draw = W for favorite |
+| Level ball + clear external lean | Possible PLAY (overlay) | Needs lean; not true coin-flip |
+| True / near coin-flip PK | PASS | No single-side push |
+| Aus semi-pro / NPL dog shallow | Cautious; prefer deeper buffer historically | High variance; small n |
+| Aus semi-pro dog `+1` | More defensive-friendly than `+0.25` | Push possible at exact 1-goal loss |
+| Second leg / aggregate | PASS bias if state distorted | Single-match W ≠ tie outcome |
+
 ## When to Use
 
 Use this skill when the user wants to:
@@ -44,6 +197,8 @@ Use this skill when the user wants to:
 - apply a defensive betting framework
 - avoid low-value favorites and noisy markets
 - review a finished match and decide whether the strategy needs adjustment
+- self cross-check a screen against past similar settled handicaps or branch WR
+- re-analyze after dual-track or historical comparison
 
 ## Market Source Policy
 
@@ -56,14 +211,15 @@ Apply these scope rules:
 - when the user gives only HKJC prices, actively seek an accessible external benchmark before forming a directional view
 - if the user provides external odds, treat them as the main pricing signal unless explicitly told otherwise
 - if the user provides multiple external sources, prioritize sharp or consensus pricing over isolated soft-book prices
-- if team names, competition names, kickoff context, or matchup identity are ambiguous, stop and ask the user to confirm the intended match before continuing
+- **if team names, competition names, kickoff context, home/away, leg (first/second), or matchup identity are uncertain, stop and ask the user first** before continuing analysis or attaching external odds; do not guess among lookalike clubs
 - use HKJC only after the external direction is formed; HKJC may improve or worsen execution quality, but should not become the core reason for a bet by itself
 - if the user provides only non-HKJC prices, continue normally and label the result as external-market analysis
 - if the user provides only HKJC prices and an external benchmark is found, label the result as HKJC input plus external benchmark analysis
 - if the user provides only HKJC prices and no external benchmark can be obtained, analysis is still allowed, but clearly mark the view as incomplete value screening rather than a fully benchmarked directional read
-- when market naming is ambiguous, keep the recommendation anchored to the handicap or total-goals context already provided by the user
+- when market naming is ambiguous, keep the recommendation anchored to the handicap or total-goals context already provided by the user, and still ask the user if team identity is not locked
 - when any external public benchmark is used, identify the exact source in the response instead of referring vaguely to `external market`
 - if no external public source was successfully checked, say so plainly and downgrade to incomplete screening or `PASS`
+- never attach external 1X2/AH from a different match, club, or competition to an HKJC line; wrong-match odds make the whole screen invalid
 
 ## Efficient Public Source Guidance
 
@@ -111,9 +267,11 @@ Collect or infer these inputs before making a recommendation:
 
 If key structural inputs are missing or uncertain, default to `PASS` or clearly mark the analysis as incomplete.
 
+**Exception for identity:** if match identity is uncertain, do not silently finish with a guessed `PASS`/`PLAY`. Ask the user first (see Match Identity Gate). Only after identity is confirmed may analysis continue.
+
 If external benchmark direct win odds are missing, do not invent them and do not silently replace them with HKJC alone. Continue only if the handicap-based rules are still usable, and explicitly state that the `Anti-Low-Value Rule` was not fully checked and that the result is only a partial value screen.
 
-If external benchmark prices are referenced, they must be tied to named public sources actually checked during the analysis.
+If external benchmark prices are referenced, they must be tied to named public sources actually checked during the analysis, and those sources must refer to the same verified teams and fixture.
 
 ## Preferred Match Input Format
 
@@ -159,7 +317,8 @@ Parsing rules:
 - treat this as a handicap-market input unless the user states otherwise
 - treat both handicap odds as the user's quoted source; if unlabeled in this workspace, default them to HKJC prices
 - treat both win odds as the user's quoted source; if unlabeled in this workspace, default them to HKJC prices
-- if the team names or matchup mapping are unclear, ask the user to confirm the exact teams or competition instead of guessing
+- **if the team names or matchup mapping are unclear or only medium-confidence, ask the user to confirm the exact teams, competition, and leg before any directional recommendation or external-odds attach**
+- do not resolve ambiguous HKJC Chinese transliterations by picking the first web hit (example failure mode: treating `國際杜古` as Inter Club d'Escaldes instead of Inter Turku)
 - when the quoted source is HKJC-only, try to obtain external benchmark prices before turning the screen into a directional recommendation
 - the handicap line is always side A's line: negative means side A gives goals, positive means side A receives goals
 - infer the favorite and underdog from side A's handicap direction first, then from market pricing if needed
@@ -182,11 +341,14 @@ Parsing rules:
 When the user provides a result after the match, use it for strategy review rather than for outcome chasing.
 
 Review in this order:
-1. Restate the original decision: `PASS` or `PLAY`
-2. Record the actual market outcome against the original quoted line
-3. Check whether the original reasoning matched the intended rule branch
-4. Separate execution error from strategy error
-5. Adjust the strategy only if a repeatable rule weakness is visible across multiple results
+1. Restate the original decision: `PASS` or `PLAY` (Track A)
+2. Record the actual market outcome against the original quoted line (cash / standard AH if needed)
+3. **Log Track B win-rate settlement** for the primary quoted handicap and any key alternative line: `W` / `L` / `P` under half-win=Win, half-loss=Loss
+4. Tag the sample branch (cup `-0.75`, league `-0.25`, level-ball lean, second leg, etc.) for later unplayed-match inference
+5. Check whether the original reasoning matched the intended rule branch
+6. Separate execution error from strategy error; separate Track A quality from Track B hit-rate
+7. Adjust Track A strategy only if a repeatable rule weakness is visible across multiple results (WR hits alone do not force looser PLAY filters)
+8. Optionally update a short `WR-inferred lean` note for **similar unplayed** spots using external odds + fundamentals + branch WR — still not auto-PLAY
 
 Recommended adjustment gate:
 - `1` result: observation only, no rule change
@@ -211,6 +373,37 @@ If the new result is only one isolated sample, keep the strategy unchanged and l
 
 ## Decision Workflow
 
+### 0. Match Identity Gate (ask user first if uncertain)
+
+Before any external-odds search is treated as authoritative, and before any `PLAY` or confident directional `PASS` narrative, lock fixture identity:
+
+Required identity locks when available:
+- official English (or local) club names for both sides
+- competition and country/region
+- home/away
+- date / kickoff context if needed to disambiguate
+- for two-legged ties: first leg or second leg, and prior-leg score if known
+
+**If identity is uncertain, stop and ask the user first.** Prefer a short confirmation question over guessing.
+
+Ask when any of these are true:
+- HKJC Chinese names admit multiple plausible clubs (for example `國際…`, `夏德`, `維京…`, similar transliterations)
+- search results point to two different fixtures or two different competitions
+- home/away or which leg is unclear
+- external pages found do not clearly match both user-quoted names
+- confidence in the mapping is less than high
+
+While waiting for confirmation:
+- do **not** issue a formal `PLAY`
+- do **not** attach external 1X2/AH from a candidate match that is not verified
+- do **not** put the leg in a parlay
+- you may list candidate mappings and why they conflict
+- if the user needs an interim stance, use incomplete screening / provisional `PASS` only, and label identity as unconfirmed
+
+After the user confirms identity, re-fetch external benchmarks for **that** fixture only, then continue the normal filters.
+
+Wrong-match external data invalidates the entire screen for that line. Treat this as an execution error class equal in severity to a settlement/mapping bug.
+
 ### 1. Start From a Defensive Default
 
 Begin with the assumption that the match is a `PASS`.
@@ -218,6 +411,11 @@ Begin with the assumption that the match is a `PASS`.
 Only move away from `PASS` if the matchup survives every filter below.
 
 Only recommend `PLAY` when the setup supports both capital protection and a realistic stable-profit edge.
+
+### 1b. Self Cross-Check (similar settled spots)
+
+After a provisional market lean forms (and before locking Track A `PLAY`), run **Self Cross-Check Against Similar Settled Spots** when required by that section.  
+At minimum for batches and borderline calls: assign a branch tag, cite comparables from `post-match-review-grok.md`, state similarity, and separate Track A vs Track B implications.
 
 ### 2. Apply the Pre-Match Filter Matrix
 
@@ -329,11 +527,14 @@ If primary-market direct win odds are unavailable:
 For a single bet:
 - prefer `+1` or `+1.25`
 - prioritize push or half-loss protection over higher upside
+- `+0.75` is allowed when external lean + price + structure support it; it is not banned because Track B treats lose-by-1 as Loss
 
 For a parlay:
 - prefer `+0.5`
 - do not use `+1` in parlays when a push would reduce that leg to `1.00`
 - avoid void dilution that weakens real parlay progression
+
+Favorite `-0.75` on Track A remains case-by-case (cup reject zone often blocks); on Track B, win-by-1 counts as Win for ledger/inference only.
 
 #### Level-Ball / PK External-Lean Overlay
 
@@ -394,12 +595,14 @@ Preferred composition:
 ## Decision Priorities
 
 When rules conflict, use this priority order:
+0. match identity gate (ask user if uncertain; block `PLAY` until locked)
 1. `FORCE PASS` rules
 2. market blacklist rules (true coin-flips only)
 3. cup favorite medium-deep handicap reject zone and cup first-leg / logistics friction warnings
 4. motivation distortion warnings
 5. underdog handicap protection rules, including level-ball external-lean overlay
 6. parlay construction preferences
+
 If a match triggers any high-risk exclusion and no strong compensating edge remains, keep the final answer as `PASS`.
 
 If a market passes the filters but still does not support a stable-profit profile, keep the final answer as `PASS`.
@@ -424,6 +627,12 @@ Rule Hits:
 Reasoning:
 - [short explanation tied directly to the rules]
 
+Self Cross-Check:
+- Branch: [tag]
+- Comparables: [settled spots + outcomes]
+- Similarity: High | Medium | Low
+- Implication (Track A / Track B): [...]
+
 O/U Check:
 - [use only when O/U is considered: why it qualified or why it failed]
 
@@ -440,6 +649,8 @@ When the user is giving a post-match result, use this review structure instead:
 Original Decision: PASS | PLAY
 Original Market: [original quoted market]
 Actual Result: [match score and settlement against the original quoted line]
+Track B (WR ledger): W | L | P  (half-win=W, half-loss=L, push=P excluded from WR)
+Branch Tag: [e.g. cup-fav-0.75 | league-0.25 | level-ball-lean | second-leg]
 Assessment: Strategy Held | Execution Error | Review Needed
 Sample Status: Observation | Watchlist | Formal Review | Eligible for Rule Change
 
@@ -449,6 +660,9 @@ What Was Correct:
 What Was Wrong:
 - [specific input read or rule application issue]
 
+WR inference note (optional):
+- [comparable unplayed spots: external odds + fundamentals + this branch WR; not auto-PLAY]
+
 Adjustment Decision:
 - Keep strategy unchanged | Watch for repeat pattern | Adjust rule
 ```
@@ -456,7 +670,12 @@ Adjustment Decision:
 ## Quality Checks Before Finishing
 
 Before returning a recommendation, verify that:
-- the answer explicitly states `PASS` or `PLAY`
+- match identity is locked at high confidence, or the user was asked and has confirmed; never `PLAY` on a guessed club mapping
+- any external odds cited refer to the same verified teams, competition, and leg as the user input
+- when self cross-check was required, a branch tag and named comparables appear; low-similarity history was not used to force PLAY
+- level-ball-lean history was not applied to true near-even markets
+- Track B WR inference is labeled and does not silently replace Track A filters
+- the answer explicitly states `PASS` or `PLAY` (or an identity-hold asking the user, which is not a formal bet decision)
 - the market type matches the correct branch for single or parlay mode
 - the main recommendation is driven by external benchmark prices whenever they can be obtained
 - any HKJC prices are used only as a relative reference, execution overlay, or line-mapping note
@@ -482,10 +701,12 @@ Before returning a recommendation, verify that:
 ## Response Style
 
 Keep the analysis readable and operational:
-- lead with the external market read when an external benchmark is available
+- if identity is uncertain, lead with a clear ask to the user (candidate names + what to confirm); do not bury the question under a full faux analysis
+- lead with the external market read when an external benchmark is available and identity is locked
 - mention HKJC mainly to explain whether the user-posted HKJC price is good enough to invest in relative to the external benchmark
 - explain why a bet does or does not meet the stable-profit standard
 - explain why the strategy prefers safety over payout
+- when self cross-check runs, keep the comparables block short and explicit (branch, 2–5 cases, similarity, A/B implication)
 - if discussing O/U, separate structural tempo reasons from simple recent-score trends
 - avoid giving multiple conflicting bet options
 - if the edge is unclear, end with `PASS`
