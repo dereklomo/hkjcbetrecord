@@ -1,6 +1,6 @@
 ---
 name: defensive-betting-analysis
-description: 'Analyze football betting opportunities with a defensive, capital-protection-first strategy where external odds such as Pinnacle and bet365 drive the betting direction, while Hong Kong Jockey Club prices are usually user-supplied input used to judge whether the available HKJC line is worth investing in relative to the external benchmark. Includes dual-track capital vs win-rate ledger and self cross-check against similar settled spots in post-match reviews. Football only. Use when evaluating 足球 or football matches, external bookmaker lines, Asian handicap lines, 讓球, 受讓, 串關, 賽前過濾, cross-book comparison, self cross-check, historical branch comparison, odds thresholds, season-phase mismatch, motivation distortion, blacklisted markets, synthetic handicap conversion, post-match result review, or whether the correct action is PASS.'
+description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. Includes dual-track WR primary vs capital auxiliary, and self cross-check against similar settled spots. Football only. Use when evaluating 足球 or football matches, 贏盤率, external bookmaker lines, Asian handicap, 讓球, 受讓, 串關, cross-check, post-match review, or PASS vs PLAY.'
 argument-hint: 'Preferred detailed input format: 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率. In this workspace, treat unlabeled quoted prices as HKJC prices unless they are explicitly labeled as external-market prices; then seek Pinnacle, bet365, or other major external benchmarks to determine direction. Use *讓球盤 when the handicap is synthetically converted from HKJC 3-way handicap.'
 user-invocable: true
 ---
@@ -13,7 +13,9 @@ This skill turns a compact betting ruleset into a readable decision workflow for
 
 This skill is for football only. Do not apply it to basketball, baseball, tennis, esports, or other sports.
 
-Build the betting view from external market prices first, preferably Pinnacle, other sharp or market-making books, and then bet365 or similar major references. Use Hong Kong Jockey Club mainly as the user-supplied investment price to judge whether the quoted HKJC line is worth taking relative to that external benchmark.
+**Primary goal: maximize justified handicap win-rate (贏盤率)** under half-win = win and half-loss = loss. All other factors are auxiliary.
+
+Build the market view from external prices first, preferably Pinnacle, other sharp or market-making books, and then bet365 or similar major references — as the main **base-rate** input to win-rate. Use Hong Kong Jockey Club mainly as the user-supplied **execution** price relative to that external benchmark.
 
 Whenever the user provides only HKJC or unlabeled prices, the analysis should actively seek accessible external public odds or public odds summaries before forming a directional view. If such a public source is used, the final write-up must explicitly name it.
 
@@ -23,36 +25,42 @@ For this workspace and user workflow, if odds are pasted without a source label,
 
 Do not claim external confirmation unless a concrete public source was actually checked. Never imply unseen Pinnacle, bet365, or consensus support.
 
-It is intentionally conservative:
-- Stable profit is more important than payout maximization.
-- Capital protection is more important than aggressive yield chasing.
-- The default action is `PASS` unless the market clearly fits the rules.
-- Deep favorite handicaps, low-value prices, chaotic matches, and weak-information spots should be rejected.
+## Primary Objective: Win-Rate First (贏盤率為主)
 
-Every recommendation must clear a stable-profit standard:
-- do not recommend a bet only because it looks survivable
-- prefer repeatable, lower-variance edges over occasional high-payout shots
-- if the edge is unclear, fragile, or depends on too many assumptions, return `PASS`
+**Hierarchy (mandatory):**
 
-## Dual Track: Capital Decision vs Win-Rate Ledger
+1. **Primary — Handicap win-rate (贏盤率 / Track B)**  
+   Choose and evaluate sides/lines by estimated probability of **settling as a win** under the win-rate ledger (half-win = win, half-loss = loss, push excluded).  
+   Directional recommendation and line selection are driven mainly by: external market lean → comparable branch WR → scoreline path needed to win the line.
 
-This workspace runs **two parallel tracks**. Do not collapse them into one KPI.
+2. **Auxiliary — All other information**  
+   Use only to **support, adjust confidence, or veto** the win-rate read — never as the main reason to ignore a clearly superior win-rate line:
+   - capital / payout / “stable-profit” narrative
+   - thin price aesthetics
+   - cup reject zones, anti-low-value, blacklists (except hard identity / wrong-match / no-market)
+   - fundamentals (基本面), motivation, travel, rotation
+   - HKJC overlay quality
 
-### Track A — Capital decision (`PLAY` / `PASS`)
+**Default posture:** prefer the line/side with the **best justified win-rate** after external odds + branch history + fundamentals as *modifiers*.  
+`PASS` when no side has a usable win-rate edge (true coin-flip, identity broken, or insufficient data) — not merely because price is “thin.”
 
-- Purpose: whether real money should be risked under the defensive framework.
-- Drivers: external odds direction, HKJC execution overlay, capital protection, stable-profit filters, blacklists, cup reject zones, identity gate.
-- High win-rate alone does **not** force `PLAY` (low price / high variance / cup noise can still be `PASS`).
+Still intentionally careful:
+- Identity must be correct before any odds attach.
+- Do not invent external prices.
+- Do not treat payout maximization as primary (payout is auxiliary).
+- Fragile or contradictory win-rate evidence → lower confidence or `PASS`.
 
-### Track B — Win-rate ledger (no profit weighting)
+## Dual Track (Primary = B, Auxiliary = A)
 
-- Purpose: measure **handicap settlement hit rate** and calibrate **line-push / similar-spot inference** for fixtures not yet played.
+### Track B — Win-rate ledger (**PRIMARY**)
+
+- Purpose: measure and forecast **handicap settlement hit rate**; drive line choice and `PLAY` lean.
 - Ignores odds magnitude and staking returns for the score itself.
-- Settlement convention (mandatory for this ledger):
+- Settlement convention (mandatory):
   - **half-win (贏半) = Win**
   - **half-loss (輸半) = Loss**
   - **full win / full loss** as usual
-  - **push / void (走盤)** = exclude from win-rate denominator (or report push rate separately; never count as Win)
+  - **push / void (走盤)** = exclude from win-rate denominator (report push rate separately; never count as Win)
 
 Win-rate formula:
 
@@ -76,21 +84,43 @@ Pushes excluded from denominator
 
 Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts Win) and **harsher on underdog `+0.75`** (lose-by-1 counts Loss) than cash P&L under half-settlement.
 
+### Track A — Capital / filter layer (**AUXILIARY**)
+
+- Purpose: optional risk notes, price quality, and hard safety gates — **not** the main selection engine.
+- May **downgrade confidence**, prefer a different line with similar WR, or **veto** only when a **hard gate** fires (below).
+- Must **not** reject a clear win-rate-preferred line solely because “stable-profit / thin price / cup habit PASS.”
+
+**Hard gates still block PLAY (identity & data integrity only):**
+- match identity uncertain → ask user / no PLAY
+- wrong-match external odds → invalidate screen
+- no usable market identity or unreadable line → PASS
+
+**Soft gates (auxiliary only):** cup reject zone, anti-low-value, coin-flip blacklist, logistics, motivation, thin price — use to **rank, warn, or modestly reduce stake confidence**, not to auto-kill a line that win-rate analysis prefers unless the win-rate edge itself is weak/absent.
+
+### Building a win-rate-first recommendation (pre-match)
+
+1. **Identity lock** (hard).
+2. **External odds** → which side is stronger and how strong (primary market signal for base rates).
+3. **Map to line(s)** under Track B settlement (what score paths are W vs L).
+4. **Branch WR + self cross-check** from settled reviews (comparable spots only).
+5. **Fundamentals as modifier** — raise/lower WR confidence; do not flip side without market+WR support.
+6. **HKJC overlay** — execution price; auxiliary.
+7. **Track A soft filters** — risk notes; only veto if WR edge is not actually clear.
+8. Output: preferred line for **win-rate**, then auxiliary caveats.
+
 ### Using Track B for unplayed matches (line push / inference)
 
-When inferring whether a **similar unplayed** market is more likely to settle Win under Track B:
+1. **External odds first** — 1X2 / AH lean and implied strength gap.
+2. **Settled WR ledger** — comparable branches only.
+3. **Fundamentals** — auxiliary modifier (not a substitute for market+WR).
+4. State `WR-inferred lean` with confidence; this **is** the main predictive output.
+5. Soft capital filters may annotate risk; they do not redefine the primary objective away from win-rate.
 
-1. **External odds first** — 1X2 / AH lean and implied strength gap; do not invent lines.
-2. **Settled WR ledger** — only comparable branches (same band: e.g. cup favorite `-0.75`, league shallow `-0.25`, second-leg trailing home, NPL underdog `+0.75`).
-3. **Fundamentals (基本面)** — required, not optional: season phase, motivation, personnel integrity, home/away, travel, cup leg state, rotation risk, style matchup. High WR in a different structural context does not transfer.
-4. **Output as inference, not auto-PLAY** — may state `WR-inferred lean` / `line-push note` for a candidate handicap; capital `PLAY` still requires Track A filters.
-5. **Never** use Track B alone to override Force-PASS, identity failure, true coin-flip blacklist, or cup favorite reject zone for staking.
+### Half-lines under win-rate-first
 
-### Do not over-filter half-lines on Track A
-
-- `±0.75` is **not** an automatic Track A blacklist.
-- Reject `-0.75` / `+0.75` only when a named rule applies (cup favorite reject zone, anti-low-value, thin stable-profit, noise/incomplete benchmark, reverse of external lean, etc.).
-- Track B may still **log** those lines for WR even when Track A is `PASS`.
+- `±0.75` is **not** an automatic blacklist.
+- Favorite `-0.75` is often **more attractive on Track B** (win-by-1 = W) than old stable-profit habit suggested — evaluate on WR, not “thin cup PASS by default.”
+- Underdog `+0.75` is **harsher on Track B** (lose-by-1 = L); prefer deeper buffers (`+1`) when WR paths are similar.
 
 ## Self Cross-Check Against Similar Settled Spots
 
@@ -146,10 +176,10 @@ Skip only for trivial identity-hold questions with no market decision.
    - Distinguish: kill-line validation (PASS avoided a losing deep favorite) vs cover-after-PASS observation (favorite covered; still may stay PASS).
    - Level-ball: only cite `level-ball-lean` samples (e.g. external away lean + PK) when current external lean exists; never cite them for true near-even PK.
 
-6. **Reconcile to dual track**
-   - Track A: cross-check may **confirm PASS**, **block a fragile PLAY**, or rarely **support PLAY** when history + external + fundamentals align with stable-profit rules.
-   - Track B: cross-check feeds `WR-inferred lean` strength (`Low` if n small, noise high, or similarity low).
-   - If history is mixed (branch has both W and L), default to **caution** and say so.
+6. **Reconcile to dual track (WR primary)**
+   - Track B: cross-check is the main input to `WR-inferred lean` and line choice (`Low` if n small, noise high, or similarity low).
+   - Auxiliary filters: may lower confidence or note capital risk; do not override a clear WR-preferred line without showing the WR case failed.
+   - If history is mixed (branch has both W and L), state mixed WR and use external + fundamentals to break ties — or `PASS` if no edge remains.
 
 7. **Write a short cross-check block in the analysis** (required when step was run)
 
@@ -176,16 +206,16 @@ Implication (Track B): WR-inferred lean / none; confidence Low|Medium
 
 These are patterns already stressed in local reviews — use as lookup keys, not as auto-bets:
 
-| Branch idea | Track A bias | Track B note |
-|-------------|--------------|--------------|
-| Cup favorite `-0.75` to `-1` | Default PASS | Mixed W/L; covers do not loosen reject zone |
-| League strong favorite `-0.75` | Case-by-case; often PASS if thin | Win-by-1 = W |
-| Shallow league `-0.25` | Often PASS if thin price | Draw = W for favorite |
-| Level ball + clear external lean | Possible PLAY (overlay) | Needs lean; not true coin-flip |
-| True / near coin-flip PK | PASS | No single-side push |
-| Aus semi-pro / NPL dog shallow | Cautious; prefer deeper buffer historically | High variance; small n |
-| Aus semi-pro dog `+1` | More defensive-friendly than `+0.25` | Push possible at exact 1-goal loss |
-| Second leg / aggregate | PASS bias if state distorted | Single-match W ≠ tie outcome |
+| Branch idea | WR-first note (primary) | Auxiliary note |
+|-------------|-------------------------|----------------|
+| Cup favorite `-0.75` to `-1` | Mixed W/L in ledger; `-0.75` win-by-1 = W — evaluate case-by-case | Cup noise lowers confidence |
+| League strong favorite `-0.75` | Often solid WR path (win-by-1 = W) | Thin price is secondary |
+| Shallow league `-0.25` | Draw = W for favorite — often high WR | Price auxiliary |
+| Level ball + clear external lean | Prefer lean side on 0 for WR | Needs lean; not true coin-flip |
+| True / near coin-flip PK | No WR edge → PASS | — |
+| Aus semi-pro / NPL dog shallow | High variance; small n | Prefer deeper buffer (`+1`) for WR paths when possible |
+| Aus semi-pro dog `+1` | Lose-by-1 = push (exclude); often better WR path than `+0.25` | — |
+| Second leg / aggregate | Single-match WR ≠ tie outcome | Aggregate state is a strong WR modifier |
 
 ## When to Use
 
@@ -347,8 +377,8 @@ Review in this order:
 4. Tag the sample branch (cup `-0.75`, league `-0.25`, level-ball lean, second leg, etc.) for later unplayed-match inference
 5. Check whether the original reasoning matched the intended rule branch
 6. Separate execution error from strategy error; separate Track A quality from Track B hit-rate
-7. Adjust Track A strategy only if a repeatable rule weakness is visible across multiple results (WR hits alone do not force looser PLAY filters)
-8. Optionally update a short `WR-inferred lean` note for **similar unplayed** spots using external odds + fundamentals + branch WR — still not auto-PLAY
+7. Adjust rules only if a repeatable weakness is visible across multiple results under the **win-rate-first** objective
+8. Update `WR-inferred lean` for **similar unplayed** spots using external odds + branch WR + fundamentals as auxiliary modifiers
 
 Recommended adjustment gate:
 - `1` result: observation only, no rule change
@@ -404,13 +434,13 @@ After the user confirms identity, re-fetch external benchmarks for **that** fixt
 
 Wrong-match external data invalidates the entire screen for that line. Treat this as an execution error class equal in severity to a settlement/mapping bug.
 
-### 1. Start From a Defensive Default
+### 1. Start From Win-Rate Default
 
-Begin with the assumption that the match is a `PASS`.
+Begin by asking which side/line has the **best justified win-rate** under Track B (external lean + score path + branch history).
 
-Only move away from `PASS` if the matchup survives every filter below.
-
-Only recommend `PLAY` when the setup supports both capital protection and a realistic stable-profit edge.
+- Prefer that line as the candidate recommendation.
+- Use auxiliary filters (price, cup noise, fundamentals) only to adjust confidence or, if they destroy the WR case, fall back to `PASS`.
+- Default to `PASS` when no clear WR edge exists (coin-flip, broken identity, insufficient data) — not merely because the price looks thin.
 
 ### 1b. Self Cross-Check (similar settled spots)
 
@@ -488,39 +518,35 @@ Then:
 - avoid backing the stronger away team on deep handicap lines by default
 - only consider an away favorite handicap if the line is still shallow and the external benchmark clearly supports it
 
-#### Cup Favorite Medium-Deep Handicap Reject Zone
+#### Cup Favorite Medium-Deep Handicap Zone (auxiliary modifier)
 
 Apply to single-leg cup ties (national cup, continental knockout single leg, Australia Cup, Korea Cup, and similar), not only two-legged ties.
 
-Default to `PASS` on the cup favorite when the quoted handicap is about `-0.75` to `-1` (inclusive of common half-lines in that band), unless a strong external benchmark still supports the favorite handicap after cup noise is considered.
+When the quoted handicap is about `-0.75` to `-1`:
+- **Primary:** estimate Track B WR (e.g. `-0.75` wins on win-by-1; settled branch has mixed W/L).
+- **Auxiliary:** cup rotation, motivation, and variance **lower confidence**; may push toward shallower dog buffer or `PASS` if WR edge is not clear after modifiers.
+- Do **not** auto-reject solely because “cup habit PASS” if external lean + WR path + branch history still favor the line.
 
-Reasons:
-- cup rotation, motivation asymmetry, and single-elimination variance inflate favorite-cover risk
-- low-to-mid favorite win prices plus a medium-deep handicap rarely meet the stable-profit standard
-- settled workspace samples (for example cup home favorites failing at `-1` or `-0.75`) re-validate this reject zone
-
-Do not treat a clear external favorite direction alone as permission to back cup favorite `-0.75` / `-1`. Direction and investable handicap are separate questions.
-
-If only incomplete external 1X2 is available and no usable external AH exists, keep cup favorite `-0.75` to `-1` as `PASS` rather than forcing a cover bet.
+If only incomplete external 1X2 is available, lower WR confidence rather than inventing cover certainty.
 
 ### 4. Apply Odds and Handicap Thresholds
 
-#### Anti-Low-Value Rule
+#### Anti-Low-Value Rule (auxiliary)
 
-Force `PASS` when:
+**Role under win-rate-first:** soft warning / confidence downgrade on extreme deep favorites — **not** an automatic kill of a strong Track B cover case unless WR edge is unclear.
+
+Flag when:
 - primary-market direct win odds are known and below `1.45`
 - and the handicap line is `-1.5` or deeper
 
-Reason:
-- the risk is too high relative to the reward
-- this is exactly the kind of favorite pricing the strategy rejects
+Reason (auxiliary capital note):
+- payout is poor even when WR is decent; still report WR path honestly
+- may prefer a shallower line with similar or better WR if available
 
 If primary-market direct win odds are unavailable:
 - do not guess or backfill them from a different market
 - do not let HKJC alone impersonate full external confirmation
-- mark the rule as `not fully checked`
-- treat the view as incomplete screening unless the user later supplies the missing win odds
-- lower confidence rather than pretending the filter passed
+- mark the price filter as `not fully checked`
 
 #### Underdog Handicap Optimization
 
@@ -548,9 +574,9 @@ Split the cases:
 Execution rules for case 2:
 - form direction only from the external benchmark first; never from HKJC level ball alone
 - do not bias toward the home side merely because HKJC opened 平手
-- if external implies away/underdog is not weaker (or is slightly stronger) and HKJC still prices level ball, prefer the external-lean side on 平手 when the price clears a stable-profit screen
+- if external implies away/underdog is not weaker (or is slightly stronger) and HKJC still prices level ball, prefer the external-lean side on 平手 for **win-rate** (draw pushes)
 - keep confidence at most `Medium`; if the external lean is tiny, noisy, or source-quality is weak, stay `PASS`
-- this is a capital-protection overlay, not a license to bet every balanced cup or league derby
+- this is a WR overlay when lean exists, not a license to bet every balanced cup or league derby
 #### O/U Qualification Rules
 
 Only consider a full-match O/U bet when the total-goals environment is reasonably predictable.
@@ -595,17 +621,15 @@ Preferred composition:
 ## Decision Priorities
 
 When rules conflict, use this priority order:
-0. match identity gate (ask user if uncertain; block `PLAY` until locked)
-1. `FORCE PASS` rules
-2. market blacklist rules (true coin-flips only)
-3. cup favorite medium-deep handicap reject zone and cup first-leg / logistics friction warnings
-4. motivation distortion warnings
-5. underdog handicap protection rules, including level-ball external-lean overlay
-6. parlay construction preferences
+0. match identity gate (hard — ask user if uncertain; block `PLAY` until locked)
+1. **win-rate edge** (Track B: external lean + line settlement path + comparable branch WR)
+2. true coin-flip / no usable lean → `PASS` (no WR edge)
+3. auxiliary modifiers: fundamentals, cup/second-leg noise, logistics, motivation, anti-low-value price warning
+4. level-ball external-lean overlay and underdog buffer choice (prefer lines with better WR paths, e.g. `+1` over thin `+0.75` when similar)
+5. parlay construction preferences
+6. soft capital notes (thin price, variance) — annotate; do not override a clear WR-preferred line without stating that WR edge collapsed
 
-If a match triggers any high-risk exclusion and no strong compensating edge remains, keep the final answer as `PASS`.
-
-If a market passes the filters but still does not support a stable-profit profile, keep the final answer as `PASS`.
+If no side has a usable win-rate edge, keep the final answer as `PASS`.
 
 ## Output Format
 
@@ -614,30 +638,31 @@ Use this structure in the final response:
 ```markdown
 Decision: PASS | PLAY
 Market: [recommended market or "none"]
+Primary lens: Win-rate (Track B)
+WR case: [why this line has the best justified win-rate; score paths that are W/L]
 Source Basis: External Primary | HKJC Input + External Benchmark | HKJC Only Incomplete Value Screen
 Sources Used: [named public sources actually checked, or `none`]
 Mode: Single | Parlay
 Confidence: Low | Medium
-Profitability Profile: Stable | Borderline
+Auxiliary notes: [price / cup / fundamentals / capital caveats — secondary]
 
 Rule Hits:
 - [rule triggered]
-- [rule triggered]
 
 Reasoning:
-- [short explanation tied directly to the rules]
+- [lead with WR + external; then auxiliary modifiers]
 
 Self Cross-Check:
 - Branch: [tag]
-- Comparables: [settled spots + outcomes]
+- Comparables: [settled spots + W/L/P]
 - Similarity: High | Medium | Low
-- Implication (Track A / Track B): [...]
+- Implication (WR primary / aux filters): [...]
 
 O/U Check:
-- [use only when O/U is considered: why it qualified or why it failed]
+- [use only when O/U is considered]
 
 Rejected Options:
-- [favorite deep handicap, match winner, O/U, etc.]
+- [lower-WR or inferior lines]
 
 Risk Notes:
 - [what could still go wrong]
@@ -674,7 +699,7 @@ Before returning a recommendation, verify that:
 - any external odds cited refer to the same verified teams, competition, and leg as the user input
 - when self cross-check was required, a branch tag and named comparables appear; low-similarity history was not used to force PLAY
 - level-ball-lean history was not applied to true near-even markets
-- Track B WR inference is labeled and does not silently replace Track A filters
+- Track B win-rate case is stated first; auxiliary capital/price/cup notes are labeled secondary
 - the answer explicitly states `PASS` or `PLAY` (or an identity-hold asking the user, which is not a formal bet decision)
 - the market type matches the correct branch for single or parlay mode
 - the main recommendation is driven by external benchmark prices whenever they can be obtained
@@ -682,17 +707,14 @@ Before returning a recommendation, verify that:
 - unlabeled user input in this workspace is not mistakenly treated as external odds
 - HKJC-only user input is primarily being evaluated for investment value against external prices, not used as the core directional signal by default
 - any rejection is tied to a named rule
-- the recommendation is aligned with stable-profit logic, not merely with actionability
+- the recommendation leads with **win-rate (Track B)**; price/capital/cup notes are labeled auxiliary
+- a clear WR-preferred line is not rejected solely for “thin price” or legacy stable-profit habit without showing WR edge is weak
 - shorthand-input analysis without direct win odds is labeled as incomplete screening, not a fully cleared recommendation
-- deep favorite handicaps are not recommended after a lifecycle mismatch alert
-- deep favorite handicaps are not recommended after major personnel-integrity damage, heavy travel tax, or first-leg tactical drag unless the external benchmark is exceptionally supportive
-- sub-`1.45` favorite win prices with `-1.5` or deeper handicap lines are rejected when the primary-market direct win price is actually known
-- missing primary-market direct win odds are disclosed as an unchecked filter, not silently ignored
-- HKJC-only analysis does not pretend to have external confirmation or a benchmarked directional edge when no benchmark could be obtained
-- chaotic even matches are not recommended unless the user explicitly asks to override the framework
-- true coin-flip blacklists are not applied to level-ball markets where external 1X2 already shows a usable lean against the home side
-- cup favorite handicaps around `-0.75` to `-1` default to `PASS` unless external support is unusually strong
-- a clear external favorite direction is not treated as permission to buy medium-deep cup favorite handicaps
+- deep favorite lines are judged on WR cover paths first; lifecycle/personnel/travel act as confidence modifiers
+- anti-low-value and cup medium-deep zones are soft/auxiliary unless WR edge is absent
+- missing primary-market direct win odds are disclosed; do not invent them
+- HKJC-only analysis does not pretend to have external confirmation when no benchmark could be obtained
+- true coin-flip / no lean → `PASS`; level-ball with clear external lean may be WR-playable
 - O/U recommendations are made only when the total-goals environment is structurally predictable
 - O/U recommendations are not based only on recent overs, recent unders, or surface scoring trends
 - post-match reviews do not force a rule change from a single isolated result
@@ -702,11 +724,11 @@ Before returning a recommendation, verify that:
 
 Keep the analysis readable and operational:
 - if identity is uncertain, lead with a clear ask to the user (candidate names + what to confirm); do not bury the question under a full faux analysis
-- lead with the external market read when an external benchmark is available and identity is locked
-- mention HKJC mainly to explain whether the user-posted HKJC price is good enough to invest in relative to the external benchmark
-- explain why a bet does or does not meet the stable-profit standard
-- explain why the strategy prefers safety over payout
-- when self cross-check runs, keep the comparables block short and explicit (branch, 2–5 cases, similarity, A/B implication)
+- **lead with win-rate case** (which line, which score paths are W/L under half-win=W / half-loss=L)
+- then external market lean that supports that WR case
+- treat fundamentals, cup noise, and price as **auxiliary** modifiers
+- mention HKJC mainly as execution overlay, not directional driver
+- when self cross-check runs, keep the comparables block short and explicit (branch, 2–5 cases, similarity, WR implication)
 - if discussing O/U, separate structural tempo reasons from simple recent-score trends
 - avoid giving multiple conflicting bet options
-- if the edge is unclear, end with `PASS`
+- if no usable WR edge, end with `PASS`
