@@ -95,7 +95,9 @@ Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts 
 - wrong-match external odds → invalidate screen
 - no usable market identity or unreadable line → PASS
 
-**Soft gates (auxiliary only):** cup reject zone, anti-low-value, coin-flip blacklist, logistics, motivation, thin price — use to **rank, warn, or modestly reduce stake confidence**, not to auto-kill a line that win-rate analysis prefers unless the win-rate edge itself is weak/absent.
+**Soft gates (auxiliary only):** cup reject zone, anti-low-value, coin-flip / no-lean PASS, logistics, motivation, thin price — use to **rank, warn, or modestly reduce stake confidence**, not to auto-kill a line that win-rate analysis prefers unless the win-rate edge itself is weak/absent.
+
+**True coin-flip is defined from external pricing first, not from equal executable AH prices alone.** Symmetric HKJC/AH quotes (e.g. both sides 1.88) without a checked external 1X2/AH lean are incomplete screens, not automatic hard blacklists. If external shows a usable lean, apply Level-Ball / PK External-Lean Overlay (or the corresponding shallow-line WR path) instead of forcing PASS by habit.
 
 ### Building a win-rate-first recommendation (pre-match)
 
@@ -648,8 +650,10 @@ Preferred composition:
 
 ### 6. Enforce Absolute Market Blacklists
 
-- balanced or coin-flip matches where both teams are in similar cycle state, external pricing shows no usable lean, and no side has a strong structural edge
-- do not expand this blacklist to every level-ball quote: if external 1X2 rejects home advantage or mildly prefers one side, apply `Level-Ball / PK External-Lean Overlay` instead of forcing `PASS` by habit
+- balanced or coin-flip matches **only when external pricing shows no usable lean** (and no side has a strong structural edge that survives external silence): both teams similar cycle state **and** external 1X2/AH is symmetric or mixed with no readable direction
+- **do not** treat equal executable AH prices alone (e.g. `1.88 / 1.88`) as proof of true coin-flip without external check
+- do not expand this blacklist to every level-ball or near-even quote: if external 1X2 rejects home advantage or mildly prefers one side, apply `Level-Ball / PK External-Lean Overlay` (or WR-path on the lean side’s shallow line) instead of forcing `PASS` by habit
+- historical local lesson (牙山): over-applying coin-flip PASS when external mildly leaned away was too strict; keep true-no-lean PASS, allow lean-side level-ball evaluation
 
 ## Decision Priorities
 
