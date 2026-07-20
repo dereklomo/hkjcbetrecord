@@ -183,6 +183,59 @@
 | Knights -0.75 | 1-2 | L | npl-aus home-fav | 否（watchlist） |
 | **Lillestrøm -0.75** | **2-1** | **W** | **league-fav-0.75 挪超** | **否**（正向 obs） |
 | Gangwon -0.75 | pending | — | K 聯賽 | — |
+| **Hammarby -1.5/-2** | **4-0** | **W** | **league-fav-deep Strong** | **否**（正向 obs） |
+| **Hacken -0.5/-1** | **0-2 客** | **W** | **league-fav-0.75 away Med–Strong** | **否**（正向 obs） |
+
+---
+
+## 2026-07-19/20 賽後批（正式 2W + 決賽/女足 PASS）
+
+**賽前檔：** `record/pre-match-2026-07-19.md`  
+**用戶賽果：**
+
+| 場次 | 賽果 |
+|------|------|
+| Halmstads vs Hacken | **0-2** |
+| Hammarby vs Degerfors | **4-0** |
+| Jaro vs Inter Turku | **0-0** |
+| Algeria Women vs Zambia Women | **1-1**（無賽前注） |
+| Spain vs Argentina | **0-0** |
+| Boston Legacy W vs Washington Spirit W | **1-2** |
+
+### 正式 PLAY
+
+| 注 | 賽果 | Track B | Assessment |
+|----|------|---------|------------|
+| Hammarby -1.5/-2 @1.96 | 4-0 | **W** | Strategy Held；Strong + 深讓需 ≥2 球，本場大勝 |
+| Hacken -0.5/-1 @1.82 | 客勝 2 | **W** | Strategy Held；Med–Strong 客 -0.75 勝 1 即 W，本場勝 2 |
+
+**本批正式：2W / 0L。** 與 Lillestrøm W 合計 `league-fav-0.75` 族正向樣本增加，仍 **n 小、不改 skill 硬規則**；NPL Knights L **繼續分開**。
+
+### PASS / lean 對照
+
+| 場次 | 原決策 | Track B | 評 |
+|------|--------|---------|-----|
+| Jaro–Turku 0-0 | PASS | [0] **P** | 近均和；PASS 合理 |
+| Spain–Argentina 0-0 | PASS | 西 0/-0.5 **L**；阿 0/+0.5 **W** | **避西和殺正確**；阿 cover-after-PASS **不回寫 PLAY** |
+| Boston–Spirit 1-2 | PASS | Spirit -0.75 勝 1 **W** | 弱 lean 中；**不回寫** 正式 PLAY |
+| Algeria–Zambia 1-1 | — | — | 僅登錄 |
+
+### 應注意 / watch
+
+1. **league-fav-0.75 / deep Strong（瑞典超）** — Hammarby W、Hacken W：外圍清晰時路徑有效；仍 Low 信心、小注。  
+2. **決賽 0/-0.5** — 0-0 再證和殺；light lean 決賽維持 PASS。  
+3. **cover-after-PASS** — 阿 0/+0.5、Spirit -0.75 事後中 ≠ 應升級預設。  
+4. **SKILL** — **不更新硬規則**（無重複失效；本批為正向）。
+
+### 正式 PLAY 粗計（本檔記憶 · 有 W/L）
+
+| 分支粗分 | 樣本 |
+|----------|------|
+| light/跨國 -0.25 | 里昂 L |
+| npl-aus home -0.75 | Knights L |
+| league-fav-0.75（歐聯主/客） | Lillestrøm W、Hacken W |
+| league-fav-deep Strong | Hammarby W |
+| **合計有結算正式** | **約 4W / 2L**（含里昂、Knights；分支勿混算單一 WR） |
 
 ### 本批對 SKILL 的結論
 
@@ -324,7 +377,7 @@
 
 > **里昂 L：** light lean + 高噪淺 -0.25，先驗 lean/賽事類型。  
 > **Knights L：** NPL 主 -0.75 正式 PLAY 方差大，watchlist、執行更保守；**n=1 不改 skill**。  
-> **Lillestrøm W：** 挪超 Medium 主 -0.75 命中；支持「穩定聯賽 + clear/medium lean」路徑，**仍 n=1、不自動放寬**。  
-> **歐陸 PASS 面：** 友誼/季前維持 PASS；light 0/-0.5 混合（HJK W / Oulu L）；cover-after-PASS 不回寫。  
-> **真五五：** 只以**外圍無 lean** 定義 PASS；圖上對稱 AH  alone 不是黑名單（牙山過嚴 lesson）。  
-> **Gangwon / 韓系** 仍待補。
+> **Lillestrøm / Hacken W：** 歐聯 -0.75 路徑（主/客）正向；**Hammarby 4-0** 深讓 Strong 命中。  
+> **07-19/20：** 正式 **2W**；決賽 0-0 驗證西 0/-0.5 和殺 PASS；Spirit cover-after-PASS 不回寫。  
+> **真五五：** 只以**外圍無 lean** 定義 PASS；圖上對稱 AH alone 不是黑名單。  
+> **SKILL 硬規則：** 仍不改；Gangwon 若有再補。
