@@ -620,7 +620,6 @@
 | pending | 芝加哥 vs 溫哥華 | 溫哥華 **0**（原 PLAY） | — | pending | level-ball-lean | **待補賽果** |
 | ~07-17 | 利昂 vs 阿特拿斯（Atlético Nacional） | 利昂 **-0.25** | **2-3** | **L** | shallow-fav-0.25-light-lean | 跨國；light lean；原 home 檔 |
 | 07-18 | Gold Coast Knights vs（NPL） | Knights **-0.5/-1** @1.84 | **1-2** | **L** | npl-aus / home-fav-0.75 | **watchlist**；NPL 正式極稀 |
-| pending | Gangwon **-0.5/-1** @2.01 | — | — | pending | K 聯賽 home-fav-0.75 | 待補賽果 |
 | 07-18 | Lillestrøm vs KFUM | Lillestrøm **-0.5/-1** @1.81 | **2-1** | **W** | league-fav-0.75（挪超） | Medium + 榜階梯；**勿與 NPL 合併** |
 | 07-19 | Hammarby vs Degerfors | Hammarby **-1.5/-2** @1.96 | **4-0** | **W** | league-fav-deep Strong | 深讓需 ≥2 球 |
 | 07-19 | Halmstads vs BK Häcken | Häcken **-0.5/-1** @1.82 | **0-2** 客 | **W** | league-fav-0.75 away Med–Strong | 客讓勝 1 即 W |
@@ -742,7 +741,7 @@
 
 ## 2026-07-18 澳洲批（正式 PLAY 失手 + PASS 面）
 
-**賽果來源：** `record/2026-07-18-2-result.png`（僅澳洲場；韓 K 聯賽 / 女足 / **Gangwon 正式 PLAY 待補**）。  
+**賽果來源：** `record/2026-07-18-2-result.png`（僅澳洲場；韓 K 聯賽 / 女足另批）。  
 **賽前卡：** `record/2026-07-18-2.png` 等。
 
 ### 正式 PLAY 結算
@@ -750,7 +749,8 @@
 | 正式注 | 賽果 | Track B | 分支 | 地位 |
 |--------|------|---------|------|------|
 | **Gold Coast Knights -0.5/-1 @1.84** | **1-2**（HT 1-0 後翻） | **L** | `npl-aus` / `home-fav-0.75` | **Observation（n=1）；watchlist** |
-| Gangwon -0.5/-1 @2.01 | （韓系結果圖仍缺） | pending | K 聯賽 home-fav-0.75 | 待補後再記 |
+
+> **訂正：** 曾誤將 **Gangwon -0.5/-1 @2.01** 列為「正式 PLAY pending」——**屬錯誤紀錄，已撤銷**，不進常駐表 A、不計正式注、不待補。
 
 **Knights 要點：**
 - 賽前案：主場、中檔熱、外圍 Medium、Track B「勝 1 = W」。  
@@ -779,7 +779,7 @@
 3. **0/-0.5 與和局** — 和 = 輸半 = L → light 主熱 0/-0.5 易殺。  
 4. **cover-after-PASS 紀律** — 事後會中 ≠ 應預設 PLAY。  
 5. **近均 / 對稱 AH** — 圖對稱 alone **不足以**稱真五五；先查外圍。  
-6. **韓系** — **Gangwon 待補**。
+6. **韓系** — 本結果圖無 K 聯賽正式 PLAY；**勿**再引用已撤銷的 Gangwon 誤記。
 
 ---
 
@@ -957,7 +957,8 @@
 > **07-19：** 正式 2W；決賽 0-0 驗證和殺 PASS。  
 > **07-20：** 正式 0；Kalmar 和 / Örgryte 深熱和殺 / Sporting 友誼大穿 → PASS 風控再驗證；cover-after-PASS 不回寫。  
 > **真五五：** 只以**外圍無 lean** 定義；圖對稱 AH alone 不是黑名單。  
-> **SKILL 硬規則：** 仍不改；Gangwon 有賽果再補表 A。
+> **SKILL 硬規則：** 仍不改。  
+> **訂正：** 表 A 曾誤列 Gangwon -0.75 pending — **已刪除**（非正式 PLAY）。
 
 ---
 
