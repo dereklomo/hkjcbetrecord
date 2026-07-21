@@ -3,9 +3,11 @@
 ## 給新 Agent 的摘要
 
 - **權威規則**：`.github/skills/defensive-betting-analysis/SKILL.md`（**贏盤率 Track B 為主**；資本/薄價/盃 soft 為輔）
-- **常駐帳本**（本檔下方）：**表 A 正式 PLAY 命中**、**表 B Track B 主讀盤總表** — 每批 append
-- 方法論：見 **Dual-Track（Primary = Track B）**；覆盤與 skill 衝突時以 skill 為準
-- 歷史批次敘事仍保留；早期「不改策略 / capital-first 語氣」僅作當時紀錄，執行以現行 skill 為準
+- **本檔 = 唯一 Grok 賽後覆盤主檔**（已合併原 `post-match-review-home.md` 的應注意點 / watchlist / 速查清單）
+- **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append
+- **賽前速查 / 分支提醒**：見文末「合併自 post-match-review-home」各節 + 速查清單
+- 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準
+- 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄
 
 ## 策略結論
 
@@ -616,9 +618,17 @@
 | 07-15 | 萊卡特 vs 半島電力 | 半島電力 **+1** | 2-1 萊勝 | **P**（客輸 1 走）或依實際結算 | dog-plus1 | 以原盤為準；常見走/半 |
 | 07-15（GPT 對照） | 全南天龍 vs 忠南牙山 | 牙山 **平手** | 3-4 客勝 | **W** | level-ball-lean | Grok 原 PASS 過嚴；**不**回寫 Grok 為 PLAY |
 | pending | 芝加哥 vs 溫哥華 | 溫哥華 **0**（原 PLAY） | — | pending | level-ball-lean | **待補賽果** |
+| ~07-17 | 利昂 vs 阿特拿斯（Atlético Nacional） | 利昂 **-0.25** | **2-3** | **L** | shallow-fav-0.25-light-lean | 跨國；light lean；原 home 檔 |
+| 07-18 | Gold Coast Knights vs（NPL） | Knights **-0.5/-1** @1.84 | **1-2** | **L** | npl-aus / home-fav-0.75 | **watchlist**；NPL 正式極稀 |
+| pending | Gangwon **-0.5/-1** @2.01 | — | — | pending | K 聯賽 home-fav-0.75 | 待補賽果 |
+| 07-18 | Lillestrøm vs KFUM | Lillestrøm **-0.5/-1** @1.81 | **2-1** | **W** | league-fav-0.75（挪超） | Medium + 榜階梯；**勿與 NPL 合併** |
+| 07-19 | Hammarby vs Degerfors | Hammarby **-1.5/-2** @1.96 | **4-0** | **W** | league-fav-deep Strong | 深讓需 ≥2 球 |
+| 07-19 | Halmstads vs BK Häcken | Häcken **-0.5/-1** @1.82 | **0-2** 客 | **W** | league-fav-0.75 away Med–Strong | 客讓勝 1 即 W |
 
-**正式 PLAY 粗 WR（有 W/L 結算者；P 剔除）：** 艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W → 約 **3W / 1L**（小樣本；半島/比利時多為 P）。  
-**注意：** 牙山列為 GPT 正式 PLAY 對照，不與 Grok 歷史 PASS 標籤混併。
+**正式 PLAY 粗 WR（有 W/L；P 剔除；分支勿混算單一 WR）：**  
+早期 dog/level：艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W；  
+近期：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W → 累計約 **6W / 3L**（小樣本；半島/比利時多為 P）。  
+**分支必須分開：** `shallow-fav-0.25-light-lean` ≠ `npl-aus home-fav-0.75` ≠ `league-fav-0.75`（穩定聯賽）。
 
 ---
 
@@ -649,6 +659,14 @@
 | 07-16 | 保地花高 2-1 山度士 | Botafogo **-0.25** | +1 | **W** | league-shallow-0.25 | PASS |
 | 07-16 | CRB 2-1 紐迪高 | CRB **-0.25** | +1 | **W** | league-shallow-0.25 | PASS |
 | 07-16 | 蒙特利爾 0-0 多倫多 | Montréal **-0.25** | 0 | **W**（和=半贏） | league-shallow-0.25 | PASS |
+| 07-20 | TPS Turku 1-3 Ilves | Ilves **[0]** | +2 客 | **W** | near-even-euro / live-PASS | PASS（賽前近五五） |
+| 07-20 | 同上 | TPS **[0]** | −2 | **L** | near-even-euro | PASS |
+| 07-20 | Mariehamn 0-2 Lahti | Lahti **-1** | +2 | **W** | incomplete-away-fav | PASS incomplete |
+| 07-20 | 同上 | Mariehamn **+1** | −2 | **L** | incomplete-dog-plus1 | PASS incomplete |
+| 07-20 | Kalmar 2-2 Malmö | 雙方 **[0]** | 0 | **P** | near-even-light | PASS |
+| 07-20 | Örgryte 0-0 Djurgården | Djurgården **-1.5/-2 類** | 0 | **L** | incomplete-deep-fav | PASS incomplete |
+| 07-20 | 同上 | Örgryte **+1.5/+2 類** | 0 | **W** | incomplete-dog-deep | PASS incomplete |
+| 07-20 | Sporting 7-0 Strasbourg | Sporting **-1** | +7 | **W** | clb-friendly-deep | PASS 友誼；cover-after-PASS |
 
 ### 分支 WR 速記（累計粗算 · 更新用）
 
@@ -656,21 +674,397 @@
 |------|--------|----------------|
 | **cup-fav-0.75** | 穿（伊、競賽會）+ 殺（基輔、慶南、連菲類）→ **mixed** | 外圍 **強/中/輕** 分檔；不硬拒、不預設 PLAY |
 | **cup-fav-1.0** | 波希 L、比奧格特 L | 對 **-1** 更嚴；需更強外圍檔 |
-| **league-shallow-0.25** | 保地 W、CRB W、蒙特利爾 W | WR 友好；**不得僅因薄價否決**清晰外圍 lean |
-| **league-fav-0.75** | 華拉倫加 W（n 小） | 聯賽強熱路徑可寫 WR lean；n 不足不寫死規則 |
+| **league-shallow-0.25** | 保地 W、CRB W、蒙特利爾 W；**里昂 light 跨國 L** | clear 聯賽 lean 仍友好；**light+跨國勿套 soft band** |
+| **league-fav-0.75** | 華拉倫加 W；**Lillestrøm W、Hacken W**（正式） | 穩定聯賽 Medium 可評估正式；**≠ NPL** |
+| **league-fav-deep** | **Hammarby -1.5/-2 W** | Strong + 球數門檻可成立；n 小 |
 | **level-ball-lean** | 牙山 W | 外圍 lean + 平手可跟；真五五仍 PASS |
 | **2nd-leg** | 斯利納單場 W 仍出局 | 推斷必須加總比分 |
-| **npl-aus / aus-semi** | +0.25 失、+1 類較穩；n 小 | 推理 **Low**；prefer 深緩衝 |
+| **npl-aus / aus-semi** | 羅奇 +0.25 L；**Knights 主 -0.75 正式 L** | **watchlist**；正式 PLAY 極稀；Low |
 
 ### 對未開賽的用法（WR-first）
 
 - **盃賽熱門 -0.75**：外圍力度分檔 + 本分支 mixed + 輪換/回合 → `WR-inferred`；soft 降信心，非自動硬 PASS。  
-- **聯賽 -0.25**：B 帳偏 W + 外圍 clear lean → 主寫 WR case；薄價只標 auxiliary。  
-- **NPL 半一**：帳近空 → **Low**，Track A 保守。
+- **聯賽 -0.25**：B 帳偏 W + 外圍 **clear** lean → 主寫 WR case；薄價只標 auxiliary；**light / 跨國 → PASS 或 Low**。  
+- **NPL 半一**：Knights watch → **Low**，正式極稀，Track A 保守。  
+- **穩定聯賽 -0.75 Medium**（~1.60–1.70 + 榜階梯）：可評估小注 PLAY（Lillestrøm 型）；勿與 NPL 混。
 
-### 對 SKILL.md（2026-07-17 本輪）
+### 對 SKILL.md
 
-- Dual Track：**B primary / A auxiliary**（覆盤已對齊）。  
-- 新增：**League Shallow `-0.25` soft band**（禁薄價 alone 否決）。  
-- 新增：盃 **external gap tier**（Strong / Medium / Light）。  
-- 常駐表 A/B：本檔維護。
+- Dual Track：**B primary / A auxiliary**；League Shallow `-0.25`；盃 gap tier；真五五 = **外圍無 lean**（非圖 AH 對稱 alone）。  
+- 常駐表 A/B + 分支 watchlist / 速查清單：**本檔維護**（原 home 已合併）。  
+- 現階段 **不改 skill 硬規則**（n 未達 formal review）；見下文「是否需要調整 SKILL」。
+
+---
+
+# 合併自 post-match-review-home.md
+
+> 原 `post-match-review-home.md` 全文併入本節（2026-07 合併）。  
+> 用途：賽後應注意點 / 分支提醒 / 賽前速查；**正式命中以常駐表 A 為準**。  
+> 結算：**贏半=W、輸半=L**；走盤不進 WR 分母。  
+> 調整門檻：1→Observation · 2→Watchlist · 3→Formal review · 5+→local tweak。
+
+## 里昂 -0.25（正式 PLAY · Observation L）
+
+| 項目 | 內容 |
+|------|------|
+| 場次 | 里昂（利昂 / Club León）vs 阿特拿斯（**Atlético Nacional**，非 Atlas） |
+| 正式注 | **里昂 -0.25（讓平半）** |
+| 參考盤口 | `1.97 利昂 1.82 讓平半 1.98 阿特拿斯` |
+| 賽果 | **2-3**（主負 1 球） |
+| Track B | **L**（負 1 → 全輸） |
+| 分支標籤 | `shallow-fav-0.25-light-lean` |
+| 樣本地位 | **Observation（n=1）** — 不改 skill 硬規則 |
+
+### 結算
+
+- 里昂 -0.25：主勝 → W；**和 → 贏半 = W**；**主負 → L**
+- 本場走 **主負 1** → 現金全輸、WR 記 **L**
+- 不是「和局半輸」型；是淺讓熱門最差路徑（直接落敗）
+
+### 應注意點（-0.25 / light lean）
+
+1. **Light lean 不要當清晰外圍邊** — 主勝約 1.95–2.05 屬 light；`league-shallow-0.25` 要 clear lean + 乾淨結構。  
+2. **先鎖賽事類型** — 跨國/盃 ≠ 自動套國內聯賽 soft band。  
+3. **盤口對稱** — 讓/受近對稱 = 優勢極薄；對稱 + light → PASS 或 Low。  
+4. **分支勿混** — 本場 L 只警告 light+高噪，不推翻乾淨聯賽 -0.25。  
+5. **n=1 紀律** — 不反推「應買客」。
+
+### 賽前速查清單（-0.25 熱門）
+
+1. [ ] 隊名、主客、**聯賽 vs 盃/跨國** 已鎖定  
+2. [ ] 外圍 1X2 是否 **clear lean**（~1.97 當 light）  
+3. [ ] 讓/受是否近對稱  
+4. [ ] 是否誤用「和也算 W」忽略落敗 = L  
+5. [ ] 基本面支持「不敗為主」  
+6. [ ] 分支標籤正確  
+
+---
+
+## 2026-07-18 澳洲批（正式 PLAY 失手 + PASS 面）
+
+**賽果來源：** `record/2026-07-18-2-result.png`（僅澳洲場；韓 K 聯賽 / 女足 / **Gangwon 正式 PLAY 待補**）。  
+**賽前卡：** `record/2026-07-18-2.png` 等。
+
+### 正式 PLAY 結算
+
+| 正式注 | 賽果 | Track B | 分支 | 地位 |
+|--------|------|---------|------|------|
+| **Gold Coast Knights -0.5/-1 @1.84** | **1-2**（HT 1-0 後翻） | **L** | `npl-aus` / `home-fav-0.75` | **Observation（n=1）；watchlist** |
+| Gangwon -0.5/-1 @2.01 | （韓系結果圖仍缺） | pending | K 聯賽 home-fav-0.75 | 待補後再記 |
+
+**Knights 要點：**
+- 賽前案：主場、中檔熱、外圍 Medium、Track B「勝 1 = W」。  
+- 實際：半場領先仍終場落敗 → 走唯一 **L 路徑**。  
+- **不是結算/映射錯誤**；是 **NPL 單場方差 + 正式出手偏進**。  
+- skill 已寫 NPL 推理 **Low、Track A 保守** — 執行層應更貼齊，**不是缺全新硬規則**。
+
+### PASS 面（風控有效）
+
+| 場次 | 賽果 | 原決策 | 事後 Track B 提示 | 評 |
+|------|------|--------|-------------------|-----|
+| Sutherland vs Sydney Olympic | 1-1 | PASS | 主 0/-0.5 和 = **L**；客 0/+0.5 和 = **W** | PASS 避主熱 **正確**；客事後中 **不回寫 PLAY** |
+| Wollongong vs Sth Districts | 2-3 | PASS（1.88 對稱） | 真五五（若外圍無 lean） | coin-flip PASS **合理** |
+| Caroline Springs vs City B | 1-0 | PASS | 主 [0] 會 **W** | cover-after-PASS；B 隊噪音 → **不升級** |
+| St George vs Rockdale | 1-6 | PASS | 客 -0.75 大 **W**；主 +0.75 **L** | 避錯 dog **正確**；強客 cover **不改預設** |
+| Lions vs GCU | 0-1 | PASS | 客 -1.5/-2 勝 1 = **L**；主 +1.5/+2 負 1 = **W** | 深熱小勝殺盤；PASS 深熱 **正確** |
+| Avondale vs St Albans | 1-1 | PASS | 主 -1/-1.5 和 = **L** | 深讓強熱未贏；PASS **正確** |
+| Altona vs Heidelberg | 0-0 | PASS | 客 -0.5/-1 和 = **L** | 客讓和殺；PASS **正確** |
+| Moreton vs Peninsula | 2-2 | PASS | 主 0/+0.5 和 = **W** | PASS 合理；主路徑事後中 |
+| Rochedale vs Brisbane City | 2-3 | PASS | 客 -0.5/-1 勝 1 = **W** | cover-after-PASS；light lean 原 PASS **不回寫** |
+
+### 本批應注意點
+
+1. **NPL 主 -0.5/-1（-0.75）正式 PLAY** — Knights **L** → watchlist；信心上限 **Low**；寧可 WR lean 不升正式；**不**因 n=1 寫 Force-PASS。  
+2. **NPL 深熱 -1.25 / -1.5/-2** — 小勝殺盤；**不追 NPL 深讓熱門**。  
+3. **0/-0.5 與和局** — 和 = 輸半 = L → light 主熱 0/-0.5 易殺。  
+4. **cover-after-PASS 紀律** — 事後會中 ≠ 應預設 PLAY。  
+5. **近均 / 對稱 AH** — 圖對稱 alone **不足以**稱真五五；先查外圍。  
+6. **韓系** — **Gangwon 待補**。
+
+---
+
+## 2026-07-18 歐陸晚場批
+
+**賽前卡：** `record/2026-07-18-3.png`  
+**賽果來源：** `record/2026-07-18-2-result-2.png`（含 HJK 2-1）
+
+### 正式 PLAY 結算
+
+| 正式注 | 賽果 | Track B | 分支 | 地位 |
+|--------|------|---------|------|------|
+| **Lillestrøm -0.5/-1 @1.81** | **2-1** | **W** | `league-fav-0.75` / Eliteserien | **Observation W（n=1）** |
+
+**Lillestrøm 要點：** 外圍約 1.62–1.68 Medium、榜階梯、勝 1 = W → 命中。  
+與 **Knights 1-2 L** 對照：同為主 -0.75，但 **挪超 ≠ NPL**；**分支分開計**。
+
+### 全場 Track B 登錄（有賽前盤者）
+
+| 場次 | 賽果 | 原決策 | 代表盤 Track B | 評 |
+|------|------|--------|----------------|-----|
+| HJK vs VPS | **2-1** | PASS | 主 0/-0.5 → **W**；客 0/+0.5 → **L** | cover-after-PASS；不升級 |
+| Ham-Kam vs Tromsø | **1-4** | PASS | 客 0/-0.5 → **W** | 不回寫應 PLAY 客 |
+| Luzern vs Sint-Truiden | **1-2** | PASS（CLB 友誼） | 主 -0.5/-1 → **L** | **PASS 友誼正確** |
+| Dundee vs Everton | **0-4** | PASS（季前） | 客 -1/-1.5 → **W** | 仍不 chase 友誼/季前 |
+| AIK vs GAIS | **2-0** | PASS（近均） | 主 0/-0.5 → **W** | 近均 PASS **正確** |
+| AC Oulu vs Gnistan | **0-2** | PASS | 主 0/-0.5 → **L** | PASS **避 L 正確** |
+| SJK vs KuPS | **0-2** | PASS | 客 0/-0.5 → **W** | cover-after-PASS |
+| **Lillestrøm vs KFUM** | **2-1** | **PLAY** | 主 -0.5/-1 → **W** | **正式命中** |
+| Start vs Rosenborg | **0-3** | PASS | 客 0/-0.5 → **W** | cover-after-PASS |
+| Kristiansund vs Sarpsborg | **0-0** | （卡外） | — | 無賽前決策 |
+
+### 本批應注意點 / Watchlist
+
+1. **`league-fav-0.75`（穩定聯賽主 -0.5/-1）** — Lillestrøm W；n 小；**非**凡主 -0.75 皆 PLAY；與 NPL 分開。  
+2. **Light 主 0/-0.5** — HJK W（cover）vs Oulu L → **混合**；light 不硬上。  
+3. **客 0/-0.5 輕熱** — 事後可爆；和 = L → **罕正式 PLAY**。  
+4. **友誼 / 季前** — 一殺一穿 → **維持預設 PASS**。  
+5. **近均** — AIK 驗證任邊可翻。  
+6. **cover-after-PASS** — 再強調。
+
+### 賽前速查清單（北歐聯賽 / 本批）
+
+1. [ ] 友誼 / CLB / 季前 → **PASS**  
+2. [ ] 主 0/-0.5 + light lean（~1.9）→ **PASS 或 Low**  
+3. [ ] 主 -0.5/-1 + **Medium** lean（~1.60–1.70）+ 榜階梯 → 可評估正式 PLAY（Lillestrøm 型）；小注  
+4. [ ] 客 0/-0.5 輕熱 → 可 WR-inferred，**罕正式 PLAY**  
+5. [ ] 近均：先查**外圍**；無 lean → PASS；有 lean → 評估 lean 邊  
+6. [ ] 勿把 NPL Knights L 與挪超 Lillestrøm W 併成同一分支 n  
+
+---
+
+## 2026-07-19/20 賽後批（正式 2W + 決賽/女足 PASS）
+
+**賽前檔：** `record/pre-match-2026-07-19.md`、`record/pre-match-2026-07-20.md`
+
+| 場次 | 賽果 |
+|------|------|
+| Halmstads vs Hacken | **0-2** |
+| Hammarby vs Degerfors | **4-0** |
+| Jaro vs Inter Turku | **0-0** |
+| Algeria Women vs Zambia Women | **1-1**（無賽前注） |
+| Spain vs Argentina | **0-0** |
+| Boston Legacy W vs Washington Spirit W | **1-2** |
+
+### 正式 PLAY
+
+| 注 | 賽果 | Track B | Assessment |
+|----|------|---------|------------|
+| Hammarby -1.5/-2 @1.96 | 4-0 | **W** | Strategy Held；Strong + 深讓需 ≥2 球 |
+| Hacken -0.5/-1 @1.82 | 客勝 2 | **W** | Strategy Held；Med–Strong 客 -0.75 |
+
+**本批正式：2W / 0L。** 與 Lillestrøm 合計 `league-fav-0.75` 族正向增加；仍 **n 小、不改 skill**；NPL Knights L **繼續分開**。
+
+### PASS / lean 對照
+
+| 場次 | 原決策 | Track B | 評 |
+|------|--------|---------|-----|
+| Jaro–Turku 0-0 | PASS | [0] **P** | 近均和；PASS 合理 |
+| Spain–Argentina 0-0 | PASS | 西 0/-0.5 **L**；阿 0/+0.5 **W** | **避西和殺正確**；阿 cover **不回寫** |
+| Boston–Spirit 1-2 | PASS | Spirit -0.75 勝 1 **W** | **不回寫** 正式 PLAY |
+| Algeria–Zambia 1-1 | — | — | 僅登錄 |
+
+### 應注意 / watch
+
+1. **league-fav-0.75 / deep Strong（瑞典超）** — Hammarby W、Hacken W：外圍清晰時路徑有效；仍 Low、小注。  
+2. **決賽 0/-0.5** — 0-0 再證和殺；light 決賽維持 PASS。  
+3. **cover-after-PASS** — 阿 / Spirit 事後中 ≠ 升級預設。  
+4. **SKILL** — **不更新硬規則**。
+
+---
+
+## 賽前速查清單（NPL / aus-semi）
+
+在考慮 **澳洲 NPL 正式 PLAY** 前：
+
+1. [ ] 分支標 `npl-aus`（勿與歐洲聯賽 -0.75 混樣）  
+2. [ ] 推理信心是否標 **Low**；Track A 是否偏保守  
+3. [ ] 主 -0.75：是否僅 Medium lean → **傾向不正式 PLAY**（Knights watch）  
+4. [ ] 深熱 ≤-1.25 / -1.5 段：小勝 = L → 預設 **PASS**  
+5. [ ] 淺 dog +0.25~+0.75：負 1 = L → 預設 **PASS**（羅奇類）  
+6. [ ] 圖對稱 AH → 先查外圍；**僅外圍無 lean** 才真五五 PASS  
+7. [ ] B 隊 / 青年 → **PASS** 或極 Low  
+8. [ ] 是否在用 cover-after-PASS 事後合理化  
+
+**存疑 → PASS。NPL 正式 PLAY 應極稀。**
+
+---
+
+## 真五五 / coin-flip 黑名單 — 往績審視（外圍為主）
+
+### 結論（策略）
+
+| 說法 | 是否合理 |
+|------|----------|
+| **外圍無可用 lean → PASS** | **合理**，與 WR-first 一致 |
+| **圖上 AH 對稱（如 1.88/1.88）= 真五五黑名單** | **不合理（過粗）** |
+| **平手/近均 + 外圍有 lean → 可評估 lean 邊** | **合理**（牙山 / level-ball-lean） |
+
+### 正確決策樹（強制）
+
+```text
+1) 先查外圍 1X2 / sharp AH（主）
+2) 有 clear / medium lean？
+   → 是：選 WR 路徑最好的可執行盤；圖價對稱只影響 execution/信心
+   → 否：真五五 / no-lean → PASS（不是因為「兩邊都是 1.88」）
+3) 僅有圖上 AH 對稱、外圍未查到？
+   → Incomplete → PASS 或降級，標「外圍未確認」
+   → 禁止寫「真五五黑名單」除非外圍已確認無 lean
+```
+
+### 往績樣本
+
+| 場次 | 事前 | 外圍 | 結果 | 含義 |
+|------|------|------|------|------|
+| **全南 vs 牙山** | Grok coin-flip PASS 過嚴 | 略偏牙山 | 3-4 客；GPT 牙山 0 **W** | 外圍 lean 不可被黑名單壓掉 |
+| Wollongong 1.88/1.88 | PASS | 需外圍 | 2-3 | 圖對稱 alone 非定義 |
+| AIK vs GAIS | PASS 近均 | 近均 | 2-0 主 | 近均猜邊；PASS 合理 |
+| 維京–史達蘭 | PASS 近均 | 近均 | 2-2 | 無 lean 則無 edge |
+
+### 執行禁令
+
+- 禁止：只看圖 AH 等價 → 「真五五黑名單」。  
+- 禁止：外圍略 lean 仍 coin-flip 一刀切（牙山過嚴）。  
+- 禁止：cover-after-PASS 回寫取消所有近均 PASS。  
+- 必須：寫 **Sources Used** 外圍；無外圍則 incomplete。
+
+---
+
+## 是否需要調整 SKILL？（合併結論）
+
+### 結論：**現階段不需要改 SKILL 硬規則**
+
+| 依據 | 說明 |
+|------|------|
+| 調整門檻 | 1 結果 = observation only |
+| Knights L / 里昂 L | 各分支 n=1；未到 formal review |
+| Lillestrøm / Hammarby / Hacken W | 正向 obs；不寫「凡 -0.75 皆 PLAY」 |
+| 既有 skill 已覆蓋 | npl-aus Low、真五五外圍定義、light -0.25、友誼 PASS |
+| 問題性質 | 多為**執行層**（Low 升正式、light 當 clear） |
+
+### 明確不要做
+
+- 不要因 Knights 禁所有 -0.75  
+- 不要因 Rockdale 1-6 放寬 NPL 客讓預設  
+- 不要歷史 PASS 回寫成 PLAY  
+- 不要因 Everton 穿盤 chase 友誼/季前  
+- 不要因 HJK 放寬 light 0/-0.5（Oulu 反例）
+
+### 一句話（累計）
+
+> **里昂 L：** light + 高噪淺 -0.25，先驗 lean/賽事類型。  
+> **Knights L：** NPL 主 -0.75 watchlist；n=1 不改 skill。  
+> **Lillestrøm / Hacken W：** 歐聯 -0.75 正向；**Hammarby** 深讓 Strong 命中。  
+> **07-19：** 正式 2W；決賽 0-0 驗證和殺 PASS。  
+> **07-20：** 正式 0；Kalmar 和 / Örgryte 深熱和殺 / Sporting 友誼大穿 → PASS 風控再驗證；cover-after-PASS 不回寫。  
+> **真五五：** 只以**外圍無 lean** 定義；圖對稱 AH alone 不是黑名單。  
+> **SKILL 硬規則：** 仍不改；Gangwon 有賽果再補表 A。
+
+---
+
+## 2026-07-20 賽後批（PASS 風控 · 正式 PLAY 0）
+
+**賽前檔：** `record/pre-match-2026-07-20.md`  
+**用戶賽果（5 場）：**
+
+| 場次 | 賽果 |
+|------|------|
+| TPS Turku vs Ilves | **1-3** |
+| IFK Mariehamn vs Lahti | **0-2** |
+| Kalmar FF vs Malmö FF | **2-2** |
+| Örgryte vs Djurgården | **0-0** |
+| Sporting CP vs Strasbourg | **7-0** |
+
+**正式 PLAY：0** — 本批僅 PASS 面校正；**不改 skill 硬規則**。
+
+### 逐場檢討
+
+#### TPS Turku 1-3 Ilves
+
+| 項目 | 內容 |
+|------|------|
+| Original Decision | **PASS**（滾球 0-0；賽前 Pinnacle 近五五 ~2.63/3.58/2.56 **無 usable lean**） |
+| Track B | 主 [0] → **L**；客 [0] → **W** |
+| Assessment | **Strategy Held** |
+| Sample Status | Observation |
+
+- 賽前真近五五 PASS 後客勝 → 屬任邊可開的方差。  
+- **cover-after-PASS** 客 [0] **不**回寫應 PLAY。  
+- 滾球不正式 PLAY 再確認。
+
+#### IFK Mariehamn 0-2 Lahti
+
+| 項目 | 內容 |
+|------|------|
+| Original Decision | **PASS incomplete**（外圍未穩） |
+| Track B | Mariehamn **+1** 負 2 → **L**；Lahti **-1** 勝 2 → **W** |
+| Assessment | **Strategy Held** |
+| Sample Status | Observation |
+
+- 客 -1 事後全贏屬 cover-after-PASS；原拒投因 **incomplete**，非站錯邊可升級。  
+- **不**因客穿盤建立「芬超客 -1 預設 PLAY」。
+
+#### Kalmar FF 2-2 Malmö FF
+
+| 項目 | 內容 |
+|------|------|
+| Original Decision | **PASS**（外圍近均 / light 客；圖 [0] 1.92/1.88） |
+| Track B | 雙方 [0] 和 → **P**（走盤，剔除 WR 分母） |
+| Assessment | **Strategy Held** |
+| Sample Status | Observation — 再驗證「無 usable WR edge → PASS」 |
+
+- light 客 Malmö 未取勝；和局使 [0] 走盤 → 正式出手亦無 W。  
+- 極弱 WR lean Malmö [0] **正確未升級**。  
+- 真五五定義：以**外圍近均**為準，非僅圖對稱。
+
+#### Örgryte 0-0 Djurgården
+
+| 項目 | 內容 |
+|------|------|
+| Original Decision | **PASS incomplete**（外圍未穩；結構客常深熱） |
+| Track B | 客 **-1.5/-2 類** 和 → **L**；主 **+1.5/+2 類** 和 → **W** |
+| Assessment | **Strategy Held** |
+| Sample Status | Observation — 深熱和殺 |
+
+- 若硬追客深讓 → 全輸。  
+- 主深受讓路徑事後 W → **弱觀察級**，**不**升級預設 dog 深緩衝 PLAY（incomplete + 缺 Strong 1X2）。  
+- 與「不複製 Hammarby 深讓除非 Strong 外圍」一致。
+
+#### Sporting CP 7-0 Strasbourg
+
+| 項目 | 內容 |
+|------|------|
+| Original Decision | **PASS（CLB 友誼）**；圖主 -1 @1.83 |
+| Track B | Sporting **-1** 大勝 → **W** |
+| Assessment | **Strategy Held** |
+| Sample Status | Observation — **cover-after-PASS 友誼** |
+
+- 與 Everton 季前大勝同型：事後深熱穿盤 **≠** 應 chase 友誼/CLB。  
+- Luzern 友誼主 -0.75 **L** 同分支反面 → 方差大 → **維持預設 PASS**。  
+- **禁止**因 7-0 放寬友誼讓球。
+
+### 盤口結算速查（風控）
+
+| 場次 | 原 PASS 避開 | 賽果含義 |
+|------|--------------|----------|
+| TPS–Ilves | 近五五 / 滾球 | 客勝 → 猜邊方差；PASS 合理 |
+| Mariehamn–Lahti | incomplete | 客 -1 穿 → cover-after-PASS |
+| Kalmar–Malmö | 近均 light | 和 → [0] P；無 edge 成立 |
+| Örgryte–Djurgården | incomplete 深熱 | 和殺客深讓 → 拒深正確 |
+| Sporting–Strasbourg | **友誼** | 主 -1 大穿 → **仍不 chase 友誼** |
+
+### 本批新增紀錄
+
+1. **近均 / no-lean PASS** — Kalmar 2-2 再證；TPS 客勝不推翻「無 lean 不硬上」。  
+2. **incomplete → PASS** — Mariehamn、Örgryte 紀律正確；事後客/-深讓路徑不回寫。  
+3. **友誼 / CLB 預設 PASS** — Sporting 7-0 **最強 cover-after-PASS 壓力** 仍維持不 chase（與 home 歐陸批 Everton/Luzern 一致）。  
+4. **正式 PLAY** — 本卡 0；**表 A 無新列**。  
+5. **SKILL** — **不修改硬規則**（無正式注失效；PASS 面驗證為主）。
+
+### 對 SKILL.md
+
+| 動作 | 是否 |
+|------|------|
+| 改 skill 硬規則 | **否** |
+| 因 Sporting 7-0 放寬友誼 | **否** |
+| 因 Lahti / Ilves 升級 incomplete 客讓 | **否** |
+| append 表 B + 本節 | **是** |
