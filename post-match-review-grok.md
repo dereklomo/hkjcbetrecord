@@ -5,9 +5,84 @@
 - **權威規則**：`.github/skills/defensive-betting-analysis/SKILL.md`（**贏盤率 Track B 為主**；資本/薄價/盃 soft 為輔）
 - **本檔 = 唯一 Grok 賽後覆盤主檔**（已合併原 `post-match-review-home.md` 的應注意點 / watchlist / 速查清單）
 - **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append
-- **賽前速查 / 分支提醒**：見文末「合併自 post-match-review-home」各節 + 速查清單
+- **賽前分析 Checklist（主）**：見下節 **「賽前分析 Checklist」** — 含 **lean→正式 PLAY 升格**（執行層；**不改 skill 硬規則**）
+- 分支速查：文末 NPL / 北歐 / -0.25 清單仍有效
 - 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準
 - 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄
+
+---
+
+## 賽前分析 Checklist（執行層 · 2026-07-21 起）
+
+> **目的：** 避免「合理 PASS 變無腦全 PASS」——在 **穩定聯賽 + 清晰 WR 路徑** 把 Low lean **升一格**成小注正式 PLAY。  
+> **不**改 skill 硬規則；**不**為「每卡至少一腳」硬找注。  
+> cover-after-PASS **永不**回寫。
+
+### 0. 每場固定順序（先做完再決策）
+
+1. [ ] **身份鎖**（隊名、主客、聯賽 vs 盃/跨國/首回、腿次）  
+2. [ ] **外圍 1X2/AH**（命名 Sources Used；無外圍 → incomplete → 傾向 PASS）  
+3. [ ] **力度分檔**：Strong / Medium / Light / 近均無 lean  
+4. [ ] **Track B 路徑**：該盤哪些比分是 W / L / P  
+5. [ ] **分支標籤** + self cross-check（2–5 可比；低相似不硬 PLAY）  
+6. [ ] **決策分層**（三選一，須寫明）：  
+   - **正式 PLAY**（進表 A / 可下注）  
+   - **WR lean only**（方向；**不**下注）  
+   - **PASS**（無 usable edge 或 hard/ soft 擋下）  
+
+### 1. 正式 PLAY 升格門檻（須**全部**勾選）
+
+僅當下列 **全部** 成立，才允許 **Confidence Low（或 Low–Medium）正式 PLAY · 小注**：
+
+1. [ ] **穩定國內聯賽**（或同等結構）：非歐戰資格首回、非友誼/CLB/季前、非 NPL/澳盃跨級、非決賽 light  
+2. [ ] 外圍 gap **≥ Medium**（主/客勝大約 **≤1.70**，或同等清晰客熱；**不是** ~1.90–2.10 light）  
+3. [ ] 可執行盤 **Track B 友好**，例如：  
+   - 熱門 **-0.75**（勝 1 = W），或  
+   - 熱門 **-0.25** 且 lean 為 **clear**（約 ≤1.70 檔；**light 不升格**），或  
+   - 深讓僅當 **Strong** 且球數門檻可達（Hammarby 型；**罕見**）  
+4. [ ] 分支 cross-check：**非**淨殺歷史；NPL / light-0.25 / 友誼 **不**借歐聯命中洗白  
+5. [ ] 輸出寫清：`Decision: PLAY` + WR case + Sources + Confidence Low + 小注  
+
+**範型（可升格）：** Lillestrøm / Hacken 型 — 穩定聯賽 + Medium + -0.75。  
+**不要升格成「只寫 lean」：** 上表全勾卻只寫 WR lean = **執行過嚴**（本 checklist 要修正的點）。
+
+### 2. 維持 PASS / 最多 lean only（勾任一 → 不正式 PLAY）
+
+1. [ ] 友誼 / CLB / 季前  
+2. [ ] 歐戰資格 **首回**（含 Medium 主 -0.75；如 Graz 型 → lean only 或 PASS）  
+3. [ ] 外圍 **Light**（主勝約 **≥1.90**）+ 淺讓 -0.25 / 0/-0.5（里昂）  
+4. [ ] 深讓 **-2 / -2.5** 或勝 1=P 的 **-1** 而無更淺可執行盤  
+5. [ ] NPL / 澳盃 / 半職業：主 -0.75、薄 dog +0.25~+0.75（Knights / 羅奇）  
+6. [ ] 真近均 / 無 lean / incomplete 外圍  
+7. [ ] 1X2 與 AH 方向打架且無 clean edge  
+8. [ ] 僅為「本卡還沒出手」而找注  
+
+### 3. 決策速查表
+
+| 情境 | 建議輸出 |
+|------|----------|
+| 穩定聯賽 + Medium≤1.70 + -0.75 + cross-check OK | **正式 PLAY Low**（小注） |
+| 穩定聯賽 + **clear** lean + -0.25 | **可**正式 PLAY Low；light → **PASS** |
+| 歐戰首回 + Medium -0.75 | **PASS** 或 **WR lean only** |
+| Strong 獨贏 + 深讓 -2 | **PASS**（除非球數路徑極清晰且自願標 rare） |
+| NPL / 澳盃 主 -0.75 或薄 dog | **PASS**（正式極稀） |
+| 近均 / incomplete / 友誼 | **PASS** |
+| 有方向但未達 §1 全勾 | **WR lean only**（明示不下注） |
+
+### 4. 批次結束自檢（防「過多 PASS」）
+
+1. [ ] 本卡是否存在 **§1 全勾** 卻被寫成 PASS / 僅 lean？→ 若有，**改回正式 PLAY Low**  
+2. [ ] 正式 PLAY 是否誤含 §2 項？→ 降回 PASS / lean  
+3. [ ] 是否用 cover-after-PASS 或「想多打」升格？→ 禁止  
+4. [ ] 表 A / 賽前檔：正式 PLAY 與 lean 已分開列  
+
+### 5. 與 skill 的關係
+
+- Checklist = **執行提醒**；skill 硬門（身份、錯場、半贏=W 等）不變。  
+- 升格 **不**等於放寬 NPL / 友誼 / light / 歐戰首回。  
+- 若 §1 型正式 PLAY 連續失效達 formal review 門檻，再議 skill——**單場不改**。
+
+---
 
 ## 策略結論
 
@@ -730,12 +805,15 @@
 
 ### 賽前速查清單（-0.25 熱門）
 
+> 與文首 **「賽前分析 Checklist」§1–2** 並用。
+
 1. [ ] 隊名、主客、**聯賽 vs 盃/跨國** 已鎖定  
-2. [ ] 外圍 1X2 是否 **clear lean**（~1.97 當 light）  
-3. [ ] 讓/受是否近對稱  
-4. [ ] 是否誤用「和也算 W」忽略落敗 = L  
-5. [ ] 基本面支持「不敗為主」  
-6. [ ] 分支標籤正確  
+2. [ ] 外圍分檔：**clear**（約 ≤1.70）vs **light**（~1.90–2.10；~1.97 當 light）  
+3. [ ] **clear + 穩定聯賽 + -0.25** → 可按 §1 **升格正式 PLAY Low**；**light → PASS**（里昂）  
+4. [ ] 讓/受是否近對稱（對稱 + light → PASS）  
+5. [ ] 是否誤用「和也算 W」忽略落敗 = L  
+6. [ ] 基本面支持「不敗為主」  
+7. [ ] 分支標籤正確；跨國/盃 **不**套國內 soft band 升格
 
 ---
 
@@ -823,12 +901,15 @@
 
 ### 賽前速查清單（北歐聯賽 / 本批）
 
+> 與文首 **「賽前分析 Checklist」§1** 並用：達標應 **正式 PLAY**，勿停在 lean。
+
 1. [ ] 友誼 / CLB / 季前 → **PASS**  
-2. [ ] 主 0/-0.5 + light lean（~1.9）→ **PASS 或 Low**  
-3. [ ] 主 -0.5/-1 + **Medium** lean（~1.60–1.70）+ 榜階梯 → 可評估正式 PLAY（Lillestrøm 型）；小注  
-4. [ ] 客 0/-0.5 輕熱 → 可 WR-inferred，**罕正式 PLAY**  
-5. [ ] 近均：先查**外圍**；無 lean → PASS；有 lean → 評估 lean 邊  
+2. [ ] 主 0/-0.5 + light lean（~1.9）→ **PASS**（不升格）  
+3. [ ] 主 -0.5/-1 + **Medium** lean（~1.60–1.70）+ 穩定聯賽 + 榜階梯 → **正式 PLAY Low 小注**（Lillestrøm / Hacken 型；§1 全勾）  
+4. [ ] 客 -0.5/-1 + Med–Strong + 穩定聯賽 → 同 §1 可 **正式 PLAY Low**；客 0/-0.5 輕熱 → 多 **lean only**  
+5. [ ] 近均：先查**外圍**；無 lean → PASS  
 6. [ ] 勿把 NPL Knights L 與挪超 Lillestrøm W 併成同一分支 n  
+7. [ ] 歐戰資格 **首回** Medium -0.75 → **不**套本條升格（lean only / PASS）
 
 ---
 
@@ -874,9 +955,9 @@
 
 ## 賽前速查清單（NPL / aus-semi）
 
-在考慮 **澳洲 NPL 正式 PLAY** 前：
+在考慮 **澳洲 NPL 正式 PLAY** 前（**不**適用文首 §1 聯賽升格）：
 
-1. [ ] 分支標 `npl-aus`（勿與歐洲聯賽 -0.75 混樣）  
+1. [ ] 分支標 `npl-aus`（勿與歐洲聯賽 -0.75 混樣；**不可**因 Lillestrøm W 升格 NPL）  
 2. [ ] 推理信心是否標 **Low**；Track A 是否偏保守  
 3. [ ] 主 -0.75：是否僅 Medium lean → **傾向不正式 PLAY**（Knights watch）  
 4. [ ] 深熱 ≤-1.25 / -1.5 段：小勝 = L → 預設 **PASS**  
@@ -885,7 +966,7 @@
 7. [ ] B 隊 / 青年 → **PASS** 或極 Low  
 8. [ ] 是否在用 cover-after-PASS 事後合理化  
 
-**存疑 → PASS。NPL 正式 PLAY 應極稀。**
+**存疑 → PASS。NPL 正式 PLAY 應極稀（§2 維持 PASS 區）。**
 
 ---
 
