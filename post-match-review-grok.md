@@ -741,6 +741,18 @@
 | 07-20 | Örgryte 0-0 Djurgården | Djurgården **-1.5/-2 類** | 0 | **L** | incomplete-deep-fav | PASS incomplete |
 | 07-20 | 同上 | Örgryte **+1.5/+2 類** | 0 | **W** | incomplete-dog-deep | PASS incomplete |
 | 07-20 | Sporting 7-0 Strasbourg | Sporting **-1** | +7 | **W** | clb-friendly-deep | PASS 友誼；cover-after-PASS |
+| 07-21-2 | Ararat-Armenia 2-0 Shamrock | Armenia **-0.25** | +2 | **W** | euro-qual-light-0.25 | PASS；cover-after-PASS |
+| 07-21-2 | Mjällby 3-0 Lincoln | Mjällby **-2** | +3 | **W** | ucl-deep-fav | PASS；cover 深熱 |
+| 07-21-2 | 同上 | Mjällby **-2.5** | +3 | **W**（半贏） | ucl-deep-fav | PASS |
+| 07-21-2 | Aarhus 1-4 Lech | Aarhus **-0.25** | −3 | **L** | euro-qual-light-0.25 | PASS；light 殺 |
+| 07-21-2 | Thun 1-1 Dinamo Zagreb | Zagreb **-0.25** | 0 | **W** | euro-qual-away-shallow | PASS |
+| 07-21-2 | Fenerbahçe 1-0 Górnik | Fener **-2** | +1 | **L** | ucl-deep-fav | PASS；**小勝殺 -2** |
+| 07-21-2 | Sturm Graz 4-0 Hearts | Graz **-0.75** | +4 | **W** | cup-fav-0.75-1st-leg | PASS+lean；cover **不回寫 PLAY** |
+| 07-21-2 | KÍ 0-0 Kauno | KÍ **-0.25** | 0 | **W** | euro-qual-light-0.25 | PASS；和=半贏 cover |
+| 07-21-2 | Ross County 1-1 Dundee | County **-0.25** | 0 | **W** | league-cup-mixed | PASS 近均 |
+| 07-21-2 | Larne 0-4 Crvena Zvezda | 紅星 **-2** | +4 客 | **W** | ucl-away-deep | PASS；cover 不 chase |
+| 07-21-2 | Víkingur 2-1 Hapoel BS | Víkingur **0** | +1 | **W** | near-even-pk | PASS；cover 不放寬近均 |
+| 07-21-2 | Mineiro 1-1 Bahia | Mineiro **-0.25** | 0 | **W** | league-shallow-light | PASS；light 和 cover |
 
 ### 分支 WR 速記（累計粗算 · 更新用）
 
@@ -1039,7 +1051,98 @@
 > **07-20：** 正式 0；Kalmar 和 / Örgryte 深熱和殺 / Sporting 友誼大穿 → PASS 風控再驗證；cover-after-PASS 不回寫。  
 > **真五五：** 只以**外圍無 lean** 定義；圖對稱 AH alone 不是黑名單。  
 > **SKILL 硬規則：** 仍不改。  
-> **訂正：** 表 A 曾誤列 Gangwon -0.75 pending — **已刪除**（非正式 PLAY）。
+> **訂正：** 表 A 曾誤列 Gangwon -0.75 pending — **已刪除**（非正式 PLAY）。  
+> **07-21 卡2：** 正式 0；Fener 1-0 **殺 -2**、Aarhus light **L** 再證 PASS；Graz/Mjällby/紅星 cover **不回寫**。
+
+---
+
+## 2026-07-21 卡2 賽後批（歐戰資格為主 · 正式 PLAY 0）
+
+**賽前檔：** `record/pre-match-2026-07-21-2.md`  
+**正式 PLAY：0** — 僅 PASS / WR lean 校正；**不改 skill 硬規則**。
+
+### 用戶賽果
+
+| 場次 | 賽果 |
+|------|------|
+| Ararat-Armenia vs Shamrock Rovers | **2-0** |
+| Mjällby vs Lincoln Red Imps | **3-0** |
+| Aarhus AGF vs Lech Poznań | **1-4** |
+| Thun vs Dinamo Zagreb | **1-1** |
+| Fenerbahçe vs Górnik Zabrze | **1-0** |
+| Sturm Graz vs Hearts | **4-0** |
+| KÍ Klaksvík vs Kauno | **0-0** |
+| Ross County vs Dundee | **1-1** |
+| Larne vs Crvena Zvezda | **0-4** |
+| Víkingur R. vs Hapoel Beer Sheva | **2-1** |
+| Atlético Mineiro vs Bahia | **1-1** |
+
+### Track B 速結（對賽前主讀盤）
+
+| 場次 | 原決策 | 代表盤 | B | 評 |
+|------|--------|--------|---|-----|
+| Ararat 2-0 Shamrock | PASS light -0.25 | 主 **-0.25** | **W** | cover-after-PASS；**不回寫**（light+首回） |
+| Mjällby 3-0 Lincoln | PASS 深讓 | **-2 / -2.5** | **W** / **W** | cover 深熱；**不**改「預設 PASS 深讓」 |
+| Aarhus 1-4 Lech | PASS light -0.25 | 主 **-0.25** | **L** | **Strategy Held**；light 主被打穿 |
+| Thun 1-1 Zagreb | PASS | 客 **-0.25** | **W** | 和=客半贏；原無正式 edge |
+| Fener 1-0 Górnik | PASS **-2** | 主 **-2** | **L**（勝 1） | **Strategy Held 關鍵**；小勝殺深讓再證 |
+| Graz 4-0 Hearts | PASS + lean -0.75 | 主 **-0.75** | **W** | lean **方向對**；歐戰首回 **仍不**升正式 PLAY（checklist §2） |
+| KÍ 0-0 Kauno | PASS light -0.25 | 主 **-0.25** | **W** | 和半贏 cover；**不**因 light 和 W 放寬里昂紀律 |
+| County 1-1 Dundee | PASS 近均 | 主 **-0.25** | **W** | 和；訊號混 PASS 合理 |
+| Larne 0-4 紅星 | PASS 深客 | 客 **-2** | **W** | cover 客深；首回 **不 chase**（Everton/Sporting 同型壓力） |
+| Víkingur 2-1 Hapoel | PASS 近均 0 | 主 **0** | **W** | cover-after-PASS；**不**放寬近均預設 PLAY |
+| Mineiro 1-1 Bahia | PASS light -0.25 | 主 **-0.25** | **W** | 和半贏；light 聯賽 **不回寫** 正式 |
+
+### 分組含義
+
+#### A. PASS 正確避殺（Strategy Held · 高價值）
+
+1. **Fenerbahçe 1-0、主讀 -2 → Track B L**  
+   - 獨贏開、深讓輸：與「Strong 獨贏 ≠ 深讓 WR」完全一致。  
+   - 本批 **最強「不放寬深讓」證據**。
+
+2. **Aarhus 1-4、light 主 -0.25 → L**  
+   - 與里昂 light 失腳同族（本場更慘）；**支持 light 不正式**。
+
+#### B. cover-after-PASS（Observation · 禁止結果論）
+
+| 類型 | 場次 | 勿做 |
+|------|------|------|
+| light -0.25 事後 W | Ararat 2-0、KÍ 0-0、Mineiro 1-1 | 不改 light→PLAY；和 W 更易誘放寬 |
+| 深熱穿盤 | Mjällby 3-0、紅星 0-4 客 | 不 chase 首回深讓（對沖 = Fener 殺盤） |
+| 首回 -0.75 大勝 | Graz 4-0 | lean 可記；**正式仍罕**（≠ Lillestrøm 聯賽） |
+| 近均平手主勝 | Víkingur 2-1 | 不改近均預設 PASS |
+
+#### C. 中性 / 混合
+
+- **Thun 1-1：** 客 -0.25 半贏；原 PASS 無 edge 指控。  
+- **County 1-1：** 外圍偏客、AH 偏主 → 和局支持「無 clean edge」。
+
+### 對「是否 PASS 過多」的回饋
+
+| 問題 | 本批答案 |
+|------|----------|
+| 深讓全 PASS 是否過嚴？ | **否** — Fener 1-0 證明小勝殺 -2；Mjällby/紅星 cover **不**授權預設 PLAY |
+| light -0.25 全 PASS？ | **維持** — Aarhus **L** 對沖 Ararat/KÍ/Mineiro 的 W |
+| Graz 應正式 PLAY？ | **仍否** — 歐戰首回 checklist §2；單場大勝 = observation；n 不足改規則 |
+| checklist §1 升格？ | 本卡 **無** 穩定聯賽 Medium≤1.70 + 友好盤同時達標 → 正式 0 **符合** checklist，非執行過嚴 |
+
+### 對 SKILL / checklist
+
+| 動作 | 是否 |
+|------|------|
+| 改 skill 硬規則 | **否** |
+| 因 Graz/Mjällby 放寬歐戰首回 / 深讓 | **否** |
+| 因 light 和 W 放寬 -0.25 | **否**（Aarhus L） |
+| 文首分析 checklist | **維持**（§1 升格仍只給穩定聯賽 Medium+） |
+| 表 A | **無新正式 PLAY** |
+| 表 B | 已 append 本批 |
+
+### 一句話（本批）
+
+> **正式 0 正確落地。**  
+> **Fener 1-0 殺 -2** + **Aarhus light L** = PASS 風控命中。  
+> Graz/Mjällby/紅星/Ararat 等 cover = observation only，**不回寫 PLAY、不改 skill**。
 
 ---
 
