@@ -3,9 +3,12 @@
 ## 給新 Agent 的摘要
 
 - **權威規則**：`.github/skills/defensive-betting-analysis/SKILL.md`（**贏盤率 Track B 為主**；資本/薄價/盃 soft 為輔）
-- **賽前執行 Checklist + Watchlist（主）**：**[`analysis-checklist.md`](analysis-checklist.md)** — lean→PLAY 升格、§1b 和=L、light -0.25 強制 PASS、MLS 升格線 watch、分支速查  
+- **賽程+賠率預設雙軌**：`.github/skills/match-card-dual/SKILL.md` → **Defensive 最佳 PLAY** + **streak-roll-eval 最佳 STREAK_LEG（或 none）**
+- **連勝全權益評級**：`.github/skills/streak-roll-eval/SKILL.md`（目標 5 連；極嚴；不管理注碼）
+- **賽前執行 Checklist + Watchlist（主）**：**[`analysis-checklist.md`](analysis-checklist.md)** — lean→PLAY 升格、§1b 和=L、light -0.25 強制 PASS、MLS 升格線 watch、**雙軌必做**、分支速查  
 - **本檔 = Grok 賽後覆盤 / 帳本主檔**（表 A/B、批次 review、Dual-Track 方法論）  
 - **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append  
+- **正式 PLAY 失誤反省**：見 **「正式 PLAY 失誤反省（執行層）」**（里昂 / Knights / 羅奇 / **Houston**）  
 - 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準  
 - 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄  
 
@@ -633,13 +636,14 @@
 | 07-18 | Lillestrøm vs KFUM | Lillestrøm **-0.5/-1** @1.81 | **2-1** | **W** | league-fav-0.75（挪超） | Medium + 榜階梯；**勿與 NPL 合併** |
 | 07-19 | Hammarby vs Degerfors | Hammarby **-1.5/-2** @1.96 | **4-0** | **W** | league-fav-deep Strong | 深讓需 ≥2 球 |
 | 07-19 | Halmstads vs BK Häcken | Häcken **-0.5/-1** @1.82 | **0-2** 客 | **W** | league-fav-0.75 away Med–Strong | 客讓勝 1 即 W |
-| 07-23 | Houston Dynamo vs DC United | Houston **-0.75** @1.86 | **1-1** | **L** | league-fav-0.75 MLS | §1 升格正式；**和 = L** |
-| pending | LAFC vs Real Salt Lake | LAFC **-0.75** @1.85 | — | pending | league-fav-0.75 MLS | 西岸補卡待結 |
+| 07-23 | Houston Dynamo vs DC United | Houston **-0.75** @1.86 | **1-1** | **L** | league-fav-0.75 MLS | §1 升格；**和 = L** |
+| 07-23 補 | LAFC vs Real Salt Lake | LAFC **-0.75** @1.85 | **3-1** | **W** | league-fav-0.75 MLS | §1 升格；勝 2 全贏 |
 
 **正式 PLAY 粗 WR（有 W/L；P 剔除；分支勿混算單一 WR）：**  
 早期 dog/level：艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W；  
-近期：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、**Houston L** → 累計約 **6W / 4L**（小樣本；半島/比利時多為 P）。  
-**分支必須分開：** `shallow-fav-0.25-light-lean` ≠ `npl-aus home-fav-0.75` ≠ `league-fav-0.75`（歐聯 vs MLS 亦宜分開計）。
+近期：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、**Houston L**、**LAFC W** → 累計約 **7W / 4L**（小樣本；半島/比利時多為 P）。  
+**MLS -0.75 正式：** Houston **L** + LAFC **W** = **1W1L**（n=2 observation 對；**未到** formal review=3）。  
+**分支必須分開：** `shallow-fav-0.25-light-lean` ≠ `npl-aus home-fav-0.75` ≠ `league-fav-0.75`（歐聯 vs MLS 分開計）。
 
 ---
 
@@ -715,6 +719,12 @@
 | 07-23 | 同上 | Lanús **-1.75** | +2 | **W**（半贏） | deep-fav | PASS |
 | 07-23 | Internacional 1-2 Cruzeiro | Inter **-0.25** | −1 | **L** | league-shallow-light | PASS；light 殺 |
 | 07-23 | São Paulo 1-2 Athletico | SP **-0.25** | −1 | **L** | league-shallow-light | PASS；light 殺 |
+| 07-23 補 | Switchbacks 2-0 Miami | Switchbacks **-1** | +2 | **W** | usl-deep-fav | PASS；cover-after-PASS |
+| 07-23 補 | 同上 | Switchbacks **-1.25 類** | +2 | **W** | usl-deep-fav | PASS |
+| 07-23 補 | Rapids 1-0 San Diego | Rapids **-0.25** | +1 | **W** | league-shallow-light | PASS；cover light |
+| 07-23 補 | Galaxy 1-3 St. Louis | Galaxy **-0.75** | −2 | **L** | league-fav-0.75 MLS lean | PASS+lean；**錯邊**；貼線不升格 **正確** |
+| 07-23 補 | **LAFC 3-1 RSL** | LAFC **-0.75** | +2 | **W** | league-fav-0.75 MLS | **正式 PLAY W** |
+| 07-23 補 | San Jose 0-4 Orlando | SJ **-1** | −4 | **L** | league-fav-1.0 | PASS；**Strategy Held** 避全輸 |
 
 ### 分支 WR 速記（累計粗算 · 更新用）
 
@@ -988,16 +998,16 @@
 > **SKILL 硬規則：** 仍不改。  
 > **訂正：** 表 A 曾誤列 Gangwon -0.75 pending — **已刪除**（非正式 PLAY）。  
 > **07-21 卡2：** 正式 0；Fener 1-0 **殺 -2**、Aarhus light **L** 再證 PASS；Graz/Mjällby/紅星 cover **不回寫**。  
-> **07-23：** **Houston 正式 1-1 → -0.75 L**；Nashville **-1 走** PASS 命中；light -0.25 再殺（Inter/SP）；**LAFC pending**。  
-> Başakşehir 深熱和殺；Omonia/Lexington cover **不回寫**。
+> **07-23：** Houston 正式 **1-1 L**；**LAFC 3-1 正式 W**（MLS -0.75 正式 **1W1L**）；Nashville **-1 走**；Galaxy lean 錯邊未升正式 **正確**；SJ -1 PASS 避爆。  
+> Başakşehir 深熱和殺；light -0.25 再殺；dog cover **不回寫**。
 
 ---
 
-## 2026-07-23 賽後批（早場 + 晚場 · Houston 正式 L）
+## 2026-07-23 賽後批（早場 + 晚場 + 西岸補卡）
 
 **賽前檔：** `record/pre-match-2026-07-23.md`  
-**正式 PLAY：** Houston **L**；**LAFC 仍 pending**（西岸補卡未在本結果清單）。  
-**不改 skill 硬規則**（Houston n=1 observation）。
+**正式 PLAY：** Houston **L**；**LAFC W**。  
+**不改 skill 硬規則**（MLS -0.75 正式 n=2 → **1W1L observation 對**；未到 formal review=3）。
 
 ### 用戶賽果
 
@@ -1005,12 +1015,14 @@
 
 **晚場：** Columbus 1-2 · Cincinnati 4-3 · Charlotte 2-2 · Nashville 1-0 · **Houston 1-1** · SKC 2-1 · Lanús 2-0 · Internacional 1-2 · São Paulo 1-2  
 
+**西岸補卡：** Switchbacks 2-0 Miami · Rapids 1-0 San Diego · Galaxy 1-3 St. Louis · **LAFC 3-1 RSL** · San Jose 0-4 Orlando  
+
 ### 正式 PLAY 結算
 
 | 正式注 | 賽果 | Track B | Assessment | Sample |
 |--------|------|---------|------------|--------|
-| **Houston -0.75 @1.86** | **1-1** | **L**（和） | §1 升格後走 **唯一全輸路徑**（需取勝） | Observation n=1；**不改** checklist 硬條件 |
-| **LAFC -0.75 @1.85** | — | pending | 未在結果清單 | 待補 |
+| **Houston -0.75 @1.86** | **1-1** | **L**（和） | §1 升格後走 **和=L** | Observation；和殺半一 |
+| **LAFC -0.75 @1.85** | **3-1** | **W**（勝 2） | §1 同型命中 | Observation W；**不**因 W 放寬倉位/串關 |
 
 ### Track B 速結（晚場 + 正式）
 
@@ -1025,43 +1037,134 @@
 | Lanús 2-0 Cienciano | PASS 深讓 | **-2** **P** / **-1.75** **W** | 剛好 2 球易走；PASS 深讓仍合理 |
 | Internacional 1-2 Cruzeiro | PASS light -0.25 | **-0.25** | **L** | light 殺 |
 | São Paulo 1-2 Athletico | PASS light -0.25 | **-0.25** | **L** | light 殺 |
+| **LAFC 3-1 RSL** | **PLAY -0.75** | 主 **-0.75** | **W** | **正式命中**；勝 2 |
+| Galaxy 1-3 St. Louis | PASS + lean -0.75 | 主 **-0.75** | **L** | lean 錯邊；**未正式** 正確 |
+| Rapids 1-0 San Diego | PASS light -0.25 | 主 **-0.25** | **W** | cover light；不回寫 |
+| Switchbacks 2-0 Miami | PASS 深讓 | **-1/-1.25** | **W** | cover USL 深；不回寫 |
+| San Jose 0-4 Orlando | PASS **-1** | 主 **-1** | **L** | **Strategy Held**；避全輸 |
 
-（早場表見上一則部分結算，已併入表 B。）
+（早場表已併入表 B。）
 
 ### 分組含義
 
-#### A. 正式 PLAY
+#### A. 正式 PLAY（MLS -0.75 一晚兩腳）
 
-- **Houston 1-1 → L：** Medium 主 -0.75 的已知弱點 = **和局全輸**；§1 仍允許小注 Low，**單場不改門檻**（n=1；Lillestrøm/Hacken 仍為歐聯正向）。  
-- **執行提醒：** MLS Medium -0.75 標 **Low + 和殺風險**；可考慮同檔是否要求略強 gap（~1.55 而非 1.58）— **僅 watch，非規則改寫**。  
-- Columbus lean **L** + 未升正式 → 支持「~1.74 不硬升」。
+- **Houston 1-1 → L：** 和殺半一；路徑風險兌現。  
+- **LAFC 3-1 → W：** 同 §1 結構命中；**不**因 W 加大注或串關。  
+- **合計 1W1L：** 支持「小注 Low + 不串」；**不**證明 §1 必改或必砍；n=2 仍 observation 級。  
+- Columbus / **Galaxy** 貼線 lean **皆 L** 且未升正式 → **貼線不升格正確**（兩邊都避表 A 損）。
 
 #### B. PASS 正確
 
-1. **Nashville 1-0、-1 → P** — 與「-1 勝1=P」紀律完全一致。  
-2. **Inter / SP light -0.25 L** + 早場 Neftçi/Ceará — light 帶繼續有效。  
-3. **Başakşehir 和殺深讓**（早場）— 深讓 PASS 再證。  
-4. **Lanús 2-0 對 -2 = P** — 深讓邊際走盤；拒深合理。
+1. **Nashville 1-0、-1 → P**；**SJ 0-4、-1 → L 若硬上** — 拒 -1 雙向驗證。  
+2. **Inter / SP / light 殺** — light -0.25 紀律。  
+3. **Başakşehir 和殺深讓**；**Lanús -2 走** — 深讓 PASS。  
+4. **Galaxy lean L 未正式** — 與 Columbus 同理。
 
 #### C. cover-after-PASS（不回寫）
 
-- Cincy / SKC **+0.75 W**、Charlotte 和 **W**、Omonia / Lexington / Bodø 等 — **禁止**升級預設 PLAY。
+- Cincy / SKC dog、Charlotte、Rapids、Switchbacks、Omonia、Lexington、Bodø 等 — **禁止**升級預設 PLAY。
 
 ### 對 SKILL / checklist
 
 | 動作 | 是否 |
 |------|------|
 | 改 skill 硬規則 | **否** |
-| 因 Houston L 取消 §1 聯賽 -0.75 升格 | **否**（n=1；歐聯樣本仍正向） |
-| 因 Cincy dog W 放寬 +0.75 | **否** |
-| 表 A | **Houston L 已登**；LAFC pending |
-| 表 B | 已 append |
+| 因 Houston L 取消 §1 | **否**（現 LAFC W 對沖；合計 1W1L） |
+| 因 LAFC W 放寬倉位/串關 | **否** |
+| 因 Galaxy L 禁所有 MLS -0.75 | **否**（僅 lean 貼線） |
+| 表 A | Houston **L** + LAFC **W** 已登 |
+| 表 B | 補卡 5 場已 append |
+| §1c MLS 升格線 watch | **維持**；1W1L 不寫死收緊也不放寬 |
 
-### 一句話（全日有結部分）
+### 一句話（07-23 全日含西岸）
 
-> **Houston 正式和殺 -0.75 → L（observation）。**  
-> Nashville **-1 走** + light -0.25 連殺 = PASS 命中。  
-> dog +0.75 cover **不回寫**；**LAFC 仍 pending。**
+> **正式 MLS -0.75：Houston 和殺 L + LAFC 3-1 W = 1W1L。**  
+> Galaxy lean 錯邊未升正式 **正確**；SJ **-1** PASS 避 0-4。  
+> 小注不串紀律成立；**不改 skill**。
+
+---
+
+## 正式 PLAY 失誤反省（執行層 · 2026-07-24 整理）
+
+> **目的：** 每腳正式 L 對齊「錯在哪一類」；**不是**推倒 skill。  
+> **門檻：** 1=Observation · 2=Watchlist · 3=Formal review · 5+=local tweak。  
+> **原則：** 反省執行品質；同分支 n 未到不改硬規則；有 W 有 L 是小樣本常態。
+
+### 1) 正式 L 總表（表 A · 有結算）
+
+| 注 | 賽果 | B | 分支 | 錯誤類型 | 狀態 |
+|----|------|---|------|----------|------|
+| 羅奇代爾 **+0.25** | 1-2 | **L** | `aus-semi-dog-shallow` | 澳半職業 **薄 dog**；緩衝不夠 | Observation；prefer +1 |
+| **里昂 -0.25** | 2-3 | **L** | `shallow-fav-0.25-light-lean` | **light + 跨國** 當 clear 聯賽 shallow | Observation；已入 light 紀律 |
+| **Knights -0.75** | 1-2 | **L** | `npl-aus home-fav-0.75` | **NPL** 主半一正式偏進 | **Watchlist**；正式極稀 |
+| **Houston -0.75** | **1-1** | **L** | `league-fav-0.75 MLS` | §1 升格後走 **和=L** 路徑 | Observation |
+| **LAFC -0.75** | **3-1** | **W** | `league-fav-0.75 MLS` | 同型命中 | Observation W |
+
+**MLS -0.75 正式合計：** Houston L + LAFC W = **1W1L**（n=2；**未到** formal review）。  
+**對照（勿只記仇）：** 艾比安/隆德里納 W、牙山 W、Lillestrøm W、Hacken W、Hammarby W、**LAFC W** → 框架非「一出手就錯」。  
+粗計有 W/L：約 **7W / 4L**（**禁止**混分支算單一命中率改規則）。
+
+### 2) 結構性失腳（已吸收 · 執行勿回潮）
+
+| 教訓 | 執行要求 |
+|------|----------|
+| **里昂** | light lean（主勝 ~≥1.90）+ 跨國/盃 **不**套聯賽 -0.25 soft band；→ PASS |
+| **Knights** | NPL / 澳盃主 -0.75 **正式極稀**；寧可 lean；勿用歐聯 W 洗白 |
+| **羅奇** | 薄 dog +0.25 預設 PASS；prefer **+1** 緩衝 |
+
+### 3) Houston 專節（§1 升格後首腳和殺）
+
+| 項目 | 內容 |
+|------|------|
+| 賽前案 | MLS + 主 ~1.58 Medium + **-0.75** → checklist §1 → **PLAY Low @1.86** |
+| 賽果 | **1-1** |
+| Track B | **-0.75 和 = L**（半一需取勝才 W） |
+| 非 | 身份錯、錯場外圍、結算錯 |
+| 是 | **路徑風險兌現**：案已寫「和=L」仍出手 |
+
+**反省要點（執行 · 非必然改規則）：**
+
+1. **-0.75 對「不敗熱門」不友好** — 若讀成主場偏膠著/1-1 劇本，應想 **-0.25** 或 **PASS**，不是半一。  
+2. **§1 全勾 = 可小注 Low，不是高信心** — 倉位勿放大；勿與 LAFC 等同型連串。  
+3. **MLS ≠ 挪超** — Lillestrøm/Hacken 相似度最多 Medium；**歐聯 vs MLS 分支宜分開計 n**。  
+4. **n：** Houston L + **LAFC W** = MLS 正式 **1W1L** — 仍 Observation 級；**不**取消 §1；**不**禁所有 -0.75；**也不**因 LAFC 放寬。  
+5. **Galaxy 同晚 lean L 未正式** — 貼線不升格與 Columbus 一致，**執行正確**。
+
+**賽前速查（MLS / 聯賽 Medium -0.75 · 補強）：**
+
+1. [ ] 和局對本盤是 **W 還是 L**？（-0.75 → **L**；-0.25 → **W**）  
+2. [ ] 是否「膠著/不敗」劇本多於「淨勝 1+」？→ 偏向 PASS 或更淺盤（Houston 型）  
+3. [ ] gap 是否清楚 Medium（~≤1.55–1.60 優於貼 1.58–1.70）？→ 貼線更嚴（Galaxy/Columbus）  
+4. [ ] 是否誤用歐聯命中洗白 MLS/巴甲？  
+5. [ ] 小注 + Confidence **僅 Low**？  
+6. [ ] 同卡第二腳同型？→ **不串關**（若串 Houston+LAFC 會 1 腳 L 拖累）
+
+### 4) 要做 / 不要做
+
+| 要做 | 不要做 |
+|------|--------|
+| 每腳 L 標分支 + 錯誤類型 | 因 Houston 禁所有 -0.75 |
+| Houston：MLS Medium -0.75 記 observation；強化「和殺」 | 因 1 場 L 取消 §1 整段 |
+| 出手前強制寫清和/小勝對盤口 W/L | 用 cover-after-PASS 說「該打更多」 |
+| NPL / light / 薄 dog **維持極稀** | 混分支總 WR 改 skill |
+| 小注紀律 | 同型 Low 連串放大方差 |
+
+### 5) 對後續出手（含 Botafogo 等）
+
+- §1 升格後仍是 **可評估小注**，不是穩賺標的。  
+- Medium + **-0.75** 在 **和局率不低** 的聯賽：可維持 PLAY 但更小注，或膠著讀法 → **降 lean / PASS**。  
+- **不**因 Houston 否定歐聯 Lillestrøm/Hacken 樣本；分支分開。  
+- **LAFC 3-1 W** 已登表 A：與 Houston **同分支** MLS -0.75 = **1W1L**；再 L 一次（n=3 同向失效）才 formal review 是否收緊 §1c。  
+- **不**因 1W1L 改 skill；**維持**小注、不串、寫清和=L。
+
+### 6) 一句話（反省）
+
+> **要反省執行類型，不推倒策略。**  
+> 里昂 / Knights / 羅奇：已入紀律，勿回潮。  
+> **Houston L + LAFC W：** §1 後 MLS -0.75 **1W1L** — 和殺仍要防；命中不放大；**n=2 不改 skill**。  
+> Galaxy 貼線 lean L 未正式 = 執行加分。  
+> 繼續分分支記帳 + 小注 > 情緒化收緊/放寬。
 
 ---
 

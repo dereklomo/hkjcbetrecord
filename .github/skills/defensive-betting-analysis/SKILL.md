@@ -1,6 +1,6 @@
 ---
 name: defensive-betting-analysis
-description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. In this workspace, pre-match sessions should read analysis-checklist.md first (execution/watchlist), then post-match-review-grok.md for ledgers. Includes dual-track WR primary vs capital auxiliary, and self cross-check against similar settled spots. Football only. Use when evaluating 足球 or football matches, 贏盤率, external bookmaker lines, Asian handicap, 讓球, 受讓, 串關, cross-check, post-match review, or PASS vs PLAY.'
+description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. In this workspace, when the user pastes a match card with odds, default to match-card-dual: report best defensive PLAY/lean and best streak-roll STREAK_LEG (if any). Read analysis-checklist.md first, then post-match-review-grok.md ledgers. Football only. Use for 足球, 讓球, 受讓, odds paste, pre-match, 賽程賠率, PASS vs PLAY, or post-match review.'
 argument-hint: 'Preferred detailed input format: 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率. In this workspace, treat unlabeled quoted prices as HKJC prices unless they are explicitly labeled as external-market prices; then seek Pinnacle, bet365, or other major external benchmarks to determine direction. Use *讓球盤 when the handicap is synthetically converted from HKJC 3-way handicap.'
 user-invocable: true
 ---
@@ -29,12 +29,25 @@ Do not claim external confirmation unless a concrete public source was actually 
 
 For **pre-match** screens in this workspace, read files in this order (does **not** change hard rules below):
 
-1. **`analysis-checklist.md`** — execution checklist, PLAY upgrade / PASS gates, watchlist (execution layer only; if it conflicts with this skill, **this skill wins**)
-2. **`post-match-review-grok.md`** — settled Track B ledgers (table A/B) and batch reviews for self cross-check
-3. **`record/pre-match-*.md`** — same-day prior decisions when present
+1. **`match-card-dual` skill** (`.github/skills/match-card-dual/SKILL.md`) — **default orchestration** when user pastes schedule + odds  
+2. **`analysis-checklist.md`** — execution checklist, PLAY upgrade / PASS gates, watchlist (execution layer only; if it conflicts with this skill, **this skill wins**)
+3. **`post-match-review-grok.md`** — settled Track B ledgers (table A/B) and batch reviews for self cross-check
+4. **`record/pre-match-*.md`** — same-day prior decisions when present  
+5. **`streak-roll-eval` skill** — for streak section of dual card (stricter; separate from ordinary PLAY)
 
 Do **not** treat `post-match-review-home.md` as a writable review source (redirect/stub only).  
 Do **not** invent a second checklist or re-home watchlists into ad-hoc session notes.
+
+### Dual card default (this workspace)
+
+When the user pastes **one or more fixtures with odds** (HKJC-style lines, multi-match card, dated 賽程+賠率):
+
+1. Always run **this skill** (defensive formal PLAY / lean / PASS).  
+2. Always also run **`streak-roll-eval`** and report best **STREAK_LEG** or **none**.  
+3. Use the response skeleton in `match-card-dual` (sections A defensive + B streak-roll + C one-liner).  
+4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.
+
+Ordinary hard rules below are unchanged; streak eligibility is **stricter** and usually empty.
 
 ## Primary Objective: Win-Rate First (贏盤率為主)
 
@@ -119,7 +132,7 @@ Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts 
 5. **Fundamentals as modifier** — raise/lower WR confidence; do not flip side without market+WR support.
 6. **HKJC overlay** — execution price; auxiliary.
 7. **Track A soft filters** — risk notes; only veto if WR edge is not actually clear.
-8. **Workspace execution gate** (this repo): apply `analysis-checklist.md` for formal PLAY upgrade vs PASS / WR-lean-only (e.g. light `-0.25` force PASS, `-0.75` must state draw=L when PLAY). Checklist cannot override hard identity / wrong-match / no-market gates in this skill.
+8. **Workspace execution gate** (this repo): apply `analysis-checklist.md` for formal PLAY upgrade vs PASS / WR-lean-only (e.g. light `-0.25` force PASS, `-0.75` must state draw=L when PLAY; **§1d 防漏升** for clear-league `-0.25`, structural dog `+0.25`/`+1`, level-ball external lean). Checklist cannot override hard identity / wrong-match / no-market gates in this skill.
 9. Output: preferred line for **win-rate**, then auxiliary caveats.
 
 ### Using Track B for unplayed matches (line push / inference)
@@ -246,7 +259,7 @@ Use this skill when the user wants to:
 - self cross-check a screen against past similar settled handicaps or branch WR
 - re-analyze after dual-track or historical comparison
 
-**In this workspace (pre-match):** before screening a batch or issuing formal `PLAY`/`PASS`, read **`analysis-checklist.md` first**, then use **`post-match-review-grok.md`** ledgers for comparable settled samples. Append new settled results only to `post-match-review-grok.md` (or dated review/pre-match record files)—not to `post-match-review-home.md`.
+**In this workspace (pre-match):** on **odds-card paste**, follow **`match-card-dual`** (defensive + streak-roll both). Read **`analysis-checklist.md`**, then **`post-match-review-grok.md`** ledgers. Append new settled results only to `post-match-review-grok.md` (or dated review/pre-match record files)—not to `post-match-review-home.md`.
 
 ## Market Source Policy
 
@@ -698,17 +711,23 @@ Decision: PASS | PLAY
 Market: [recommended market or "none"]
 Primary lens: Win-rate (Track B)
 WR case: [why this line has the best justified win-rate; score paths that are W/L]
+Fundamentals (mandatory snapshot — not optional flavor):
+- Motivation / season phase: ...
+- Personnel: ...
+- Home-away / travel / schedule: ...
+- Style / draw-magnet risk: ...
+- Veto or support: [blocks PLAY | lowers conf | supports lean]
 Source Basis: External Primary | HKJC Input + External Benchmark | HKJC Only Incomplete Value Screen
 Sources Used: [named public sources actually checked, or `none`]
 Mode: Single | Parlay
 Confidence: Low | Medium
-Auxiliary notes: [price / cup / fundamentals / capital caveats — secondary]
+Auxiliary notes: [price / cup / capital caveats — secondary; fundamentals already above]
 
 Rule Hits:
 - [rule triggered]
 
 Reasoning:
-- [lead with WR + external; then auxiliary modifiers]
+- [lead with WR + external; then fundamentals modifier; then other aux]
 
 Self Cross-Check:
 - Branch: [tag]
@@ -759,7 +778,8 @@ Before returning a recommendation, verify that:
 - when self cross-check was required, a branch tag and named comparables appear; low-similarity history was not used to force PLAY
 - level-ball-lean history was not applied to true near-even markets
 - Track B win-rate case is stated first; auxiliary capital/price/cup notes are labeled secondary
-- in this workspace for pre-match screens: `analysis-checklist.md` was considered for formal PLAY upgrade vs PASS / WR-lean-only (especially light `-0.25`, pure `-1`, deep favorites, and any formal `-0.75` stating draw=L)
+- **Fundamentals snapshot present** on any formal PLAY (and preferred on WR lean); rotation/dead-rubber/structural absences that kill the WR case → not PLAY
+- in this workspace for pre-match **odds cards**: dual output present (defensive + streak-roll), and `analysis-checklist.md` considered for formal PLAY upgrade vs PASS / WR-lean-only (especially light `-0.25`, pure `-1`, deep favorites, formal `-0.75` stating draw=L + fundamentals, and **§1d 防漏升** so clear shallow/dog structures are not silent PASS)
 - the answer explicitly states `PASS` or `PLAY` (or an identity-hold asking the user, which is not a formal bet decision)
 - the market type matches the correct branch for single or parlay mode
 - the main recommendation is driven by external benchmark prices whenever they can be obtained
@@ -788,7 +808,8 @@ Keep the analysis readable and operational:
 - if identity is uncertain, lead with a clear ask to the user (candidate names + what to confirm); do not bury the question under a full faux analysis
 - **lead with win-rate case** (which line, which score paths are W/L under half-win=W / half-loss=L)
 - then external market lean that supports that WR case
-- treat fundamentals, cup noise, and price as **auxiliary** modifiers
+- **always write a Fundamentals snapshot** on PLAY / borderline lean (motivation, personnel, travel, rotation, draw risk); odds-only screens are incomplete
+- treat fundamentals as **modifiers/vetoes** (not side-inventors); cup noise and price remain auxiliary
 - mention HKJC mainly as execution overlay, not directional driver
 - when self cross-check runs, keep the comparables block short and explicit (branch, 2–5 cases, similarity, WR implication)
 - if discussing O/U, separate structural tempo reasons from simple recent-score trends
