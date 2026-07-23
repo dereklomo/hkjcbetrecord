@@ -3,84 +3,19 @@
 ## 給新 Agent 的摘要
 
 - **權威規則**：`.github/skills/defensive-betting-analysis/SKILL.md`（**贏盤率 Track B 為主**；資本/薄價/盃 soft 為輔）
-- **本檔 = 唯一 Grok 賽後覆盤主檔**（已合併原 `post-match-review-home.md` 的應注意點 / watchlist / 速查清單）
-- **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append
-- **賽前分析 Checklist（主）**：見下節 **「賽前分析 Checklist」** — 含 **lean→正式 PLAY 升格**（執行層；**不改 skill 硬規則**）
-- 分支速查：文末 NPL / 北歐 / -0.25 清單仍有效
-- 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準
-- 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄
+- **賽前執行 Checklist + Watchlist（主）**：**[`analysis-checklist.md`](analysis-checklist.md)** — lean→PLAY 升格、§1b 和=L、light -0.25 強制 PASS、MLS 升格線 watch、分支速查  
+- **本檔 = Grok 賽後覆盤 / 帳本主檔**（表 A/B、批次 review、Dual-Track 方法論）  
+- **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append  
+- 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準  
+- 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄  
 
----
+### 賽前請先讀
 
-## 賽前分析 Checklist（執行層 · 2026-07-21 起）
+1. `analysis-checklist.md`（執行）  
+2. 本檔表 A/B / 相關分支 review（可比樣本）  
+3. skill（硬規則）  
 
-> **目的：** 避免「合理 PASS 變無腦全 PASS」——在 **穩定聯賽 + 清晰 WR 路徑** 把 Low lean **升一格**成小注正式 PLAY。  
-> **不**改 skill 硬規則；**不**為「每卡至少一腳」硬找注。  
-> cover-after-PASS **永不**回寫。
-
-### 0. 每場固定順序（先做完再決策）
-
-1. [ ] **身份鎖**（隊名、主客、聯賽 vs 盃/跨國/首回、腿次）  
-2. [ ] **外圍 1X2/AH**（命名 Sources Used；無外圍 → incomplete → 傾向 PASS）  
-3. [ ] **力度分檔**：Strong / Medium / Light / 近均無 lean  
-4. [ ] **Track B 路徑**：該盤哪些比分是 W / L / P  
-5. [ ] **分支標籤** + self cross-check（2–5 可比；低相似不硬 PLAY）  
-6. [ ] **決策分層**（三選一，須寫明）：  
-   - **正式 PLAY**（進表 A / 可下注）  
-   - **WR lean only**（方向；**不**下注）  
-   - **PASS**（無 usable edge 或 hard/ soft 擋下）  
-
-### 1. 正式 PLAY 升格門檻（須**全部**勾選）
-
-僅當下列 **全部** 成立，才允許 **Confidence Low（或 Low–Medium）正式 PLAY · 小注**：
-
-1. [ ] **穩定國內聯賽**（或同等結構）：非歐戰資格首回、非友誼/CLB/季前、非 NPL/澳盃跨級、非決賽 light  
-2. [ ] 外圍 gap **≥ Medium**（主/客勝大約 **≤1.70**，或同等清晰客熱；**不是** ~1.90–2.10 light）  
-3. [ ] 可執行盤 **Track B 友好**，例如：  
-   - 熱門 **-0.75**（勝 1 = W），或  
-   - 熱門 **-0.25** 且 lean 為 **clear**（約 ≤1.70 檔；**light 不升格**），或  
-   - 深讓僅當 **Strong** 且球數門檻可達（Hammarby 型；**罕見**）  
-4. [ ] 分支 cross-check：**非**淨殺歷史；NPL / light-0.25 / 友誼 **不**借歐聯命中洗白  
-5. [ ] 輸出寫清：`Decision: PLAY` + WR case + Sources + Confidence Low + 小注  
-
-**範型（可升格）：** Lillestrøm / Hacken 型 — 穩定聯賽 + Medium + -0.75。  
-**不要升格成「只寫 lean」：** 上表全勾卻只寫 WR lean = **執行過嚴**（本 checklist 要修正的點）。
-
-### 2. 維持 PASS / 最多 lean only（勾任一 → 不正式 PLAY）
-
-1. [ ] 友誼 / CLB / 季前  
-2. [ ] 歐戰資格 **首回**（含 Medium 主 -0.75；如 Graz 型 → lean only 或 PASS）  
-3. [ ] 外圍 **Light**（主勝約 **≥1.90**）+ 淺讓 -0.25 / 0/-0.5（里昂）  
-4. [ ] 深讓 **-2 / -2.5** 或勝 1=P 的 **-1** 而無更淺可執行盤  
-5. [ ] NPL / 澳盃 / 半職業：主 -0.75、薄 dog +0.25~+0.75（Knights / 羅奇）  
-6. [ ] 真近均 / 無 lean / incomplete 外圍  
-7. [ ] 1X2 與 AH 方向打架且無 clean edge  
-8. [ ] 僅為「本卡還沒出手」而找注  
-
-### 3. 決策速查表
-
-| 情境 | 建議輸出 |
-|------|----------|
-| 穩定聯賽 + Medium≤1.70 + -0.75 + cross-check OK | **正式 PLAY Low**（小注） |
-| 穩定聯賽 + **clear** lean + -0.25 | **可**正式 PLAY Low；light → **PASS** |
-| 歐戰首回 + Medium -0.75 | **PASS** 或 **WR lean only** |
-| Strong 獨贏 + 深讓 -2 | **PASS**（除非球數路徑極清晰且自願標 rare） |
-| NPL / 澳盃 主 -0.75 或薄 dog | **PASS**（正式極稀） |
-| 近均 / incomplete / 友誼 | **PASS** |
-| 有方向但未達 §1 全勾 | **WR lean only**（明示不下注） |
-
-### 4. 批次結束自檢（防「過多 PASS」）
-
-1. [ ] 本卡是否存在 **§1 全勾** 卻被寫成 PASS / 僅 lean？→ 若有，**改回正式 PLAY Low**  
-2. [ ] 正式 PLAY 是否誤含 §2 項？→ 降回 PASS / lean  
-3. [ ] 是否用 cover-after-PASS 或「想多打」升格？→ 禁止  
-4. [ ] 表 A / 賽前檔：正式 PLAY 與 lean 已分開列  
-
-### 5. 與 skill 的關係
-
-- Checklist = **執行提醒**；skill 硬門（身份、錯場、半贏=W 等）不變。  
-- 升格 **不**等於放寬 NPL / 友誼 / light / 歐戰首回。  
-- 若 §1 型正式 PLAY 連續失效達 formal review 門檻，再議 skill——**單場不改**。
+> **已拆出：** 原本文首「賽前分析 Checklist」全文 → **`analysis-checklist.md`**（唯一執行權威）。本檔不再維護 checklist 內文，避免雙源。
 
 ---
 
@@ -698,11 +633,13 @@
 | 07-18 | Lillestrøm vs KFUM | Lillestrøm **-0.5/-1** @1.81 | **2-1** | **W** | league-fav-0.75（挪超） | Medium + 榜階梯；**勿與 NPL 合併** |
 | 07-19 | Hammarby vs Degerfors | Hammarby **-1.5/-2** @1.96 | **4-0** | **W** | league-fav-deep Strong | 深讓需 ≥2 球 |
 | 07-19 | Halmstads vs BK Häcken | Häcken **-0.5/-1** @1.82 | **0-2** 客 | **W** | league-fav-0.75 away Med–Strong | 客讓勝 1 即 W |
+| 07-23 | Houston Dynamo vs DC United | Houston **-0.75** @1.86 | **1-1** | **L** | league-fav-0.75 MLS | §1 升格正式；**和 = L** |
+| pending | LAFC vs Real Salt Lake | LAFC **-0.75** @1.85 | — | pending | league-fav-0.75 MLS | 西岸補卡待結 |
 
 **正式 PLAY 粗 WR（有 W/L；P 剔除；分支勿混算單一 WR）：**  
 早期 dog/level：艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W；  
-近期：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W → 累計約 **6W / 3L**（小樣本；半島/比利時多為 P）。  
-**分支必須分開：** `shallow-fav-0.25-light-lean` ≠ `npl-aus home-fav-0.75` ≠ `league-fav-0.75`（穩定聯賽）。
+近期：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、**Houston L** → 累計約 **6W / 4L**（小樣本；半島/比利時多為 P）。  
+**分支必須分開：** `shallow-fav-0.25-light-lean` ≠ `npl-aus home-fav-0.75` ≠ `league-fav-0.75`（歐聯 vs MLS 亦宜分開計）。
 
 ---
 
@@ -753,6 +690,31 @@
 | 07-21-2 | Larne 0-4 Crvena Zvezda | 紅星 **-2** | +4 客 | **W** | ucl-away-deep | PASS；cover 不 chase |
 | 07-21-2 | Víkingur 2-1 Hapoel BS | Víkingur **0** | +1 | **W** | near-even-pk | PASS；cover 不放寬近均 |
 | 07-21-2 | Mineiro 1-1 Bahia | Mineiro **-0.25** | 0 | **W** | league-shallow-light | PASS；light 和 cover |
+| 07-23 | Neftçi 2-4 Dinamo Minsk | Neftçi **-0.25** | −2 | **L** | euro-qual-light-0.25 | PASS；light 殺 |
+| 07-23 | Omonia 1-0 Kairat | Omonia **-0.75** | +1 | **W** | cup-fav-0.75-1st-leg | PASS+lean；cover **不回寫** |
+| 07-23 | Bodø 3-0 HamKam | Bodø **-2.5** | +3 | **W**（半贏） | league-fav-deep | PASS；cover 深 |
+| 07-23 | 同上 | Bodø **-3** | +3 | **P** | league-fav-deep | PASS |
+| 07-23 | Levski 1-0 Craiova | Levski **-0.25** | +1 | **W** | euro-qual-light-0.25 | PASS；cover light |
+| 07-23 | Başakşehir 1-1 Inter Turku | Başakşehir **-1.5/-2** | 0 | **L** | euro-qual-deep | PASS；**深熱和殺** |
+| 07-23 | Trnava 0-0 CSKA 1948 | 平手 | 0 | **P** | near-even-euro | PASS |
+| 07-23 | QoS 1-4 Aberdeen | QoS **+1.25** | −3 | **L** | cup-dog | PASS |
+| 07-23 | Medellín 2-2 Vasco | Medellín **-0.25** | 0 | **W** | cross-light-0.25 | PASS；cover |
+| 07-23 | Coritiba 1-3 Palmeiras | Coritiba **+0.75** | −2 | **L** | dog-plus0.75 | PASS |
+| 07-23 | 同上 | Palmeiras **-0.75** | +2 | **W** | away-fav-0.75 | PASS；cover 不回寫 |
+| 07-23 | Ceará 0-1 CRB | Ceará **-0.25** | −1 | **L** | league-shallow-light | PASS；light 殺 |
+| 07-23 | Lexington 2-0 Oakland | Lexington **-0.75** | +2 | **W** | usl-fav-0.75 | PASS+lean；cover **不回寫** |
+| 07-23 | Houston 1-1 DC United | Houston **-0.75** | 0 | **L** | league-fav-0.75 MLS | **正式 PLAY L** |
+| 07-23 | Columbus 1-2 NYCFC | Columbus **-0.75** | −1 | **L** | league-fav-0.75 MLS lean | PASS+lean；方向錯 |
+| 07-23 | Cincinnati 4-3 Vancouver | Cincy **+0.75** | +1 | **W** | dog-plus0.75 | PASS；cover-after-PASS |
+| 07-23 | 同上 | Vancouver **-0.75** | −1 | **L** | away-fav-0.75 | PASS |
+| 07-23 | Charlotte 2-2 Atlanta | Charlotte **-0.25** | 0 | **W** | league-shallow-light | PASS；cover light |
+| 07-23 | Nashville 1-0 Montréal | Nashville **-1** | +1 | **P** | league-fav-1.0 | PASS；**勝1走** 紀律成立 |
+| 07-23 | SKC 2-1 Minnesota | SKC **+0.75** | +1 | **W** | dog-plus0.75 | PASS；cover 不回寫 |
+| 07-23 | 同上 | Minnesota **-0.75** | −1 | **L** | away-fav-0.75 | PASS |
+| 07-23 | Lanús 2-0 Cienciano | Lanús **-2** | +2 | **P** | deep-fav | PASS；剛好 2 球走 |
+| 07-23 | 同上 | Lanús **-1.75** | +2 | **W**（半贏） | deep-fav | PASS |
+| 07-23 | Internacional 1-2 Cruzeiro | Inter **-0.25** | −1 | **L** | league-shallow-light | PASS；light 殺 |
+| 07-23 | São Paulo 1-2 Athletico | SP **-0.25** | −1 | **L** | league-shallow-light | PASS；light 殺 |
 
 ### 分支 WR 速記（累計粗算 · 更新用）
 
@@ -785,7 +747,7 @@
 # 合併自 post-match-review-home.md
 
 > 原 `post-match-review-home.md` 全文併入本節（2026-07 合併）。  
-> 用途：賽後應注意點 / 分支提醒 / 賽前速查；**正式命中以常駐表 A 為準**。  
+> 用途：賽後應注意點 / 分支樣本；**賽前 checklist 以 `analysis-checklist.md` 為準**；**正式命中以常駐表 A 為準**。  
 > 結算：**贏半=W、輸半=L**；走盤不進 WR 分母。  
 > 調整門檻：1→Observation · 2→Watchlist · 3→Formal review · 5+→local tweak。
 
@@ -817,15 +779,7 @@
 
 ### 賽前速查清單（-0.25 熱門）
 
-> 與文首 **「賽前分析 Checklist」§1–2** 並用。
-
-1. [ ] 隊名、主客、**聯賽 vs 盃/跨國** 已鎖定  
-2. [ ] 外圍分檔：**clear**（約 ≤1.70）vs **light**（~1.90–2.10；~1.97 當 light）  
-3. [ ] **clear + 穩定聯賽 + -0.25** → 可按 §1 **升格正式 PLAY Low**；**light → PASS**（里昂）  
-4. [ ] 讓/受是否近對稱（對稱 + light → PASS）  
-5. [ ] 是否誤用「和也算 W」忽略落敗 = L  
-6. [ ] 基本面支持「不敗為主」  
-7. [ ] 分支標籤正確；跨國/盃 **不**套國內 soft band 升格
+> **已遷至** [`analysis-checklist.md`](analysis-checklist.md) **§7a**（以該檔為準）。
 
 ---
 
@@ -913,15 +867,7 @@
 
 ### 賽前速查清單（北歐聯賽 / 本批）
 
-> 與文首 **「賽前分析 Checklist」§1** 並用：達標應 **正式 PLAY**，勿停在 lean。
-
-1. [ ] 友誼 / CLB / 季前 → **PASS**  
-2. [ ] 主 0/-0.5 + light lean（~1.9）→ **PASS**（不升格）  
-3. [ ] 主 -0.5/-1 + **Medium** lean（~1.60–1.70）+ 穩定聯賽 + 榜階梯 → **正式 PLAY Low 小注**（Lillestrøm / Hacken 型；§1 全勾）  
-4. [ ] 客 -0.5/-1 + Med–Strong + 穩定聯賽 → 同 §1 可 **正式 PLAY Low**；客 0/-0.5 輕熱 → 多 **lean only**  
-5. [ ] 近均：先查**外圍**；無 lean → PASS  
-6. [ ] 勿把 NPL Knights L 與挪超 Lillestrøm W 併成同一分支 n  
-7. [ ] 歐戰資格 **首回** Medium -0.75 → **不**套本條升格（lean only / PASS）
+> **已遷至** [`analysis-checklist.md`](analysis-checklist.md) **§7b**（以該檔為準）。
 
 ---
 
@@ -967,18 +913,7 @@
 
 ## 賽前速查清單（NPL / aus-semi）
 
-在考慮 **澳洲 NPL 正式 PLAY** 前（**不**適用文首 §1 聯賽升格）：
-
-1. [ ] 分支標 `npl-aus`（勿與歐洲聯賽 -0.75 混樣；**不可**因 Lillestrøm W 升格 NPL）  
-2. [ ] 推理信心是否標 **Low**；Track A 是否偏保守  
-3. [ ] 主 -0.75：是否僅 Medium lean → **傾向不正式 PLAY**（Knights watch）  
-4. [ ] 深熱 ≤-1.25 / -1.5 段：小勝 = L → 預設 **PASS**  
-5. [ ] 淺 dog +0.25~+0.75：負 1 = L → 預設 **PASS**（羅奇類）  
-6. [ ] 圖對稱 AH → 先查外圍；**僅外圍無 lean** 才真五五 PASS  
-7. [ ] B 隊 / 青年 → **PASS** 或極 Low  
-8. [ ] 是否在用 cover-after-PASS 事後合理化  
-
-**存疑 → PASS。NPL 正式 PLAY 應極稀（§2 維持 PASS 區）。**
+> **已遷至** [`analysis-checklist.md`](analysis-checklist.md) **§7c**（含 USL；以該檔為準）。
 
 ---
 
@@ -1052,7 +987,81 @@
 > **真五五：** 只以**外圍無 lean** 定義；圖對稱 AH alone 不是黑名單。  
 > **SKILL 硬規則：** 仍不改。  
 > **訂正：** 表 A 曾誤列 Gangwon -0.75 pending — **已刪除**（非正式 PLAY）。  
-> **07-21 卡2：** 正式 0；Fener 1-0 **殺 -2**、Aarhus light **L** 再證 PASS；Graz/Mjällby/紅星 cover **不回寫**。
+> **07-21 卡2：** 正式 0；Fener 1-0 **殺 -2**、Aarhus light **L** 再證 PASS；Graz/Mjällby/紅星 cover **不回寫**。  
+> **07-23：** **Houston 正式 1-1 → -0.75 L**；Nashville **-1 走** PASS 命中；light -0.25 再殺（Inter/SP）；**LAFC pending**。  
+> Başakşehir 深熱和殺；Omonia/Lexington cover **不回寫**。
+
+---
+
+## 2026-07-23 賽後批（早場 + 晚場 · Houston 正式 L）
+
+**賽前檔：** `record/pre-match-2026-07-23.md`  
+**正式 PLAY：** Houston **L**；**LAFC 仍 pending**（西岸補卡未在本結果清單）。  
+**不改 skill 硬規則**（Houston n=1 observation）。
+
+### 用戶賽果
+
+**早場：** Neftçi 2-4 · Omonia 1-0 · Bodø 3-0 · Levski 1-0 · Başakşehir 1-1 · Trnava 0-0 · QoS 1-4 · Medellín 2-2 · Coritiba 1-3 · Ceará 0-1 · Lexington 2-0  
+
+**晚場：** Columbus 1-2 · Cincinnati 4-3 · Charlotte 2-2 · Nashville 1-0 · **Houston 1-1** · SKC 2-1 · Lanús 2-0 · Internacional 1-2 · São Paulo 1-2  
+
+### 正式 PLAY 結算
+
+| 正式注 | 賽果 | Track B | Assessment | Sample |
+|--------|------|---------|------------|--------|
+| **Houston -0.75 @1.86** | **1-1** | **L**（和） | §1 升格後走 **唯一全輸路徑**（需取勝） | Observation n=1；**不改** checklist 硬條件 |
+| **LAFC -0.75 @1.85** | — | pending | 未在結果清單 | 待補 |
+
+### Track B 速結（晚場 + 正式）
+
+| 場次 | 原決策 | 代表盤 | B | 評 |
+|------|--------|--------|---|-----|
+| **Houston 1-1 DC** | **PLAY -0.75** | 主 **-0.75** | **L** | **正式失手**；和殺半一 |
+| Columbus 1-2 NYCFC | PASS + lean -0.75 | 主 **-0.75** | **L** | lean 錯邊；**未正式** 無表 A 損；貼線不升格 **正確** |
+| Cincinnati 4-3 Vancouver | PASS | 主 **+0.75** | **W** | dog 勝1 全贏；**cover-after-PASS 不回寫** |
+| Charlotte 2-2 Atlanta | PASS light -0.25 | 主 **-0.25** | **W** | 和半贏 cover；light 不回寫 |
+| Nashville 1-0 Montréal | PASS **-1** | 主 **-1** | **P** | **Strategy Held**；勝1走，拒 -1 正確 |
+| SKC 2-1 Minnesota | PASS | 主 **+0.75** | **W** | dog cover；不回寫 |
+| Lanús 2-0 Cienciano | PASS 深讓 | **-2** **P** / **-1.75** **W** | 剛好 2 球易走；PASS 深讓仍合理 |
+| Internacional 1-2 Cruzeiro | PASS light -0.25 | **-0.25** | **L** | light 殺 |
+| São Paulo 1-2 Athletico | PASS light -0.25 | **-0.25** | **L** | light 殺 |
+
+（早場表見上一則部分結算，已併入表 B。）
+
+### 分組含義
+
+#### A. 正式 PLAY
+
+- **Houston 1-1 → L：** Medium 主 -0.75 的已知弱點 = **和局全輸**；§1 仍允許小注 Low，**單場不改門檻**（n=1；Lillestrøm/Hacken 仍為歐聯正向）。  
+- **執行提醒：** MLS Medium -0.75 標 **Low + 和殺風險**；可考慮同檔是否要求略強 gap（~1.55 而非 1.58）— **僅 watch，非規則改寫**。  
+- Columbus lean **L** + 未升正式 → 支持「~1.74 不硬升」。
+
+#### B. PASS 正確
+
+1. **Nashville 1-0、-1 → P** — 與「-1 勝1=P」紀律完全一致。  
+2. **Inter / SP light -0.25 L** + 早場 Neftçi/Ceará — light 帶繼續有效。  
+3. **Başakşehir 和殺深讓**（早場）— 深讓 PASS 再證。  
+4. **Lanús 2-0 對 -2 = P** — 深讓邊際走盤；拒深合理。
+
+#### C. cover-after-PASS（不回寫）
+
+- Cincy / SKC **+0.75 W**、Charlotte 和 **W**、Omonia / Lexington / Bodø 等 — **禁止**升級預設 PLAY。
+
+### 對 SKILL / checklist
+
+| 動作 | 是否 |
+|------|------|
+| 改 skill 硬規則 | **否** |
+| 因 Houston L 取消 §1 聯賽 -0.75 升格 | **否**（n=1；歐聯樣本仍正向） |
+| 因 Cincy dog W 放寬 +0.75 | **否** |
+| 表 A | **Houston L 已登**；LAFC pending |
+| 表 B | 已 append |
+
+### 一句話（全日有結部分）
+
+> **Houston 正式和殺 -0.75 → L（observation）。**  
+> Nashville **-1 走** + light -0.25 連殺 = PASS 命中。  
+> dog +0.75 cover **不回寫**；**LAFC 仍 pending。**
 
 ---
 

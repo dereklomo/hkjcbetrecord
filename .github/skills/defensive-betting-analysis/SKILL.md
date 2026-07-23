@@ -1,6 +1,6 @@
 ---
 name: defensive-betting-analysis
-description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. Includes dual-track WR primary vs capital auxiliary, and self cross-check against similar settled spots. Football only. Use when evaluating 足球 or football matches, 贏盤率, external bookmaker lines, Asian handicap, 讓球, 受讓, 串關, cross-check, post-match review, or PASS vs PLAY.'
+description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. In this workspace, pre-match sessions should read analysis-checklist.md first (execution/watchlist), then post-match-review-grok.md for ledgers. Includes dual-track WR primary vs capital auxiliary, and self cross-check against similar settled spots. Football only. Use when evaluating 足球 or football matches, 贏盤率, external bookmaker lines, Asian handicap, 讓球, 受讓, 串關, cross-check, post-match review, or PASS vs PLAY.'
 argument-hint: 'Preferred detailed input format: 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率. In this workspace, treat unlabeled quoted prices as HKJC prices unless they are explicitly labeled as external-market prices; then seek Pinnacle, bet365, or other major external benchmarks to determine direction. Use *讓球盤 when the handicap is synthetically converted from HKJC 3-way handicap.'
 user-invocable: true
 ---
@@ -24,6 +24,17 @@ If the user provides only external odds, do not force the analysis back into a H
 For this workspace and user workflow, if odds are pasted without a source label, treat them as HKJC prices rather than external odds. The default next step is to look for external benchmark prices and use those benchmarks, not the HKJC line itself, to determine the preferred betting direction.
 
 Do not claim external confirmation unless a concrete public source was actually checked. Never imply unseen Pinnacle, bet365, or consensus support.
+
+### Workspace read order (this repo)
+
+For **pre-match** screens in this workspace, read files in this order (does **not** change hard rules below):
+
+1. **`analysis-checklist.md`** — execution checklist, PLAY upgrade / PASS gates, watchlist (execution layer only; if it conflicts with this skill, **this skill wins**)
+2. **`post-match-review-grok.md`** — settled Track B ledgers (table A/B) and batch reviews for self cross-check
+3. **`record/pre-match-*.md`** — same-day prior decisions when present
+
+Do **not** treat `post-match-review-home.md` as a writable review source (redirect/stub only).  
+Do **not** invent a second checklist or re-home watchlists into ad-hoc session notes.
 
 ## Primary Objective: Win-Rate First (贏盤率為主)
 
@@ -108,7 +119,8 @@ Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts 
 5. **Fundamentals as modifier** — raise/lower WR confidence; do not flip side without market+WR support.
 6. **HKJC overlay** — execution price; auxiliary.
 7. **Track A soft filters** — risk notes; only veto if WR edge is not actually clear.
-8. Output: preferred line for **win-rate**, then auxiliary caveats.
+8. **Workspace execution gate** (this repo): apply `analysis-checklist.md` for formal PLAY upgrade vs PASS / WR-lean-only (e.g. light `-0.25` force PASS, `-0.75` must state draw=L when PLAY). Checklist cannot override hard identity / wrong-match / no-market gates in this skill.
+9. Output: preferred line for **win-rate**, then auxiliary caveats.
 
 ### Using Track B for unplayed matches (line push / inference)
 
@@ -129,9 +141,10 @@ Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts 
 Before finalizing Track A `PLAY`/`PASS` (and when writing Track B `WR-inferred lean`), **run a self cross-check**: compare the current fixture to **comparable settled samples** in this workspace, then adjust confidence or decision only when the comparison is structurally valid.
 
 Primary local sources (in order):
-1. `post-match-review-grok.md` (and any dated post-match review files in the repo root)
-2. Branch tags / Track B ledger tables already written in those reviews
-3. Optional: `post-match-review-gpt.md` or other agent reviews for disagreement notes — never copy a decision without re-checking identity and external odds
+1. `analysis-checklist.md` — pre-match execution checklist, upgrade/PASS gates, and watchlist (execution layer; does not override this skill’s hard rules)
+2. `post-match-review-grok.md` (and any dated post-match review files / `record/pre-match-*.md`) — settled ledgers table A/B and batch reviews
+3. Branch tags / Track B ledger tables already written in those reviews
+4. Optional: `post-match-review-gpt.md` or other agent reviews for disagreement notes — never copy a decision without re-checking identity and external odds
 
 ### When self cross-check is required
 
@@ -232,6 +245,8 @@ Use this skill when the user wants to:
 - review a finished match and decide whether the strategy needs adjustment
 - self cross-check a screen against past similar settled handicaps or branch WR
 - re-analyze after dual-track or historical comparison
+
+**In this workspace (pre-match):** before screening a batch or issuing formal `PLAY`/`PASS`, read **`analysis-checklist.md` first**, then use **`post-match-review-grok.md`** ledgers for comparable settled samples. Append new settled results only to `post-match-review-grok.md` (or dated review/pre-match record files)—not to `post-match-review-home.md`.
 
 ## Market Source Policy
 
@@ -449,6 +464,11 @@ Begin by asking which side/line has the **best justified win-rate** under Track 
 
 After a provisional market lean forms (and before locking Track A `PLAY`), run **Self Cross-Check Against Similar Settled Spots** when required by that section.  
 At minimum for batches and borderline calls: assign a branch tag, cite comparables from `post-match-review-grok.md`, state similarity, and separate Track A vs Track B implications.
+
+### 1c. Workspace execution checklist (this repo)
+
+Before locking formal `PLAY` or a confident multi-match `PASS` screen in this workspace, apply **`analysis-checklist.md`** (upgrade gates, force-PASS bands, watchlist).  
+This step is **execution discipline** for the local ledger workflow—it does **not** replace the identity gate, invent odds, or elevate capital filters above win-rate.
 
 ### 2. Apply the Pre-Match Filter Matrix
 
@@ -739,6 +759,7 @@ Before returning a recommendation, verify that:
 - when self cross-check was required, a branch tag and named comparables appear; low-similarity history was not used to force PLAY
 - level-ball-lean history was not applied to true near-even markets
 - Track B win-rate case is stated first; auxiliary capital/price/cup notes are labeled secondary
+- in this workspace for pre-match screens: `analysis-checklist.md` was considered for formal PLAY upgrade vs PASS / WR-lean-only (especially light `-0.25`, pure `-1`, deep favorites, and any formal `-0.75` stating draw=L)
 - the answer explicitly states `PASS` or `PLAY` (or an identity-hold asking the user, which is not a formal bet decision)
 - the market type matches the correct branch for single or parlay mode
 - the main recommendation is driven by external benchmark prices whenever they can be obtained
