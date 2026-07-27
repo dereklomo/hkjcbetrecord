@@ -84,7 +84,7 @@ FC慶南 0-0 驪州FC
 3.95 迪祖亞拿 1.72 受讓半一 2.07 堤格雷斯 1.72
 1.47 水原FC女足 1.95 讓一球 1.75 華川FC女足 4.85
 
-根據並記錄以下比賽結果，檢查是否需要更新現時SKILL.md，請參考以往review並紀錄有需要更新的策略(包括值得觀察成為):
+根據並記錄以下比賽結果，檢查是否需要更新現時SKILL.md，請參考以往review並紀錄有需要更新的策略(包括值得觀察比賽):
 國際杜古 2-1 薩拉熱窩
 FC聖若瑟 0-0 波希米亞人
 伊斯韋斯 3-1 迪費丹治
@@ -219,6 +219,31 @@ San Jose Earthquakes 0-4 Orlando City
 1.82 Oakleigh Cannons 1.69 讓平半 2.07 South Melbourne 3.25
 3.30 Gimhae City 1.93 受讓平半 1.83 Chungbuk Cheongju FC 2.01
 
+以下為 2026年7月23日 至 7月24日 的比賽賽果，根據並記錄以下比賽結果，檢查是否需要更新現時SKILL.md，請參考以往review並紀錄有需要更新的策略(包括值得觀察比賽):
+
+Qarabag 0-0 CSKA Sofia
+HJK Helsinki 5-0 Coleraine
+AEK Larnaca 0-1 Beitar Jerusalem
+Sheriff 0-5 Maccabi Tel Aviv
+Hammarby 0-1 Anderlecht
+Besiktas JK 1-0 Midtjylland
+St. Gallen 2-1 Benfica
+FC Twente Enschede 1-2 Ferencvarosi TC
+Hapoel Tel Aviv 2-0 Ludogorets Razgrad
+Motherwell 2-0 HB Torshavn
+Hajduk Split 2-0 Pafos FC
+Botafogo - RJ 0-0 Vitória - BA
+Cuiaba 0-1 Atletico Clube Goianiense
+Boca Juniors 1-0 O.Higgins
+Botafogo SP 4-2 Juventude
+Defensa Y Justicia 1-1 Aldosivi Mar del Plata
+
+Manly United 3-0 Sydney Olympic
+Heidelberg United 0-0 Caroline Springs George Cross
+St Albans Saints 3-2 Hume City
+Oakleigh Cannons 1-2 South Melbourne
+Gimhae City 1-1 Chungbuk Cheongju FC
+
 20260725
 3.10 Jaro 2.03 受讓平半 1.75 SJK Seinajoen 1.88
 1.45 Vasteras SK FK 1.90 讓一球 1.86 Orgryte 5.0
@@ -232,4 +257,40 @@ San Jose Earthquakes 0-4 Orlando City
 5.30 Atlante FC 1.80 受讓一球 1.97 CF America 1.47
 1.90 Tijuana 1.76 讓平半 2.02 Club Leon 3.15
 
-20260726
+根據並記錄以下比賽結果，檢查是否需要更新現時SKILL.md，請參考以往review並紀錄有需要更新的策略(包括值得觀察比賽):
+Jaro 2-1 SJK Seinajoen
+Vasteras SK FK 2-0 Orgryte
+Viborg 1-0 Odense BK
+Gimnasia Mendoza 1-0 Central Cordoba SDE
+Guatemala U20 0-1 Costa Rica U20
+Racing Club de Avellaneda 2-1 Gimnasia LP
+CA Huracan 1-0 Banfield
+Colo Colo 3-1 Deportes Limache
+Tepatitlan FC 0-1 Alacranes de Durango
+Atlante FC 1-1 CF America
+Tijuana 1-0 Club Leon
+
+27/07/2026（一）
+
+（即場／進行中為主，完整主客勝賠率部分已暫停或變動）
+約 2.16 Deportes Concepcion 2.03 [-1/-1.5] 1.72 O'Higgins 約 2.84
+（FB1801，讓球盤參考；主客勝來自即場參考）
+約 1.41 Pachuca 1.64 [-1/-1.5] 2.15 Queretaro 約 5.50
+（FB1851）
+約 1.35 Honduras U20 1.96 [-0.5/-1] 1.77 Jamaica U20 約 5.90
+（FB1675）
+1.07 Indonesia 1.88 [-2/-2.5] 1.88 Cambodia 19.00
+（FB1912）
+約 2.97 Ferro Carril Oeste Women 1.72 [0/+0.5] 2.00 Talleres Women 約 2.25
+（FB1905）
+
+28/07/2026（二）
+
+1.63 Hacken 1.93 [-0.5/-1] 1.83 AIK Solna 3.80
+（FB1756）
+1.56 Rosenborg 1.84 [-0.5/-1] 1.92 Fredrikstad 4.40
+（FB1864）
+1.64 Randers 1.95 [-0.5/-1] 1.82 Silkeborg IF 3.95
+（FB1769）
+1.23 South Africa Women 1.70 [-1/-1.5] 2.05 Tanzania Women 8.00
+（FB1640）

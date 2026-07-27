@@ -74,7 +74,7 @@
 | 結構缺陣 | 主力前鋒+中軸或門將等 **雙脊梁** 缺；或單核心缺明顯改球路 |
 | 旅途/賽程稅過重 | 客熱長途/三賽七天仍打深讓 |
 | 未知主導 | 完全查不到人員/動機 → incomplete，**不**正式 PLAY |
-| **-0.75 且明顯和局磁鐵** | 近交手連和、雙方偏不敗腳法，又無強取勝劇本 → 和=L 路徑放大，**傾向 lean only / PASS** |
+| **-0.75 且明顯和局磁鐵** | 近交手連和、雙方偏不敗腳法，又無強取勝劇本 → 和=L 路徑放大，**傾向 lean only / PASS**（**07-24 Botafogo 0-0 L** 再證：已標和磁鐵仍升格 = 執行偏進） |
 
 **修飾（不翻邊，只調信心）：** 主場真實優勢、中段賽季穩定陣容、動機與 market lean 同向 → 支持 Low 小注；**不可**用基本面發明與外圍相反的 PLAY。
 
@@ -116,6 +116,15 @@
 - NPL / USL / 澳盃 薄 dog  
 - light 上盤 -0.25（≥1.85）  
 - 僅因「本卡沒下盤」硬找受讓  
+
+### 1d-3b · dog +1 watch（07-25 後 · 不改 skill）
+
+| 訊號 | 執行 |
+|------|------|
+| **Atlante +1** 1-1 **W** | Med 客熱 + 和 → 防漏路徑有效 |
+| **Örgryte +1** 負 2 **L** | 主外圍 **Strong ~≤1.50** 時 +1 仍可被 2-0 穿 → **提高爆破風險敘事**；可更小注或僅 lean |
+| 比利時/半島 +1 **P** | 輸 1 走仍友好 |
+| Racing/GM lean **-0.75** cover | **不**因 cover 放寬貼線升格 |
 
 ### 1d-4 · 批次輸出建議（可選短表）
 
@@ -225,24 +234,77 @@
 - 本檔 = **執行提醒**；skill 硬門（身份、錯場、半贏=W 等）不變。  
 - 升格 **不**等於放寬 NPL / 友誼 / light / 歐戰首回 / 深讓 / 薄 dog。  
 - **§1d 防漏** = 執行掃描，**不**新開 light/NPL 窗口；與 skill 下盤保護 / 平手 lean overlay 對齊。  
-- 若 §1 型正式 PLAY 連續失效達 formal review 門檻，再議 skill——**Houston 單場 L 不改規則**。  
+- 若 §1 型正式 PLAY 連續失效達 formal review 門檻，再議 skill——**Houston / Botafogo 單場和殺不改規則**。  
 - **§1c MLS 升格線收緊** = watch only；LAFC **W** + Houston **L** = **1W1L**，**仍不寫死**收緊/放寬。  
+- **07-24 Botafogo 0-0 L：** 和磁鐵已標仍升格 → 執行應更嚴 §1-fund；**不**改 skill。  
 - 可比結算樣本、正式命中表 → **`post-match-review-grok.md`**。
 
 ---
 
-## 6. 07-23 暫時賽果 → 執行備忘（不改 skill）
+## 6. 07-23 / 07-24 賽果 → 執行備忘（不改 skill）
 
 | 訊號 | 執行含義 |
 |------|----------|
 | Houston 1-1 → 正式 **-0.75 L** | §1b 強制「和=L」；小注；不串同分支 |
-| Neftçi / Ceará / Inter / SP **light -0.25 L** | §2：主勝≥1.85 的 -0.25 **強制 PASS** |
+| **Botafogo 0-0 → 正式 -0.75 L** | 同路徑；**交手/風格和磁鐵 → 應 lean/PASS 或改 -0.25**，勿硬半一 |
+| **Örgryte +1 L** / **Atlante +1 W** | dog+1 **1W1L**；Strong 主穿 watch；§1d **保留** |
+| Racing / GM lean -0.75 **W**（07-25） | cover **不回寫**正式 |
+| Defensa 1-1 lean -0.75 **L** | 貼線不升格 **正確** |
+| Neftçi / Ceará / Inter / SP / **Cuiabá** **light -0.25 L** | §2：主勝≥1.85 的 -0.25 **強制 PASS** |
+| 歐戰 Qarabağ -1 和殺、Twente -1 **L**、Motherwell -2 **P** | 拒 -1/深 **Strategy Held** |
+| Manly NPL cover；Heidelberg 深和殺 | NPL 正式極稀 **維持**；cover **不回寫** |
 | Nashville 1-0 → **-1 P** | 拒純 -1 再證 |
 | Başakşehir 和殺深讓；Lanús -2 走 | 深讓 PASS；`Strong 獨贏 ≠ 深讓 WR` |
 | Omonia lean **W**；Columbus lean **L** | 首回 lean only；貼線不升 §1 |
 | Cincy / SKC **+0.75 W** | cover-after-PASS **不回寫** |
 | Lexington USL **W** | USL 不升正式 |
 | **LAFC -0.75** | **pending** → 再議 §1c |
+
+---
+
+## 6b. 分分支 WR + 出手優先序（表 A 為主 · 2026-07-25 截）
+
+> **用途：** 賽前「先打哪類、先避哪類」；**n 小**，只作優先序，**不是**單一命中率改 skill。  
+> **正式粗計：** 約 **7–8W / 6L**（~54–57%；P 剔除；牙山 GPT 列可計可不計）。  
+> **詳帳：** `post-match-review-grok.md` 表 A/B。
+
+### 出手優先序（高 → 低）
+
+| 優先 | 結構 | 表 A / 可比粗況 | 出手建議 | 一票否決 |
+|------|------|-----------------|----------|----------|
+| **P1** | 穩聯賽（挪/瑞等）Medium **-0.75** + 榜階梯 + **無和磁鐵** | Lillestrøm W、Hacken W | **正式 Low 小注**；寫和=L | 交手連和／膠著劇本 → 降 lean 或改 -0.25 |
+| **P2** | 穩聯賽 **clear -0.25**（外圍 ≤1.70）+ 基本面支持不敗 | 表 B 保地/CRB/蒙特利爾多 W；正式 clear 仍稀 | **§1d 防漏 → 正式 Low**（勿只 lean） | 主勝≥1.85 light → PASS |
+| **P3** | 結構 **dog +1**（非半職）+ 外圍 **非 Strong 碾壓** | Atlante **W**；比/半島 **P** | **§1d 可正式 Low** | 主/客熱 **~≤1.50 Strong** → 爆破 watch（Örgryte **L**） |
+| **P4** | 穩聯賽 **dog +0.25** + 外圍非強主 | 艾比安/隆德里納 **W** | **可正式 Low**（≠ 羅奇 NPL） | 半職/澳低級 → PASS |
+| **P5** | 平手 + **外圍 clear lean** | 牙山 **W** | **可正式 Low** | 真五五（外圍無 lean）→ PASS |
+| **P6** | MLS / 巴甲等 Medium **-0.75** | Houston L、LAFC W、Botafogo L | **更嚴**：小注或膠著→PASS；§1c watch | 和磁鐵／貼線 ~1.72+ → 不硬升 |
+| **P7** | 貼線 -0.75（外圍 ~1.72–1.85） | Defensa L；Racing/GM lean **W** | **最多 lean**；cover **不回寫** | 勿因 cover 升正式 |
+| **避** | light -0.25、NPL/USL、歐戰首回、純 -1、深讓、薄 +0.75 | 里昂/Knights/多批 PASS 成立 | **PASS**（正式極稀） | cover **永不**回寫 |
+
+### 分支 WR 速覽（正式 + 必要表 B 註）
+
+| 分支 | 正式 / 主讀粗況 | 優先 | 備註 |
+|------|-----------------|------|------|
+| `league-fav-0.75` 歐北穩聯 | **2W**（Lil/Hacken） | **P1** | 範型；≠ MLS/巴甲/NPL |
+| `league-fav-0.75` MLS | **1W1L** | **P6** | 和殺 + 穿；n=2 |
+| `league-fav-0.75` 巴甲 | **0W1L**（Botafogo） | **P6** | 和磁鐵執行 |
+| `league-shallow` **clear** -0.25 | 正式稀；表 B 友好 | **P2** | 防漏必掃 |
+| `league-shallow-light` | 正式應 0；表 B mixed | **避** | ≥1.85 強制 PASS |
+| `league-dog-plus1` | **1W1L** + 早期 P | **P3** | Strong 主 watch |
+| `dog-plus0.25` 穩聯賽 | **2W** | **P4** | 和=W 友好 |
+| `aus-semi-dog-shallow` | **0W1L**（羅奇） | **避** | prefer +1 或 PASS |
+| `npl-aus` | 正式 **L**（Knights） | **避** | 正式極稀 |
+| `shallow-fav-0.25-light` 跨國 | **0W1L**（里昂） | **避** | 已入紀律 |
+| `level-ball-lean` | 牙山 **W** | **P5** | 真五五仍 PASS |
+| `league-fav-deep` / 純 **-1** | 正式少；表 B 多 P/L | **避** 正式 | Strong 獨贏 ≠ 深讓 WR |
+| 歐戰 light / 首回 | 表 B mixed | **避** 正式 | lean only 上限 |
+
+### 使用規則
+
+1. **先掃 P1–P5 有無達標**，再考慮 P6；P7/避 **不**為填倉位升級。  
+2. **同卡多腳：** 不串同分支；寧可 1 腳 P1 大於 2 腳 P6+P3。  
+3. **短窗 2W3L** 不推翻上表；**同分支 ≥3 次同向失效** 才 formal review skill。  
+4. 更新頻率：每批正式結算後改本節數字；權威列仍在 grok 表 A。
 
 ---
 
