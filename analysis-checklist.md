@@ -253,6 +253,8 @@
 | Neftçi / Ceará / Inter / SP / **Cuiabá** **light -0.25 L** | §2：主勝≥1.85 的 -0.25 **強制 PASS** |
 | 歐戰 Qarabağ -1 和殺、Twente -1 **L**、Motherwell -2 **P** | 拒 -1/深 **Strategy Held** |
 | Manly NPL cover；Heidelberg 深和殺 | NPL 正式極稀 **維持**；cover **不回寫** |
+| **Rosenborg -0.75 4-0 W**（07-27） | §6b **P1** 正向；歐北正式 3W0L |
+| **Häcken / Randers lean 和殺** | 貼線 **P7** 不升正式 **再證** |
 | Nashville 1-0 → **-1 P** | 拒純 -1 再證 |
 | Başakşehir 和殺深讓；Lanús -2 走 | 深讓 PASS；`Strong 獨贏 ≠ 深讓 WR` |
 | Omonia lean **W**；Columbus lean **L** | 首回 lean only；貼線不升 §1 |
@@ -272,20 +274,20 @@
 
 | 優先 | 結構 | 表 A / 可比粗況 | 出手建議 | 一票否決 |
 |------|------|-----------------|----------|----------|
-| **P1** | 穩聯賽（挪/瑞等）Medium **-0.75** + 榜階梯 + **無和磁鐵** | Lillestrøm W、Hacken W | **正式 Low 小注**；寫和=L | 交手連和／膠著劇本 → 降 lean 或改 -0.25 |
+| **P1** | 穩聯賽（挪/瑞等）Medium **-0.75** + 榜階梯 + **無和磁鐵** | Lillestrøm W、Hacken W、**Rosenborg 4-0 W**（07-27） | **正式 Low 小注**；寫和=L | 交手連和／膠著劇本 → 降 lean 或改 -0.25 |
 | **P2** | 穩聯賽 **clear -0.25**（外圍 ≤1.70）+ 基本面支持不敗 | 表 B 保地/CRB/蒙特利爾多 W；正式 clear 仍稀 | **§1d 防漏 → 正式 Low**（勿只 lean） | 主勝≥1.85 light → PASS |
 | **P3** | 結構 **dog +1**（非半職）+ 外圍 **非 Strong 碾壓** | Atlante **W**；比/半島 **P** | **§1d 可正式 Low** | 主/客熱 **~≤1.50 Strong** → 爆破 watch（Örgryte **L**） |
 | **P4** | 穩聯賽 **dog +0.25** + 外圍非強主 | 艾比安/隆德里納 **W** | **可正式 Low**（≠ 羅奇 NPL） | 半職/澳低級 → PASS |
 | **P5** | 平手 + **外圍 clear lean** | 牙山 **W** | **可正式 Low** | 真五五（外圍無 lean）→ PASS |
 | **P6** | MLS / 巴甲等 Medium **-0.75** | Houston L、LAFC W、Botafogo L | **更嚴**：小注或膠著→PASS；§1c watch | 和磁鐵／貼線 ~1.72+ → 不硬升 |
-| **P7** | 貼線 -0.75（外圍 ~1.72–1.85） | Defensa L；Racing/GM lean **W** | **最多 lean**；cover **不回寫** | 勿因 cover 升正式 |
+| **P7** | 貼線 -0.75（外圍 ~1.72–1.85） | Defensa L；Racing/GM lean W；**Häcken/Randers 07-27 和殺 L** | **最多 lean**；cover **不回寫**；和殺證不升 | 勿因 cover 升正式 |
 | **避** | light -0.25、NPL/USL、歐戰首回、純 -1、深讓、薄 +0.75 | 里昂/Knights/多批 PASS 成立 | **PASS**（正式極稀） | cover **永不**回寫 |
 
 ### 分支 WR 速覽（正式 + 必要表 B 註）
 
 | 分支 | 正式 / 主讀粗況 | 優先 | 備註 |
 |------|-----------------|------|------|
-| `league-fav-0.75` 歐北穩聯 | **2W**（Lil/Hacken） | **P1** | 範型；≠ MLS/巴甲/NPL |
+| `league-fav-0.75` 歐北穩聯 | **3W0L**（Lil/Hacken/**Rosenborg**） | **P1** | 範型；≠ MLS/巴甲/NPL；n 仍小 |
 | `league-fav-0.75` MLS | **1W1L** | **P6** | 和殺 + 穿；n=2 |
 | `league-fav-0.75` 巴甲 | **0W1L**（Botafogo） | **P6** | 和磁鐵執行 |
 | `league-shallow` **clear** -0.25 | 正式稀；表 B 友好 | **P2** | 防漏必掃 |

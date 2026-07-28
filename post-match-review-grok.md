@@ -641,15 +641,17 @@
 | 07-24 | Botafogo-RJ vs Vitória-BA | Botafogo **-0.75** @1.91 | **0-0** | **L** | league-fav-0.75 BRA | §1 升格；**和=L**；賽前已寫交手和磁鐵 |
 | 07-25 | Västerås vs Örgryte | Örgryte **+1** @1.86 | **2-0** 主 | **L**（客負 2） | league-dog-plus1 | §1d 防漏；Strong 主穿 2 球 |
 | 07-25 | Atlante vs CF América | Atlante **+1** @1.80 | **1-1** | **W**（和=全贏 +1） | league-dog-plus1 MX | §1d 防漏；和局護盤命中 |
+| 07-27 | Rosenborg vs Fredrikstad | Rosenborg **-0.75** @1.84 | **4-0** | **W** | league-fav-0.75 NOR | §6b P1；挪超 Medium 半一；勝 4 |
 
 **正式 PLAY 粗 WR（有 W/L；P 剔除；分支勿混算單一 WR）：**  
 早期 dog/level：艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W；  
-近期上盤：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、Houston L、LAFC W、Botafogo L；  
-**07-25 下盤 +1：** Örgryte **L**、Atlante **W** → 累計約 **8W / 6L**（小樣本；半島/比利時 +1 多為 **P** 剔除）。  
+近期上盤：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、Houston L、LAFC W、Botafogo L、**Rosenborg W**；  
+**07-25 下盤 +1：** Örgryte **L**、Atlante **W** → 累計約 **9W / 6L**（小樣本；半島/比利時 +1 多為 **P** 剔除）。  
 **MLS -0.75 正式：** Houston **L** + LAFC **W** = **1W1L**。  
-**dog +1 正式（有 W/L）：** Atlante **W** + Örgryte **L** = **1W1L**（n=2 observation；比利時/半島多 **P**）。  
-**聯賽 -0.75 和殺：** Houston + Botafogo → 和磁鐵執行備忘。  
-**分支必須分開：** dog-plus1 ≠ thin +0.25；league-fav-0.75 歐聯/MLS/巴甲 分開計。
+**歐北穩聯賽 -0.75 正式：** Lillestrøm W、Hacken W、**Rosenborg W** = **3W0L**（小樣本正向）。  
+**dog +1 正式（有 W/L）：** Atlante **W** + Örgryte **L** = **1W1L**。  
+**聯賽 -0.75 和殺：** Houston + Botafogo（≠ 歐北 P1 樣本）。  
+**分支必須分開：** 歐北 league-fav-0.75 ≠ MLS/巴甲；dog-plus1 ≠ thin +0.25。
 
 ---
 
@@ -771,6 +773,12 @@
 | 07-25 | Atlante 1-1 América | Atlante **+1** | 0 | **W** | league-dog-plus1 MX | **正式 PLAY W**；和=護盤 |
 | 07-25 | 同上 | América **-1** | 0 | **L** | league-away-fav-1.0 | PASS；和殺 -1 |
 | 07-25 | Tijuana 1-0 León | Tijuana **-0.25** | +1 | **W** | league-shallow-light | PASS；cover light **不回寫** |
+| 07-27 | Indonesia 5-1 Cambodia | Indonesia **-2/-2.5** | +4 | **W** | intl-deep-fav | PASS；cover 深 **不回寫** |
+| 07-27 | Ferro Oeste W 1-0 Talleres W | Ferro 側 **0/+0.5** | +1 | **W**（主勝） | women-near-even | PASS；女足 cover **不回寫** |
+| 07-27 | Häcken 0-0 AIK | Häcken **-0.75** | 0 | **L** | league-fav-0.75 SWE lean | PASS+lean 貼線；**和=L**；不升正式 **正確** |
+| 07-27 | **Rosenborg 4-0 Fredrikstad** | Rosenborg **-0.75** | +4 | **W** | league-fav-0.75 NOR | **正式 PLAY W** |
+| 07-27 | Randers 1-1 Silkeborg | Randers **-0.75** | 0 | **L** | league-fav-0.75 DEN lean | PASS+lean 貼線；**和=L**；不升正式 **正確** |
+| 07-27 | SA Women 1-2 Tanzania W | SA Women **-1/-1.5** | −1 | **L** | women-intl-deep | PASS；深熱爆冷；Strategy Held |
 
 ### 分支 WR 速記（累計粗算 · 更新用）
 
@@ -779,7 +787,7 @@
 | **cup-fav-0.75** | 穿（伊、競賽會）+ 殺（基輔、慶南、連菲類）→ **mixed** | 外圍 **強/中/輕** 分檔；不硬拒、不預設 PLAY |
 | **cup-fav-1.0** | 波希 L、比奧格特 L | 對 **-1** 更嚴；需更強外圍檔 |
 | **league-shallow-0.25** | 保地 W、CRB W、蒙特利爾 W；**里昂 light 跨國 L** | clear 聯賽 lean 仍友好；**light+跨國勿套 soft band** |
-| **league-fav-0.75** | 正式：Lillestrøm W、Hacken W、Houston L、LAFC W、**Botafogo L** | Medium 可評估；**和=L**；MLS/巴甲/歐聯 **分開 n**；和磁鐵慎半一 |
+| **league-fav-0.75** | 歐北正式：Lil/Hacken/**Rosenborg W**；MLS 1W1L；Botafogo L；貼線 lean：Häcken/Randers **和殺 L** | **P1 歐北維持**；貼線不升再證；MLS/巴甲分開 |
 | **league-fav-deep** | **Hammarby -1.5/-2 W**；Motherwell -2 **P** / -2.5 **L** | Strong 仍可能剛好球數；拒深維持 |
 | **level-ball-lean** | 牙山 W；Sheriff 客 lean cover | 外圍 lean + 平手可跟；真五五仍 PASS；cover 不回寫 |
 | **2nd-leg** | 斯利納單場 W 仍出局 | 推斷必須加總比分 |
@@ -1052,7 +1060,51 @@
 > **07-23：** Houston 正式 **1-1 L**；**LAFC 3-1 正式 W**（MLS -0.75 正式 **1W1L**）；Nashville **-1 走**；Galaxy lean 錯邊未升正式 **正確**；SJ -1 PASS 避爆。  
 > Başakşehir 深熱和殺；light -0.25 再殺；dog cover **不回寫**。  
 > **07-24：** **Botafogo -0.75 正式 0-0 L**（和殺；賽前和磁鐵已標）；Defensa lean 和殺貼線不升 **正確**；歐戰 deep/-1/light 多數 PASS 成立；NPL cover **不回寫**；**SKILL 硬規則仍不改**。  
-> **07-25：** 正式 **Örgryte +1 L**（主 2-0 穿）+ **Atlante +1 W**（1-1）= dog+1 **1W1L**；Racing/GM lean cover **不回寫**；light -0.25 多 cover **不回寫**；**SKILL 不改**；watch Strong 主 vs dog +1。
+> **07-25：** 正式 **Örgryte +1 L**（主 2-0 穿）+ **Atlante +1 W**（1-1）= dog+1 **1W1L**；Racing/GM lean cover **不回寫**；light -0.25 多 cover **不回寫**；**SKILL 不改**；watch Strong 主 vs dog +1。  
+> **07-27：** 正式 **Rosenborg -0.75 4-0 W**（歐北 P1）；Häcken/Randers 貼線 lean **皆和殺 L** → 不升正式 **正確**；Indonesia 深 cover / 女足深殺 **不回寫**；**SKILL 不改**。
+
+---
+
+## 2026-07-27 賽後批（挪瑞丹 + 國足/女足）
+
+**賽前檔：** `record/pre-match-2026-07-27.md`  
+**正式 PLAY：** **Rosenborg -0.75 @1.84 → 4-0 → Track B W**  
+**不改 skill 硬規則**（歐北 P1 正向 obs；貼線不升再證）。
+
+### 用戶賽果
+
+Indonesia 5-1 Cambodia · Ferro Oeste W 1-0 Talleres W · **Häcken 0-0 AIK** · **Rosenborg 4-0 Fredrikstad** · **Randers 1-1 Silkeborg** · SA Women 1-2 Tanzania W  
+
+### 正式 PLAY 結算
+
+| 正式注 | 賽果 | Track B | Assessment | Sample |
+|--------|------|---------|------------|--------|
+| **Rosenborg -0.75 @1.84** | **4-0** | **W** | §6b P1 挪超 Medium 半一 | Observation W；歐北 -0.75 正式累計 **3W0L** |
+
+### 策略是否成立（摘要）
+
+| 決策 | 賽果關係 | 評估 |
+|------|----------|------|
+| 正式 Rosenborg -0.75 | **4-0 W** | P1 路徑成立 |
+| Häcken -0.75 **僅 lean**（外圍 ~1.80+） | **0-0 → L** | 貼線不升 **正確**（和=L） |
+| Randers -0.75 **僅 lean**（~1.72–1.76） | **1-1 → L** | 同上 **正確** |
+| 拒 Indonesia 深 | 5-1 cover | cover-after-PASS **不回寫** |
+| 拒 SA Women 深 | 1-2 主負 | PASS 避爆 **Strategy Held** |
+| 拒 Ferro 女足近均 | 主 1-0 cover | 女足 PASS **不回寫** |
+| Streak none | Rosenborg 大勝但 -0.75 仍非 streak 預設 | 維持（和殺結構仍敵對） |
+
+### 值得觀察（watch · 不改 skill）
+
+1. **歐北穩聯賽 Medium -0.75（P1）** — Lil / Hacken（歷史）/ **Rosenborg W** → 優先序 **維持**；n 仍小。  
+2. **貼線 -0.75 lean（P7）** — Häcken、Randers **同晚雙和殺** → 不升正式紀律 **強化**（非「該升」）。  
+3. **深讓國足** — Indonesia 大穿 **不**放寬深讓正式。  
+4. **女足深讓** — SA 爆冷 → 女足/深讓 PASS 維持。  
+5. **同卡「一正式兩 lean」** — 正式 W + 兩 lean 和殺 = 篩盤分層有效。
+
+### 對 SKILL.md
+
+- **硬規則：不改**  
+- 執行：§6b P1 / P7 對照本批再驗證；checklist 備忘更新即可  
 
 ---
 
@@ -1253,8 +1305,9 @@ Jaro 2-1 SJK · **Västerås 2-0 Örgryte** · Viborg 1-0 Odense · Gimnasia M 1
 **MLS -0.75 正式合計：** Houston L + LAFC W = **1W1L**（n=2；**未到** formal review）。  
 **巴甲 -0.75 正式：** Botafogo **L**（n=1 Observation）。  
 **dog +1 正式（W/L）：** Atlante **W** + Örgryte **L** = **1W1L**（比利時/半島多 **P**）。  
-**對照（勿只記仇）：** 艾比安/隆德里納 W、牙山 W、Lillestrøm W、Hacken W、Hammarby W、LAFC W、**Atlante W** → 框架非「一出手就錯」。  
-粗計有 W/L：約 **8W / 6L**（**禁止**混分支算單一命中率改規則）。
+**對照（勿只記仇）：** 艾比安/隆德里納 W、牙山 W、Lillestrøm W、Hacken W、Hammarby W、LAFC W、Atlante W、**Rosenborg W** → 框架非「一出手就錯」。  
+粗計有 W/L：約 **9W / 6L**（**禁止**混分支算單一命中率改規則）。  
+**歐北 -0.75 正式：** Lillestrøm / Hacken / **Rosenborg = 3W0L**（與 MLS/巴甲和殺分開計）。
 
 ### 2) 結構性失腳（已吸收 · 執行勿回潮）
 

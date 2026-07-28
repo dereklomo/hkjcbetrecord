@@ -273,10 +273,27 @@ Tijuana 1-0 Club Leon
 20260727
 1.07 Indonesia 1.88 [-2/-2.5] 1.88 Cambodia 19.00
 2.97 Ferro Carril Oeste Women 1.72 [0/+0.5] 2.00 Talleres Women 2.25
-
-28/07/2026（二）
-
 1.63 Hacken 1.93 [-0.5/-1] 1.83 AIK Solna 3.80
 1.56 Rosenborg 1.84 [-0.5/-1] 1.92 Fredrikstad 4.40
 1.64 Randers 1.95 [-0.5/-1] 1.82 Silkeborg IF 3.95
 1.23 South Africa Women 1.70 [-1/-1.5] 2.05 Tanzania Women 8.00
+
+根據並記錄以下比賽結果，檢查是否需要更新現時SKILL.md，請參考以往review並紀錄有需要更新的策略(包括值得觀察比賽):
+Indonesia 5-1 Cambodia
+Ferro Carril Oeste Women 1-0 Talleres Women
+Hacken 0-0 AIK Solna
+Rosenborg 4-0 Fredrikstad
+Randers 1-1 Silkeborg IF
+South Africa Women 1-2 Tanzania Women
+
+1.29 Mexico U20 1.85 [-1/-1.5] 1.87 Costa Rica U20 7.25
+4.35 Huracan Women 1.67 [+0.5/+1] 2.07 River Plate Women 1.71
+2.62 KuPS 2.03 [0] 1.75 Sabah FC 2.26
+5.30 Lincoln Red Imps 1.88 [+1] 1.88 Mjallby 1.44
+1.24 Zambia Women 1.71 [-1/-1.5] 2.04 Egypt Women 8.00
+1.84 CSKA 1948 Sofia 1.68 [0/-0.5] 2.12 Spartak Trnava 3.80
+1.29 Dinamo Zagreb 1.84 [-1/-1.5] 1.92 Thun 6.90
+1.77 Hearts 2.11 [-0.5/-1] 1.69 Sturm Graz 3.40
+1.70 Shamrock Rovers 2.05 [-0.5/-1] 1.74 Ararat-Armenia 3.85
+1.07 Nigeria Women 1.88 [-2/-2.5] 1.85 Malawi Women 19.00
+1.91 Banfield 1.72 [0/-0.5] 2.07 Sarmiento 3.80
