@@ -11,8 +11,8 @@ user-invocable: true
 
 **Default for this workspace:** every time the user inputs a **schedule/card with odds**, produce **both**:
 
-1. **Defensive** (`defensive-betting-analysis` + `analysis-checklist.md`) — best ordinary formal `PLAY`(s), WR lean-only, and PASS screen  
-2. **Streak-roll** (`streak-roll-eval`) — best **next** `STREAK_LEG` candidate for full-equity sequential roll toward **5 wins**, or explicit **none**
+1. **Defensive** — **§1-max one max-WR formal PLAY** (required if any edge) + leans/PASS  
+2. **Streak-roll** — best **STREAK_LEG** or **none** (still strict; empty OK)
 
 Do **not** skip streak-roll because “user didn’t ask for all-in.” Dual output is the default unless the user says **only defensive** / **only streak** / **post-match only**.
 
@@ -51,15 +51,23 @@ Trigger on **any** of:
 
 For each match apply defensive + checklist:
 
-- Identity + external + **fundamentals modifier** (motivation, personnel, travel, rotation, season phase)  
-- `PLAY` | `WR lean only` | `PASS`  
-- Formal PLAY only if checklist §1 (and §1b if `-0.75`) **and** fundamentals do not kill the WR case  
-- **Named external odds required** for formal PLAY (§1-ext); incomplete external → lean only max  
-- **Draw-magnet on `-0.75`:** default lean/PASS unless exception gates in checklist §1-fund  
-- **Dog `+1`:** formal only if favorite external win price **>1.50**; if ≤1.50 Strong → lean only  
-- Tag league tier **A/B/C/D** (§6b-0) on any formal  
-- Collect formal PLAYs and notable leans  
-- **Anti-miss (§1d):** after the batch, scan for (1) clear-league fav **`-0.25`**, (2) structural dog **`+0.25` / `+1` (fav >1.50)**, (3) level-ball + external lean — if all gates pass but output was PASS/lean only, **upgrade to formal Low PLAY**. Empty scan = OK. Do **not** open light / NPL / thin `+0.75` / Strong `+1`.
+- Identity + external + **fundamentals modifier**  
+- Score each fixture on **Track B WR** (path + external gap + league tier + fundamentals)  
+- Apply A–E as **ranking penalties / Risk notes**, **not** card-wide hard zeros (see checklist §1-max)  
+- Tag league tier **A/B/C/D**  
+- Collect candidates for formal / lean / PASS  
+
+### Step 2b — §1-max: one best WR formal PLAY (required)
+
+After all fixtures:
+
+1. Rank candidates by Track B win-rate (path friendliness first: e.g. `+1` draw=W / lose-by-1=P often beats `-0.75` draw=L when edges similar)  
+2. Output **exactly one** primary formal `PLAY` = **max WR on this card** (Low stake), unless *every* fixture is true coin-flip / identity-broken / unreadable  
+3. May add other ideal §1 PLAYs; still **must** label the **§1-max 主推**  
+4. Do **not** leave formal empty when any usable WR edge exists  
+5. Do **not** invent a reverse/garbage side just to fill the slot  
+
+**Anti-miss (§1d):** still upgrade full-gate clear `-0.25` / clean dog structures; empty anti-miss is OK if §1-max already picked the best path.
 
 ### Step 3 — Streak-roll pass (every fixture)
 
@@ -75,8 +83,8 @@ For each match apply streak-roll-eval (stricter):
 
 | Track | How to pick “best” |
 |-------|---------------------|
-| **Defensive** | All formal `PLAY`s (small-stake); if zero, top 1–3 **WR lean only** (labeled not bets); if none, state **no defensive PLAY** |
-| **Streak-roll** | At most **one** next `STREAK_LEG` (or zero). Prefer draw-friendly paths (`-0.25` clear lean, level-ball clear lean). Never package 5 simultaneous all-in legs |
+| **Defensive** | **§1-max:** exactly **one** max-WR formal `PLAY` (required if any edge). Optional extra ideal §1 PLAYs. Then leans / PASS |
+| **Streak-roll** | At most **one** next `STREAK_LEG` (or zero). Prefer draw-friendly paths. Empty OK |
 
 If both tracks highlight the **same** match: say so, and warn streak rules are **stricter** (may still be NOT_ELIGIBLE for roll while PLAY for unit defensive).
 
@@ -88,63 +96,45 @@ Always use this skeleton for odds-card input:
 # Dual Card Screen
 
 ## A. Defensive (unit / WR-first)
-### Formal PLAY
-| # | Match | Market | Price | Conf | Why (WR + fundamentals) |
-...
-(or: none)
+### Formal PLAY（§1-max 本卡最大 WR · 主推 1 腳）
+| # | Match | Market | Price | Conf | WR 排序理由 |
+| 1 | … | … | … | Low | 路徑 > 外圍 > 分檔 |
 
 ### WR lean only (not bets)
 ...
 
 ### Rest: PASS (count or short groups)
 
-### 防漏升掃描 (checklist §1d — required)
-| 結構 | 本卡候選 | 結果 |
-|------|----------|------|
-| clear 聯賽 -0.25 | … / 無 | PLAY / 否決 / 無候選 |
-| 結構 dog +0.25 | … / 無 | … |
-| 結構 dog +1 或 平手 lean | … / 無 | … |
+### 防漏升掃描 (checklist §1d)
+...
 
 ## B. Streak-roll (full-equity · target 5 wins)
-StreakState: m/5 (default 0/5 if not given)
-
+StreakState: m/5
 ### Best next STREAK_LEG
-(or: **none — NOT_ELIGIBLE all**)
-
-[If STREAK_LEG: full streak block — must include Fundamentals snapshot + veto Y/N]
-
-### Why others fail streak (short)
-- hostile path / light / cup first leg / deep / **fundamentals veto** / etc.
+(or: **none**)
 
 ## C. One-line summary
-Defensive: ... | Streak-roll: ...
+Defensive: §1-max … | Streak-roll: …
 ```
 
-**Fundamentals are required on both tracks** — not odds-only screening.
+**Fundamentals on both tracks.** A–E = rank/risk modifiers, not card-wide formal ban.
 
 ## Rules of Combination
 
-1. **Empty is OK** on either side — especially streak  
-2. **Do not** invent a STREAK_LEG to “fill” section B  
-3. **Do not** upgrade defensive PASS to PLAY to fill section A  
-4. Fund management stays **user-owned** (no stake amounts for full-roll)  
-5. Defensive PLAY still **Low + 小注** per checklist; streak section does not change that  
-6. Same-night multiple defensive PLAYs: still **no same-branch parlay**; streak still **one next leg max**  
+1. **Streak empty OK**; defensive formal empty **only** if no usable WR edge on entire card  
+2. **Do not** invent STREAK_LEG to fill B  
+3. **Do** pick **max WR** formal when edges exist; **do not** invent garbage reverse sides  
+4. Fund management **user-owned**  
+5. Defensive **Low + 小注**; no same-branch parlay; streak one next leg max  
 
 ## Quality Checks
 
-- [ ] Both sections A and B present  
-- [ ] Streak section not skipped on odds card  
-- [ ] Sources named when external used  
-- [ ] **Fundamentals** considered on PLAY and STREAK (not odds-only)  
-- [ ] `-0.75` formal defensive states **draw=L**  
-- [ ] Streak does not recommend `-0.75` as default STREAK_LEG  
-- [ ] Identity holds asked before any PLAY/STREAK_LEG  
-- [ ] **防漏升 §1d** scanned; no silent PASS on full-gate clear `-0.25`  
-- [ ] Did **not** “anti-miss” into light `-0.25`, NPL, thin `+0.75`, or Strong (≤1.50) dog `+1`  
-- [ ] No formal without **named external** sources  
-- [ ] No formal `-0.75` on draw-magnet without written exception  
-- [ ] League tier A/B/C/D stated on formal PLAYs
+- [ ] Both A and B present  
+- [ ] **§1-max one primary formal PLAY** when any usable edge exists  
+- [ ] Why this leg beats others on **Track B path** stated  
+- [ ] Streak may be none  
+- [ ] Strong `+1` / draw-magnet / incomplete: Risk noted if §1-max  
+- [ ] No reverse/garbage filler
 
 ## Post-match exception
 

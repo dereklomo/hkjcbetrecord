@@ -1085,7 +1085,7 @@
 
 ## 2026-07-28 賽後批（歐戰卡 + 南美/韓卡）
 
-**賽前檔：** `record/pre-match-2026-07-28.md`（卡1 正式 0）+ `record/pre-match-2026-07-28-2.md`（卡2 **Juventude**）  
+**賽前檔：** `record/pre-match-2026-07-28.md`（卡1 正式 0）+ `record/pre-match-2026-07-29.md`（原 07-28 卡2 · **Juventude** §1-max；`07-28-2` 已改期）  
 **正式 PLAY：** **Juventude -0.75 @1.77 → 1-0 → Track B W**  
 **不改 skill 硬規則**。
 
