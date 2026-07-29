@@ -54,8 +54,12 @@ For each match apply defensive + checklist:
 - Identity + external + **fundamentals modifier** (motivation, personnel, travel, rotation, season phase)  
 - `PLAY` | `WR lean only` | `PASS`  
 - Formal PLAY only if checklist §1 (and §1b if `-0.75`) **and** fundamentals do not kill the WR case  
+- **Named external odds required** for formal PLAY (§1-ext); incomplete external → lean only max  
+- **Draw-magnet on `-0.75`:** default lean/PASS unless exception gates in checklist §1-fund  
+- **Dog `+1`:** formal only if favorite external win price **>1.50**; if ≤1.50 Strong → lean only  
+- Tag league tier **A/B/C/D** (§6b-0) on any formal  
 - Collect formal PLAYs and notable leans  
-- **Anti-miss (§1d):** after the batch, scan for (1) clear-league fav **`-0.25`**, (2) structural dog **`+0.25` / `+1`**, (3) level-ball + external lean — if all gates pass but output was PASS/lean only, **upgrade to formal Low PLAY**. Empty scan = OK. Do **not** open light / NPL / thin `+0.75`.
+- **Anti-miss (§1d):** after the batch, scan for (1) clear-league fav **`-0.25`**, (2) structural dog **`+0.25` / `+1` (fav >1.50)**, (3) level-ball + external lean — if all gates pass but output was PASS/lean only, **upgrade to formal Low PLAY**. Empty scan = OK. Do **not** open light / NPL / thin `+0.75` / Strong `+1`.
 
 ### Step 3 — Streak-roll pass (every fixture)
 
@@ -136,10 +140,13 @@ Defensive: ... | Streak-roll: ...
 - [ ] `-0.75` formal defensive states **draw=L**  
 - [ ] Streak does not recommend `-0.75` as default STREAK_LEG  
 - [ ] Identity holds asked before any PLAY/STREAK_LEG  
-- [ ] **防漏升 §1d** scanned (clear league `-0.25` / structural dog `+0.25`/`+1` / level-ball lean); no silent PASS on full-gate spots  
-- [ ] Did **not** “anti-miss” into light `-0.25`, NPL, or thin dog `+0.75`
+- [ ] **防漏升 §1d** scanned; no silent PASS on full-gate clear `-0.25`  
+- [ ] Did **not** “anti-miss” into light `-0.25`, NPL, thin `+0.75`, or Strong (≤1.50) dog `+1`  
+- [ ] No formal without **named external** sources  
+- [ ] No formal `-0.75` on draw-magnet without written exception  
+- [ ] League tier A/B/C/D stated on formal PLAYs
 
 ## Post-match exception
 
-If input is **only results** (scores, no new pricing card): skip dual pre-match; run post-match review / ledger update under defensive skill.  
-If input is **results + “update streak chain”**: update streak chain state (W/L/P → m/5 or BROKEN) briefly, still no dual pre-match unless a new card is attached.
+If input is **only results** (scores, no new pricing card): skip dual pre-match; run post-match review / ledger update under defensive skill **and** checklist **§9 Skill 嚴寬簡審** (mandatory short table every results batch).  
+If input is **results + “update streak chain”**: update streak chain state (W/L/P → m/5 or BROKEN) briefly, still no dual pre-match unless a new card is attached; still include §9 if ledgers were updated.

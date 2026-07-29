@@ -132,7 +132,7 @@ Implication: Track B is **more favorable to favorite `-0.75`** (win-by-1 counts 
 5. **Fundamentals as modifier** — raise/lower WR confidence; do not flip side without market+WR support.
 6. **HKJC overlay** — execution price; auxiliary.
 7. **Track A soft filters** — risk notes; only veto if WR edge is not actually clear.
-8. **Workspace execution gate** (this repo): apply `analysis-checklist.md` for formal PLAY upgrade vs PASS / WR-lean-only (e.g. light `-0.25` force PASS, `-0.75` must state draw=L when PLAY; **§1d 防漏升** for clear-league `-0.25`, structural dog `+0.25`/`+1`, level-ball external lean). Checklist cannot override hard identity / wrong-match / no-market gates in this skill.
+8. **Workspace execution gate** (this repo): apply `analysis-checklist.md` for formal PLAY upgrade vs PASS / WR-lean-only (light `-0.25` force PASS; `-0.75` draw=L + **draw-magnet default no formal**; **named external required**; dog `+1` formal only if fav external **>1.50**; league tier A/B/C/D; **§1d 防漏升**). Checklist cannot override hard identity / wrong-match / no-market gates in this skill.
 9. Output: preferred line for **win-rate**, then auxiliary caveats.
 
 ### Using Track B for unplayed matches (line push / inference)
@@ -408,8 +408,9 @@ Review in this order:
 4. Tag the sample branch (cup `-0.75`, league `-0.25`, level-ball lean, second leg, etc.) for later unplayed-match inference
 5. Check whether the original reasoning matched the intended rule branch
 6. Separate execution error from strategy error; separate Track A quality from Track B hit-rate
-7. Adjust rules only if a repeatable weakness is visible across multiple results under the **win-rate-first** objective
-8. Update `WR-inferred lean` for **similar unplayed** spots using external odds + branch WR + fundamentals as auxiliary modifiers
+7. **Skill strict/loose re-check (mandatory every results batch in this workspace):** using this batch + cumulative ledgers, state whether any rule band looks **too strict** or **too loose**; default **no hard-rule change**. Follow `analysis-checklist.md` §9: fill **Lean short table** then **§9 strict/loose table**. Lean W ≠ should have been PLAY; lean L supports non-upgrade. Never treat cover-after-PASS alone as proof of over-strictness.
+8. Adjust rules only if a repeatable weakness is visible across multiple results under the **win-rate-first** objective **and** the adjustment gate is met
+9. Update `WR-inferred lean` for **similar unplayed** spots using external odds + branch WR + fundamentals as auxiliary modifiers
 
 Recommended adjustment gate:
 - `1` result: observation only, no rule change
@@ -425,12 +426,13 @@ In post-match review, do not:
 - rewrite the original logic after seeing the scoreline
 - rewrite a historical `PASS` into a retroactive `PLAY` after the result; correct future rule text instead, and label the old call as too strict or too loose in a cross-check note
 - treat a weak-observation side that later wins as proof the observation should have been a default `PLAY`
+- skip the §9 strict/loose block because “nothing to change”
 Valid strategy-adjustment signals include:
 - repeated failure of the same rule branch under similar season-phase conditions
 - recurring misread of motivation or lifecycle mismatch inputs
 - consistent evidence that a line type or source hierarchy is being interpreted incorrectly
 
-If the new result is only one isolated sample, keep the strategy unchanged and log it as observation only.
+If the new result is only one isolated sample, keep the strategy unchanged and log it as observation only — **still** write the short strict/loose re-check.
 
 ## Decision Workflow
 
@@ -768,6 +770,21 @@ WR inference note (optional):
 
 Adjustment Decision:
 - Keep strategy unchanged | Watch for repeat pattern | Adjust rule
+
+### Lean 短表（本批 · 必填 · checklist §9a）
+| 結構 | 場次 | 賽前 | Track B | 對升格含義 |
+|------|------|------|---------|------------|
+| 貼線 -0.75 | … / 無 | … | … | … |
+| 歐戰次回合 -0.75 | … / 無 | … | … | … |
+| Strong +1 lean | … / 無 | … | … | … |
+
+### Skill 嚴寬簡審（本批 · 必做 · checklist §9）
+| 維度 | 本批訊號 | 累計含義 | 動作 |
+|------|----------|----------|------|
+| 過嚴？ | … | … | 維持 / watch / checklist |
+| 過寬？ | … | … | 維持 / 執行收緊 / watch |
+| Lean 分層 | … | … | 不回寫 / 防漏候選 |
+| 改 skill 硬規則？ | 否（預設） | … | 僅 formal review 時待議 |
 ```
 
 ## Quality Checks Before Finishing
