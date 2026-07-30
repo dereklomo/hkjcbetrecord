@@ -42,12 +42,14 @@ Do **not** invent a second checklist or re-home watchlists into ad-hoc session n
 
 When the user pastes **one or more fixtures with odds** (HKJC-style lines, multi-match card, dated 賽程+賠率):
 
-1. Always run **this skill** (defensive formal PLAY / lean / PASS).  
-2. Always also run **`streak-roll-eval`** and report best **STREAK_LEG** or **none**.  
-3. Use the response skeleton in `match-card-dual` (sections A defensive + B streak-roll + C one-liner).  
+1. Always run **this skill** with **`analysis-checklist.md`**:  
+   - **Table A formal PLAY** = ideal gates + **whitelist W1–W6** only (may be empty)  
+   - **Max-WR observation** only if table A empty (not a hit-ledger bet)  
+2. Run **`streak-roll-eval` only if** table A has a **draw-friendly** formal (`-0.25` or level-ball lean); else `streak: skipped` unless user forces streak.  
+3. Use the response skeleton in `match-card-dual`.  
 4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.
 
-Ordinary hard rules below are unchanged; streak eligibility is **stricter** and usually empty.
+Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked), not forcing a play every card.
 
 ## Primary Objective: Win-Rate First (贏盤率為主)
 

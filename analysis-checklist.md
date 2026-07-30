@@ -4,120 +4,115 @@
 **賽後帳本 / 批次 review：** `post-match-review-grok.md`（表 A/B、逐場賽果）  
 **本檔角色：** 賽前 **執行 checklist + watchlist**；與 skill 衝突時 **以 skill 為準**。
 
-> **目的：** 在 **贏盤率（Track B）** 下找出本卡 **最大勝率一腳** 正式 PLAY（Low 小注），並避免合理邊被過度封鎖。  
-> **每卡必選（§1-max）：** 賽程+賠率卡結束時，須輸出 **恰好 1 腳**「本卡最大 WR」正式 PLAY（可與其他小注並存，但 **至少 / 預設主推 1 腳**）。僅當全卡 **真五五 + 身份破 + 無可讀外圍 lean** 才允許 formal **0**。  
-> **A–E 角色（修正）：** 作 **排序／信心修飾**，**不是**整卡清零開關。和磁鐵、Strong+1、外圍不全 → **降權或標 Risk**，仍可在「本卡相對最佳」時 **Low 正式**。  
-> **防漏升：** clear -0.25 / 結構下盤 — 達標勿只 lean（§1d）。  
-> **不**改 skill 硬結算；**不**硬湊垃圾邊；**不**放寬「真無 edge」。cover-after-PASS **永不**回寫。
+> **Grill 鎖定規格（2026-07 session）：** 主目標 = **表 A 正式 Track B 勝率**。  
+> **兩欄輸出：** ① **Formal PLAY（表 A）** = 理想 §1 + **白名單 W1–W6**；可空。② **Max-WR 觀察** = 僅當表 A **為空** 時 0～1 腳路徑最佳，**不進表 A 命中帳**。  
+> **和磁鐵/膠著 + 半一 → 硬踢出表 A**。歐戰**兩回合不進表 A**；單場盃僅 Strong+淺盤可審。  
+> **Streak：** 非每卡必跑；僅表 A 有 **draw≠L** 正式（-0.25 或平手 lean）時才評。  
+> cover-after-PASS **永不**回寫。**不**改 skill 半贏=W 硬結算。
 
 **維護：** 改執行規則 / watchlist **只改本檔**；賽後樣本 append **只改** `post-match-review-grok.md`。
 
 ---
 
-## 雙軌預設（賽程+賠率必做）
+## 雙軌預設（賽程+賠率）
 
-每當用戶輸入 **含賠率的賽程／多場盤**（除非明說只要一邊）：
-
-| 軌道 | Skill | 輸出 |
+| 軌道 | 何時跑 | 輸出 |
 |------|--------|------|
-| **A. Defensive** | `defensive-betting-analysis` + 本 checklist | **§1-max 本卡最大 WR 正式 PLAY（1 腳主推）** + 可選其他 Low；WR lean；PASS；**含基本面** |
-| **B. Streak-roll** | `streak-roll-eval` | 最佳下一腳 **STREAK_LEG** 或 **none**（仍極嚴；可空） |
+| **A. Defensive** | **每卡必跑** | **表 A 正式**（白名單，可 0 多腳）+ **若表 A=0 → Max-WR 觀察 1 腳** + lean + PASS |
+| **B. Streak-roll** | **僅當** 表 A 存在 **draw≠L** 正式盤（**-0.25** 和=W，或 **平手 lean** 和=P） | STREAK_LEG 或 none；否則 **`streak: skipped`**（非每卡必跑） |
 
-編排權威：`.github/skills/match-card-dual/SKILL.md`（回應骨架 A/B/C）。
+編排：`.github/skills/match-card-dual/SKILL.md`。
 
-**禁止：** 為填滿 B 而硬給 STREAK_LEG；**為填 A 而選真無 edge 的垃圾邊**；只寫賠率不寫基本面。  
-**允許：** streak 空；defensive formal **僅在全卡無 usable WR edge 時為 0**。
-
-**基本面（兩軌都要）：** 動機／賽季階段、主力缺陣、主客與旅途、賽程密度、輪換／B 隊、風格是否偏和。  
-- Defensive：基本面 **修飾** WR，可否決升格。  
-- Streak：基本面 **可強制 NOT_ELIGIBLE**（輪換／無慾／結構缺陣），即使 1X2 好看。
+**禁止：** 為填表 A 硬選垃圾邊；把 Max-WR 觀察寫進表 A；cover 回寫。  
+**允許：** 表 A 空（無白名單達標）；streak skipped。
 
 ---
 
-## 0. 每場固定順序（先做完再決策）
+## 0. 每場固定順序
 
-1. [ ] **身份鎖**（隊名、主客、聯賽 vs 盃/跨國/首回、腿次）  
-2. [ ] **外圍 1X2/AH**（命名 Sources Used；無外圍 → incomplete → 傾向 PASS）  
-3. [ ] **力度分檔**：Strong / Medium / Light / 近均無 lean  
-4. [ ] **Track B 路徑**：該盤哪些比分是 W / L / P（**-0.75 必須點明：和 = L**）  
-5. [ ] **基本面快照**：動機、人員、主客/旅途、賽程、輪換；與 lean **同向或否決**  
-6. [ ] **分支標籤** + self cross-check（可比樣本見 `post-match-review-grok.md` 表 A/B；低相似不硬 PLAY）  
-7. [ ] **決策分層**（須寫明）：  
-   - **正式 PLAY**（進表 A）  
-   - **WR lean only**  
-   - **PASS**  
-8. [ ] **整卡結束：** 跑 **§1-max**（本卡最大 WR 一腳）
+1. [ ] 身份鎖  
+2. [ ] 外圍命名 + 力度分檔  
+3. [ ] Track B 路徑（**-0.75：和=L**）  
+4. [ ] 基本面快照（含 **和磁鐵/膠著？**）  
+5. [ ] 分支 + self cross-check  
+6. [ ] 是否進 **表 A 白名單**（§1-A）  
+7. [ ] 整卡：表 A 集合；若空 → **Max-WR 觀察**（§1-obs）  
+8. [ ] 是否觸發 streak（§1-streak）
 
 ---
 
-## 1-max. 每卡最大勝率一腳（**必做** · 防過度封鎖）
+## 1-A. 表 A 正式 PLAY（進命中帳 · 主目標）
 
-> **目的：** A–E 與 §2 用於 **排序與標風險**，避免「全卡 formal 0」成為常態。  
-> **主推：** 每張賽程+賠率卡 → **1 腳** `Decision: PLAY` = 本卡 **Track B 勝率最高且可辯護** 的邊。
+**須同時：** 理想 §1 勾選 + **落在白名單 W1–W6** + **無硬否決**。
 
-### 排序鍵（由高到低）
+### 白名單（Grill · W1–W6）
 
-1. **Track B 路徑友好**（例：和=W 的 -0.25 / +0.25；輸1=P 的 +1；優於和=L 的 -0.75）  
-2. **外圍 lean 清晰度**（Strong/Medium > light > incomplete）  
-3. **聯賽分檔** A > B > C > 盃/次回合 > D  
-4. **基本面**同向；無明顯輪換/無慾  
-5. A–E **懲罰分**（和磁鐵、Strong 爆破、外圍不全 → 降序，**不**直接刪除候選）
+| ID | 分支 | 條件摘要 |
+|----|------|----------|
+| **W1** | 歐北 **A 檔** Medium **-0.75** | 挪/瑞等；外圍 ≤1.70；**無和磁鐵/膠著**；榜/結構合理 |
+| **W2** | 穩聯賽 **clear -0.25** | 外圍 ≤1.70；和=W；非 light |
+| **W3** | 穩聯賽 **dog +0.25** | 非半職；外圍非強主 |
+| **W4** | **平手 + 外圍 clear lean** | 真五五不進 |
+| **W5** | **dog +1** 熱門 **1.51–1.75 Med** | **穩聯賽**（非歐戰兩回合、非半職）；爆破風險寫清 |
+| **W6** | **B 檔** Medium **-0.75** | 如巴乙；n 與 A/C **分開**；**無和磁鐵** |
 
-### 硬擋（仍可 formal 0）
+**不進白名單（示例）：**  
+- **W7** C 檔 MLS/巴甲 Medium -0.75 → 最多 lean / Max-WR 觀察  
+- NPL/USL/女足/U20、light -0.25、純 -1/深讓、薄 +0.75  
+- **歐戰兩回合**（首/次回）一律不進表 A  
+- **單場盃：** 僅外圍熱門 **≤1.55 Strong** + **淺盤**（-0.25 或平手 lean，非深讓）可審表 A  
 
-僅當 **整卡** 皆屬：身份未鎖、真五五（外圍無 lean）、或無可解析盤。
+### 理想 §1 勾選（表 A）
 
-### 軟擋 → 仍可當「本卡最大 WR」正式 Low
+1. [ ] 身份鎖；聯賽分檔 A/B/C/D  
+2. [ ] **Sources Used 命名外圍**（表 A **必須**；incomplete → 不進表 A）  
+3. [ ] 外圍 gap 達該白名單要求（通常 Medium ≤1.70 或 W5 的 Med 熱門價）  
+4. [ ] 盤型 ∈ W1–W6  
+5. [ ] 分支 cross-check 非淨殺；不跨分支洗白  
+6. [ ] 基本面無硬否決；**-0.75 無和磁鐵/膠著**（見下）  
+7. [ ] 輸出：`Decision: PLAY` + WR + Fundamentals + Sources + Low + 小注 + **Whitelist ID**
 
-| A–E 原硬擋 | 修正後 |
-|------------|--------|
-| 和磁鐵 -0.75 | **降權**；優先改 **-0.25**；若無更佳邊可 **Low 正式半一** 但必寫和=L + 和磁鐵 Risk |
-| 熱門 ≤1.50 的 dog +1 | **降權**（爆破）；若路徑仍是本卡最佳 → **允許 Low 正式** + 必寫「負≥2=L」 |
-| 外圍 incomplete | **降權**；若 HKJC/殘餘訊號仍是本卡最佳 → **允許 Low 正式** 標 `Incomplete external` |
-| 歐戰次回合 / C 檔 | **降權**；可當最大 WR 若明顯優於其餘 → **Low 正式** + 總比分/方差 Risk |
-| light / NPL / 深讓 / 薄 +0.75 | **預設不進最大 WR**；僅當全卡更差時才勉強 Low 並寫 **極低 conf** |
+### 和磁鐵 / 膠著（表 A · **-0.75 硬踢**）
 
-### 輸出（主推 1 腳）
+若盤為熱門 **-0.75** 且賽前判斷 **和磁鐵**（交手偏和、風格和王）或 **膠著劇本**（無慾互咬、明顯磨和）→ **禁止表 A 正式**。  
+- 可：lean only；或有 clear **-0.25** 且合 W2 → 表 A 打 -0.25  
+- 可：列入 Max-WR 觀察（若表 A 全空且路徑仍相對最佳）— **不進命中帳**  
+- 樣本：Houston、Botafogo  
+
+### 硬否決（表 A 與觀察都不可硬抬）
+
+輪換 B 隊 / dead rubber / 雙脊梁缺 / 極端旅途稅 / 身份未鎖 / 真五五。
+
+---
+
+## 1-obs. Max-WR 觀察（**不進表 A** · 僅表 A 為空時）
+
+當本卡 **零腳** 表 A 正式，且存在相對可用 edge：
+
+1. 按 Track B 路徑排序（和=W、輸1=P 優先於和=L 的 -0.75）  
+2. 輸出 **0～1 腳** `Max-WR Observation`（**明示不進表 A / 非命中帳**）  
+3. Conf Low；寫 Risk（Strong 爆破、盃、次回合等）  
+4. **有表 A 正式時：不強制** 本欄  
 
 ```markdown
-### Formal PLAY（本卡最大 WR · §1-max）
-| # | Match | Market | Price | Conf | WR 排序理由（路徑 > 外圍 > 分檔） |
-| 1 | … | … | … | Low | … |
+### Formal PLAY（表 A · 白名單）
+（0 或多腳）
 
-Rejected better-looking but worse WR: …
+### Max-WR 觀察（不進表 A · 僅表 A 空時）
+| Match | Market | Why path-best | Risk |
 ```
-
-**禁止：** 為填 1 腳而選「明顯劣於 PASS」的反向盤；**禁止** 有 usable edge 卻 formal 0。
 
 ---
 
-## 1. 正式 PLAY 升格門檻（理想全勾 · **§1-max 可放寬**）
+## 1-streak. 何時跑 streak-roll
 
-**理想情況**（全勾 → 標準 Low 正式，可多腳）：
-
-1. [ ] **穩定國內聯賽**（或同等）；標 **A/B/C/D**（§6b-0）  
-2. [ ] **外圍命名**（Sources Used）— incomplete 時僅能靠 **§1-max** 升 1 腳且標 Incomplete  
-3. [ ] 外圍 gap **≥ Medium**（約 ≤1.70）— light 預設不進理想正式  
-4. [ ] Track B 友好盤（-0.75 / clear -0.25 / 結構 +0.25/+1 / 平手 lean / 罕見深讓 Strong）  
-5. [ ] 分支 cross-check 非淨殺  
-6. [ ] 基本面無硬否決（§1-fund）  
-7. [ ] 輸出完整：PLAY + WR + Fundamentals + Sources + Low + 小注  
-
-**§1-ext 外圍 incomplete（修飾 · 非整卡清零）：**  
-- 理想正式：需要命名外圍  
-- **§1-max 唯一主推：** 允許 incomplete，但 conf **Low** + 標 Incomplete + 排序懲罰  
-
-**§1-fund 基本面：**
-
-| 類型 | 處理 |
+| 條件 | 動作 |
 |------|------|
-| 輪換 B 隊 / 無慾 / 雙脊梁缺 / 旅途稅 | **硬否決**（不可 §1-max 硬抬） |
-| **-0.75 和磁鐵** | **強降權**；優先 -0.25；若仍是本卡最大 WR → **允許 Low 正式** + 和=L + 和磁鐵 Risk（Houston/Botafogo 教訓） |
-| 其餘 | 修飾 conf |
+| 表 A 有正式且盤為 **-0.25**（和=W）或 **平手 lean**（和=P） | 跑 `streak-roll-eval` → STREAK_LEG 或 none |
+| 表 A 僅有 **-0.75 / +1 / 其他** | **`streak: skipped`**（-0.75 和=L 與連勝衝突） |
+| 表 A 空 | **`streak: skipped`**（除非用戶明示要評連勝） |
 
-**範型：** A 檔 Medium -0.75；clear -0.25；結構 +0.25；**+1**（含 Strong 熱門時僅作 §1-max 且標爆破）。  
-
-**不要：** 全勾卻只 lean；只寫賠率；有 §1-max 候選卻 formal 0。
+用戶明示「連勝 / streak / 全權益」時可強制跑 B。
 
 ---
 
@@ -147,15 +142,16 @@ Rejected better-looking but worse WR: …
 - NPL / USL / 薄 dog / light -0.25 — 預設 PASS  
 - 僅因「本卡還沒出手」硬找 — 禁止（須 WR 排序）  
 
-### 1d-3b · dog +1 分檔（修飾 · 配合 §1-max）
+### 1d-3b · dog +1（配合表 A 白名單 W5）
 
-| 熱門外圍 | 理想正式 | §1-max 若為本卡最佳 |
-|----------|----------|---------------------|
-| **≤1.50 Strong** | 預設 lean | **允許 Low 正式** + 爆破 Risk（Örgryte） |
-| **1.51–1.75 Med** | 可正式 Low | 優先 |
-| **>1.75** | 多 lean/PASS | 僅當路徑仍最佳 |
+| 熱門外圍 | 表 A | Max-WR 觀察（表 A 空時） |
+|----------|------|---------------------------|
+| **≤1.50 Strong** | **不進**（非 W5） | 可作觀察 + 爆破 Risk |
+| **1.51–1.75 Med** + 穩聯賽 | **W5 可表 A** | — |
+| 歐戰兩回合 / 半職 | **不進表 A** | 可觀察 |
+| **>1.75** | 多不進 | 可觀察 |
 
-樣本：Atlante W（Med）；Örgryte L（Strong 穿）；Lincoln lean W 不回寫。
+樣本：Atlante W（Med 聯賽）；Örgryte L（Strong）；Lincoln 盃/Strong 不進表 A。
 
 ### 1d-4 · 批次輸出（防漏表 · 賽前必出）
 
@@ -177,15 +173,14 @@ Rejected better-looking but worse WR: …
 
 凡正式 PLAY 熱門 **-0.75**（或同等半一），輸出 **必須** 含：
 
-0. [ ] 和磁鐵：**已寫**和=L + Risk；若本腳是 §1-max 則允許，否則優先 -0.25/lean  
-1. [ ] **「和 = L（全輸）；本注依賴取勝」**  
-2. [ ] **Confidence: Low** + **小注**  
-3. [ ] **聯賽分檔** A/B/C/D  
-4. [ ] Sources 命名或標 Incomplete  
+0. [ ] **和磁鐵/膠著檢查：** 若是 → **禁止表 A**（半一）；可 -0.25（W2）或觀察  
+1. [ ] **「和 = L；本注依賴取勝」**（凡半一敘事）  
+2. [ ] **Whitelist ID**（W1 或 W6）  
+3. [ ] **Confidence: Low** + **小注**；聯賽分檔  
+4. [ ] Sources **命名**（表 A 必須）  
 5. [ ] 同晚同分支 **不串關**  
-6. [ ] 若為 **§1-max 主推**：寫清 **為何 WR 高於本卡其餘**  
 
-**樣本：** Houston/Botafogo 和殺 → 半一必寫和=L；和磁鐵 **降權** 而非永遠禁打。
+**樣本：** Houston/Botafogo → 和磁鐵半一 **不得表 A**。
 
 ---
 
@@ -245,13 +240,13 @@ Rejected better-looking but worse WR: …
 4. [ ] 表 A / 賽前檔：正式 PLAY 與 lean 已分開列  
 5. [ ] 凡 **-0.75 正式** 是否已寫 **「和 = L」**？  
 5b. [ ] 正式 PLAY / STREAK_LEG 是否有 **基本面快照**（動機·人員·旅途·輪換）？**禁止只寫賠率**  
-5c. [ ] **§1-max：** 是否已選 **本卡最大 WR 一腳**正式？（有 edge 卻 formal 0 = 違規）  
-5d. [ ] 和磁鐵半一是否已寫和=L + Risk（若作正式）？  
-5e. [ ] Strong +1 正式是否標爆破 Risk？  
-5f. [ ] 聯賽分檔 A/B/C/D 是否已標？  
-5g. [ ] Incomplete 正式是否標 Incomplete external？  
-6. [ ] light -0.25 是否誤升理想正式？  
-7. [ ] 是否為「填空」選了劣於 PASS 的邊？→ 禁止  
+5c. [ ] 表 A 腳是否皆 ∈ **W1–W6** 且無和磁鐵半一？  
+5d. [ ] 歐戰**兩回合**是否誤進表 A？→ 否  
+5e. [ ] 表 A **空** 時是否有 **Max-WR 觀察**（若有 edge）？有表 A 時不強制觀察  
+5f. [ ] Streak：僅 draw-friendly 表 A 才跑；否則 skipped  
+5g. [ ] Max-WR 觀察是否誤標為表 A 命中？→ 禁止  
+6. [ ] light/NPL/深/薄+0.75 是否誤進表 A？  
+7. [ ] 是否為填空選垃圾邊？→ 禁止  
 7. [ ] 深讓是否點明 **獨贏 ≠ 讓球 WR**？  
 8. [ ] **雙軌：** 是否已輸出 **Defensive 最佳** + **Streak-roll 最佳/none**？（賽程+賠率必做）  
 9. [ ] Streak 是否誤把普通 PLAY 或 `-0.75` 當 STREAK_LEG？→ 否決  
@@ -483,13 +478,22 @@ Rejected better-looking but worse WR: …
 - 優先盯：P7 貼線、-歐戰次回合 -0.75、Strong +1 lean。  
 - 詳見 §6b、§1d。
 
-### 9e. 執行優化演進
+### 9e. 執行規格演進（Grill 鎖定）
 
 | 版 | 內容 |
 |----|------|
-| A–E（07-28） | 和磁鐵/Strong+1/Lean 表/分檔/外圍 — 曾作硬擋 → **易整卡 formal 0** |
-| **§1-max（現行）** | A–E 改 **排序修飾**；**每卡必選最大 WR 一腳**；避免過度封鎖 |
+| A–E | 易整卡 formal 0 |
+| §1-max 強制正式 | 易污染表 A（Gornik 類） |
+| **Grill 鎖定（現行）** | 表 A = **W1–W6 白名單**；Max-WR 觀察僅表 A 空；和磁鐵半一踢出表 A；歐戰兩回合不進表 A；streak 僅 draw-friendly 表 A 觸發 |
+
+### 9f. Grill 決策備忘（只讀摘要）
+
+1. 主目標：表 A Track B 勝率  
+2. 表 A ≠ 路徑觀察  
+3. 白名單 W1–W6；W7 不進  
+4. 和磁鐵/膠著 + 半一 → 硬踢表 A  
+5. 歐戰兩回合不進表 A；單場盃 Strong+淺可審  
+6. Max-WR 觀察僅表 A 空  
+7. Streak 非每卡；僅 -0.25 / 平手 lean 表 A 觸發  
 
 ---
-
-*§1-max：每卡最大勝率一腳；A–E 修飾不整卡清零。*

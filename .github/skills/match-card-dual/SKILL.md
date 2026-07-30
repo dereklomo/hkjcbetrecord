@@ -1,142 +1,132 @@
 ---
 name: match-card-dual
-description: 'Default pre-match workflow for this workspace: whenever the user pastes a football match card with odds (HKJC-style lines, multi-match batch, or schedule+prices), run BOTH defensive-betting-analysis (best ordinary PLAY / lean / PASS) and streak-roll-eval (best STREAK_LEG for full-equity 5-win roll, if any). Use when user posts 讓球 lines with prices, 賽程+賠率, multi-line odds paste, pre-match card, or asks for dual screen / 雙軌篩盤. Football only.'
-argument-hint: 'Paste one or more lines: 勝賠 隊A 讓賠 盤 受賠 隊B 勝賠 (HKJC default). Optional StreakState m/5.'
+description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive screening under analysis-checklist (table-A whitelist formal PLAYs + max-WR observation only if table A empty) and run streak-roll-eval only when a table-A formal is draw-friendly (-0.25 or level-ball lean). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
+argument-hint: 'Paste HKJC-style lines. Optional StreakState m/5 or 連勝 to force streak eval.'
 user-invocable: true
 ---
 
-# Match Card Dual Screen (Defensive + Streak-Roll)
+# Match Card Dual Screen (Defensive + Conditional Streak)
 
 ## Purpose
 
-**Default for this workspace:** every time the user inputs a **schedule/card with odds**, produce **both**:
+**Default for this workspace** on schedule/card with odds:
 
-1. **Defensive** — **§1-max one max-WR formal PLAY** (required if any edge) + leans/PASS  
-2. **Streak-roll** — best **STREAK_LEG** or **none** (still strict; empty OK)
+1. **Defensive (always)** — `defensive-betting-analysis` + `analysis-checklist.md`  
+   - **Formal PLAY (table A):** whitelist **W1–W6** only; may be **empty**  
+   - **Max-WR observation:** **only if table A is empty** — 0–1 path-best leg, **not** ledger table A  
+2. **Streak-roll (conditional)** — `streak-roll-eval`  
+   - Run **only if** table A has a **draw-friendly** formal: favorite **-0.25** (draw=W) or **level-ball lean** (draw=P)  
+   - Otherwise output **`streak: skipped`** (unless user forces 連勝/streak)
 
-Do **not** skip streak-roll because “user didn’t ask for all-in.” Dual output is the default unless the user says **only defensive** / **only streak** / **post-match only**.
+**Primary goal (grill-locked):** maximize **justified table-A Track B win-rate**, not “always have a bet.”
 
 ## When This Applies
 
-Trigger on **any** of:
+- Odds paste / multi-match card / pre-match with prices  
 
-- Multi-line or single-line paste matching HKJC/odds format  
-- Dated card (`20260724` + lines)  
-- “分析” / “篩盤” / “pre-match” with prices  
-- Implicit batch of 讓球/受讓/平手 with numbers  
+**Skip dual pre-match for:** results-only; strategy-only; user `只 defensive` / `只 streak` / `不要連勝評級`.
 
-**Do not** force dual mode for:
+## Read Order
 
-- Pure post-match results (use defensive post-match + ledger append)  
-- Pure strategy/meta questions without a card  
-- User explicitly: `只 defensive` / `只 streak-roll` / `不要連勝評級`
+1. This skill  
+2. `analysis-checklist.md` (**§1-A / §1-obs / §1-streak**, whitelist W1–W6)  
+3. `defensive-betting-analysis` (Track B hard rules)  
+4. `streak-roll-eval` (only when triggered)  
+5. `post-match-review-grok.md` ledgers  
 
-## Read Order (this repo)
-
-1. This skill (orchestration)  
-2. `analysis-checklist.md`  
-3. `.github/skills/defensive-betting-analysis/SKILL.md` (hard WR rules)  
-4. `.github/skills/streak-roll-eval/SKILL.md` (streak gates)  
-5. `post-match-review-grok.md` ledgers A/B for cross-check  
-
-## Workflow (fixed)
+## Workflow
 
 ### Step 1 — Parse & identity
 
-- Parse all lines; treat unlabeled as **HKJC**  
-- Lock identities; ask user if uncertain (blocks PLAY and STREAK_LEG)  
-- Seek external 1X2 (named sources) before directional claims  
+- Parse lines; unlabeled = **HKJC**  
+- Lock identity; ask if uncertain  
+- Seek **named** external 1X2  
 
-### Step 2 — Defensive pass (every fixture)
+### Step 2 — Score every fixture
 
-For each match apply defensive + checklist:
+For each: external gap, Track B map, fundamentals (incl. **draw-magnet / cagey script?**), league tier A/B/C/D, branch tag.
 
-- Identity + external + **fundamentals modifier**  
-- Score each fixture on **Track B WR** (path + external gap + league tier + fundamentals)  
-- Apply A–E as **ranking penalties / Risk notes**, **not** card-wide hard zeros (see checklist §1-max)  
-- Tag league tier **A/B/C/D**  
-- Collect candidates for formal / lean / PASS  
+### Step 3 — Table A formal (whitelist)
 
-### Step 2b — §1-max: one best WR formal PLAY (required)
+Promote to **Formal PLAY (table A)** only if:
 
-After all fixtures:
+- Ideal checklist §1 gates (named external, Medium as required, fundamentals hard vetoes clear)  
+- Branch ∈ **W1–W6**  
+- **Not** draw-magnet/cagey **-0.75**  
+- **Not** two-legged euro  
+- Single-leg cup only if Strong (≤~1.55) + shallow line  
 
-1. Rank candidates by Track B win-rate (path friendliness first: e.g. `+1` draw=W / lose-by-1=P often beats `-0.75` draw=L when edges similar)  
-2. Output **exactly one** primary formal `PLAY` = **max WR on this card** (Low stake), unless *every* fixture is true coin-flip / identity-broken / unreadable  
-3. May add other ideal §1 PLAYs; still **must** label the **§1-max 主推**  
-4. Do **not** leave formal empty when any usable WR edge exists  
-5. Do **not** invent a reverse/garbage side just to fill the slot  
+Multiple table-A legs allowed if each qualifies; **no same-branch parlay**.
 
-**Anti-miss (§1d):** still upgrade full-gate clear `-0.25` / clean dog structures; empty anti-miss is OK if §1-max already picked the best path.
+### Step 4 — Max-WR observation (only if table A empty)
 
-### Step 3 — Streak-roll pass (every fixture)
+If **zero** table-A formals and some usable edge exists:
 
-For each match apply streak-roll-eval (stricter):
+- Pick **one** path-best leg (Track B path first: draw=W / lose-by-1=P preferred over draw=L paths when comparable)  
+- Label **`Max-WR Observation — NOT table A`**  
+- Low conf + Risk notes  
+- **Do not** count in hit-rate ledger  
 
-- Default `NOT_ELIGIBLE`  
-- **Odds + Track B path + fundamentals** all required; fundamentals veto (rotation / dead rubber / key absences) blocks STREAK_LEG even if 1X2 looks strong  
-- `STREAK_LEG` only if all streak gates pass  
-- Ordinary defensive `PLAY` **≠** auto `STREAK_LEG`  
-- Hostile: `-0.75` (draw=L), pure `-1`, deep fav, thin dog, light `-0.25`, NPL/USL, euro Q first leg, near-even  
+If table A non-empty: **skip** forced observation.
 
-### Step 4 — Pick “best of”
+### Step 5 — Streak (conditional)
 
-| Track | How to pick “best” |
-|-------|---------------------|
-| **Defensive** | **§1-max:** exactly **one** max-WR formal `PLAY` (required if any edge). Optional extra ideal §1 PLAYs. Then leans / PASS |
-| **Streak-roll** | At most **one** next `STREAK_LEG` (or zero). Prefer draw-friendly paths. Empty OK |
+| Table A content | Streak section |
+|-----------------|----------------|
+| Has **-0.25** or **level-ball lean** formal | Run streak-roll-eval → STREAK_LEG or none |
+| Only **-0.75** / **+1** / empty | **`streak: skipped`** |
+| User forces streak | Run eval anyway |
 
-If both tracks highlight the **same** match: say so, and warn streak rules are **stricter** (may still be NOT_ELIGIBLE for roll while PLAY for unit defensive).
-
-### Step 5 — Required response structure
-
-Always use this skeleton for odds-card input:
+### Step 6 — Response skeleton
 
 ```markdown
 # Dual Card Screen
 
-## A. Defensive (unit / WR-first)
-### Formal PLAY（§1-max 本卡最大 WR · 主推 1 腳）
-| # | Match | Market | Price | Conf | WR 排序理由 |
-| 1 | … | … | … | Low | 路徑 > 外圍 > 分檔 |
+## A. Defensive (WR-first · table A priority)
+### Formal PLAY（表 A · 白名單 W1–W6 · 可進命中帳）
+| # | Match | Market | WL | Conf | Why |
+（or: **none**）
 
-### WR lean only (not bets)
+### Max-WR 觀察（不進表 A · 僅表 A 為空時）
+| Match | Market | Why path-best | Risk |
+（or: skipped — table A non-empty / no edge）
+
+### WR lean only
 ...
 
-### Rest: PASS (count or short groups)
-
-### 防漏升掃描 (checklist §1d)
+### Rest: PASS
 ...
 
-## B. Streak-roll (full-equity · target 5 wins)
+## B. Streak-roll
 StreakState: m/5
+Status: evaluated | **skipped** (reason)
 ### Best next STREAK_LEG
-(or: **none**)
+...
 
-## C. One-line summary
-Defensive: §1-max … | Streak-roll: …
+## C. One-line
+Table A: … | Observation: … | Streak: …
 ```
-
-**Fundamentals on both tracks.** A–E = rank/risk modifiers, not card-wide formal ban.
 
 ## Rules of Combination
 
-1. **Streak empty OK**; defensive formal empty **only** if no usable WR edge on entire card  
-2. **Do not** invent STREAK_LEG to fill B  
-3. **Do** pick **max WR** formal when edges exist; **do not** invent garbage reverse sides  
-4. Fund management **user-owned**  
-5. Defensive **Low + 小注**; no same-branch parlay; streak one next leg max  
+1. **Empty table A is OK** and often correct  
+2. **Do not** invent table-A PLAY outside W1–W6  
+3. **Do not** put Max-WR observation into table A  
+4. **Do not** invent garbage sides to fill either column  
+5. Streak empty/skipped OK  
+6. Fund management user-owned  
 
 ## Quality Checks
 
-- [ ] Both A and B present  
-- [ ] **§1-max one primary formal PLAY** when any usable edge exists  
-- [ ] Why this leg beats others on **Track B path** stated  
-- [ ] Streak may be none  
-- [ ] Strong `+1` / draw-magnet / incomplete: Risk noted if §1-max  
-- [ ] No reverse/garbage filler
+- [ ] Table A legs each have Whitelist ID W1–W6  
+- [ ] No draw-magnet **-0.75** in table A  
+- [ ] No two-legged euro in table A  
+- [ ] Max-WR observation only when table A empty  
+- [ ] Streak skipped unless draw-friendly table A (or user force)  
+- [ ] Named sources on table A formals  
+- [ ] Fundamentals present  
 
-## Post-match exception
+## Post-match
 
-If input is **only results** (scores, no new pricing card): skip dual pre-match; run post-match review / ledger update under defensive skill **and** checklist **§9 Skill 嚴寬簡審** (mandatory short table every results batch).  
-If input is **results + “update streak chain”**: update streak chain state (W/L/P → m/5 or BROKEN) briefly, still no dual pre-match unless a new card is attached; still include §9 if ledgers were updated.
+Results-only → ledger append + checklist **§9** (Lean short table + strict/loose).  
+Do not rewrite historical PASS into table A after cover.

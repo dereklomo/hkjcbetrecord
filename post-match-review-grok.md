@@ -7,7 +7,7 @@
 - **連勝全權益評級**：`.github/skills/streak-roll-eval/SKILL.md`（目標 5 連；極嚴；不管理注碼）
 - **賽前執行 Checklist + Watchlist（主）**：**[`analysis-checklist.md`](analysis-checklist.md)** — lean→PLAY 升格、§1b 和=L、light -0.25 強制 PASS、MLS 升格線 watch、**雙軌必做**、**§6b 優先序**、**§9 賽果後 Skill 嚴寬簡審（每次必做）**  
 - **每次賽果更新：** append 表 A/B + 簡批 + **§9a Lean 短表** + **§9 嚴寬表** — 預設不改 skill 硬規則  
-- **執行優化（2026-07-28 A–E）：** 和磁鐵半一預設不正式；Strong≤1.50 的 +1 僅 lean；聯賽 A/B/C/D 分檔；無命名外圍禁止正式 — 見 `analysis-checklist.md` §9e
+- **Grill 鎖定（表 A）：** 白名單 **W1–W6**；和磁鐵半一踢出表 A；歐戰兩回合不進表 A；Max-WR 觀察不進命中帳；streak 僅 draw-friendly 表 A 觸發 — 見 `analysis-checklist.md` §1-A / §9f
 - **本檔 = Grok 賽後覆盤 / 帳本主檔**（表 A/B、批次 review、Dual-Track 方法論）  
 - **常駐帳本**：表 A 正式 PLAY 命中、表 B Track B 主讀盤 — 每批 append  
 - **正式 PLAY 失誤反省**：見 **「正式 PLAY 失誤反省（執行層）」**（里昂 / Knights / 羅奇 / Houston / Botafogo / **Örgryte +1 穿盤**；對照 **Atlante +1 W**）  
