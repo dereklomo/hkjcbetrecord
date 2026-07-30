@@ -7,9 +7,9 @@
 - **連勝全權益評級**：`.github/skills/streak-roll-eval/SKILL.md`（目標 5 連；極嚴；不管理注碼）
 - **賽前執行 Checklist + Watchlist（主）**：**[`analysis-checklist.md`](analysis-checklist.md)** — lean→PLAY 升格、§1b 和=L、light -0.25 強制 PASS、MLS 升格線 watch、**雙軌必做**、**§6b 優先序**、**§9 賽果後 Skill 嚴寬簡審（每次必做）**  
 - **每次賽果更新：** append 表 A/B + 簡批 + **§9a Lean 短表** + **§9 嚴寬表** — 預設不改 skill 硬規則  
-- **Grill 鎖定（表 A + 表 Obs）：** 白名單 **W1–W6**（**可多腳**；廢 §1-max）；和磁鐵半一踢出表 A；歐戰兩回合不進表 A；**Max-WR 觀察 → 常駐表 Obs**（獨立 WR，永不併表 A）；路徑寬優先；D 檔不進 Obs 主欄；streak 僅 draw-friendly 表 A — 見 `analysis-checklist.md` §1-A / §1-obs / §9f  
-- **本檔 = Grok 賽後覆盤 / 帳本主檔**（表 A/**Obs**/B、批次 review、Dual-Track 方法論）  
-- **常駐帳本**：表 A 正式 PLAY 命中、**表 Obs** Max-WR 觀察結算、表 B Track B 主讀盤 — 每批 append  
+- **Grill 鎖定（表 A + 表 A′）：** 表 A = **W1–W6**（可多腳；三條件維持；廢 §1-max）；**準表 A′** = 表 A 空時 0～1 腳可小注、獨立帳（原 Obs 已合併）；和磁鐵半一踢表 A/A′；歐戰兩回合不進表 A；D 檔 A′ 子帳+淺盤+命名外圍；streak 僅 draw-friendly 表 A — 見 `analysis-checklist.md` §1-A / §1-A′ / §9f  
+- **本檔 = Grok 賽後覆盤 / 帳本主檔**（表 A/**A′**/B、批次 review、Dual-Track 方法論）  
+- **常駐帳本**：表 A 正式 PLAY、**表 A′** 準表結算、表 B Track B 主讀 — 每批 append  
 - **正式 PLAY 失誤反省**：見 **「正式 PLAY 失誤反省（執行層）」**（里昂 / Knights / 羅奇 / Houston / Botafogo / **Örgryte +1 穿盤**；對照 **Atlante +1 W**）  
 - 方法論：見 **Dual-Track（Primary = Track B）**；與 skill 衝突時以 skill 為準  
 - 歷史批次敘事仍保留；早期 capital-first 語氣僅作當時紀錄  
@@ -659,19 +659,20 @@
 
 ---
 
-## 常駐表 Obs · Max-WR 觀察結算（**不進表 A WR**）
+## 常駐表 A′ · 準表 A 結算（**可小注 · 不進表 A WR**）
 
-> 僅賽前標 **Max-WR Observation**（表 A 空時 0～1 腳）。半贏=W、半輸=L、走=P。  
-> **分結構計 WR**（`league` / `cup` / `euro-2leg` 等）；**禁止**併入上方表 A 粗 WR。  
-> 舊 §1-max 誤升正式、依 grill 改標 Obs 的腳，備註寫明。
+> 賽前標 **準表 A′ / Soft PLAY**（**僅表 A 空** 時 0～1 腳）。半贏=W、半輸=L、走=P。  
+> **分結構／子帳計 WR**（`league` / `cup` / `euro-2leg` / `women` / `u20` / `semi`）；**禁止**併入表 A 粗 WR。  
+> 歷史：原「表 Obs」已遷移至此；舊 §1-max 誤標正式改 A′ 的腳備註寫明。
 
 | 日期批 | 場次 | 盤口 | 賽果 | Track B | 結構標籤 | 備註 |
 |--------|------|------|------|---------|----------|------|
-| 07-30 | Gornik Zabrze vs Fenerbahçe | Gornik **+1** @1.85 | **1-1** | **W**（和=全贏 +1） | euro-2leg · Strong-blast · path-wide | 賽前 §1-max 誤標正式；**grill 重標 Obs**；負≥2 才 L 未觸發 |
+| 07-30 | Gornik Zabrze vs Fenerbahçe | Gornik **+1** @1.85 | **1-1** | **W**（和=全贏 +1） | euro-2leg · Strong-blast · path-wide | 賽前 §1-max 誤標正式 → **Obs → A′ 遷移**；負≥2 才 L 未觸發 |
 
-**表 Obs 粗 WR（有 W/L；分結構）：**  
+**表 A′ 粗 WR（有 W/L；分結構）：**  
 - **euro-2leg dog +1：** Gornik **W** = **1W0L**（n=1；≠ 聯賽 dog+1 表 A 的 Atlante/Örgryte）  
-- 盃 dog +1 lean cover（Busan 等）→ 見 lean 短表，**未**進 Obs 主欄（當日有表 A 正式 Juventude）
+- 盃 dog +1 lean cover（Busan 等）→ lean 短表；當日有表 A（Juve）→ **不可**掛 A′  
+- 待結：Inter Turku **+0.75**（07-30/31 賽前 **A′ 候選**）
 
 ---
 
@@ -1096,14 +1097,14 @@
 > **07-25：** 正式 **Örgryte +1 L**（主 2-0 穿）+ **Atlante +1 W**（1-1）= dog+1 **1W1L**；Racing/GM lean cover **不回寫**；light -0.25 多 cover **不回寫**；**SKILL 不改**；watch Strong 主 vs dog +1。  
 > **07-27：** 正式 **Rosenborg -0.75 4-0 W**（歐北 P1）；Häcken/Randers 貼線 lean **皆和殺 L** → 不升正式 **正確**；Indonesia 深 cover / 女足深殺 **不回寫**；**SKILL 不改**。  
 > **07-28：** 正式 **Juventude -0.75 1-0 W**（巴乙）；卡1 正式 0 成立；Lincoln +1 / Sabah lean cover **不回寫**；Hearts 次回合 **L** 驗證不升；Dinamo 小勝殺深 / Nigeria 深爆 **PASS 對**；**SKILL 不改**。  
-> **07-29 餘場 + 07-30：** 表 A **無新正式**（Juve 已入帳）；**表 Obs：Gornik +1 1-1 W**（§1-max 誤標撤出表 A）；Flu lean 0-0 **L**；Busan +1 lean **W** 不回寫；Jeju 3-3 半一和殺 PASS **對**；**廢 §1-max**；**SKILL 不改**。
+> **07-29 餘場 + 07-30：** 表 A **無新正式**（Juve 已入帳）；**表 A′：Gornik +1 1-1 W**（§1-max 誤標撤出表 A；原 Obs 已遷 A′）；Flu lean 0-0 **L**；Busan +1 lean **W** 不回寫；Jeju 3-3 半一和殺 PASS **對**；**廢 §1-max**；**SKILL 不改**。
 
 ---
 
-## 2026-07-29 / 07-30 賽後批（grill 重標 · 表 Obs 啟用）
+## 2026-07-29 / 07-30 賽後批（grill 重標 · 表 A′）
 
 **賽前檔：** `record/pre-match-2026-07-29.md` + `record/pre-match-2026-07-30.md`  
-**Grill 共識（本批執行）：** 表 A 可多腳 W1–W6；廢 §1-max；Obs 路徑寬優先 + 常駐表 Obs；Gornik **不**進表 A。  
+**Grill 共識：** 表 A 可多腳 W1–W6；廢 §1-max；**準表 A′**（原 Obs 合併）；Gornik **不**進表 A。  
 **不改 skill 硬規則**。
 
 ### 用戶賽果
@@ -1112,12 +1113,12 @@
 
 **07-30：** Kauno 1-0 Klaksvik · Lech 0-2 AGF · Ghana W 2-0 Cape Verde W · Barracas 1-0 Aldosivi · Craiova 2-2 Levski · **Gornik 1-1 Fener** · Jamaica U20 2-2 Panama U20 · Cameroon W 2-1 Mali W · Vasco 1-0 DIM · Gimnasia 1-0 River · Inter 1-1 Flamengo · Bragantino 1-0 Cristal · **Flu 0-0 Bahia** · Canada U20 1-1 Honduras U20  
 
-### 表 A / 表 Obs
+### 表 A / 表 A′
 
 | 帳 | 注 | 賽果 | B | 處理 |
 |----|-----|------|---|------|
 | 表 A | （本批無新）Juventude 已在 07-28 批 | — | — | 不重複計 |
-| **表 Obs** | **Gornik +1 @1.85** | **1-1** | **W** | 唯一 Obs；§1-max 誤標正式 → **改 Obs** |
+| **表 A′** | **Gornik +1 @1.85** | **1-1** | **W** | 唯一 A′；§1-max 誤標正式 → **改 A′**（自 Obs 遷移） |
 
 ### Lean 短表（§9a）
 
@@ -1133,8 +1134,8 @@
 
 | 決策 | 評估 |
 |------|------|
-| 表 A 不納 Gornik | **成立** — 歐戰 +1 ∉ W1–W6；1-1 只證路徑，進 Obs |
-| Obs 選 Gornik 不選 Flu | **成立** — Flu 0-0 **L**；寬路徑優先 |
+| 表 A 不納 Gornik | **成立** — 歐戰 +1 ∉ W1–W6；1-1 只證路徑，進 **A′** |
+| A′ 選 Gornik 不選 Flu | **成立** — Flu 0-0 **L**；寬路徑優先 |
 | 拒 Busan 表 A（有 Juve） | **成立** — 盃 +1；cover 不回寫 |
 | 拒 Jeju 盃半一 | **成立** — 3-3 和殺 |
 | 拒 Bragantino 深 / Vasco -1 正式 | **成立** — 小勝殺深；-1 走 |
@@ -1146,9 +1147,9 @@
 |------|----------|------|
 | 過嚴？ | Busan/Gimnasia/Inter dog cover | **不回寫**；維持 |
 | 過寬？ | §1-max 曾把 Gornik 當正式 | **已廢**；改 Obs |
-| Obs | Gornik **W**；路徑排序被 Flu **L** 支持 | **維持** §1-obs |
+| A′ | Gornik **W**；路徑排序被 Flu **L** 支持 | **維持** §1-A′ |
 | 改 skill？ | **否** | **不改** |
-| 改 checklist？ | 多腳表 A、表 Obs、廢 §1-max | **已做**（grill B 執行） |
+| 改 checklist？ | 多腳表 A、**表 A′**（廢純 Obs）、廢 §1-max | **已做** |
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: match-card-dual
-description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive screening under analysis-checklist (table-A whitelist formal PLAYs + max-WR observation only if table A empty) and run streak-roll-eval only when a table-A formal is draw-friendly (-0.25 or level-ball lean). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
+description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive screening under analysis-checklist (table-A whitelist formal PLAYs + quasi-table A′ soft PLAY only if table A empty) and run streak-roll-eval only when a table-A formal is draw-friendly (-0.25 or level-ball lean). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
 argument-hint: 'Paste HKJC-style lines. Optional StreakState m/5 or 連勝 to force streak eval.'
 user-invocable: true
 ---
@@ -12,13 +12,15 @@ user-invocable: true
 **Default for this workspace** on schedule/card with odds:
 
 1. **Defensive (always)** — `defensive-betting-analysis` + `analysis-checklist.md`  
-   - **Formal PLAY (table A):** whitelist **W1–W6** only; **0 / 1 / many** legs (each must qualify; **no** §1-max one-forced-play)  
-   - **Max-WR observation (Obs):** **only if table A is empty** — 0–1 path-best leg; **not** table A; post-match → **table Obs** ledger  
+   - **Formal PLAY (table A):** whitelist **W1–W6** only; **0 / 1 / many** legs; **no** §1-max  
+   - **準表 A′ (Soft PLAY):** **only if table A is empty** — **0–1** leg; **small stake OK**; **not** table A WR; post-match → **table A′**  
+   - Pure **Max-WR / Obs column is retired** (merged into A′)  
 2. **Streak-roll (conditional)** — `streak-roll-eval`  
-   - Run **only if** table A has a **draw-friendly** formal: favorite **-0.25** (draw=W) or **level-ball lean** (draw=P)  
-   - Otherwise output **`streak: skipped`** (unless user forces 連勝/streak)
+   - Run **only if** table A has a **draw-friendly** formal: **-0.25** or **level-ball lean**  
+   - Else **`streak: skipped`** (unless user forces 連勝/streak)
 
-**Primary goal (grill-locked):** maximize **justified table-A Track B win-rate**, not “always have a bet.”
+**Primary goal (grill-locked):** maximize **justified table-A Track B win-rate**.  
+**Frequency valve:** A′ when table A empty — does **not** relax table-A triple gate.
 
 ## When This Applies
 
@@ -29,10 +31,10 @@ user-invocable: true
 ## Read Order
 
 1. This skill  
-2. `analysis-checklist.md` (**§1-A / §1-obs / §1-streak**, whitelist W1–W6)  
+2. `analysis-checklist.md` (**§1-A / §1-A′ / §1-streak**, whitelist W1–W6)  
 3. `defensive-betting-analysis` (Track B hard rules)  
 4. `streak-roll-eval` (only when triggered)  
-5. `post-match-review-grok.md` ledgers  
+5. `post-match-review-grok.md` ledgers (table A / **A′** / B)
 
 ## Workflow
 
@@ -44,43 +46,42 @@ user-invocable: true
 
 ### Step 2 — Score every fixture
 
-For each: external gap, Track B map, fundamentals (incl. **draw-magnet / cagey script?**), league tier A/B/C/D, branch tag.
+For each: external gap, Track B map, fundamentals (incl. **draw-magnet / cagey?**), league tier A/B/C/D, branch tag.
 
 ### Step 3 — Table A formal (whitelist)
 
 Promote to **Formal PLAY (table A)** only if:
 
-- Ideal checklist §1 gates (named external, Medium as required, fundamentals hard vetoes clear)  
+- Ideal §1 gates (named external, Medium as required, hard vetoes clear)  
 - Branch ∈ **W1–W6**  
 - **Not** draw-magnet/cagey **-0.75**  
 - **Not** two-legged euro  
-- Single-leg cup only if Strong (≤~1.55) + shallow line  
-- **Not** cup dog **+1** as table A (lean/Obs only)
+- Single-leg cup only if Strong (≤~1.55) + shallow  
+- **Not** cup dog **+1** as table A  
 
-**Multiple** table-A legs allowed if each qualifies; **no same-branch parlay**.  
-**Forbidden:** §1-max forcing one non-whitelist “best path” into table A (e.g. euro Strong **+1**).
+**Multiple** table-A legs OK if each qualifies; **no same-branch parlay**.  
+**Forbidden:** §1-max forcing non-whitelist path into table A.
 
-### Step 4 — Max-WR observation (only if table A empty)
+### Step 4 — 準表 A′ (only if table A empty)
 
-**Section always present** in the card (write **none** if not used).
+**Section always present** (write **none** if not used).
 
-If **zero** table-A formals and some usable edge exists:
+If **zero** table-A formals and usable edge:
 
-- Rank by **path width:** dog **+1** (W/draw=W, lose-1=P) **>** clear **-0.25** / level lean **>** **-0.75** (draw=L)  
-- **C-tier -0.75** allowed only if no wider path on the card  
-- **League/cup/euro all allowed** for Obs; tag `league` / `cup` / `euro-2leg` / `Strong-blast`  
-- **D-tier** (women / U20 / semi-pro) **not** Obs main column  
-- Hard vetoes still apply (unlocked identity, true 50-50, B-team / dead rubber)  
-- Pick **one** leg; label **`Max-WR Observation — NOT table A`**  
-- Post-match: append **table Obs** (never merge WR into table A)
+- **One-leg shortfall** OR **structure pack** (euro dog +1/+0.75, cup +1, C-tier -0.75, …)  
+- **Path rank:** dog **+1/+0.75** > **-0.25**/level > **-0.75**  
+- Draw-magnet **-0.75** → **ban A′**  
+- **D-tier** (women/U20/semi): allowed only in **sub-ledger** with **shallow line + named external**; never mix WR with league/euro A′  
+- Label **`Soft PLAY / 準表 A′ — NOT table A`**  
+- Post-match: append **table A′** only  
 
-If table A non-empty: **Obs = none** (do not force a second column bet).
+If table A non-empty: **A′ = none**.
 
 ### Step 5 — Streak (conditional)
 
 | Table A content | Streak section |
 |-----------------|----------------|
-| Has **-0.25** or **level-ball lean** formal | Run streak-roll-eval → STREAK_LEG or none |
+| Has **-0.25** or **level-ball lean** formal | Run streak-roll-eval |
 | Only **-0.75** / **+1** / empty | **`streak: skipped`** |
 | User forces streak | Run eval anyway |
 
@@ -90,12 +91,12 @@ If table A non-empty: **Obs = none** (do not force a second column bet).
 # Dual Card Screen
 
 ## A. Defensive (WR-first · table A priority)
-### Formal PLAY（表 A · 白名單 W1–W6 · 可多腳 · 可進命中帳）
+### Formal PLAY（表 A · W1–W6 · 可多腳 · 命中帳）
 | # | Match | Market | WL | Conf | Why |
 （or: **none**）
 
-### Max-WR 觀察（表 Obs · 不進表 A · 僅表 A 空時 · 欄位必有）
-| Match | Market | Path rank | Tag | Risk |
+### 準表 A′（可小注 · 不進表 A · 僅表 A 空 · 0～1 腳）
+| Match | Market | Why A′ | Tag / 子帳 | Risk |
 （or: **none** — table A non-empty / no edge / veto）
 
 ### WR lean only
@@ -111,33 +112,35 @@ Status: evaluated | **skipped** (reason)
 ...
 
 ## C. One-line
-Table A: … | Observation: … | Streak: …
+Table A: … | A′: … | Streak: …
 ```
 
 ## Rules of Combination
 
-1. **Empty table A is OK** and often correct  
-2. **Many table-A legs OK** if each ∈ W1–W6  
-3. **Do not** invent table-A PLAY outside W1–W6  
-4. **Do not** put Max-WR / Obs into table A  
-5. **Do not** invent garbage sides to fill either column  
-6. Cover after PASS/lean **never** rewrites to table A  
-7. Streak empty/skipped OK  
-8. Fund management user-owned  
+1. Empty table A is OK  
+2. Many table-A legs OK if each ∈ W1–W6  
+3. Do not invent table-A outside W1–W6  
+4. Do not put A′ into table A WR  
+5. Do not invent garbage sides  
+6. Cover after PASS/lean never rewrites to table A  
+7. A′ only when table A empty (0–1 leg)  
+8. Streak empty/skipped OK  
+9. Fund management user-owned  
 
 ## Quality Checks
 
 - [ ] Table A legs each have Whitelist ID W1–W6  
-- [ ] No §1-max single forced formal outside whitelist  
-- [ ] No draw-magnet **-0.75** in table A  
-- [ ] No two-legged euro / cup dog+1 in table A  
-- [ ] Max-WR section present; Obs only when table A empty  
-- [ ] Obs path rank respected; D-tier not Obs main  
-- [ ] Streak skipped unless draw-friendly table A (or user force)  
+- [ ] No §1-max non-whitelist formal  
+- [ ] No draw-magnet **-0.75** in table A or A′  
+- [ ] No two-legged euro / cup dog+1 in **table A**  
+- [ ] A′ section present; only when table A empty  
+- [ ] A′ path rank + shortfall/structure pack respected  
+- [ ] D-tier A′ has sub-ledger + shallow + named external  
+- [ ] Streak skipped unless draw-friendly table A (or force)  
 - [ ] Named sources on table A formals  
 - [ ] Fundamentals present  
 
 ## Post-match
 
-Results-only → ledger append + checklist **§9** (Lean short table + strict/loose).  
+Results-only → ledger append table A / **A′** / B + checklist **§9**.  
 Do not rewrite historical PASS into table A after cover.

@@ -43,13 +43,13 @@ Do **not** invent a second checklist or re-home watchlists into ad-hoc session n
 When the user pastes **one or more fixtures with odds** (HKJC-style lines, multi-match card, dated 賽程+賠率):
 
 1. Always run **this skill** with **`analysis-checklist.md`**:  
-   - **Table A formal PLAY** = ideal gates + **whitelist W1–W6** only (**0 / 1 / many** legs; **no** §1-max forced single play)  
-   - **Max-WR observation (Obs)** only if table A empty — path-width rank; post-match **table Obs** only (not table A)  
+   - **Table A formal PLAY** = ideal gates + **whitelist W1–W6** only (**0 / 1 / many** legs; **no** §1-max)  
+   - **準表 A′ (Soft PLAY)** only if table A empty — 0–1 leg, small stake OK, post-match **table A′** only (never merge into table A WR); pure Obs column **retired**  
 2. Run **`streak-roll-eval` only if** table A has a **draw-friendly** formal (`-0.25` or level-ball lean); else `streak: skipped` unless user forces streak.  
-3. Use the response skeleton in `match-card-dual` (Max-WR section always present).  
+3. Use the response skeleton in `match-card-dual` (A′ section always present).  
 4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.
 
-Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked), not forcing a play every card.
+Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked); **A′** is the frequency valve, not a table-A relax.
 
 ## Primary Objective: Win-Rate First (贏盤率為主)
 
