@@ -4,13 +4,13 @@
 **賽後帳本 / 批次 review：** `post-match-review-grok.md`（表 A/B、逐場賽果）  
 **本檔角色：** 賽前 **執行 checklist + watchlist**；與 skill 衝突時 **以 skill 為準**。
 
-> **Grill 鎖定規格（2026-07 session）：** 主目標 = **表 A 正式 Track B 勝率**。  
-> **兩欄輸出：** ① **Formal PLAY（表 A）** = 理想 §1 + **白名單 W1–W6**；可空。② **Max-WR 觀察** = 僅當表 A **為空** 時 0～1 腳路徑最佳，**不進表 A 命中帳**。  
+> **Grill 鎖定規格（2026-07 session · 含 07-30 補強）：** 主目標 = **表 A 正式 Track B 勝率**。  
+> **兩欄輸出：** ① **Formal PLAY（表 A）** = 理想 §1 + **白名單 W1–W6**；**可 0／1／多腳**（各腳獨立達標；**廢 §1-max 每卡強制一腳**）。② **Max-WR 觀察（Obs）** = 僅當表 A **為空** 時 0～1 腳路徑最佳；**不進表 A**；賽後進常駐 **表 Obs**（獨立 WR）。  
 > **和磁鐵/膠著 + 半一 → 硬踢出表 A**。歐戰**兩回合不進表 A**；單場盃僅 Strong+淺盤可審。  
 > **Streak：** 非每卡必跑；僅表 A 有 **draw≠L** 正式（-0.25 或平手 lean）時才評。  
 > cover-after-PASS **永不**回寫。**不**改 skill 半贏=W 硬結算。
 
-**維護：** 改執行規則 / watchlist **只改本檔**；賽後樣本 append **只改** `post-match-review-grok.md`。
+**維護：** 改執行規則 / watchlist **只改本檔**；賽後樣本 append **只改** `post-match-review-grok.md`（表 A / **表 Obs** / 表 B）。
 
 ---
 
@@ -18,13 +18,13 @@
 
 | 軌道 | 何時跑 | 輸出 |
 |------|--------|------|
-| **A. Defensive** | **每卡必跑** | **表 A 正式**（白名單，可 0 多腳）+ **若表 A=0 → Max-WR 觀察 1 腳** + lean + PASS |
+| **A. Defensive** | **每卡必跑** | **表 A 正式**（W1–W6，**可多腳**）+ **若表 A=0 → Max-WR 觀察 0～1 腳** + lean + PASS |
 | **B. Streak-roll** | **僅當** 表 A 存在 **draw≠L** 正式盤（**-0.25** 和=W，或 **平手 lean** 和=P） | STREAK_LEG 或 none；否則 **`streak: skipped`**（非每卡必跑） |
 
 編排：`.github/skills/match-card-dual/SKILL.md`。
 
-**禁止：** 為填表 A 硬選垃圾邊；把 Max-WR 觀察寫進表 A；cover 回寫。  
-**允許：** 表 A 空（無白名單達標）；streak skipped。
+**禁止：** 為填表 A 硬選垃圾邊；把 Obs 寫進表 A；cover 回寫；§1-max 強迫非白名單正式。  
+**允許：** 表 A 空；表 A 多腳；Obs none；streak skipped。
 
 ---
 
@@ -43,7 +43,9 @@
 
 ## 1-A. 表 A 正式 PLAY（進命中帳 · 主目標）
 
-**須同時：** 理想 §1 勾選 + **落在白名單 W1–W6** + **無硬否決**。
+**須同時：** 理想 §1 勾選 + **落在白名單 W1–W6** + **無硬否決**。  
+**多腳：** 同卡凡各自達標均可進表 A（**不**限一場）；**禁止**同分支串關。  
+**已廢：** §1-max「每卡強制最大 WR 一腳正式」（曾把 Gornik 歐戰 +1 誤升正式）。
 
 ### 白名單（Grill · W1–W6）
 
@@ -85,21 +87,36 @@
 
 ---
 
-## 1-obs. Max-WR 觀察（**不進表 A** · 僅表 A 為空時）
+## 1-obs. Max-WR 觀察 / 表 Obs（**不進表 A** · 僅表 A 為空時）
+
+**賽前：** dual 卡 **必有**本欄（可寫 **none**）。  
+**賽後：** append `post-match-review-grok.md` **常駐表 Obs**；**WR 永不併入表 A**。
 
 當本卡 **零腳** 表 A 正式，且存在相對可用 edge：
 
-1. 按 Track B 路徑排序（和=W、輸1=P 優先於和=L 的 -0.75）  
-2. 輸出 **0～1 腳** `Max-WR Observation`（**明示不進表 A / 非命中帳**）  
-3. Conf Low；寫 Risk（Strong 爆破、盃、次回合等）  
-4. **有表 A 正式時：不強制** 本欄  
+### 路徑排序（硬）
+
+1. **寬路徑優先：** dog **+1**（勝/和=W、輸1=P）＞ clear **-0.25**／平手 lean（和=W/P）＞ **-0.75**（和=L）  
+2. **C 檔 -0.75**（巴甲／MLS 類）可進 Obs，但 **有更寬路徑時不選**（樣本：07-30 Flu 半一次於 Gornik +1）  
+3. **不限**聯賽／盃／歐戰——只比路徑；必須標 `league` / `cup` / `euro-2leg` / `Strong-blast` 等  
+4. 輸出 **0～1 腳**；Conf Low；**明示不進表 A**  
+5. **有表 A 正式時：不強制** Obs（不並列第二正式）
+
+### Obs 硬否決 / 檔位牆
+
+| 禁入 Obs 主欄 | 處理 |
+|---------------|------|
+| 身份未鎖、真五五無 lean、B 隊／dead rubber、極端已知輪換否決 | **none** 或 PASS |
+| **D 檔**（女足／U20／半職） | **不進 Obs 主欄**；最多 lean 短表 |
+| 和磁鐵／膠著 **-0.75** | 慎；通常不選作 Obs（與表 A 同精神） |
 
 ```markdown
-### Formal PLAY（表 A · 白名單）
-（0 或多腳）
+### Formal PLAY（表 A · 白名單 W1–W6 · 可多腳）
+（0 或多腳；各腳 Whitelist ID）
 
-### Max-WR 觀察（不進表 A · 僅表 A 空時）
-| Match | Market | Why path-best | Risk |
+### Max-WR 觀察（表 Obs · 不進表 A · 僅表 A 空時）
+| Match | Market | Path rank | Tag | Risk |
+（or: **none** — 有表 A / 無 edge / 全否決）
 ```
 
 ---
@@ -483,17 +500,18 @@
 | 版 | 內容 |
 |----|------|
 | A–E | 易整卡 formal 0 |
-| §1-max 強制正式 | 易污染表 A（Gornik 類） |
-| **Grill 鎖定（現行）** | 表 A = **W1–W6 白名單**；Max-WR 觀察僅表 A 空；和磁鐵半一踢出表 A；歐戰兩回合不進表 A；streak 僅 draw-friendly 表 A 觸發 |
+| §1-max 強制正式 | 易污染表 A（**Gornik 歐戰 +1**）→ **已廢** |
+| **Grill 鎖定（現行）** | 表 A = **W1–W6**（**可多腳**）；**表 Obs** 僅表 A 空、路徑寬優先、獨立帳；和磁鐵半一踢表 A；歐戰兩回合不進表 A；D 檔不進 Obs 主欄；streak 僅 draw-friendly 表 A |
 
 ### 9f. Grill 決策備忘（只讀摘要）
 
 1. 主目標：表 A Track B 勝率  
-2. 表 A ≠ 路徑觀察  
-3. 白名單 W1–W6；W7 不進  
+2. 表 A ≠ Obs；Obs 永不併入表 A WR  
+3. 白名單 W1–W6；W7 不進；**表 A 可多腳**；**廢 §1-max**  
 4. 和磁鐵/膠著 + 半一 → 硬踢表 A  
-5. 歐戰兩回合不進表 A；單場盃 Strong+淺可審  
-6. Max-WR 觀察僅表 A 空  
+5. 歐戰兩回合不進表 A；單場盃 Strong+淺可審；**盃 dog+1 不進表 A**（cover 不回寫）  
+6. Obs：表 A 空 → 0～1 腳；路徑 **+1 ＞ -0.25 ＞ -0.75**；不限盃/歐戰但標籤分開；D 檔禁 Obs 主欄  
 7. Streak 非每卡；僅 -0.25 / 平手 lean 表 A 觸發  
+8. 樣本：Gornik +1 = **Obs W** 非表 A；Juventude -0.75 = **表 A W**（W6）  
 
 ---

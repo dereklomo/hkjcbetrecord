@@ -342,3 +342,18 @@ Kairat 1-0 Omonia Nicosia
 1.22 RB Bragantino 1.71 [-1/-1.5] 2.08 Sporting Cristal 9.25
 1.65 Fluminense 1.97 [-0.5/-1] 1.80 Bahia 4.30
 1.99 Canada U20 1.83 [0/-0.5] 1.93 Honduras U20 3.10
+
+Kauno Zalgiris 1-0 KI Klaksvik
+Lech Poznan 0-2 AGF Aarhus
+Ghana Women 2-0 Cape Verde Islands Women
+Barracas Central 1-0 Aldosivi
+CS Universitatea Craiova 2-2 Levski Sofia
+Gornik Zabrze 1-1 Fenerbahce
+Jamaica U20 2-2 Panama U20
+Cameroon Women 2-1 Mali Women
+Vasco da Gama 1-0 Independiente Medellin
+Gimnasia LP 1-0 River Plate
+Internacional 1-1 Flamengo
+RB Bragantino 1-0 Sporting Cristal
+Fluminense 0-0 Bahia
+Canada U20 1-1 Honduras U20
