@@ -1,4 +1,4 @@
-# 2026-07-10 賽果回顧與策略檢討
+﻿# 2026-07-10 賽果回顧與策略檢討
 
 ## 給新 Agent 的摘要
 
@@ -668,11 +668,11 @@
 | 日期批 | 場次 | 盤口 | 賽果 | Track B | 結構標籤 | 備註 |
 |--------|------|------|------|---------|----------|------|
 | 07-30 | Gornik Zabrze vs Fenerbahçe | Gornik **+1** @1.85 | **1-1** | **W**（和=全贏 +1） | euro-2leg · Strong-blast · path-wide | 賽前 §1-max 誤標正式 → **Obs → A′ 遷移**；負≥2 才 L 未觸發 |
+| 07-30/31 | Inter Turku vs Başakşehir | Inter Turku **+0.75** @1.89 | **2-0** | **W**（客勝 2 全贏 dog） | euro-2leg · Strong-blast · path-wide | 賽前 **A′ Soft PLAY**；表 A none；路徑冠軍；Strong 客未爆破 |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
-- **euro-2leg dog +1：** Gornik **W** = **1W0L**（n=1；≠ 聯賽 dog+1 表 A 的 Atlante/Örgryte）  
-- 盃 dog +1 lean cover（Busan 等）→ lean 短表；當日有表 A（Juve）→ **不可**掛 A′  
-- 待結：Inter Turku **+0.75**（07-30/31 賽前 **A′ 候選**）
+- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；≠ 聯賽 dog+1 表 A；**勿**併表 A）  
+- 盃 dog +1 lean cover（Busan 等）→ lean 短表；當日有表 A（Juve）→ **不可**掛 A′
 
 ---
 
@@ -976,7 +976,7 @@
 
 ## 2026-07-19/20 賽後批（正式 2W + 決賽/女足 PASS）
 
-**賽前檔：** `record/pre-match-2026-07-19.md`、`record/pre-match-2026-07-20.md`
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-19_20-card.md`、`record/pre-match/2026-07/pre-match-2026-07-20_21-card.md`
 
 | 場次 | 賽果 |
 |------|------|
@@ -1097,13 +1097,69 @@
 > **07-25：** 正式 **Örgryte +1 L**（主 2-0 穿）+ **Atlante +1 W**（1-1）= dog+1 **1W1L**；Racing/GM lean cover **不回寫**；light -0.25 多 cover **不回寫**；**SKILL 不改**；watch Strong 主 vs dog +1。  
 > **07-27：** 正式 **Rosenborg -0.75 4-0 W**（歐北 P1）；Häcken/Randers 貼線 lean **皆和殺 L** → 不升正式 **正確**；Indonesia 深 cover / 女足深殺 **不回寫**；**SKILL 不改**。  
 > **07-28：** 正式 **Juventude -0.75 1-0 W**（巴乙）；卡1 正式 0 成立；Lincoln +1 / Sabah lean cover **不回寫**；Hearts 次回合 **L** 驗證不升；Dinamo 小勝殺深 / Nigeria 深爆 **PASS 對**；**SKILL 不改**。  
-> **07-29 餘場 + 07-30：** 表 A **無新正式**（Juve 已入帳）；**表 A′：Gornik +1 1-1 W**（§1-max 誤標撤出表 A；原 Obs 已遷 A′）；Flu lean 0-0 **L**；Busan +1 lean **W** 不回寫；Jeju 3-3 半一和殺 PASS **對**；**廢 §1-max**；**SKILL 不改**。
+> **07-29 餘場 + 07-30：** 表 A **無新正式**（Juve 已入帳）；**表 A′：Gornik +1 1-1 W**（§1-max 誤標撤出表 A；原 Obs 已遷 A′）；Flu lean 0-0 **L**；Busan +1 lean **W** 不回寫；Jeju 3-3 半一和殺 PASS **對**；**廢 §1-max**；**SKILL 不改**。  
+> **07-30/31 卡（部分）：** 表 A **none**；**A′ Inter Turku +0.75 2-0 W**（euro dog 路徑；A′ **2W0L**）；South Mel / Ilves / PAOK / Bournemouth cover **不回寫**；Midtjylland 次回合 **L**、Tobol 深和殺、Levadia dog **L** 驗證 PASS；**Independiente 等未賽**；**SKILL 不改**。
+
+---
+
+## 2026-07-30 / 07-31 賽後批（部分 · A′ Inter Turku）
+
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-30_31-card.md`  
+**表 A：** none  
+**表 A′：** **Inter Turku +0.75 @1.89 → 2-0 → Track B W**  
+**不改 skill 硬規則**。
+
+### 用戶賽果（本批已給）
+
+South Melbourne 2-1 Adelaide · Sydney Olympic 0-3 Brisbane · Tobol 1-1 Panevezys · Bournemouth 5-2 Augsburg · Ilves 2-1 Stjarnan · **Inter Turku 2-0 Başakşehir** · Levadia 1-3 Göteborg · Midtjylland 0-2 Besiktas · Nordsjaelland 6-0 GAIS · Senegal W 1-0 Kenya W · Beitar 2-3 AEK Larnaca · PAOK 2-0 Dynamo Kyiv  
+
+（Anderlecht／Independiente／Coritiba／Talleres／女足其餘／U20 等 **未給** → 不結。）
+
+### 表 A / 表 A′
+
+| 帳 | 注 | 賽果 | B | 評估 |
+|----|-----|------|---|------|
+| 表 A | — | — | — | none 成立 |
+| **表 A′** | **Inter Turku +0.75** | **2-0** | **W** | 客勝穿盤；Strong 爆破未發生；路徑 A′ **正確** |
+
+### Lean 短表（§9a）
+
+| 結構 | 場次 | 賽前 | B | 含義 |
+|------|------|------|---|------|
+| 澳盃 dog +0.25 | South Melbourne | lean 極弱 | **W**（2-1） | cover **不回寫** 表 A／A′ |
+| 歐戰 -0.75 | Ilves | PASS | **W**（2-1 勝1） | cover **不回寫** |
+| 歐戰 -0.25 | PAOK | PASS／弱 | **W**（2-0） | cover **不回寫**；兩回合仍不升表 A |
+| 友誼 -0.75 | Bournemouth | PASS | **W**（5-2） | cover **不回寫** |
+| 次回合 -0.75 | Midtjylland | PASS | **L**（0-2） | 追分 **Strategy Held** |
+| 深讓 | Tobol -1.5/-2 | PASS | **L**（1-1） | 和殺深 **正確** |
+| 歐戰 dog +0.25 | Levadia | PASS | **L**（1-3） | 拒近均 dog **對** |
+| 澳盃深 dog | Sydney Olympic | PASS | **L**（0-3） | 深 dog 穿 **對** |
+| 女足 -0.75 | Senegal W | PASS | **W**（1-0） | D 檔 cover 不回寫 |
+| 平手 | Beitar | PASS | **L**（2-3） | 近均 PASS |
+
+### 策略是否成立
+
+| 決策 | 評估 |
+|------|------|
+| 表 A none | **成立** — 無 W1–W6 漏抓 formal |
+| A′ = Turku 不選 Independiente | **暫成立** — Turku **W**；Independiente **未賽** 不改排序 |
+| 拒 Mid／Tobol／友誼升格 | **成立** — Mid **L**、Tobol **L**、Bournemouth cover 不回寫 |
+| 拒 2 串 1（Turku+Independiente） | **事後看** Turku 單腳 W 已夠；Independiente 未賽 |
+
+### Skill 嚴寬簡審（§9）
+
+| 維度 | 本批訊號 | 動作 |
+|------|----------|------|
+| 過嚴？ | South Mel／Ilves／PAOK／Bournemouth cover | **不回寫**；維持 |
+| 過寬？ | 無表 A；A′ 有 W | A′ n=2 正向 observation |
+| A′ 路徑 | Turku **W**；euro dog **2W0L** | **維持** §1-A′；**勿**升表 A |
+| 改 skill？ | **否** | **不改** |
 
 ---
 
 ## 2026-07-29 / 07-30 賽後批（grill 重標 · 表 A′）
 
-**賽前檔：** `record/pre-match-2026-07-29.md` + `record/pre-match-2026-07-30.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-29.md` + `record/pre-match/2026-07/pre-match-2026-07-30.md`  
 **Grill 共識：** 表 A 可多腳 W1–W6；廢 §1-max；**準表 A′**（原 Obs 合併）；Gornik **不**進表 A。  
 **不改 skill 硬規則**。
 
@@ -1155,7 +1211,7 @@
 
 ## 2026-07-28 賽後批（歐戰卡 + 南美/韓卡）
 
-**賽前檔：** `record/pre-match-2026-07-28.md`（卡1 正式 0）+ `record/pre-match-2026-07-29.md`（原 07-28 卡2 · **Juventude** §1-max；`07-28-2` 已改期）  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-28.md`（卡1 正式 0）+ `record/pre-match/2026-07/pre-match-2026-07-29.md`（原 07-28 卡2 · **Juventude** §1-max；`07-28-2` 已改期）  
 **正式 PLAY：** **Juventude -0.75 @1.77 → 1-0 → Track B W**  
 **不改 skill 硬規則**。
 
@@ -1229,7 +1285,7 @@ Mexico U20 2-0 · Huracán W 1-0 River W · KuPS 0-2 Sabah · Lincoln 0-0 Mjäll
 
 ## 2026-07-27 賽後批（挪瑞丹 + 國足/女足）
 
-**賽前檔：** `record/pre-match-2026-07-27.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-27.md`  
 **正式 PLAY：** **Rosenborg -0.75 @1.84 → 4-0 → Track B W**  
 **不改 skill 硬規則**（歐北 P1 正向 obs；貼線不升再證）。
 
@@ -1272,7 +1328,7 @@ Indonesia 5-1 Cambodia · Ferro Oeste W 1-0 Talleres W · **Häcken 0-0 AIK** ·
 
 ## 2026-07-25 賽後批（北歐/阿甲/墨甲 · 防漏 +1）
 
-**賽前檔：** `record/pre-match-2026-07-25.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-25.md`  
 **正式 PLAY：** Örgryte **+1 L**；Atlante **+1 W**  
 **不改 skill 硬規則**（dog+1 有 W/L = observation 對；未到 formal review）。
 
@@ -1316,7 +1372,7 @@ Jaro 2-1 SJK · **Västerås 2-0 Örgryte** · Viborg 1-0 Odense · Gimnasia M 1
 
 ## 2026-07-24 賽後批（歐戰/南美卡 + 澳 NPL/K2 卡）
 
-**賽前檔：** `record/pre-match-2026-07-24.md`（卡1 + 卡2）  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-24.md`（卡1 + 卡2）  
 **正式 PLAY：** 僅 **Botafogo-RJ -0.75 @1.91** → **0-0 → Track B L**  
 **Streak：** 賽前 none；若誤當 STREAK_LEG 會鏈死 — **streak 否決正確**  
 **不改 skill 硬規則**（和殺 = Observation + 執行層強化；n 未達 formal review）。
@@ -1365,7 +1421,7 @@ Jaro 2-1 SJK · **Västerås 2-0 Örgryte** · Viborg 1-0 Odense · Gimnasia M 1
 
 ## 2026-07-23 賽後批（早場 + 晚場 + 西岸補卡）
 
-**賽前檔：** `record/pre-match-2026-07-23.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-23.md`  
 **正式 PLAY：** Houston **L**；**LAFC W**。  
 **不改 skill 硬規則**（MLS -0.75 正式 n=2 → **1W1L observation 對**；未到 formal review=3）。
 
@@ -1560,7 +1616,7 @@ Jaro 2-1 SJK · **Västerås 2-0 Örgryte** · Viborg 1-0 Odense · Gimnasia M 1
 
 ## 2026-07-21 卡2 賽後批（歐戰資格為主 · 正式 PLAY 0）
 
-**賽前檔：** `record/pre-match-2026-07-21-2.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-21-2.md`  
 **正式 PLAY：0** — 僅 PASS / WR lean 校正；**不改 skill 硬規則**。
 
 ### 用戶賽果
@@ -1650,7 +1706,7 @@ Jaro 2-1 SJK · **Västerås 2-0 Örgryte** · Viborg 1-0 Odense · Gimnasia M 1
 
 ## 2026-07-20 賽後批（PASS 風控 · 正式 PLAY 0）
 
-**賽前檔：** `record/pre-match-2026-07-20.md`  
+**賽前檔：** `record/pre-match/2026-07/pre-match-2026-07-20_21-card.md`  
 **用戶賽果（5 場）：**
 
 | 場次 | 賽果 |

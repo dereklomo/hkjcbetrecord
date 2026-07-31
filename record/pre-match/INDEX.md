@@ -1,0 +1,44 @@
+# Pre-match 紀錄索引（依**賽事日期**）
+
+**規則（grill 鎖定）：**  
+- 路徑：`record/pre-match/YYYY-MM/`  
+- 檔名：`pre-match-YYYY-MM-DD.md`；同日第 n 卡 `-2`…；跨日整卡 `pre-match-YYYY-MM-DD_DD-card.md`  
+- **card** = 完整 dual／表 A·A′ 決策（勿拆決策）  
+- **day 切片** = 僅當日場次／結算 + 鏈回 card（可選）  
+- 廢後綴 `-npl` 等語意後綴（改放標題）
+
+**權威結算帳：** `post-match-review-grok.md`
+
+---
+
+## 2026-07
+
+| 賽事日 | 檔案 | 類型 | 備註 |
+|--------|------|------|------|
+| 07-19 | [pre-match-2026-07-19_20-card.md](2026-07/pre-match-2026-07-19_20-card.md) | card | 原文含 07-19 + 07-20 場 |
+| 07-20 | ↑ 同 card；另見 [20_21-card](2026-07/pre-match-2026-07-20_21-card.md) | card | 07-20 session 含 07-21 場 |
+| 07-21 | [pre-match-2026-07-21.md](2026-07/pre-match-2026-07-21.md) | day/card | 澳盃 + K 聯 |
+| 07-21 | [pre-match-2026-07-21-2.md](2026-07/pre-match-2026-07-21-2.md) | day #2 | 歐戰資格 |
+| 07-22 | [pre-match-2026-07-22.md](2026-07/pre-match-2026-07-22.md) | day | |
+| 07-23 | [pre-match-2026-07-23.md](2026-07/pre-match-2026-07-23.md) | day | |
+| 07-24 | [pre-match-2026-07-24.md](2026-07/pre-match-2026-07-24.md) | day | 卡1+卡2 同檔 |
+| 07-25 | [pre-match-2026-07-25.md](2026-07/pre-match-2026-07-25.md) | day | |
+| 07-27 | [pre-match-2026-07-27.md](2026-07/pre-match-2026-07-27.md) | day | |
+| 07-28 | [pre-match-2026-07-28.md](2026-07/pre-match-2026-07-28.md) | day | |
+| 07-29 | [pre-match-2026-07-29.md](2026-07/pre-match-2026-07-29.md) | day | 原 28 卡2；Juventude 表 A |
+| 07-30 | [pre-match-2026-07-30.md](2026-07/pre-match-2026-07-30.md) | day | Gornik 卡（A′ 重標） |
+| 07-30 | [pre-match-2026-07-30_31-card.md](2026-07/pre-match-2026-07-30_31-card.md) | card | 原文 `20260730`+`20260731`；A′ Turku |
+| 07-30 | [pre-match-2026-07-30-day.md](2026-07/pre-match-2026-07-30-day.md) | day 切片 | 僅 30 日場 → 鏈 30_31-card |
+| 07-31 | [pre-match-2026-07-31-day.md](2026-07/pre-match-2026-07-31-day.md) | day 切片 | 僅 31 日場（euro 卡）→ 鏈 30_31-card |
+| 07-31 | [pre-match-2026-07-31-2.md](2026-07/pre-match-2026-07-31-2.md) | day #2 | 原 npl 卡；A′ Bentleigh |
+
+---
+
+## 命名速查
+
+| 模式 | 例子 |
+|------|------|
+| 單日一卡 | `pre-match-2026-07-28.md` |
+| 同日第 2 卡 | `pre-match-2026-07-21-2.md` |
+| 跨日整卡 | `pre-match-2026-07-30_31-card.md` |
+| 日切片 | `pre-match-2026-07-30-day.md` |
