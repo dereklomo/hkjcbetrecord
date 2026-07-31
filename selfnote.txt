@@ -357,3 +357,39 @@ Internacional 1-1 Flamengo
 RB Bragantino 1-0 Sporting Cristal
 Fluminense 0-0 Bahia
 Canada U20 1-1 Honduras U20
+
+20260730
+3.40 South Melbourne 2.12 [0/+0.5] 1.66 Adelaide Utd 1.80
+8.25 Sydney Olympic 1.70 [+1.5/+2] 2.06 Brisbane Roar 1.20
+1.13 Tobol 1.89 [-1.5/-2] 1.87 Panevezys 13.50
+1.78 Bournemouth 1.78 [-0.5/-1] 1.95 Augsburg
+
+20260731
+1.67 Ilves 2.06 [-0.5/-1] 1.73 Stjarnan 3.75
+4.35 Inter Turku 1.89 [+0.5/+1] 1.87 Basaksehir 1.58
+2.90 FCI Levadia 1.88 [0/+0.5] 1.88 Goteborg 2.04
+1.73 Midtjylland 2.07 [-0.5/-1] 1.72 Besiktas 3.55
+1.46 Nordsjaelland 1.96 [-1] 1.81 GAIS 5.10
+1.53 Senegal Women 1.79 [-0.5/-1] 1.94 Kenya Women 4.90
+2.29 Beitar Jerusalem 1.73 [0] 2.06 AEK Larnaca 2.72
+1.71 PAOK 1.58 [0/-0.5] 2.30 Dynamo Kiev 3.95
+2.44 PFC CSKA Sofia 1.82 [0] 1.95 Qarabag 2.58
+2.07 Anderlecht 1.91 [0/-0.5] 1.85 Hammarby 2.85
+3.30 Coleraine 2.11 [0/+0.5] 1.69 HJK Helsinki 1.81
+1.09 Benfica 1.80 [-2] 1.97 St. Gallen 15.00
+1.39 Morocco Women 1.80 [-1] 1.93 Algeria Women 6.10
+2.36 Talleres 2.09 [0/-0.5] 1.70 Velez Sarsfield 2.95
+1.09 Costa Rica U20 1.95 [-2] 1.78 Antigua and Barbuda U20 14.50
+1.53 Independiente 1.82 [-0.5/-1] 1.95 Newell's Old Boys 5.50
+3.45 O'Higgins 2.00 [0/+0.5] 1.77 Boca Juniors 1.98
+3.30 Coritiba 1.98 [0/+0.5] 1.79 Cruzeiro 1.97
+1.62 Oaxaca 1.93 [-0.5/-1] 1.83 Dorados 4.25
+1.10 Mexico U20 1.96 [-2] 1.77 Guatemala U20 15.00
+
+2.85 Rochedale Rovers 1.98 [0/+0.5] 1.75 Eastern Suburbs FC 1.86
+2.35 Wynnum Wolves 1.92 [0] 1.81 Brisbane City 2.16
+8.50 Bentleigh Greens 1.66 [+1.5/+2] 2.12 Oakleigh Cannons 1.21
+3.10 Incheon Steel Women 1.91 [0/+0.5] 1.79 Hwacheon FC Women 1.97
+1.09 Suwon FC Women 1.80 [-2] 1.97 Sejong FC Women 13.00
+1.21 Preston Lions 1.69 [-1/-1.5] 2.07 Green Gully 8.75
+1.08 Vietnam 1.91 [-2/-2.5] 1.85 Singapore 16.00
