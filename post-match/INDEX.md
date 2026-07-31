@@ -18,7 +18,7 @@
 
 | 日期／批 | 檔案 | 表 A | 表 A′ | 備註 |
 |----------|------|------|-------|------|
-| 2026-07-30/31（補登 Independiente 等） | [batches/2026-07-30_31.md](batches/2026-07-30_31.md) | none | Turku **W** | Independiente lean **W** 不回寫 |
+| 2026-07-30/31（**卡結清**） | [batches/2026-07-30_31.md](batches/2026-07-30_31.md) | none | Turku **W** | Independiente lean W；Coritiba lean L |
 | 2026-07-29/30 grill | [batches/2026-07-29_30.md](batches/2026-07-29_30.md) | （Juve 已入熱表） | Gornik **W** | A′ 啟用 |
 | 2026-07 全文快照 | [batches/2026-07-archive-legacy.md](batches/2026-07-archive-legacy.md) | 見內文 | 見內文 | **只讀**；07-10～早期批+完整表 B |
 

@@ -44,4 +44,9 @@
 | Morocco W 1-0 Algeria W | PASS **-1** | **P** |
 | CR U20 4-1 Antigua U20 | PASS 深 | cover 不回寫 |
 
-**仍待：** Coritiba／O'Higgins／Oaxaca／Mexico U20 等。
+| O'Higgins 1-0 Boca | PASS **+0.25** | **W** cover 不回寫 |
+| Coritiba 0-1 Cruzeiro | lean **+0.25** | **L** |
+| Oaxaca 1-0 Dorados | PASS **-0.75** | **W** cover 不回寫 |
+| Mexico U20 2-0 Guatemala U20 | PASS 深 | **W** cover 不回寫 |
+
+**本卡（euro／南美切片）已結清。**

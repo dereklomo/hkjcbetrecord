@@ -220,11 +220,15 @@ Confidence: Low
 | PASS | Morocco W **-1** | **1-0** | **P**（勝1走） | D 檔 |
 | PASS | Talleres light **-0.25** | **1-3** | **L** | light 殺 **對** |
 | PASS | CR U20 深 | **4-1** | **W** | cover 不回寫 |
-| lean | Coritiba **+0.25** | *未賽* | — | 待補 |
+| lean | Coritiba **+0.25** | **0-1** | **L** | 近均 dog lean 失手；不升格 **正確** |
+| PASS | O'Higgins **+0.25** | **1-0** | **W** | cover **不回寫** |
+| PASS | Oaxaca **-0.75** | **1-0** | **W**（勝1） | cover 不回寫 |
+| PASS | Mexico U20 深 | **2-0** | **W** | D 檔 cover 不回寫 |
 
 **表 A 本卡：** 0  
 **表 A′ 本卡（已結）：** **1W 0L**（Turku）  
-**累計表 A′ euro dog：** Gornik W + Turku W = **2W0L**
+**累計表 A′ euro dog：** Gornik W + Turku W = **2W0L**  
+**本卡 lean 有 W/L：** Independiente **W**；Coritiba **L**；South Mel **W**
 
 ### Lean 短表
 
@@ -232,21 +236,23 @@ Confidence: Low
 |------|------|------|---|------|
 | 澳盃 +0.25 | South Mel | lean | **W** | 不回寫 |
 | **C 檔 -0.75** | **Independiente** | lean | **W** | 勝面命中；非表 A／非 A′ |
+| 巴甲 dog +0.25 | Coritiba | 極弱 lean | **L** | 不升格正確 |
 | A′ euro +0.75 | Turku | **A′** | **W** | 進表 A′ |
 | 次回合 -0.75 | Mid | PASS | **L** | 維持拒正式 |
 | 次回合 -0.25 | Anderlecht | PASS | **W** | 不回寫 |
+| 南美 dog +0.25 | O'Higgins | PASS | **W** | 不回寫 |
 
 ### Skill 嚴寬簡審
 
 | 維度 | 訊號 | 動作 |
 |------|------|------|
-| 過嚴？ | Independiente／Anderlecht／Benfica cover | **不回寫** |
-| 過寬？ | 無表 A L | 維持三條件 |
-| A′ | Turku **W**；Independiente lean 亦 **W** | 路徑尺 vs 勝面尺 **並存正確** |
+| 過嚴？ | Independiente／Anderlecht／O'Higgins cover | **不回寫** |
+| 過寬？ | Coritiba lean **L**；無表 A L | 維持近均 dog 不升 |
+| A′ | Turku **W** | 路徑尺正確 |
 | 改 skill？ | **否** | **不改** |
 
 ---
 
 ## 一句話
 
-> **07-30/31 補登：** 表 A **none**；**A′ Turku 2-0 W**；**Independiente lean 1-0 W**（C 檔仍不升表 A）；Anderlecht／Benfica cover **不回寫**；Coleraine／Talleres PASS 殺盤；Coritiba 等 **仍待**；**SKILL 不改**。
+> **07-30/31 卡結清：** 表 A **none**；**A′ Turku W**；Independiente lean **W**／Coritiba lean **L**；O'Higgins cover 不回寫；**SKILL 不改**。
