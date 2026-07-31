@@ -1,7 +1,8 @@
 # 賽前分析 Checklist + Watchlist（執行層）
 
 **權威規則（硬）：** `.github/skills/defensive-betting-analysis/SKILL.md`  
-**賽後帳本 / 批次 review：** `post-match-review-grok.md`（表 A/B、逐場賽果）  
+**賽後熱帳：** `post-match-review-grok.md`（表 A / A′ / 分支速查 — **Agent 預設只讀此檔**）  
+**賽後冷檔：** `post-match/INDEX.md` → `post-match/batches/`（每批一檔；**最近 2 批**；legacy 只讀）  
 **本檔角色：** 賽前 **執行 checklist + watchlist**；與 skill 衝突時 **以 skill 為準**。
 
 > **Grill 鎖定規格（2026-07 · 含 A′ 補強）：** 主目標 = **表 A 正式 Track B 勝率**（三條件 **不過度放寬**）。  
@@ -10,7 +11,7 @@
 > **和磁鐵/膠著 + 半一 → 踢出表 A 與 A′**。歐戰兩回合 **不進表 A**（可進 A′ 結構包）。  
 > **Streak：** 僅表 A 有 draw-friendly 正式時才評。cover **永不**回寫。**不**改 skill 半贏=W。
 
-**維護：** 改執行規則 **只改本檔**；賽後 append **只改** `post-match-review-grok.md`（表 A / **表 A′** / 表 B）。
+**維護：** 改執行規則 **只改本檔**；賽後：熱檔 `post-match-review-grok.md`（表 A/A′＋速查）+ `post-match/batches/<date>.md`（§9）+ 更新 `post-match/INDEX.md`。
 
 ---
 
@@ -304,7 +305,7 @@
 - 若 §1 型正式 PLAY 連續失效達 formal review 門檻，再議 skill——**Houston / Botafogo 單場和殺不改規則**。  
 - **§1c MLS 升格線收緊** = watch only；LAFC **W** + Houston **L** = **1W1L**，**仍不寫死**收緊/放寬。  
 - **07-24 Botafogo 0-0 L：** 和磁鐵已標仍升格 → 執行應更嚴 §1-fund；**不**改 skill。  
-- 可比結算樣本、正式命中表 → **`post-match-review-grok.md`**。
+- 可比結算樣本、正式命中表 → **`post-match-review-grok.md`（熱）**；最近批 → **`post-match/INDEX.md`**。
 
 ---
 
@@ -338,7 +339,7 @@
 
 > **用途：** 賽前「先打哪類、先避哪類」；**n 小**，只作優先序，**不是**單一命中率改 skill。  
 > **正式粗計：** 約 **10W / 6L**（~63%；P 剔除）。  
-> **詳帳：** `post-match-review-grok.md` 表 A/B。
+> **詳帳：** `post-match-review-grok.md` 表 A/A′（熱）；完整表 B → `post-match/batches/2026-07-archive-legacy.md`。
 
 ### 6b-0 · 聯賽分檔（算 n / 升格嚴度 · **必標**）
 

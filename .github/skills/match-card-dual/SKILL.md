@@ -34,7 +34,8 @@ user-invocable: true
 2. `analysis-checklist.md` (**§1-A / §1-A′ / §1-streak**, whitelist W1–W6)  
 3. `defensive-betting-analysis` (Track B hard rules)  
 4. `streak-roll-eval` (only when triggered)  
-5. `post-match-review-grok.md` ledgers (table A / **A′** / B)
+5. `post-match-review-grok.md` (**hot** ledgers only: table A / **A′** / branch WR)  
+6. `post-match/INDEX.md` → **latest 2** batch files under `post-match/batches/` (not full legacy)
 
 ## Workflow
 
@@ -142,5 +143,6 @@ Table A: … | A′: … | Streak: …
 
 ## Post-match
 
-Results-only → ledger append table A / **A′** / B + checklist **§9**.  
+Results-only → append **hot** table A / **A′** + branch quick-ref; write **`post-match/batches/<date>.md`** (§9); update **`post-match/INDEX.md`**.  
+Do **not** load `2026-07-archive-legacy.md` by default.  
 Do not rewrite historical PASS into table A after cover.

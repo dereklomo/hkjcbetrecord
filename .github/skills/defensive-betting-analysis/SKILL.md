@@ -31,9 +31,10 @@ For **pre-match** screens in this workspace, read files in this order (does **no
 
 1. **`match-card-dual` skill** (`.github/skills/match-card-dual/SKILL.md`) — **default orchestration** when user pastes schedule + odds  
 2. **`analysis-checklist.md`** — execution checklist, PLAY upgrade / PASS gates, watchlist (execution layer only; if it conflicts with this skill, **this skill wins**)
-3. **`post-match-review-grok.md`** — settled Track B ledgers (table A/B) and batch reviews for self cross-check
-4. **`record/pre-match-*.md`** — same-day prior decisions when present  
-5. **`streak-roll-eval` skill** — for streak section of dual card (stricter; separate from ordinary PLAY)
+3. **`post-match-review-grok.md`** — **hot** ledgers only (table A / A′ / branch WR + mistake short table). Do **not** load full archive by default.  
+4. **`post-match/INDEX.md`** → open only the **latest 2** files under `post-match/batches/` for recent §9 / narrative. Open `batches/2026-07-archive-legacy.md` **only** for formal review or missing comparables.  
+5. **`record/pre-match/INDEX.md`** / dated pre-match cards — same-day prior decisions when present  
+6. **`streak-roll-eval` skill** — for streak section of dual card (stricter; separate from ordinary PLAY)
 
 Do **not** treat `post-match-review-home.md` as a writable review source (redirect/stub only).  
 Do **not** invent a second checklist or re-home watchlists into ad-hoc session notes.
@@ -47,7 +48,8 @@ When the user pastes **one or more fixtures with odds** (HKJC-style lines, multi
    - **準表 A′ (Soft PLAY)** only if table A empty — 0–1 leg, small stake OK, post-match **table A′** only (never merge into table A WR); pure Obs column **retired**  
 2. Run **`streak-roll-eval` only if** table A has a **draw-friendly** formal (`-0.25` or level-ball lean); else `streak: skipped` unless user forces streak.  
 3. Use the response skeleton in `match-card-dual` (A′ section always present).  
-4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.
+4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.  
+5. **Post-match context:** prefer **hot** `post-match-review-grok.md` + **2** recent batches from `post-match/INDEX.md` — not the full legacy archive.
 
 Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked); **A′** is the frequency valve, not a table-A relax.
 
