@@ -35,4 +35,13 @@
 | PAOK 2-0 | PASS cover | 不回寫 |
 | … | 見 card | |
 
-**Independiente 等：** 待補全場。
+| Independiente 1-0 Newell's | lean **-0.75** | **W**（不回寫） |
+| Anderlecht 3-1 Hammarby | PASS **-0.25** | cover 不回寫 |
+| CSKA Sofia 0-0 Qarabag | PASS **0** | **P** |
+| Coleraine 0-3 HJK | PASS **+0.25** | **L** |
+| Benfica 5-0 St. Gallen | PASS 深 | cover 不回寫 |
+| Talleres 1-3 Vélez | PASS light | **L** |
+| Morocco W 1-0 Algeria W | PASS **-1** | **P** |
+| CR U20 4-1 Antigua U20 | PASS 深 | cover 不回寫 |
+
+**仍待：** Coritiba／O'Higgins／Oaxaca／Mexico U20 等。

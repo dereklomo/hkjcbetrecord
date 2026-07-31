@@ -212,7 +212,14 @@ Confidence: Low
 | PASS | Senegal W **-0.75** | **1-0** | **W** | D 檔 cover **不回寫** |
 | PASS | Beitar **0** | **2-3** | 主 **L** | 近均 PASS |
 | PASS | PAOK **-0.25** | **2-0** | **W** | 歐戰 cover **不回寫** |
-| lean | Independiente **-0.75** | *未賽* | — | 待補 |
+| lean | Independiente **-0.75** | **1-0** | **W**（勝1） | lean 命中；**不**回寫表 A／A′ |
+| PASS | CSKA Sofia **0** | **0-0** | **P** | 近均 |
+| PASS | Anderlecht **-0.25** | **3-1** | **W** | 次回合 cover **不回寫** |
+| PASS | Coleraine **+0.25** | **0-3** | **L** | dog PASS **對** |
+| PASS | Benfica **-2** | **5-0** | **W** | 深 cover **不回寫** |
+| PASS | Morocco W **-1** | **1-0** | **P**（勝1走） | D 檔 |
+| PASS | Talleres light **-0.25** | **1-3** | **L** | light 殺 **對** |
+| PASS | CR U20 深 | **4-1** | **W** | cover 不回寫 |
 | lean | Coritiba **+0.25** | *未賽* | — | 待補 |
 
 **表 A 本卡：** 0  
@@ -224,20 +231,22 @@ Confidence: Low
 | 結構 | 場次 | 賽前 | B | 含義 |
 |------|------|------|---|------|
 | 澳盃 +0.25 | South Mel | lean | **W** | 不回寫 |
+| **C 檔 -0.75** | **Independiente** | lean | **W** | 勝面命中；非表 A／非 A′ |
 | A′ euro +0.75 | Turku | **A′** | **W** | 進表 A′ |
 | 次回合 -0.75 | Mid | PASS | **L** | 維持拒正式 |
+| 次回合 -0.25 | Anderlecht | PASS | **W** | 不回寫 |
 
 ### Skill 嚴寬簡審
 
 | 維度 | 訊號 | 動作 |
 |------|------|------|
-| 過嚴？ | 多場 cover | **不回寫** |
+| 過嚴？ | Independiente／Anderlecht／Benfica cover | **不回寫** |
 | 過寬？ | 無表 A L | 維持三條件 |
-| A′ | Turku **W** | **維持**；不升表 A |
+| A′ | Turku **W**；Independiente lean 亦 **W** | 路徑尺 vs 勝面尺 **並存正確** |
 | 改 skill？ | **否** | **不改** |
 
 ---
 
 ## 一句話
 
-> **07-30/31 部分結算：** 表 A **none**；**A′ Inter Turku +0.75 2-0 W**（euro dog A′ **2W0L**）；Mid／Tobol／Sydney PASS 殺盤成立；South Mel／Ilves／PAOK／Bournemouth cover **不回寫**；Independiente 等 **待補**；**SKILL 不改**。
+> **07-30/31 補登：** 表 A **none**；**A′ Turku 2-0 W**；**Independiente lean 1-0 W**（C 檔仍不升表 A）；Anderlecht／Benfica cover **不回寫**；Coleraine／Talleres PASS 殺盤；Coritiba 等 **仍待**；**SKILL 不改**。
