@@ -14,6 +14,10 @@
 
 **維護：** 改執行規則 **只改本檔**；賽後：熱檔 `post-match-review-grok.md`（表 A/A′＋速查）+ `post-match/batches/<date>.md`（§9）+ 更新 `post-match/INDEX.md`。
 
+**輸入格式（2026-08 · 最新）：** 港盤多行卡 **Format A** 為預設 — `FBxxxx · 聯賽 · 時間 · 主 [盤] ： 客 [盤] · 主水 · 客水`（常無 1X2）。詳見 skill `defensive-betting-analysis` → Preferred Match Input Format；編排 `match-card-dual` Step 1。一行 compact / 英文 dump 仍接受（Format B）。
+
+**身份／來源防呆（Grill 2026-08）：** 外圍英名對不上 → **該場 `ID hold` + 直接問用戶**（其餘場繼續）。對齊 **隊名+賽事+日期**（高風險加主客）；**不要**用外圍水 vs 港盤水判身份。別名表 `record/hkjc-name-alias.md`（先查後搜；僅用戶確認後寫入）。Sources 須可追溯數字或標 `none`。
+
 ---
 
 ## 雙軌預設（賽程+賠率）

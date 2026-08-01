@@ -1,7 +1,7 @@
 ---
 name: match-card-dual
 description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive screening under analysis-checklist (table-A whitelist formal PLAYs + quasi-table A′ soft PLAY only if table A empty) and run streak-roll-eval only when a table-A formal is draw-friendly (-0.25 or level-ball lean). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
-argument-hint: 'Paste HKJC-style lines. Optional StreakState m/5 or 連勝 to force streak eval.'
+argument-hint: 'Preferred: HKJC multi-line card (FBxxxx · 聯賽 · 時間 · 主 [盤] ： 客 [盤] · 主水 · 客水). Also one-line compact. Optional StreakState m/5 or 連勝.'
 user-invocable: true
 ---
 
@@ -25,6 +25,8 @@ user-invocable: true
 ## When This Applies
 
 - Odds paste / multi-match card / pre-match with prices  
+- **Preferred paste:** HKJC **card block** (`FBxxxx` + 中文聯賽/隊名 + `[盤]` + 兩側讓球水) — see `defensive-betting-analysis` → **Preferred Match Input Format · Format A**  
+- **Also accept:** one-line compact / English dumps (Format B)
 
 **Skip dual pre-match for:** results-only; strategy-only; user `只 defensive` / `只 streak` / `不要連勝評級`.
 
@@ -32,7 +34,7 @@ user-invocable: true
 
 1. This skill  
 2. `analysis-checklist.md` (**§1-A / §1-A′ / §1-streak**, whitelist W1–W6)  
-3. `defensive-betting-analysis` (Track B hard rules)  
+3. `defensive-betting-analysis` (Track B hard rules + **input format A/B**)  
 4. `streak-roll-eval` (only when triggered)  
 5. `post-match-review-grok.md` (**hot** ledgers only: table A / **A′** / branch WR)  
 6. `post-match/INDEX.md` → **latest 2** batch files under `post-match/batches/` (not full legacy)
@@ -41,9 +43,18 @@ user-invocable: true
 
 ### Step 1 — Parse & identity
 
-- Parse lines; unlabeled = **HKJC**  
-- Lock identity; ask if uncertain  
-- Seek **named** external 1X2  
+- Detect format: **`FBxxxx` / 中文聯賽+`[ 盤 ]`+`：`** → **Format A (HKJC card block · preferred)**; else one-line → Format B  
+- Unlabeled waters = **HKJC** execution (AH prices; often **no 1X2** in Format A)  
+- Normalize: home first; `[ -0.5 / -1 ]` → **-0.75**; `[ 0 / -0.5 ]` → **-0.25**; `[ +1 / +1.5 ]` → **+1.25**; `[ 0 ]` → level  
+- First water = **home AH**, second = **away AH**  
+- **Alias first:** read `record/hkjc-name-alias.md` (if present) before web search; use `FBxxxx` as key when useful  
+- Lock identity: **teams + competition + card date** (+ **home/away** if high-risk — see defensive skill Identity Gate)  
+- **If English names / fixture do not lock → that fixture `ID hold`:** ask user (1–2 candidates); **no external attach**; **rest of card continues**  
+- **Do not** fail identity because external 1X2 ≠ HKJC AH water (HKJC = execution only)  
+- Seek **named** external 1X2 with **traceable numbers** only after `ID locked` (table-A formals need this; Format A usually lacks ML)  
+- Label fixtures: `ID locked` | `ID hold` | `incomplete` (no external)  
+- Same-day **re-paste** = **latest execution**; note deltas  
+- Multi-paste same date = card a/b/c until user asks **合併一檔**
 
 ### Step 2 — Score every fixture
 
@@ -138,7 +149,8 @@ Table A: … | A′: … | Streak: …
 - [ ] A′ path rank + shortfall/structure pack respected  
 - [ ] D-tier A′ has sub-ledger + shallow + named external  
 - [ ] Streak skipped unless draw-friendly table A (or force)  
-- [ ] Named sources on table A formals  
+- [ ] Named sources on table A formals (real Sources or `none`; no fake lean)  
+- [ ] Identity status respected (`ID hold` → no external-based PLAY/A′)  
 - [ ] Fundamentals present  
 
 ## Post-match

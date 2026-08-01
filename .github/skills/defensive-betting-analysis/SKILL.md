@@ -1,7 +1,7 @@
 ---
 name: defensive-betting-analysis
 description: 'Analyze football betting with win-rate (贏盤率) as the primary objective under half-win=win and half-loss=loss settlement; external odds, branch history, and fundamentals support the WR case while capital/price/cup filters are auxiliary. HKJC prices are usually execution overlay. In this workspace, when the user pastes a match card with odds, default to match-card-dual: report best defensive PLAY/lean and best streak-roll STREAK_LEG (if any). Read analysis-checklist.md first, then post-match-review-grok.md ledgers. Football only. Use for 足球, 讓球, 受讓, odds paste, pre-match, 賽程賠率, PASS vs PLAY, or post-match review.'
-argument-hint: 'Preferred detailed input format: 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率. In this workspace, treat unlabeled quoted prices as HKJC prices unless they are explicitly labeled as external-market prices; then seek Pinnacle, bet365, or other major external benchmarks to determine direction. Use *讓球盤 when the handicap is synthetically converted from HKJC 3-way handicap.'
+argument-hint: 'Preferred HKJC card paste (multi-line): FBxxxx · 聯賽 · 開賽時間 · 主隊 [主盤] ： 客隊 [客盤] · 主讓球水 · 客讓球水. Also accept one-line: 勝A 隊A 讓A 盤 讓B 隊B 勝B. Unlabeled = HKJC execution; seek external benchmarks for direction. Use *盤 for synthetic 3-way→AH.'
 user-invocable: true
 ---
 
@@ -34,7 +34,8 @@ For **pre-match** screens in this workspace, read files in this order (does **no
 3. **`post-match-review-grok.md`** — **hot** ledgers only (table A / A′ / branch WR + mistake short table). Do **not** load full archive by default.  
 4. **`post-match/INDEX.md`** → open only the **latest 2** files under `post-match/batches/` for recent §9 / narrative. Open `batches/2026-07-archive-legacy.md` **only** for formal review or missing comparables.  
 5. **`record/pre-match/INDEX.md`** / dated pre-match cards — same-day prior decisions when present  
-6. **`streak-roll-eval` skill** — for streak section of dual card (stricter; separate from ordinary PLAY)
+6. **`record/hkjc-name-alias.md`** — HKJC Chinese↔English club map (**read before external search**; append only after user confirms)  
+7. **`streak-roll-eval` skill** — for streak section of dual card (stricter; separate from ordinary PLAY)
 
 Do **not** treat `post-match-review-home.md` as a writable review source (redirect/stub only).  
 Do **not** invent a second checklist or re-home watchlists into ad-hoc session notes.
@@ -272,19 +273,20 @@ Use these source layers:
 - secondary reference source: Hong Kong Jockey Club prices for relative comparison, local-bias checking, and optional execution mapping
 
 Apply these scope rules:
-- for this workspace, if the source is not stated, assume the user is giving HKJC prices rather than external prices
-- when the user gives only HKJC prices, actively seek an accessible external benchmark before forming a directional view
-- if the user provides external odds, treat them as the main pricing signal unless explicitly told otherwise
+- for this workspace, if the source is not stated, assume the user is giving **HKJC execution** prices rather than external prices
+- when the user gives only HKJC prices, actively seek an accessible external benchmark for **direction / gap tier** (not to match HKJC waters)
+- if the user provides external odds, treat them as the main **directional** signal unless explicitly told otherwise
 - if the user provides multiple external sources, prioritize sharp or consensus pricing over isolated soft-book prices
-- **if team names, competition names, kickoff context, home/away, leg (first/second), or matchup identity are uncertain, stop and ask the user first** before continuing analysis or attaching external odds; do not guess among lookalike clubs
-- use HKJC only after the external direction is formed; HKJC may improve or worsen execution quality, but should not become the core reason for a bet by itself
+- **Identity / source-error gate (Grill 2026-08 · hardened):** see **Match Identity Gate** below — **ask user** when English names or fixture identity do not lock; **do not guess**
+- **Never require external odds to equal HKJC waters.** Mismatch of decimal prices is **not** “identity fail.” HKJC = execution; external = identity check + lean/strength only
+- use HKJC only after identity is locked and external direction (if any) is formed; HKJC must not be the core reason for a bet by itself
 - if the user provides only non-HKJC prices, continue normally and label the result as external-market analysis
 - if the user provides only HKJC prices and an external benchmark is found, label the result as HKJC input plus external benchmark analysis
-- if the user provides only HKJC prices and no external benchmark can be obtained, analysis is still allowed, but clearly mark the view as incomplete value screening rather than a fully benchmarked directional read
-- when market naming is ambiguous, keep the recommendation anchored to the handicap or total-goals context already provided by the user, and still ask the user if team identity is not locked
-- when any external public benchmark is used, identify the exact source in the response instead of referring vaguely to `external market`
-- if no external public source was successfully checked, say so plainly and downgrade to incomplete screening or `PASS`
-- never attach external 1X2/AH from a different match, club, or competition to an HKJC line; wrong-match odds make the whole screen invalid
+- if the user provides only HKJC prices and no external benchmark can be obtained, analysis is still allowed, but clearly mark incomplete value screening
+- when any external public benchmark is used, identify the **exact source + concrete 1X2 or AH numbers** (traceable); ban vague “market leans home” with no figures
+- **`Sources Used: none` is valid** when nothing was checked; never invent Sources
+- if two external sources **conflict on direction**, treat as **no clean lean** (incomplete) — list both; do not pick a side to force Medium/PLAY
+- never attach external 1X2/AH from a different match, club, or competition to an HKJC line; wrong-match odds **invalidate that fixture’s external screen**
 
 ## Efficient Public Source Guidance
 
@@ -304,7 +306,8 @@ Source-efficiency rules:
 - if `Sporting Life`, `BetMines`, or a Bing summary already gives a usable external direction, stop broad searching and move to analysis
 - do not spend excessive tokens chasing exact Asian handicap tables when only 1X2 is realistically accessible; label the result as partial or incomplete instead
 - if a source repeatedly fails meaningful extraction in this workspace, deprioritize it during the same analysis session
-- every final recommendation that uses an external view must include a `Sources Used` line naming the actual public pages checked
+- every final recommendation that uses an external view must include `Sources Used` with **named pages + concrete odds figures** actually checked (not vague lean language)
+- `Sources Used: none` when no external page was checked — preferred over fabricated sources
 
 Known limitations in this workspace:
 - direct bookmaker or comparison pages are often JS-heavy, rate-limited, or blocked
@@ -340,24 +343,80 @@ If external benchmark prices are referenced, they must be tied to named public s
 
 ## Preferred Match Input Format
 
-The preferred detailed one-line input format is:
+**Workspace default (2026-08 起 · 最新權威)：港盤多行卡（HKJC card block）。**  
+One-line compact format remains **accepted fallback** (English dumps, quick paste).  
+Unlabeled prices = **HKJC execution**; seek external benchmarks for direction (unchanged).
+
+### Format A — HKJC card block（**preferred / 最新**）
+
+Typical paste (tabs or spaces; fields may wrap across lines):
+
+```text
+FBxxxx        聯賽中文名    HH:MM    主隊中文名
+[ 主盤 ]    ：    客隊中文名
+[ 客盤 ]        主讓球水            客讓球水
+```
+
+Optional prefix lines (when present, parse them):
+
+```text
+DD/MM/YYYY HH:MM
+FBxxxx
+English Competition Name
+Home English
+Away English
+[line] or media tags (MTS / YT / …)
+```
+
+**Field map:**
+
+| 欄位 | 含義 | 備註 |
+|------|------|------|
+| `FBxxxx` | 港會球賽編號 | 鎖定身份／對帳用；寫 pre-match 可帶編號 |
+| 聯賽 | 中文（或英）賽事名 | 阿甲／美職／瑞士超／女非國盃… → 分檔 A/B/C/D |
+| `HH:MM` | 開賽時間 | 通常為**用戶本地／港盤列表時間**；跨日卡以用戶標的賽事日為準 |
+| 主隊 / 客隊 | 中文譯名為主 | 對英名見 Match Identity Gate；勿瞎猜 |
+| `[ 主盤 ]` | 主隊讓球（港式） | 可含空格：`[ +1 / +1.5 ]`、`[ 0 ]`、`[ -2 ]` |
+| `：` | 對陣分隔 | 可有可無 |
+| `[ 客盤 ]` | 客隊讓球 | **應與主盤符號相反、數值對應**（主 -0.5/-1 ↔ 客 +0.5/+1） |
+| 主讓球水 / 客讓球水 | 兩側 **讓球盤水位** | 本格式常**不帶** 1X2 獨贏水 → 標 incomplete 獨贏過濾，仍可篩盤 |
+
+**Worked example (user 2026-08-02 style):**
+
+```text
+FB2115        阿甲    04:58    學生隊
+[ -0.5 / -1 ]    ：    防衛者
+[ +0.5 / +1 ]        1.78            2.04
+```
+
+→ Home **Estudiantes (LP)** (verify identity) **-0.5/-1 @1.78** vs Defensa **+0.5/+1 @2.04**；competition 阿甲；kickoff 04:58 on card date.
+
+```text
+FB2075        葡萄牙超級盃    03:15    波圖
+[ -2 ]    ：    杜連斯
+[ +2 ]        1.86            1.90
+```
+
+→ Porto **-2 @1.86** vs Torreense **+2 @1.90**；深讓；`Strong 獨贏 ≠ 深讓 WR` 紀律適用。
+
+**Parsing rules for Format A:**
+
+1. **One fixture = one FB block** until the next `FBxxxx` (or next clear competition+time row).  
+2. **Home is listed first** (left of `：`); handicap in the first `[…]` is **home’s** line.  
+3. **Normalize lines:** strip spaces inside brackets; `/` half-lines → Track B map (`-0.5/-1` = **-0.75**, `0/-0.5` = **-0.25**, `+1/+1.5` = **+1.25**, plain `[0]` = level ball).  
+4. **Home negative = home gives goals** (favorite side on AH); home positive = home receives (dog).  
+5. **Odds order:** first water = **home AH**, second = **away AH** (not 1X2 unless user labels 獨贏).  
+6. **Missing 1X2 is normal** in this paste → do **not** invent ML; seek external 1X2; mark Anti-Low-Value / full value screen incomplete when needed.  
+7. **Chinese names:** high-ambiguity → **ask user** (學生隊 vs 里奧古亞圖學生隊；國際… 等).  
+8. **Media tags** (`MTS`, `YT`, …) → ignore for market math; optional note only.  
+9. **Line moves vs prior card:** if user re-pastes same day with new waters/lines, treat as **latest execution**; re-screen or note delta (e.g. Miami was -0.75, now pure -1).  
+10. **Multi-card day:** several pastes same date → merge under one 賽事日 file when user asks 合併; each paste can be card a/b/c in analysis.
+
+### Format B — One-line compact（**fallback · 仍接受**）
 
 ```text
 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率
 ```
-
-Default source assumption for this workspace: when the user posts unlabeled prices in this format, treat them as HKJC prices. Only treat them as external primary-market prices when the user explicitly labels an external source or provides cross-book context.
-
-Analytical source assumption for this workspace: unlabeled quoted prices are usually the HKJC price the user can actually bet. The skill should then seek external benchmark prices separately and use those external prices to decide direction before judging whether the HKJC quote is investable.
-
-Interpret it as:
-- `隊伍A勝賠率`: side A quoted match-winner odds
-- `隊伍A`: side A
-- `隊伍A讓球賠率`: side A quoted handicap odds
-- `讓球盤`: the handicap line, always from side A perspective
-- `隊伍B讓球賠率`: side B quoted handicap odds
-- `隊伍B`: side B
-- `隊伍B勝賠率`: side B quoted match-winner odds
 
 Example:
 
@@ -365,41 +424,37 @@ Example:
 1.62 Liverpool 1.86 -1.25 2.02 Burnley 5.20
 ```
 
-If the handicap is synthetically converted from Hong Kong Jockey Club 3-way handicap, mark it with a leading `*`:
+Synthetic 3-way→AH: leading `*` on the line (`*-1.5`).
 
-```text
-1.62 Liverpool 1.86 *-1.5 2.02 Burnley 5.20
-```
-
-Fallback shorthand is accepted only for incomplete screening when direct win odds are unavailable:
+Shorthand (incomplete — no ML):
 
 ```text
 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B
 ```
 
-Parsing rules:
-- treat the detailed format as the default contract whenever available
-- treat this as a handicap-market input unless the user states otherwise
-- treat both handicap odds as the user's quoted source; if unlabeled in this workspace, default them to HKJC prices
-- treat both win odds as the user's quoted source; if unlabeled in this workspace, default them to HKJC prices
-- **if the team names or matchup mapping are unclear or only medium-confidence, ask the user to confirm the exact teams, competition, and leg before any directional recommendation or external-odds attach**
-- do not resolve ambiguous HKJC Chinese transliterations by picking the first web hit (example failure mode: treating `國際杜古` as Inter Club d'Escaldes instead of Inter Turku)
-- when the quoted source is HKJC-only, try to obtain external benchmark prices before turning the screen into a directional recommendation
-- the handicap line is always side A's line: negative means side A gives goals, positive means side A receives goals
-- infer the favorite and underdog from side A's handicap direction first, then from market pricing if needed
-- if the handicap line begins with `*`, treat it as a synthetic handicap reference converted from Hong Kong Jockey Club 3-way handicap
-- if HKJC has no Asian handicap line and the user converts a Hong Kong Jockey Club 3-way handicap market into a handicap line, require the `*` marker when possible
-- synthetic HKJC handicap references are allowed for screening, but lower confidence because 3-way handicap settlement is not identical to Asian handicap settlement
-- if original 3-way handicap prices are available, mention them as HKJC source context instead of pretending they are true Asian handicap odds
-- if the user supplies both external and HKJC prices, form the main read from the external prices first and use HKJC only as an overlay
-- if the user supplies only HKJC prices, analysis is still possible, but first attempt to benchmark those prices against Pinnacle, bet365, or another major external source
-- if the user supplies only HKJC prices and no external benchmark is obtainable, do not present the result as a fully benchmarked directional edge
-- if benchmark attempts succeed only through public summaries or public odds portals rather than direct bookmaker pages, state that limitation explicitly and name those public sources
-- if the user later clarifies that quoted prices are external, immediately switch the main pricing source to that external market context
-- if the shorthand format is used, treat the output as incomplete screening rather than a full recommendation unless separate win odds are provided
-- if the shorthand format is used without separate win odds, mark the direct-win filter as missing and do not present the result as a fully cleared `PLAY`
-- if season phase, motivation, or match context is missing, ask for it or mark the final view as incomplete
-- if the line cannot be parsed cleanly, stop and request a corrected format instead of guessing
+Interpret Format B as:
+- `隊伍A勝賠率` / `隊伍B勝賠率`: match-winner odds when present  
+- `讓球盤`: always from side A (first team) perspective  
+- negative = side A gives goals  
+
+Also accept English one-line dumps of the form  
+`ML_home Home AH_home [line] AH_away Away ML_away`  
+(as historically used in this workspace).
+
+### Shared parsing rules (A + B)
+
+- treat handicap market as default unless user states O/U only  
+- unlabeled → **HKJC prices** (execution overlay)  
+- external primary only when user labels external or provides cross-book context  
+- **if team / competition / leg identity unclear → ask before PLAY or external attach**  
+- do not resolve ambiguous HKJC Chinese by first web hit (e.g. `國際杜古` ≠ Inter Escaldes)  
+- when HKJC-only, seek external benchmark before directional recommendation  
+- if handicap begins with `*`, synthetic from 3-way; lower confidence  
+- if user supplies external + HKJC, direction from external; HKJC overlay only  
+- if only HKJC and no external, incomplete value screen — say so  
+- Format A without ML: mark direct-win filter missing; still allow dual card on AH paths  
+- Format B shorthand without win odds: incomplete screening, not fully cleared PLAY  
+- if line cannot be parsed cleanly, stop and request correction instead of guessing
 
 ## Post-Match Review Workflow
 
@@ -440,36 +495,63 @@ If the new result is only one isolated sample, keep the strategy unchanged and l
 
 ## Decision Workflow
 
-### 0. Match Identity Gate (ask user first if uncertain)
+### 0. Match Identity Gate (ask user first if uncertain) · Grill 2026-08
 
-Before any external-odds search is treated as authoritative, and before any `PLAY` or confident directional `PASS` narrative, lock fixture identity:
+Before any external-odds search is treated as authoritative, and before any table-A / A′ formal direction that cites external lean, lock fixture identity.
 
-Required identity locks when available:
-- official English (or local) club names for both sides
-- competition and country/region
-- home/away
-- date / kickoff context if needed to disambiguate
-- for two-legged ties: first leg or second leg, and prior-leg score if known
+#### What “match” means (identity — **not** odds equality)
 
-**If identity is uncertain, stop and ask the user first.** Prefer a short confirmation question over guessing.
+External page must align on:
 
-Ask when any of these are true:
-- HKJC Chinese names admit multiple plausible clubs (for example `國際…`, `夏德`, `維京…`, similar transliterations)
-- search results point to two different fixtures or two different competitions
-- home/away or which leg is unclear
-- external pages found do not clearly match both user-quoted names
-- confidence in the mapping is less than high
+| Check | Rule |
+|-------|------|
+| **兩隊** | Both clubs match user card (via English names / alias table) |
+| **賽事類型** | League vs cup vs friendly / super cup / youth, etc. |
+| **開賽日** | Same calendar day as user card date (± timezone OK; wrong day = fail) |
+| **主客** | **High-risk only** (below); conflict → ask user |
 
-While waiting for confirmation:
-- do **not** issue a formal `PLAY`
-- do **not** attach external 1X2/AH from a candidate match that is not verified
-- do **not** put the leg in a parlay
-- you may list candidate mappings and why they conflict
-- if the user needs an interim stance, use incomplete screening / provisional `PASS` only, and label identity as unconfirmed
+**Do not** treat “external 1X2 ≠ HKJC AH water” as identity failure. User pastes **HKJC execution**; external is for **who is playing + direction/tier**.
 
-After the user confirms identity, re-fetch external benchmarks for **that** fixture only, then continue the normal filters.
+#### Alias table
 
-Wrong-match external data invalidates the entire screen for that line. Treat this as an execution error class equal in severity to a settlement/mapping bug.
+- Path: **`record/hkjc-name-alias.md`**
+- **Before** web search: look up HKJC Chinese (and `FBxxxx` if present)
+- **Write:** only after **user confirms** a mapping (or user says 鎖名); Agent **must not** auto-append guesses
+- Rows marked `ambiguous` → always ask user
+
+#### High-risk (force home/away check) — list ∪ trigger
+
+**List:** two-legged euro / neutral venue; cup; highly ambiguous Chinese (`學生隊`, `國際…`, `維京…`, etc.); U20 / women / B-team; derbies with confusable names.  
+**Trigger:** ≥2 plausible external fixtures, **or** external home/away disagrees with card left=home.
+
+#### Per-fixture hard stop (not whole card) — **Q1=A**
+
+When English names / teams / competition / date (or high-risk home-away) **do not lock**:
+
+1. **That fixture only:** no external 1X2 attach; no table-A / A′ direction that depends on external lean  
+2. **Ask the user immediately:** 1–2 candidate English names + why uncertain (+ FB code if any)  
+3. **Rest of card continues** dual screen  
+4. Label fixture: **`ID hold`**
+
+After user confirms → re-fetch external for **that** fixture only → may upgrade to **`ID locked`**.
+
+#### Identity status labels (output)
+
+| Status | Meaning | External lean / table A–A′ using external |
+|--------|---------|------------------------------------------|
+| **`ID locked`** | Teams + competition + date OK (+ H/A if high-risk) | Allowed |
+| **`ID hold`** | Asked user / waiting | **Forbidden** external attach |
+| **`incomplete`** | Identity OK or structure-only, but **no usable external** | Structure PASS/lean only; no fake Sources |
+
+#### While waiting (`ID hold`)
+
+- do **not** formal `PLAY` / A′ that needs external Medium/clear lean  
+- do **not** attach external 1X2/AH from unverified candidates  
+- do **not** put the leg in a parlay  
+- may still apply **structure-only** rules (deep line PASS, D-tier, pure -1 reject) without naming external lean  
+- list candidate mappings briefly
+
+Wrong-match external data **invalidates that fixture’s external screen** (same severity as settlement mapping bugs).
 
 ### 1. Start From Win-Rate Default
 
@@ -794,8 +876,11 @@ Adjustment Decision:
 ## Quality Checks Before Finishing
 
 Before returning a recommendation, verify that:
-- match identity is locked at high confidence, or the user was asked and has confirmed; never `PLAY` on a guessed club mapping
+- each fixture has **ID locked | ID hold | incomplete** where external is used; never `PLAY` on a guessed club mapping
+- identity checks are **teams + competition + date** (+ H/A if high-risk) — **not** HKJC vs external price equality
 - any external odds cited refer to the same verified teams, competition, and leg as the user input
+- alias table consulted when present; no silent auto-write of aliases
+- Sources are real or explicitly `none`; conflicting external directions → incomplete lean
 - when self cross-check was required, a branch tag and named comparables appear; low-similarity history was not used to force PLAY
 - level-ball-lean history was not applied to true near-even markets
 - Track B win-rate case is stated first; auxiliary capital/price/cup notes are labeled secondary

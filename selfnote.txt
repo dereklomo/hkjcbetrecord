@@ -434,3 +434,54 @@ TPS Turku 3-0 IFK Mariehamn
 3.25 Tirol 2.05 [0/+0.5] 1.74 Sturm Graz 1.88
 3.65 Hamburg 1.76 [+0.5/+1] 2.02 Everton 1.69
 3.15 Dynamo Makhachkala 1.90 [0/+0.5] 1.90 Lokomotiv Moscow 2.08
+
+20260802b
+2.25 Honduras U20 1.99 [0/+0.5] 1.78 Panama U20 2.65
+2.50 Atlas 2.03 [0] 1.75 Monterrey 2.35
+2.20 Colorado Rapids 1.98 [-0.5/-1] 1.79 Austin FC 2.90
+2.40 Oakland Roots 1.95 [0/-0.5] 1.82 Pittsburgh Riverhounds 2.55
+2.15 LA Galaxy 1.97 [0/-0.5] 1.80 FC Dallas 3.00
+2.10 Portland Timbers 1.79 [0] 1.98 Seattle Sounders 2.95
+1.55 Cruz Azul 1.70 [-1/-1.5] 2.09 Atlante 5.00
+1.80 Sacramento Republic 1.93 [-1.5/-2] 1.83 Jacksonville 3.80
+1.70 Sydney United 1.67 [0/-0.5] 2.10 NWS Spirit 4.00
+4.50 Brisbane Roar B 1.95 [+1/+1.5] 1.78 Moreton City 1.50
+1.65 Marconi Stallions 1.85 [-1/-1.5] 1.88 St George City 4.50
+1.95 Rockdale Ilinden 2.04 [-0.5/-1] 1.71 Manly United 3.40
+1.85 South Melbourne 1.79 [-0.5/-1] 1.94 St Albans Saints 3.60
+3.80 Sydney Olympic 1.83 [+1/+1.5] 1.90 APIA Leichhardt 1.65
+
+20260802
+2.56 Estudiantes Rio Cuarto 1.86 [0] 1.90 Banfield 2.62
+2.38 Thun 1.98 [0] 1.79 Young Boys Bern 2.26
+1.06 Porto 2.03 [-2/-2.5] 1.75 Torreense 18.00
+1.57 Canada U20 1.86 [-0.5/-1] 1.90 Jamaica U20 4.85
+2.10 Nigeria Women 1.83 [0/-0.5] 1.93 Zambia Women 2.82
+1.66 Estudiantes 1.76 [-0.5/-1] 2.02 Defensa y Justicia
+2.05 Palestino 2.05 [0] 1.77 Cobresal
+1.82 Cruz Azul Hidalgo 1.82 [0] 1.95 Venados
+1.73 Kansas City Current Women 1.73 [0/-0.5] 1.98 Angel City Women
+1.90 Queretaro 1.90 [0/+0.5] 1.90 Tigres 1.90
+1.83 Toluca 1.83 [0/-0.5] 1.93 Chivas Guadalajara
+1.72 Inter Miami 1.72 [-0.5/-1] 2.10 Columbus Crew
+2.09 Vancouver Whitecaps 2.09 [-0.5/-1] 1.73 LAFC
+1.70 FC Cincinnati 1.70 [0/-0.5] 2.13 San Jose Earthquakes
+1.87 Birmingham Legion 1.87 [0/+0.5] 1.89 Rhode Island FC
+1.90 Sporting Kansas City 1.90 [0/+0.5] 1.90 Houston Dynamo
+1.83 Chicago Fire 1.83 [-1] 1.97 Charlotte FC
+
+
+2.25 Honduras U20 1.99 [0/+0.5] 1.78 Panama U20 2.65
+2.50 Atlas 2.03 [0] 1.75 Monterrey 2.35
+2.20 Colorado Rapids 1.98 [-0.5/-1] 1.79 Austin FC 2.90
+2.40 Oakland Roots 1.95 [0/-0.5] 1.82 Pittsburgh Riverhounds 2.55
+2.15 LA Galaxy 1.97 [0/-0.5] 1.80 FC Dallas 3.00
+2.10 Portland Timbers 1.79 [0] 1.98 Seattle Sounders 2.95
+1.55 Cruz Azul 1.70 [-1/-1.5] 2.09 Atlante 5.00
+1.80 Sacramento Republic 1.93 [-1.5/-2] 1.83 Jacksonville 3.80
+1.70 Sydney United 1.67 [0/-0.5] 2.10 NWS Spirit 4.00
+4.50 Brisbane Roar B 1.95 [+1/+1.5] 1.78 Moreton City 1.50
+1.65 Marconi Stallions 1.85 [-1/-1.5] 1.88 St George City 4.50
+1.95 Rockdale Ilinden 2.04 [-0.5/-1] 1.71 Manly United 3.40
+1.85 South Melbourne 1.79 [-0.5/-1] 1.94 St Albans Saints 3.60
+3.80 Sydney Olympic 1.83 [+1/+1.5] 1.90 APIA Leichhardt 1.65
