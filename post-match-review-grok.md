@@ -60,17 +60,18 @@
 | 07-25 | Atlante vs CF América | Atlante **+1** @1.80 | **1-1** | **W**（和=全贏 +1） | league-dog-plus1 MX | §1d 防漏；和局護盤命中 |
 | 07-27 | Rosenborg vs Fredrikstad | Rosenborg **-0.75** @1.84 | **4-0** | **W** | league-fav-0.75 NOR | §6b P1；挪超 Medium 半一；勝 4 |
 | 07-28 | Juventude vs Avaí | Juventude **-0.75** @1.77 | **1-0** | **W** | league-fav-0.75 BRA-B | 巴乙 Medium 半一；勝 1 = W |
+| **08-01 卡2** | **Häcken vs Kalmar** | Häcken **-0.5/-1** @1.90 | **1-1** | **L** | league-fav-0.75 SWE W1 | 表 A；**和=L**；**formal：應硬否**（@1.90≥線；見 §1b-2） |
 
 **正式 PLAY 粗 WR（有 W/L；P 剔除；分支勿混算單一 WR）：**  
 早期 dog/level：艾比安 W、隆德里納 W、羅奇代爾 L、牙山（GPT）W；  
-近期上盤：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、Houston L、LAFC W、Botafogo L、Rosenborg W、**Juventude W**；  
-**07-25 下盤 +1：** Örgryte **L**、Atlante **W** → 累計約 **10W / 6L**（小樣本；半島/比利時 +1 多為 **P** 剔除）。  
+近期上盤：里昂 L、Knights L、Lillestrøm W、Hammarby W、Hacken W、Houston L、LAFC W、Botafogo L、Rosenborg W、Juventude W、**08-01 Häcken L**；  
+**07-25 下盤 +1：** Örgryte **L**、Atlante **W** → 累計約 **10W / 7L**（小樣本；半島/比利時 +1 多為 **P** 剔除）。  
 **MLS -0.75 正式：** Houston **L** + LAFC **W** = **1W1L**。  
-**歐北穩聯賽 -0.75 正式：** Lillestrøm W、Hacken W、Rosenborg W = **3W0L**。  
+**歐北穩聯賽 -0.75 正式：** Lillestrøm W、Hacken(07-19 客) W、Rosenborg W、**Häcken(08-01 主) L** = **3W1L**。  
 **巴乙 -0.75 正式：** **Juventude W**（n=1；≠ Botafogo 甲級和殺混算）。  
 **dog +1 正式（有 W/L）：** Atlante **W** + Örgryte **L** = **1W1L**（Lincoln lean 0-0 為 **W** 不回寫）。  
-**聯賽 -0.75 和殺：** Houston + Botafogo（≠ 歐北/巴乙 P 型）。  
-**分支必須分開：** 歐北 ≠ MLS ≠ 巴甲/巴乙；dog-plus1 ≠ thin +0.25。
+**聯賽 -0.75 和殺（跨池 n · Grill 08-01）：** Houston + Botafogo + **Häcken 08-01** = **n=3** → formal **已** → checklist **§1b-2 常態閘**（**不改 skill**）。  
+**分支 W 帳仍分開：** 歐北 ≠ MLS ≠ 巴甲/巴乙；**僅和殺 n 跨池**；dog-plus1 ≠ thin +0.25；**同隊不同日**仍各計一 pen。
 
 ---
 
@@ -86,9 +87,11 @@
 |--------|------|------|------|---------|----------|------|
 | 07-30 | Gornik Zabrze vs Fenerbahçe | Gornik **+1** @1.85 | **1-1** | **W**（和=全贏 +1） | euro-2leg · Strong-blast · path-wide | 賽前 §1-max 誤標正式 → **Obs → A′ 遷移**；負≥2 才 L 未觸發 |
 | 07-30/31 | Inter Turku vs Başakşehir | Inter Turku **+0.75** @1.89 | **2-0** | **W**（客勝 2 全贏 dog） | euro-2leg · Strong-blast · path-wide | 賽前 **A′ Soft PLAY**；表 A none；路徑冠軍；Strong 客未爆破 |
+| **08-01 卡1** | **Gold Coast Utd vs Gold Coast Knights** | **GCU +1/+1.5** @1.74 | **1-0** | **W**（主勝全贏 dog） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft PLAY**；表 A none；**NPL 子帳**；勿併表 A / 勿與 Knights 表 A L 混算 |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
 - **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；≠ 聯賽 dog+1 表 A；**勿**併表 A）  
+- **semi / npl dog +1／+1.25：** GCU **W** = **1W0L**（n=1；**獨立子帳**；Knights 表 A L 不洗白 NPL 正式）  
 - 盃 dog +1 lean cover（Busan 等）→ lean 短表；當日有表 A（Juve）→ **不可**掛 A′
 
 ---
@@ -106,7 +109,7 @@
 | **cup-fav-0.75** | 穿（伊、競賽會）+ 殺（基輔、慶南、連菲類）→ **mixed** | 外圍 **強/中/輕** 分檔；不硬拒、不預設 PLAY |
 | **cup-fav-1.0** | 波希 L、比奧格特 L | 對 **-1** 更嚴；需更強外圍檔 |
 | **league-shallow-0.25** | 保地 W、CRB W、蒙特利爾 W；**里昂 light 跨國 L** | clear 聯賽 lean 仍友好；**light+跨國勿套 soft band** |
-| **league-fav-0.75** | 歐北 3W0L；MLS 1W1L；Botafogo L；**Juventude 巴乙 W**；貼線 lean 和殺 | **P1 歐北維持**；巴乙 n=1 正向；MLS/巴甲分開 |
+| **league-fav-0.75** | 歐北 **3W1L**；MLS 1W1L；Botafogo L；**Juventude 巴乙 W**；**跨池和殺 n=3** | **P1 維持 + §1b-2 閘**；巴乙 n=1；W 帳分開、和殺 n 跨池 |
 | **league-fav-deep** | **Hammarby -1.5/-2 W**；Motherwell -2 **P** / -2.5 **L** | Strong 仍可能剛好球數；拒深維持 |
 | **level-ball-lean** | 牙山 W；Sheriff 客 lean cover | 外圍 lean + 平手可跟；真五五仍 PASS；cover 不回寫 |
 | **2nd-leg** | 斯利納單場 W 仍出局 | 推斷必須加總比分 |
@@ -128,7 +131,7 @@
 
 - Dual Track：**B primary / A auxiliary**；League Shallow `-0.25`；盃 gap tier；真五五 = **外圍無 lean**（非圖 AH 對稱 alone）。  
 - 常駐表 A/B + 分支 watchlist / 速查清單：**本檔維護**（原 home 已合併）。  
-- 現階段 **不改 skill 硬規則**（n 未達 formal review）；見下文「是否需要調整 SKILL」。
+- **08-01 formal 已 consummate：** 執行層 **§1b-2**（跨池和殺 n、價位推定、雙錨翻案）；**仍不改** skill 硬規則。再升級門檻見熱帳 §6（如 n=5）。
 
 ---
 
@@ -147,18 +150,20 @@
 | 羅奇代爾 **+0.25** | 1-2 | **L** | `aus-semi-dog-shallow` | 澳半職業 **薄 dog**；緩衝不夠 | Observation；prefer +1 |
 | **里昂 -0.25** | 2-3 | **L** | `shallow-fav-0.25-light-lean` | **light + 跨國** 當 clear 聯賽 shallow | Observation；已入 light 紀律 |
 | **Knights -0.75** | 1-2 | **L** | `npl-aus home-fav-0.75` | **NPL** 主半一正式偏進 | **Watchlist**；正式極稀 |
-| **Houston -0.75** | **1-1** | **L** | `league-fav-0.75 MLS` | §1 升格後走 **和=L** 路徑 | Observation |
-| **LAFC -0.75** | **3-1** | **W** | `league-fav-0.75 MLS` | 同型命中 | Observation W |
-| **Botafogo -0.75** | **0-0** | **L** | `league-fav-0.75 BRA` | 和=L；賽前已標交手**和磁鐵**仍出手 | Observation；執行應更嚴和磁鐵否決 |
+| **Houston -0.75** | **1-1** | **L** | `league-fav-0.75 MLS` | §1 升格後走 **和=L** 路徑 | **跨池和殺 #1**；入 formal 池 |
+| **LAFC -0.75** | **3-1** | **W** | `league-fav-0.75 MLS` | 同型命中；**定 max W@1.85** | Observation W（調價位線用） |
+| **Botafogo -0.75** | **0-0** | **L** | `league-fav-0.75 BRA` | 和=L；賽前已標交手**和磁鐵**仍出手 | **跨池和殺 #2** |
 | **Örgryte +1** | **2-0** 主 | **L** | `league-dog-plus1` | Strong 主穿 2 球；§1d 防漏 | Observation |
 | **Atlante +1** | **1-1** | **W** | `league-dog-plus1 MX` | 和局護 +1 命中 | Observation W |
+| **Häcken -0.75**（08-01 主） | **1-1** | **L** | `league-fav-0.75 SWE W1` | @**1.90** 推定膠著應硬否；和=L | **跨池和殺 #3** → **formal consummate** |
 
-**MLS -0.75 正式合計：** Houston L + LAFC W = **1W1L**（n=2；**未到** formal review）。  
-**巴甲 -0.75 正式：** Botafogo **L**（n=1 Observation）。  
+**跨池和殺 n（聯賽 -0.75 正式 和→L only）：** **3** → formal **已** → `analysis-checklist.md` **§1b-2**（**不改 skill**）。  
+**MLS -0.75 正式合計：** Houston L + LAFC W = **1W1L**（分支帳；和殺已入跨池）。  
+**巴甲 -0.75 正式：** Botafogo **L**（和殺入跨池）。  
 **dog +1 正式（W/L）：** Atlante **W** + Örgryte **L** = **1W1L**（比利時/半島多 **P**）。  
-**對照（勿只記仇）：** 艾比安/隆德里納 W、牙山 W、Lillestrøm W、Hacken W、Hammarby W、LAFC W、Atlante W、**Rosenborg W** → 框架非「一出手就錯」。  
-粗計有 W/L：約 **10W / 6L**（**禁止**混分支算單一命中率改規則）。  
-**歐北 -0.75 正式：** Lillestrøm / Hacken / Rosenborg = **3W0L**。  
+**對照（勿只記仇）：** 艾比安/隆德里納 W、牙山 W、Lillestrøm W、Hacken 客 W、Hammarby W、LAFC W、Atlante W、**Rosenborg W**、**Juventude W** → 框架非「一出手就錯」。  
+粗計有 W/L：約 **10W / 7L**（**禁止**用混分支總 WR 改 skill；**和殺 n 可跨池**）。  
+**歐北 -0.75 正式：** **3W1L**（含 Häcken 主 L）。  
 **巴乙 -0.75 正式：** **Juventude W**（n=1；與 Botafogo 甲分開）。
 
 ### 2) 結構性失腳（已吸收 · 執行勿回潮）
@@ -222,8 +227,19 @@
 - §1 升格後仍是 **可評估小注**，不是穩賺標的。  
 - Medium + **-0.75** 在 **和局率不低** 的聯賽：可維持 PLAY 但更小注，或膠著讀法 → **降 lean / PASS**。  
 - **Botafogo 0-0：** 賽前已寫近交手和磁鐵 → 執行反省是 **§1-fund 和磁鐵應否決或降 lean，卻仍正式**；非身份/結算錯。  
-- **不**因 Houston/Botafogo 否定歐聯 Lillestrøm/Hacken 樣本；分支分開。  
-- **LAFC 3-1 W** 已登表 A：與 Houston **同分支** MLS -0.75 = **1W1L**；再 L 一次（n=3 同向失效）才 formal review 是否收緊 §1c。  
+- **不**因 Houston/Botafogo/Häcken 否定歐北 W 樣本；**W 帳分支仍分開**；**和殺 n 跨池**（Grill 08-01）。  
+- **LAFC 3-1 W** 定 **max 正式 W 水位 1.85** → 推定線 **@≥1.86**（§1b-2 動態）。  
+
+### 6) Formal review 2026-08-01（Grill 鎖定 · 已落檔 checklist §1b-2）
+
+| 項目 | 內容 |
+|------|------|
+| 觸發 | 聯賽 **-0.75 正式和殺** 跨池 **n=3**（Houston、Botafogo、Häcken） |
+| 產出 | **執行閘常態化**；**不改** skill 硬規則；W1 **保留** |
+| 閘 | 和磁鐵／明確膠著 **硬否**；**@ > max 正式 W**（現 ≥1.86）推定膠著；翻案須 **外圍 clear + 結構錨** |
+| Häcken 08-01 | @1.90 → 推定；應 **硬否** → L = **執行可避免** |
+| 再升級 | n 續累加；例如 **n=5** 再議是否動 skill／凍結半一 |
+| 不牽連 | A′ GCU W、cover 不回寫、Gangwon 拒 -1、友誼 PASS |
 
 > …（全文見 legacy「正式 PLAY 失誤反省」）
 

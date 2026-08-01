@@ -393,3 +393,44 @@ Canada U20 1-1 Honduras U20
 1.09 Suwon FC Women 1.80 [-2] 1.97 Sejong FC Women 13.00
 1.21 Preston Lions 1.69 [-1/-1.5] 2.07 Green Gully 8.75
 1.08 Vietnam 1.91 [-2/-2.5] 1.85 Singapore 16.00
+
+20260801
+2.28 Western Sydney Wanderers B 1.83 [0] 1.93 UNSW FC 2.36
+5.20 Gold Coast Utd 1.74 [+1/+1.5] 2.05 Gold Coast Knights 1.36
+2.14 Altona Magic 2.03 [0/-0.5] 1.75 Caroline Springs George Cross 2.72
+1.81 Sutherland Sharks 1.69 [0/-0.5] 2.11 Wollongong Wolves 3.25
+1.83 Lions FC 1.74 [0/-0.5] 2.05 Peninsula Power 2.96
+2.56 St George FC 2.05 [0] 1.74 Southern Districts Raiders 2.17
+4.60 Dandenong Thunder 1.83 [+1] 1.93 Dandenong City 1.47
+2.14 Chelsea 1.98 [0/-0.5] 1.79 Tottenham 2.47
+3.00 FC Tokyo 2.04 [0/+0.5] 1.71 Dortmund 1.83
+1.97 Pohang Steelers 1.81 [0/-0.5] 1.99 Gimcheon Sangmu 3.40
+2.54 Jeonbuk Motors 1.92 [0] 1.88 FC Seoul 2.49
+1.41 Gangwon FC 1.93 [-1] 1.87 Bucheon FC 6.70
+2.75 A1.38 TPS Turku 1.78 [-1] 1.99 IFK Mariehamn 5.70
+
+Western Sydney Wanderers B 2-1 UNSW FC
+Gold Coast Utd 1-0 Gold Coast Knights
+Altona Magic 1-1 Caroline Springs George Cross
+Sutherland Sharks 2-1 Wollongong Wolves
+Lions FC 1-0 Peninsula Power
+St George FC 2-3 Southern Districts Raiders
+Dandenong Thunder 0-1 Dandenong City
+Chelsea 1-2 Tottenham
+FC Tokyo 0-1 Dortmund
+Pohang Steelers 0-1 Gimcheon Sangmu
+Jeonbuk Motors 0-0 FC Seoul
+Gangwon FC 0-3 Bucheon FC
+Akron Tolyatti 1-2 Rubin Kazan
+TPS Turku 3-0 IFK Mariehamn
+
+1.35 Thailand 1.97 [-1/-1.5] 1.80 Malaysia 6.00
+1.99 Manchester Utd 1.86 [0/-0.5] 1.90 Atletico Madrid 2.88
+1.59 Hacken 1.90 [-0.5/-1] 1.90 Kalmar 4.00
+1.43 CSKA Moscow 1.85 [-0.5/-1] 1.91 Krylya Sovetov Samara 5.50
+2.08 Fredrikstad 1.91 [0/-0.5] 1.85 Sandefjord 2.82
+1.78 Falkirk 2.17 [-0.5/-1] 1.68 St. Mirren 3.60
+1.48 Lahti 1.99 [-1] 1.78 Jaro 4.90
+3.25 Tirol 2.05 [0/+0.5] 1.74 Sturm Graz 1.88
+3.65 Hamburg 1.76 [+0.5/+1] 2.02 Everton 1.69
+3.15 Dynamo Makhachkala 1.90 [0/+0.5] 1.90 Lokomotiv Moscow 2.08
