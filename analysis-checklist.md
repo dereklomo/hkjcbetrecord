@@ -10,6 +10,8 @@
 > **已廢純 Obs 欄**（原 Max-WR 觀察 **合併為 A′**）。  
 > **和磁鐵/膠著 + 半一 → 踢出表 A 與 A′**。歐戰兩回合 **不進表 A**（可進 A′ 結構包）。  
 > **§1b-2（08-01 formal）：** 聯賽 -0.75 **和殺 n 跨池**；價位推定（@ > max 正式 W）；翻案雙錨；**不改 skill**。  
+> **§1-A′-dog（08-02 Grill）：** path-wide dog +1.25 **watch**；NPL/semi **預設 lean only**；聯賽 dog 價位閘；euro-2leg **不連坐**；**不改 skill**。  
+> **§0-Exec Gate（08 Grill）：** 每張 dual 末五勾；未過不得 PLAY／A′／帶力度 lean；防外圍跳步等執行疏失。  
 > **Streak：** 僅表 A 有 draw-friendly 正式時才評。cover **永不**回寫。**不**改 skill 半贏=W。
 
 **維護：** 改執行規則 **只改本檔**；賽後：熱檔 `post-match-review-grok.md`（表 A/A′＋速查）+ `post-match/batches/<date>.md`（§9）+ 更新 `post-match/INDEX.md`。
@@ -42,13 +44,35 @@
 ## 0. 每場固定順序
 
 1. [ ] 身份鎖  
-2. [ ] 外圍命名 + 力度分檔  
+1b. [ ] **盤口解析自檢（防主客勝搞反）：** Format B → 欄1=**主勝**、欄7=**客勝**；熱門必須寫「主勝 X」或「客勝 Y」；主盤 **+** = 主 **AH dog**（例：`2.12 Silkeborg … +0.75 … Copenhagen 1.68` → **客勝 1.68**，非主勝）  
+2. [ ] 外圍命名 + 力度分檔（Strong/Med/Light 掛在**正確主/客**上）  
 3. [ ] Track B 路徑（**-0.75：和=L**）  
 4. [ ] 基本面快照（含 **和磁鐵/膠著？**）  
 5. [ ] 分支 + self cross-check  
 6. [ ] 是否進 **表 A 白名單**（§1-A）  
 7. [ ] 整卡：表 A 集合；若空 → **準表 A′**（§1-A′）；有表 A → A′ **none**  
-8. [ ] 是否觸發 streak（§1-streak）
+8. [ ] 是否觸發 streak（§1-streak）  
+9. [ ] **整卡輸出末必須有 `## Exec Gate`（見下）** — 未過不得 PLAY／A′／帶力度 lean  
+
+### 0-Exec Gate（強制輸出 · Grill 2026-08 · 防跳步疏失）
+
+每張 **dual／賽前卡** 結尾必貼（如實勾）：
+
+```markdown
+## Exec Gate
+- [ ] 主勝/客勝已對欄（Format B 欄1/欄7；或 Format A 無 ML 已標）
+- [ ] 外圍：已查 **或** incomplete + `Sources Used: none`
+- [ ] 凡 Med/Strong/方向 lean/A′/表 A → 有命名 Sources + 數字（否則只能結構 PASS）
+- [ ] §1b-2 / §1-A′-dog（若相關）已套
+- [ ] 表 A / A′ / Streak 三欄齊
+```
+
+| 規則 | 內容 |
+|------|------|
+| **未過** | **禁止** 表 A PLAY、A′ Soft、帶 Strong/Med 的方向 lean 定論 |
+| **允許** | 結構 PASS、incomplete 說明、GATE 缺項（例：缺外圍 → 只列硬否決場） |
+| **外圍** | skill 要求港盤後查 benchmark；漏跑 = Gate #2/#3 不得假勾 |
+| **賽後** | 不另開五勾；沿用 §9 lean 短表 + 嚴寬簡審 |
 
 ---
 
@@ -170,6 +194,22 @@
 1. dog **+1／+0.75** ＞ clear **-0.25**／平手 lean ＞ **-0.75**（和=L）  
 2. 有更寬路徑時 **不選** 最窄半一（樣本：Gornik +1 優於 Flu -0.75）  
 3. 標籤：`league` / `cup` / `euro-2leg` / `Strong-blast` / `women` / `u20` / `semi`  
+4. **path-wide dog 降權（下節）可把「路徑冠軍」降成 lean only** — 不改排序定義，改 **A′ 資格**
+
+### 1-A′-dog · path-wide dog +1／+1.25 降權（Grill 2026-08-02 · **不改 skill**）
+
+> **觸發事實：** 08-02 當日 A′ **1W2L** = Observation；**Olympic L + Orenburg L** = 聯賽外 path-wide dog **watch n=2**（分結構；**勿**混 euro 2W0L）。  
+> **不廢 A′**；**不**因單日改憲法；**euro-2leg dog 不連坐**（Gornik／Turku **2W0L** 維持可 A′）。
+
+| 結構 | 執行 |
+|------|------|
+| **NPL／semi dog +1／+1.25** | **預設 lean only** — **暫不掛 A′**（GCU W + Olympic L = 子帳 1W1L） |
+| **聯賽 dog +1／+1.25** | 熱門獨贏 **≤1.55**，或熱門 **-1.25 深讓** 且主勝 **≤1.60** → **禁 A′**（最多 lean） |
+| **聯賽 dog +1／+1.25** Med | 熱門約 **1.56–1.75** → 可 A′，但 **Low** + 明示 **`path-wide dog watch n=…`**（現聯賽相關 n 見熱帳；Orenburg 已計） |
+| **euro-2leg dog +1／+0.75** | **維持可 A′**（獨立子帳；**不**套 NPL lean-only） |
+| **計 n** | 僅 **A′ 結算 L** 且結構為 path-wide dog +1／+1.25（非 euro-2leg）→ 該結構 n+1；**n=3 → formal review**（再議凍結／更深補丁） |
+| **NPL 解封** | **不**因 lean cover；需後續 **A′ W**、formal 結論、或用戶點名「NPL A′ 恢復」 |
+| **08-02 當日** | 整日 1W2L → **Observation only**（已 consummate 本節） |
 
 ### D 檔（女足／U20／半職）
 
@@ -178,6 +218,7 @@
 | **可進 A′** | 是，但必須進 **子帳**（`women` / `u20` / `semi`） |
 | **子帳 WR** | **永不**與聯賽／歐戰 A′ 混算 |
 | **額外門檻** | **淺盤**（禁止純 -1／-1.5 深熱當 A′）+ **命名外圍必須有**；否則最多 lean |
+| **semi／NPL dog +1／+1.25** | 見 **§1-A′-dog** → **預設 lean only**（暫不 A′） |
 | **為何曾黑名單** | 外圍薄、方差大、易 cover 回寫壓力；表 A 仍 **正式極稀** |
 
 ### 輸出模板

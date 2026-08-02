@@ -420,11 +420,32 @@ FB2075        葡萄牙超級盃    03:15    波圖
 隊伍A勝賠率 隊伍A 隊伍A讓球賠率 讓球盤 隊伍B讓球賠率 隊伍B 隊伍B勝賠率
 ```
 
+**7-field lock (mandatory · anti-mislabel 2026-08):**
+
+| # | 欄位 | = |
+|---|------|---|
+| 1 | **主勝** | home match-winner odds |
+| 2 | 主隊 | home name |
+| 3 | 主讓球水 | home AH odds |
+| 4 | 讓球盤 | **from home perspective**（− = 主讓；**+ = 主受讓 = dog**） |
+| 5 | 客讓球水 | away AH odds |
+| 6 | 客隊 | away name |
+| 7 | **客勝** | away match-winner odds |
+
 Example:
 
 ```text
 1.62 Liverpool 1.86 -1.25 2.02 Burnley 5.20
 ```
+
+→ 主勝 1.62（Liverpool **主熱**）；盤 -1.25 主讓。
+
+```text
+2.12 Silkeborg IF 1.80 [+0.5/+1] 1.97 Copenhagen 1.68
+```
+
+→ 主勝 **2.12**；客勝 **1.68** = **Copenhagen 客熱 Med**；主盤 **+0.75** = Silkeborg **主 dog**。  
+**禁止**把欄位 7 的 1.68 寫成「主勝」。（2026-08 實錯：曾誤標「熱門主勝 ~1.68」。）
 
 Synthetic 3-way→AH: leading `*` on the line (`*-1.5`).
 
@@ -435,9 +456,11 @@ Shorthand (incomplete — no ML):
 ```
 
 Interpret Format B as:
-- `隊伍A勝賠率` / `隊伍B勝賠率`: match-winner odds when present  
-- `讓球盤`: always from side A (first team) perspective  
-- negative = side A gives goals  
+- **欄1 = 主勝 only；欄7 = 客勝 only** — never swap  
+- 1X2 熱門 = **較短獨贏**那一側，並**明示主或客**（`客勝 1.68 Med` / `主勝 1.62 Strong`）  
+- `讓球盤`: always from **home** perspective  
+- home line **+** → home is **AH dog**（即使主勝獨贏短於客勝時仍以盤為準寫 dog／fav，並標 1X2 與 AH 是否打架）  
+- negative on home line = home gives goals  
 
 Also accept English one-line dumps of the form  
 `ML_home Home AH_home [line] AH_away Away ML_away`  
@@ -456,7 +479,8 @@ Also accept English one-line dumps of the form
 - if only HKJC and no external, incomplete value screen — say so  
 - Format A without ML: mark direct-win filter missing; still allow dual card on AH paths  
 - Format B shorthand without win odds: incomplete screening, not fully cleared PLAY  
-- if line cannot be parsed cleanly, stop and request correction instead of guessing
+- if line cannot be parsed cleanly, stop and request correction instead of guessing  
+- **Hard anti-pattern:** never label the shorter of the two MLs as「主勝」without checking **which field** it came from; always write `主勝 X` / `客勝 Y` explicitly before gap tier (Strong/Med/Light)
 
 ## Post-Match Review Workflow
 
@@ -879,6 +903,7 @@ Adjustment Decision:
 
 Before returning a recommendation, verify that:
 - each fixture has **ID locked | ID hold | incomplete** where external is used; never `PLAY` on a guessed club mapping
+- **Format B:** 主勝/客勝 not swapped; dog/fav matches home-line sign; gap tier cites **主勝 or 客勝** correctly  
 - identity checks are **teams + competition + date** (+ H/A if high-risk) — **not** HKJC vs external price equality
 - any external odds cited refer to the same verified teams, competition, and leg as the user input
 - alias table consulted when present; no silent auto-write of aliases

@@ -10,11 +10,14 @@
 
 ## Agent 讀序（強制）
 
-1. `analysis-checklist.md`
+1. `analysis-checklist.md`（含 **§0-Exec Gate**）
 2. **本檔**（熱）
 3. `post-match/INDEX.md` → **最近 2 批** `post-match/batches/*`
 4. 冷 batch / legacy — **僅** formal review、同分支重複失效、用戶點名歷史
-5. skill 硬規則
+5. skill 硬規則 + **`match-card-dual`**（賽前 dual）
+
+**賽前 dual 輸出強制：** 結尾必須有 **`## Exec Gate` 五勾**（見 checklist §0-Exec Gate / match-card-dual Step 6）。  
+Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（外圍漏查、主客勝搞反等）。
 
 ## 給新 Agent 的摘要（熱）
 
@@ -89,13 +92,15 @@
 | 07-30/31 | Inter Turku vs Başakşehir | Inter Turku **+0.75** @1.89 | **2-0** | **W**（客勝 2 全贏 dog） | euro-2leg · Strong-blast · path-wide | 賽前 **A′ Soft PLAY**；表 A none；路徑冠軍；Strong 客未爆破 |
 | **08-01 卡1** | **Gold Coast Utd vs Gold Coast Knights** | **GCU +1/+1.5** @1.74 | **1-0** | **W**（主勝全贏 dog） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft PLAY**；表 A none；**NPL 子帳**；勿併表 A / 勿與 Knights 表 A L 混算 |
 | **08-02 卡1** | **Estudiantes LP vs Defensa** | **Est -0.5/-1** @1.78 | **3-0** | **W**（勝≥2 全贏半一） | **league** · ARG · path-narrow | 賽前 **A′ Soft**；表 A none；勿併表 A |
-| **08-02 卡2** | **Sydney Olympic vs APIA** | **Olympic +1/+1.5** @1.83 | **1-3** | **L**（負 2 穿 +1.25） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft**；NPL 子帳；**不**與 GCU W 混洗；勿併表 A |
+| **08-02 卡2** | **Sydney Olympic vs APIA** | **Olympic +1/+1.5** @1.83 | **1-3** | **L**（負 2 穿 +1.25） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft**；NPL 子帳；勿併表 A |
+| **08-02 卡3** | **Orenburg vs Zenit** | **Orenburg +1/+1.5** @1.93 | **0-3** | **L**（負 3 全輸） | **league** · RUS · path-wide | 賽前 **A′ Soft**；Zenit 穿；勿併表 A／勿與 euro-2leg dog 混算 |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
-- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A）  
-- **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L**（獨立子帳；Knights 表 A L 不洗白）  
-- **league ARG C -0.75：** Estudiantes **W** = **1W0L**（n=1）  
-- **08-02 pending A′：** Orenburg +1.25
+- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A；**維持可 A′**）  
+- **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L** → Grill：**預設 lean only、暫不掛 A′**（checklist §1-A′-dog）  
+- **league ARG C -0.75：** Estudiantes **W** = **1W0L**  
+- **league RUS dog +1.25：** Orenburg **L** = **0W1L**；path-wide dog **watch**（聯賽 A′ L 計 n；與 Olympic 同路徑形 **n=2**；n=3 formal）  
+- **08-02 當日 A′ 1W2L：** Observation only；**不**廢 A′、**不**改 skill
 
 ---
 

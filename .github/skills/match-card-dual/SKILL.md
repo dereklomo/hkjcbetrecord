@@ -45,8 +45,9 @@ user-invocable: true
 
 - Detect format: **`FBxxxx` / 中文聯賽+`[ 盤 ]`+`：`** → **Format A (HKJC card block · preferred)**; else one-line → Format B  
 - Unlabeled waters = **HKJC** execution (AH prices; often **no 1X2** in Format A)  
-- Normalize: home first; `[ -0.5 / -1 ]` → **-0.75**; `[ 0 / -0.5 ]` → **-0.25**; `[ +1 / +1.5 ]` → **+1.25**; `[ 0 ]` → level  
-- First water = **home AH**, second = **away AH**  
+- **Format B 7 欄：** `主勝 主隊 主讓水 盤 客讓水 客隊 客勝` — **欄1≠欄7**；熱門寫 **`主勝 X` 或 `客勝 Y`**，禁止「較短獨贏=主勝」捷徑  
+- Normalize: home first; `[ -0.5 / -1 ]` → **-0.75**; `[ 0 / -0.5 ]` → **-0.25**; `[ +1 / +1.5 ]` → **+1.25**; `[ 0 ]` → level；**home + = AH dog**  
+- Format A: first water = **home AH**, second = **away AH**（無 1X2 時勿捏造主勝）  
 - **Alias first:** read `record/hkjc-name-alias.md` (if present) before web search; use `FBxxxx` as key when useful  
 - Lock identity: **teams + competition + card date** (+ **home/away** if high-risk — see defensive skill Identity Gate)  
 - **If English names / fixture do not lock → that fixture `ID hold`:** ask user (1–2 candidates); **no external attach**; **rest of card continues**  
@@ -125,7 +126,21 @@ Status: evaluated | **skipped** (reason)
 
 ## C. One-line
 Table A: … | A′: … | Streak: …
+
+## Exec Gate（強制 · 不可省略）
+- [ ] 主勝/客勝已對欄（Format B 欄1/欄7；或 Format A 無 ML 已標）
+- [ ] 外圍：已查 **或** incomplete + `Sources Used: none`
+- [ ] 凡 Med/Strong/方向 lean/A′/表 A → 有**命名 Sources + 數字**（否則只能結構 PASS）
+- [ ] §1b-2 / §1-A′-dog（若相關）已套
+- [ ] 表 A / A′ / Streak 三欄齊
 ```
+
+### Exec Gate 規則（Grill 2026-08 · 防執行疏失）
+
+1. **每張** dual／賽前卡結尾 **必須** 有 `## Exec Gate` 五勾（可 `[x]`／`[ ]` 如實）。  
+2. **任一未過** → **禁止** 定 `PLAY`／**A′ Soft**／帶力度分檔的方向 lean；允許：結構 PASS 清單、incomplete、GATE 缺項說明。  
+3. 不得「先出完整 dual 再補 Gate」當過關；Gate 是輸出的一部分。  
+4. 外圍漏跑 = Gate #2/#3 必須為未勾或 incomplete，不得假裝已查。
 
 ## Rules of Combination
 
@@ -151,6 +166,8 @@ Table A: … | A′: … | Streak: …
 - [ ] Streak skipped unless draw-friendly table A (or force)  
 - [ ] Named sources on table A formals (real Sources or `none`; no fake lean)  
 - [ ] Identity status respected (`ID hold` → no external-based PLAY/A′)  
+- [ ] **主勝/客勝 not swapped** on Format B; gap tier labels home vs away correctly  
+- [ ] **`## Exec Gate` present** with five checks honest; no PLAY/A′/tiered lean if gate fails  
 - [ ] Fundamentals present  
 
 ## Post-match
