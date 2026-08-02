@@ -88,11 +88,14 @@
 | 07-30 | Gornik Zabrze vs Fenerbahçe | Gornik **+1** @1.85 | **1-1** | **W**（和=全贏 +1） | euro-2leg · Strong-blast · path-wide | 賽前 §1-max 誤標正式 → **Obs → A′ 遷移**；負≥2 才 L 未觸發 |
 | 07-30/31 | Inter Turku vs Başakşehir | Inter Turku **+0.75** @1.89 | **2-0** | **W**（客勝 2 全贏 dog） | euro-2leg · Strong-blast · path-wide | 賽前 **A′ Soft PLAY**；表 A none；路徑冠軍；Strong 客未爆破 |
 | **08-01 卡1** | **Gold Coast Utd vs Gold Coast Knights** | **GCU +1/+1.5** @1.74 | **1-0** | **W**（主勝全贏 dog） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft PLAY**；表 A none；**NPL 子帳**；勿併表 A / 勿與 Knights 表 A L 混算 |
+| **08-02 卡1** | **Estudiantes LP vs Defensa** | **Est -0.5/-1** @1.78 | **3-0** | **W**（勝≥2 全贏半一） | **league** · ARG · path-narrow | 賽前 **A′ Soft**；表 A none；勿併表 A |
+| **08-02 卡2** | **Sydney Olympic vs APIA** | **Olympic +1/+1.5** @1.83 | **1-3** | **L**（負 2 穿 +1.25） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft**；NPL 子帳；**不**與 GCU W 混洗；勿併表 A |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
-- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；≠ 聯賽 dog+1 表 A；**勿**併表 A）  
-- **semi / npl dog +1／+1.25：** GCU **W** = **1W0L**（n=1；**獨立子帳**；Knights 表 A L 不洗白 NPL 正式）  
-- 盃 dog +1 lean cover（Busan 等）→ lean 短表；當日有表 A（Juve）→ **不可**掛 A′
+- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A）  
+- **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L**（獨立子帳；Knights 表 A L 不洗白）  
+- **league ARG C -0.75：** Estudiantes **W** = **1W0L**（n=1）  
+- **08-02 pending A′：** Orenburg +1.25
 
 ---
 

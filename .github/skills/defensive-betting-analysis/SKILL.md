@@ -266,6 +266,8 @@ Use this skill when the user wants to:
 
 **In this workspace (pre-match):** on **odds-card paste**, follow **`match-card-dual`** (defensive + streak-roll both). Read **`analysis-checklist.md`**, then **`post-match-review-grok.md`** ledgers. Append new settled results only to `post-match-review-grok.md` (or dated review/pre-match record files)—not to `post-match-review-home.md`.
 
+**Do not archive user input (2026-08):** never dump the user’s raw paste into `selfnote.txt` or pre-match「原始盤」unless they **explicitly** ask to write/save a file. Default = decision output only.
+
 ## Market Source Policy
 
 Use these source layers:

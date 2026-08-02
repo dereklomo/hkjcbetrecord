@@ -17,12 +17,14 @@
 | 港譯（卡上原文） | 英文正式名 | 聯賽／地區 | FB 例（可空） | status | 備註 |
 |------------------|------------|------------|---------------|--------|------|
 | （範例）國際杜古 | Inter Turku | FIN | | locked | 非 Inter Escaldes |
-| （範例）學生隊 | *ambiguous* | ARG | FB2115 | ambiguous | 須區分 Estudiantes LP vs 其他「學生」 |
+| **學生隊** | **Estudiantes (La Plata)** | ARG | FB2115 | **locked** | 用戶確認；vs 防衛者 |
+| **防衛者** | **Defensa y Justicia** | ARG | FB2115 | **locked** | 與學生隊同場 |
+| **里奧古亞圖學生隊** | **Estudiantes de Río Cuarto** | ARG | FB2110 | **locked** | ≠ 拉普拉塔學生隊 |
+| **班菲特**（阿甲，vs 里奧） | **Banfield** | ARG | FB2110 | **locked** | 非葡萄牙 Benfica |
+| **洛斯查蘭特** | **Nordsjælland (FC Nordsjaelland)** | DEN | FB2180 | **locked** | 用戶 2026-08-02；vs 蘭達斯 |
+| **蘭達斯** | **Randers** | DEN | FB2180 | **locked** | 丹超；≠ 挪超跨國場 |
 
-<!-- 用戶確認後在此追加，例如：
-| 里奧古亞圖學生隊 | Estudiantes de Río Cuarto | ARG | FB2110 | locked | |
-| 防衛者 | Defensa y Justicia | ARG | FB2115 | locked | |
--->
+<!-- 用戶確認後繼續追加 -->
 
 ---
 

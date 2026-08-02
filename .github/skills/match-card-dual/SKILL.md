@@ -158,3 +158,9 @@ Table A: … | A′: … | Streak: …
 Results-only → append **hot** table A / **A′** + branch quick-ref; write **`post-match/batches/<date>.md`** (§9); update **`post-match/INDEX.md`**.  
 Do **not** load `2026-07-archive-legacy.md` by default.  
 Do not rewrite historical PASS into table A after cover.
+
+## Do not archive user paste (workspace · 2026-08)
+
+- **Do not** append raw user odds paste to `selfnote.txt`, pre-match「原始盤」blocks, or other record files **unless the user explicitly asks** to save/write/merge a file.  
+- Default response = **decisions only** (table A / A′ / lean / PASS / one-line).  
+- Pre-match files only when user requests write-in; prefer **decision summary**, not full paste dump.
