@@ -18,7 +18,8 @@
 
 | 日期／批 | 檔案 | 表 A | 表 A′ | 備註 |
 |----------|------|------|-------|------|
-| **2026-08-02** | [batches/2026-08-02.md](batches/2026-08-02.md) | none | **Est W · Olympic L · Orenburg L** | A′ 1W2L 分結構；Molde 等或仍 pending |
+| **2026-08-03** | [batches/2026-08-03.md](batches/2026-08-03.md) | none | none | Denver 和殺 PASS；San Luis W +1 **L**；LIV 友誼 PASS |
+| **2026-08-02** | [batches/2026-08-02.md](batches/2026-08-02.md) | none | **Est W · Olympic L · Orenburg L** | A′ 1W2L 分結構 |
 | **2026-08-01** | [batches/2026-08-01.md](batches/2026-08-01.md) | Häcken **1-1 L** | **GCU +1/+1.5 W** | 跨池和殺 n=3 → **§1b-2 formal**；A′ 不牽連 |
 | 2026-07-30/31（**卡結清**） | [batches/2026-07-30_31.md](batches/2026-07-30_31.md) | none | Turku **W** | Independiente lean W；Coritiba lean L |
 | 2026-07-29/30 grill | [batches/2026-07-29_30.md](batches/2026-07-29_30.md) | （Juve 已入熱表） | Gornik **W** | A′ 啟用 |
