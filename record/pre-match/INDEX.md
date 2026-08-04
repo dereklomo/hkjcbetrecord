@@ -42,8 +42,9 @@
 | **08-01** | [pre-match-2026-08-01-2.md](2026-08/pre-match-2026-08-01-2.md) | day/card #2 | 歐亞混卡；**表 A Häcken -0.75 W1**；A′ none |
 | **08-02** | [pre-match-2026-08-02.md](2026-08/pre-match-2026-08-02.md) | day · 三卡**決策摘要** | 表 A none；A′ Est@1.78 / Olympic+1.25 / Orenburg+1.25；**無原始貼盤** |
 | **08-03** | [pre-match-2026-08-03.md](2026-08/pre-match-2026-08-03.md) | day · **僅 12 場** | 表 A／A′ **none**；LIV 友誼；Mirassol **盃** soft lean；**Exec Gate** |
-| **08-04** | [pre-match-2026-08-04.md](2026-08/pre-match-2026-08-04.md) | day/card #1 · 隊名更正 | 表 A／A′ **none**；Halmstads vs Sirius Strong→禁 A′ |
-| **08-04** | [pre-match-2026-08-04-2.md](2026-08/pre-match-2026-08-04-2.md) | day/card #2 · 4 場 | 表 A／A′ **none**；菲 +1.25 vs 泰 Strong lean only |
+| **08-04** | [pre-match-2026-08-04.md](2026-08/pre-match-2026-08-04.md) | day/card #1 · **新引擎重析** | 表 A／A′ **none**；Halmstad dog→lean；Athletico 盃 lean |
+| **08-04** | [pre-match-2026-08-04-2.md](2026-08/pre-match-2026-08-04-2.md) | day/card #2 · **新引擎重析** | 表 A／A′ **none**；菲 dog lean only |
+| **08-05** | [pre-match-2026-08-05.md](2026-08/pre-match-2026-08-05.md) | day · **兩批合併一檔** | 表 A／A′ **none**；lean Hapoel+0.75／Ñublense−0.75／Minnesota−0.75 |
 
 > **日期更正：** 08-01 兩卡 session 曾誤稱 07-20；**賽事日 = 2026-08-01**。  
 > 07-20 檔案仍為 **七月** 舊卡，勿與 08 月卡混淆。
