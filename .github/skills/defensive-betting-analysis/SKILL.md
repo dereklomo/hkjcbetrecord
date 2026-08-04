@@ -46,13 +46,13 @@ When the user pastes **one or more fixtures with odds** (HKJC-style lines, multi
 
 1. Always run **this skill** with **`analysis-checklist.md`**:  
    - **Table A formal PLAY** = ideal gates + **whitelist W1–W6** only (**0 / 1 / many** legs; **no** §1-max)  
-   - **準表 A′ (Soft PLAY)** only if table A empty — 0–1 leg, small stake OK, post-match **table A′** only (never merge into table A WR); pure Obs column **retired**  
+   - **準表 A′ (Soft PLAY)** only if table A empty — 0–1 leg; **external + fundamentals required**; prefer **shortfall fav/shallow** over path-wide dog; **league/NPL dog banned from A′** (lean WR watch); **euro-2leg dog** still allowed; **four sentences** on any A′; **none OK**; post-match **table A′** only  
 2. Run **`streak-roll-eval` only if** table A has a **draw-friendly** formal (`-0.25` or level-ball lean); else `streak: skipped` unless user forces streak.  
 3. Use the response skeleton in `match-card-dual` (A′ section always present).  
 4. Skip dual only if user says only-defensive / only-streak, or input is post-match-results-only.  
 5. **Post-match context:** prefer **hot** `post-match-review-grok.md` + **2** recent batches from `post-match/INDEX.md` — not the full legacy archive.
 
-Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked); **A′** is the frequency valve, not a table-A relax.
+Ordinary hard rules below are unchanged. **Primary workspace goal:** table-A Track B win-rate (grill-locked); **A′** = secondary Soft with external+fundamentals — **not** a path-wide dog machine.
 
 ## Primary Objective: Win-Rate First (贏盤率為主)
 

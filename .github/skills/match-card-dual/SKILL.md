@@ -75,20 +75,27 @@ Promote to **Formal PLAY (table A)** only if:
 **Multiple** table-A legs OK if each qualifies; **no same-branch parlay**.  
 **Forbidden:** §1-max forcing non-whitelist path into table A.
 
-### Step 4 — 準表 A′ (only if table A empty)
+### Step 4 — 準表 A′ (only if table A empty) · **engine fix Grill 08**
 
-**Section always present** (write **none** if not used).
+**Section always present** (write **none** if not used — **empty A′ is OK and common**).
 
-If **zero** table-A formals and usable edge:
+If **zero** table-A formals:
 
-- **One-leg shortfall** OR **structure pack** (euro dog +1/+0.75, cup +1, C-tier -0.75, …)  
-- **Path rank:** dog **+1/+0.75** > **-0.25**/level > **-0.75**  
-- Draw-magnet **-0.75** → **ban A′**  
-- **D-tier** (women/U20/semi): allowed only in **sub-ledger** with **shallow line + named external**; never mix WR with league/euro A′  
-- Label **`Soft PLAY / 準表 A′ — NOT table A`**  
-- Post-match: append **table A′** only  
+**Do NOT** pick pure path-wide dog (+1/+1.25) as Soft just because path is widest.
 
-If table A non-empty: **A′ = none**.
+**A′ only if all hold:**
+
+1. **Named external with numbers** (incomplete → no A′ Soft)  
+2. **Fundamentals** hard vetoes clear; draw-magnet **-0.75** → ban A′  
+3. Market is either:  
+   - **Shortfall favorite/shallow:** **-0.25** / level lean / **-0.75** (near W1–W6 or W7 C-tier; named external)  
+   - **OR euro-2leg dog +1/+0.75** only (Strong fav labeled + blast Risk)  
+4. **Banned from A′ (lean-only WR watch):** **league dog +1/+1.25**, **NPL/semi dog +1/+1.25**, **cup dog +1**, any dog with fav ML **≤1.55**  
+5. Among valid candidates: prefer **shortfall shallow/fav** over euro dog; **never** rank by path width alone  
+6. **Four sentences required** on any A′ Soft: external · fundamentals · why not table A · why dog allowed/banned  
+7. Label **`Soft PLAY / 準表 A′ — NOT table A`**; post-match → **table A′** only  
+
+If table A non-empty **or** no valid candidate: **A′ = none**.
 
 ### Step 5 — Streak (conditional)
 
@@ -109,8 +116,9 @@ If table A non-empty: **A′ = none**.
 （or: **none**）
 
 ### 準表 A′（可小注 · 不進表 A · 僅表 A 空 · 0～1 腳）
-| Match | Market | Why A′ | Tag / 子帳 | Risk |
-（or: **none** — table A non-empty / no edge / veto）
+| Match | Market | Why A′ | Tag | Risk |
+（or: **none** — table A non-empty / no valid shortfall or euro-2leg dog）
+**四句（有 A′ 必填）：** 外圍 / 基本面 / 為何非表 A / 為何允許或禁止 dog
 
 ### WR lean only
 ...
@@ -160,9 +168,10 @@ Table A: … | A′: … | Streak: …
 - [ ] No §1-max non-whitelist formal  
 - [ ] No draw-magnet **-0.75** in table A or A′  
 - [ ] No two-legged euro / cup dog+1 in **table A**  
-- [ ] A′ section present; only when table A empty  
-- [ ] A′ path rank + shortfall/structure pack respected  
-- [ ] D-tier A′ has sub-ledger + shallow + named external  
+- [ ] A′ section present; only when table A empty; **none OK**  
+- [ ] A′ not pure path-wide league/NPL dog; euro-2leg dog only exception  
+- [ ] A′ has external numbers + fundamentals + **four sentences**  
+- [ ] D-tier A′ (if any) shallow + named external + sub-ledger only  
 - [ ] Streak skipped unless draw-friendly table A (or force)  
 - [ ] Named sources on table A formals (real Sources or `none`; no fake lean)  
 - [ ] Identity status respected (`ID hold` → no external-based PLAY/A′)  

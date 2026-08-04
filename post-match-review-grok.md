@@ -96,11 +96,11 @@ Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（�
 | **08-02 卡3** | **Orenburg vs Zenit** | **Orenburg +1/+1.5** @1.93 | **0-3** | **L**（負 3 全輸） | **league** · RUS · path-wide | 賽前 **A′ Soft**；Zenit 穿；勿併表 A／勿與 euro-2leg dog 混算 |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
-- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A；**維持可 A′**）  
-- **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L** → Grill：**預設 lean only、暫不掛 A′**（checklist §1-A′-dog）  
-- **league ARG C -0.75：** Estudiantes **W** = **1W0L**  
-- **league RUS dog +1.25：** Orenburg **L** = **0W1L**；path-wide dog **watch**（聯賽 A′ L 計 n；與 Olympic 同路徑形 **n=2**；n=3 formal）  
-- **08-02 當日 A′ 1W2L：** Observation only；**不**廢 A′、**不**改 skill
+- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A；**引擎修後仍可 A′**）  
+- **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L** → **禁 A′**（lean 觀察 WR）  
+- **league dog +1.25：** Orenburg **L**；Halmstad lean **L** → **禁 A′**（lean 觀察）  
+- **league ARG C -0.75：** Estudiantes **W** = **1W0L**（**差一截上盤**型 — 新引擎優先方向）  
+- **Grill 08 引擎修：** 禁止 path 獨大／純盤形 dog A′；須外圍+基本面+四句；無合格 → **none 合法**；**不改 skill**
 
 ---
 
