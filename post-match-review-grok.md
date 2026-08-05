@@ -16,8 +16,9 @@
 4. 冷 batch / legacy — **僅** formal review、同分支重複失效、用戶點名歷史
 5. skill 硬規則 + **`match-card-dual`**（賽前 dual）
 
-**賽前 dual 輸出強制：** 結尾必須有 **`## Exec Gate` 五勾**（見 checklist §0-Exec Gate / match-card-dual Step 6）。  
-Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（外圍漏查、主客勝搞反等）。
+**賽前 dual 輸出強制（08-05）：** **排名**（非 PASS · 信心%↓ · Track=表A/A′/lean）+ **PASS 理由表** + One-line + **`## Exec Gate` 五勾**（見 checklist §0-Output / §0-Exec Gate · match-card-dual Step 6）。  
+Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（外圍漏查、主客勝搞反等）。  
+**賽後必加 `## 校準反省`：** 對齊排名 #／信心% vs 賽果；**≥1 條**校準建議（checklist §9a）。
 
 ## 給新 Agent 的摘要（熱）
 

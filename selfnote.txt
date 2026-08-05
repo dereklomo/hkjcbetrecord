@@ -603,3 +603,67 @@ Dominican Republic U21 0-1 Venezuela U21
 Athletico Paranaense 2-0 Vitoria
 Huracan 0-0 Atletico Tucuman
 Santos Laguna Women 0-2 CF America Women
+
+20260805
+2.60 Ararat-Armenia 1.97 [0] 1.80 NK Celje 2.38
+1.89 Mjallby 1.72 [0/-0.5] 2.07 Slovan Bratislava 3.50
+3.75 Hapoel Beer Sheva 1.71 [+0.5/+1] 2.08 Crvena Zvezda 1.74
+2.25 Lokomotiv Moscow 1.78 [0] 2.00 CSKA Moscow 2.60
+3.30 Sparta Prague 2.03 [0/+0.5] 1.75 Lyon 1.90
+2.04 Union Saint Gilloise 1.88 [0/-0.5] 1.88 Bodo Glimt 2.88
+1.47 Costa Rica U20 1.94 [-1] 1.79 Haiti U20 5.10
+5.70 Burkina Faso Women 1.68 [+1/+1.5] 2.07 South Africa Women 1.39
+4.65 Tanzania Women 1.93 [+0.5/+1] 1.80 Cote d'Ivoire Women 1.54
+3.15 Juventude 1.81 [0/+0.5] 1.96 Atletico Mineiro 2.21
+1.58 Deportivo Nublense 1.88 [-0.5/-1] 1.88 Rangers de Talca 4.30
+2.03 FC Cincinnati 1.89 [0/-0.5] 1.87 Pachuca 2.70
+2.22 Charlotte FC 1.77 [0] 2.00 Pumas UNAM 2.50
+1.59 Minnesota Utd 1.88 [-0.5/-1] 1.88 Juarez 4.00
+1.08 USA U20 1.89 [-2/-2.5] 1.83 Guatemala U20 16.00
+1.97 Real Salt Lake 1.83 [0/-0.5] 1.93 Tigres UANL 2.98
+1.14 Vancouver Whitecaps 1.82 [-1.5/-2] 1.95 Atlante 10.00
+
+Ararat-Armenia 2-1 NK Celje
+Mjallby 1-2 Slovan Bratislava
+Hapoel Beer Sheva 1-0 Crvena Zvezda
+Lokomotiv Moscow 1-1 CSKA Moscow 
+Sparta Prague 2-1 Lyon  
+Union Saint Gilloise 3-3 Bodo Glimt
+Costa Rica U20 1-1 Haiti U20  
+Burkina Faso Women 0-1 South Africa Women  
+Tanzania Women 1-2 Cote d'Ivoire Women  
+Juventude 0-1 Atletico Mineiro  
+Deportivo Nublense 1-0 Rangers de Talca
+FC Cincinnati 3-1 Pachuca
+Charlotte FC 3-0 Pumas UNAM
+Minnesota Utd 1-2 Juarez
+USA U20 3-1 Guatemala U20
+Real Salt Lake 1-1 Tigres UANL
+Vancouver Whitecaps 0-1 Atlante
+
+1.62 Ajax Women 1.90 [-0.5/-1] 1.80 Brondby Women 3.80
+1.53 Ferencvaros Women 1.78 [-0.5/-1] 1.92 PAOK Women 4.25
+4.00 Fakel Voronezh 1.74 [+0.5/+1] 2.04 Dinamo Moscow 1.67
+1.20 Spartak Moscow 2.05 [-1.5/-2] 1.74 FC Orenburg 9.00
+
+20260805
+1.75 St. Polten Women 2.08 [-0.5/-1] 1.66 Young Boys Bern Women 3.45
+1.58 AGF Aarhus 1.89 [-0.5/-1] 1.91 Sabah FC 4.40
+1.51 Brann 1.77 [-0.5/-1] 2.00 Apollon Limassol 4.80
+1.22 Zenit St. Petersburg 1.78 [-1/-1.5] 1.99 Baltika Kaliningrad 10.00
+1.21 Fenerbahce 2.12 [-1.5/-2] 1.71 Sturm Graz 9.00
+1.54 Ferencvaros 1.85 [-0.5/-1] 1.95 Gornik Zabrze 4.85
+1.50 Arsenal 2.02 [-1] 1.76 Betis 4.40
+29.00 Egypt Women 2.08 [+2.5/+3] 1.71 Nigeria Women 1.03
+3.30 Malawi Women 1.60 [+0.5/+1] 2.26 Zambia Women 1.85
+1.88 Boca Juniors 1.70 [0/-0.5] 2.09 Estudiantes 3.90
+1.57 Canada U20 1.84 [-0.5/-1] 1.88 Jamaica U20 4.55
+1.66 Penarol 2.01 [-0.5/-1] 1.80 Montevideo Wanderers 4.70
+1.29 Inter Miami CF 1.77 [-1/-1.5] 2.00 Atletico San Luis 6.20
+2.29 Tigre 2.01 [0/-0.5] 1.78 Belgrano 3.30
+1.97 Fluminense 1.79 [0/-0.5] 2.02 Vasco da Gama 3.65
+4.15 Fortaleza 1.77 [+0.5/+1] 2.04 Palmeiras 1.68
+1.73 FC Dallas 2.07 [-0.5/-1] 1.72 Queretaro 3.50
+1.63 El Paso Locomotive 1.93 [-0.5/-1] 1.83 Monterey Bay 4.00
+1.30 Mexico U20 1.88 [-1/-1.5] 1.84 Panama U20 7.25
+1.19 Toluca 2.05 [-1.5/-2] 1.74 Seattle Sounders 9.00

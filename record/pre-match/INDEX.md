@@ -44,10 +44,12 @@
 | **08-03** | [pre-match-2026-08-03.md](2026-08/pre-match-2026-08-03.md) | day · **僅 12 場** | 表 A／A′ **none**；LIV 友誼；Mirassol **盃** soft lean；**Exec Gate** |
 | **08-04** | [pre-match-2026-08-04.md](2026-08/pre-match-2026-08-04.md) | day/card #1 · **新引擎重析** | 表 A／A′ **none**；Halmstad dog→lean；Athletico 盃 lean |
 | **08-04** | [pre-match-2026-08-04-2.md](2026-08/pre-match-2026-08-04-2.md) | day/card #2 · **新引擎重析** | 表 A／A′ **none**；菲 dog lean only |
-| **08-05** | [pre-match-2026-08-05.md](2026-08/pre-match-2026-08-05.md) | day · **兩批合併一檔** | 表 A／A′ **none**；lean Hapoel+0.75／Ñublense−0.75／Minnesota−0.75 |
+| **08-05** | [pre-match-2026-08-05.md](2026-08/pre-match-2026-08-05.md) | day · **兩批合併一檔** | 表 A／A′ **none**；**已結清** → batch 08-05 |
+| **08-05 未結** | [pre-match-2026-08-05-pending.md](2026-08/pre-match-2026-08-05-pending.md) | **未結整合** · 3 補卡 24 場 + 熱帳舊 pending | 表 A／A′ **none**；lean 8 腳；**芝加哥–溫哥華 0 待補** |
 
 > **日期更正：** 08-01 兩卡 session 曾誤稱 07-20；**賽事日 = 2026-08-01**。  
-> 07-20 檔案仍為 **七月** 舊卡，勿與 08 月卡混淆。
+> 07-20 檔案仍為 **七月** 舊卡，勿與 08 月卡混淆。  
+> **未結以 `08-05-pending` 為準**（session 補 dual 尚未登賽果）。
 
 ---
 

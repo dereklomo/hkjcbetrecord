@@ -105,42 +105,58 @@ If table A non-empty **or** no valid candidate: **A′ = none**.
 | Only **-0.75** / **+1** / empty | **`streak: skipped`** |
 | User forces streak | Run eval anyway |
 
-### Step 6 — Response skeleton
+### Step 6 — Response skeleton（**排名輸出 · Grill 08-05 鎖定**）
+
+**內部邏輯不變：** 仍先跑表 A（W1–W6）→ 僅表 A 空才 A′ → lean / PASS → 條件 streak。  
+**對用戶輸出變瘦：** 非 PASS 合併為 **信心% 降序排名**；PASS 另表理由；**不**再分大段 Formal / A′ / lean 列表。
 
 ```markdown
 # Dual Card Screen
 
-## A. Defensive (WR-first · table A priority)
-### Formal PLAY（表 A · W1–W6 · 可多腳 · 命中帳）
-| # | Match | Market | WL | Conf | Why |
-（or: **none**）
+## 排名（非 PASS · 信心% 降序）
+| # | Match | Market | Track | 信心% | Why |
+|---|-------|--------|-------|------|-----|
+| 1 | … | … | 表A / A′ / lean | 58 | … |
+（若全卡 PASS → 寫 **none**）
 
-### 準表 A′（可小注 · 不進表 A · 僅表 A 空 · 0～1 腳）
-| Match | Market | Why A′ | Tag | Risk |
-（or: **none** — table A non-empty / no valid shortfall or euro-2leg dog）
-**四句（有 A′ 必填）：** 外圍 / 基本面 / 為何非表 A / 為何允許或禁止 dog
+> **信心%** = 主觀勝盤率估（Track B 半贏=W／半輸=L），**僅排序用**；非客觀 EV、不進命中帳。  
+> **Track：** `表A` = Formal PLAY（W1–W6）；`A′` = Soft（僅表 A 空）；`lean` = 有方向但不進 A/A′。  
+> **有 A′ 時** 仍必附 **四句**（外圍／基本面／為何非表 A／為何允許或禁止 dog）— 可寫在該列 Why 下或排名表下附註。
 
-### WR lean only
-...
+## PASS（不進排名）
+| 場 | 理由 |
+|----|------|
+| … | 純-1 / 友誼 / @≥線 / 和磁鐵半一 / ID hold / incomplete / … |
 
-### Rest: PASS
-...
-
-## B. Streak-roll
-StreakState: m/5
+## Streak-roll
 Status: evaluated | **skipped** (reason)
-### Best next STREAK_LEG
-...
+（僅表 A 有 draw-friendly 正式時 evaluated；否則 skipped）
 
-## C. One-line
-Table A: … | A′: … | Streak: …
+## One-line
+表A: … | A′: … | lean 頂: … | Streak: …
 
 ## Exec Gate（強制 · 不可省略）
 - [ ] 主勝/客勝已對欄（Format B 欄1/欄7；或 Format A 無 ML 已標）
 - [ ] 外圍：已查 **或** incomplete + `Sources Used: none`
 - [ ] 凡 Med/Strong/方向 lean/A′/表 A → 有**命名 Sources + 數字**（否則只能結構 PASS）
 - [ ] §1b-2 / §1-A′-dog（若相關）已套
-- [ ] 表 A / A′ / Streak 三欄齊
+- [ ] 排名（或 none）+ PASS + Streak/One-line 齊；內部 A/A′ 邏輯已套
+```
+
+### 排名規則（輸出層 · 不改帳本）
+
+1. **僅** `表A` / `A′` / `lean` 進排名；**PASS 永不進排名**。  
+2. 按 **信心% 降序**（同分：表A > A′ > lean；再同分可按盤深淺或任意穩定次序）。  
+3. 信心% 為 **整數主觀估**（例 55–70 常見；勿假裝精確到小數）。  
+4. 表 A / A′ / lean **帳本標籤仍寫清**（Track 欄）；賽後命中帳仍只認 **事前表 A / A′**，不因排名% 回寫。  
+5. 全 PASS → 排名 **none** + PASS 表填滿理由即可。
+
+### 賽後（有賽果時 · 附加於 batch／回覆）
+
+```markdown
+## 校準反省
+- 預測 vs 賽果：（對齊排名 # 與 信心%；哪腳高排名失手／低排名命中）
+- 建議：（**至少 1 條**，供模型校準；可寫執行閘／外圍／信心% 偏樂觀等）
 ```
 
 ### Exec Gate 規則（Grill 2026-08 · 防執行疏失）
@@ -177,16 +193,19 @@ Table A: … | A′: … | Streak: …
 - [ ] Identity status respected (`ID hold` → no external-based PLAY/A′)  
 - [ ] **主勝/客勝 not swapped** on Format B; gap tier labels home vs away correctly  
 - [ ] **`## Exec Gate` present** with five checks honest; no PLAY/A′/tiered lean if gate fails  
+- [ ] **Ranking output:** non-PASS only, 信心% desc, Track ∈ {表A,A′,lean}; PASS table with reasons; no PASS in ranking  
+- [ ] A′ in ranking still has **four sentences**  
 - [ ] Fundamentals present  
 
 ## Post-match
 
 Results-only → append **hot** table A / **A′** + branch quick-ref; write **`post-match/batches/<date>.md`** (§9); update **`post-match/INDEX.md`**.  
+Include **`## 校準反省`**（預測 vs 賽果對齊排名#／%；**≥1 條建議**）.  
 Do **not** load `2026-07-archive-legacy.md` by default.  
 Do not rewrite historical PASS into table A after cover.
 
 ## Do not archive user paste (workspace · 2026-08)
 
 - **Do not** append raw user odds paste to `selfnote.txt`, pre-match「原始盤」blocks, or other record files **unless the user explicitly asks** to save/write/merge a file.  
-- Default response = **decisions only** (table A / A′ / lean / PASS / one-line).  
+- Default response = **decisions only**（**排名** + PASS 理由 + One-line + Exec Gate；內部仍表 A／A′／lean）.  
 - Pre-match files only when user requests write-in; prefer **decision summary**, not full paste dump.

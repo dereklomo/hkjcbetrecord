@@ -18,6 +18,7 @@
 
 | 日期／批 | 檔案 | 表 A | 表 A′ | 備註 |
 |----------|------|------|-------|------|
+| **2026-08-05** | [batches/2026-08-05.md](batches/2026-08-05.md) | none | none | 全日結清；Ñublense lean **W** · Minnesota lean **L**；VAN 深 PASS |
 | **2026-08-04** | [batches/2026-08-04.md](batches/2026-08-04.md) | none | none | Halmstad 0-2 驗證 Strong 禁 dog A′；Celtic 1-0 殺 −2 |
 | **2026-08-03** | [batches/2026-08-03.md](batches/2026-08-03.md) | none | none | Denver 和殺 PASS；San Luis W +1 **L**；LIV 友誼 PASS |
 | **2026-08-02** | [batches/2026-08-02.md](batches/2026-08-02.md) | none | **Est W · Olympic L · Orenburg L** | A′ 1W2L 分結構 |
