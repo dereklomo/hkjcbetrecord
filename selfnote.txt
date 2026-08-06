@@ -659,6 +659,20 @@ Vancouver Whitecaps 0-1 Atlante
 1.88 Boca Juniors 1.70 [0/-0.5] 2.09 Estudiantes 3.90
 1.57 Canada U20 1.84 [-0.5/-1] 1.88 Jamaica U20 4.55
 1.66 Penarol 2.01 [-0.5/-1] 1.80 Montevideo Wanderers 4.70
+
+St. Polten Women 4-3 Young Boys Bern Women
+AGF Aarhus 2-1 Sabah FC
+Brann 0-1 Apollon Limassol
+Zenit St. Petersburg 1-0 Baltika Kaliningrad
+Fenerbahce 2-0 Sturm Graz
+Ferencvaros 1-0 Gornik Zabrze
+Arsenal 1-3 Betis
+Egypt Women 2-6 Nigeria Women
+Malawi Women 1-2 Zambia Women
+Boca Juniors 1-0 Estudiantes
+Canada U20 3-1 Jamaica U20
+Penarol 5-1 Montevideo Wanderers
+
 1.29 Inter Miami CF 1.77 [-1/-1.5] 2.00 Atletico San Luis 6.20
 2.29 Tigre 2.01 [0/-0.5] 1.78 Belgrano 3.30
 1.97 Fluminense 1.79 [0/-0.5] 2.02 Vasco da Gama 3.65
@@ -667,3 +681,56 @@ Vancouver Whitecaps 0-1 Atlante
 1.63 El Paso Locomotive 1.93 [-0.5/-1] 1.83 Monterey Bay 4.00
 1.30 Mexico U20 1.88 [-1/-1.5] 1.84 Panama U20 7.25
 1.19 Toluca 2.05 [-1.5/-2] 1.74 Seattle Sounders 9.00
+
+Inter Miami CF 4-2 Atletico San Luis
+Tigre 0-0 Belgrano
+Fluminense 0-1 Vasco da Gama
+Fortaleza 2-1 Palmeiras
+FC Dallas 0-0 Queretaro
+El Paso Locomotive 0-0 Monterey Bay
+Mexico U20 1-1 Panama U20
+Toluca 2-1 Seattle Sounders
+
+20260806
+2.13 Las Vegas Lights 1.97 [0/-0.5] 1.80 Oakland Roots 2.74
+2.70 Los Angeles FC 1.67 [0/+0.5] 2.14 Guadalajara 2.15
+3.10 KuPS 1.88 [0/+0.5] 1.88 CS Universitatea Craiova 2.05
+1.95 Inter Turku 1.79 [0/-0.5] 1.98 Vaduz 3.15
+
+Las Vegas Lights 0-0 Oakland Roots
+Los Angeles FC 1-1 Guadalajara
+KuPS vs CS Universitatea Craiova
+Inter Turku vs Vaduz
+
+20260807
+2.62 Jagiellonia Bialystok 2.00 [0] 1.77 Rangers 2.31
+2.35 HJK Helsinki 1.80 [0] 1.97 Motherwell 2.57
+2.80 CFR Cluj 1.74 [0/+0.5] 2.05 Tromso 2.26
+3.95 Hradec Kralove 1.74 [+0.5/+1] 2.05 Besiktas 1.71
+2.95 Goteborg 1.84 [0/+0.5] 1.92 AA Gent 2.12
+1.97 Rakow Czestochowa 1.80 [0/-0.5] 1.97 Hammarby 3.20
+2.19 Beitar Jerusalem 1.99 [0/-0.5] 1.78 Austria Vienna 2.83
+1.48 PAOK 1.73 [-0.5/-1] 2.06 Anderlecht 5.20
+1.06 Ajax 1.69 [-2/-2.5] 2.11 Shelbourne 19.00
+1.07 Braga 1.83 [-2/-2.5] 1.93 Dinamo Minsk 18.00
+8.50 Bohemians 2.12 [+1/+1.5] 1.68 Midtjylland 1.22
+1.24 Bristol City 1.77 [-1/-1.5] 2.00 Walsall 8.00
+1.07 Benfica 1.79 [-2/-2.5] 1.98 Hearts 19.00
+7.00 Cape Verde Islands Women 1.86 [+1/+1.5] 1.86 Cameroon Women 1.29
+5.00 Mali Women 1.94 [+0.5/+1] 1.79 Ghana Women 1.53
+2.27 Union Santa Fe 2.02 [0/-0.5] 1.76 Lanus 3.00
+1.63 Corinthians 1.96 [-0.5/-1] 1.81 Internacional 4.35
+1.41 New York City 1.76 [-1] 2.02 Santos Laguna 5.30
+
+2.68 Philadelphia Union 1.76 [0/+0.5] 2.02 Cruz Azul 2.19 (費城聯 vs 藍十字)
+1.43 Chicago Fire 1.86 [-1] 1.90 Necaxa 4.95 (芝加哥火燄 vs 尼卡沙)
+2.08 Austin FC 1.90 [0/-0.5] 1.86 Tijuana 2.90 (FC奧斯汀 vs 迪祖亞拿)
+1.43 CF America 1.87 [-1] 1.89 San Diego FC 5.10 (CF 阿美利加 vs 聖地亞哥FC)
+1.59 Portland Timbers 1.85 [-0.5/-1] 1.91 Puebla 3.95 (波特蘭伐木者 vs 普埃布拉)
+1.14 Lions FC 1.77 [-1.5/-2] 1.96 Brisbane Roar B 9.50 (FC獅子 vs 布里斯班獅吼B隊)
+1.56 Hwacheon FC Women 1.85 [-0.5/-1] 1.85 Gyeongju FC Women 4.40 (華川FC女足 vs 慶州FC女足)
+1.95 Incheon Steel Women 1.77 [0/-0.5] 1.93 Sejong FC Women 3.20 (仁川制鐵女足 vs 世宗FC女足)
+3.30 Yokohama F.Marinos 2.06 [0/+0.5] 1.73 Kashima Antlers 1.87 (橫濱水手 vs 鹿島鹿角)
+2.32 Gamba Osaka 1.78 [0] 1.99 Urawa Reds 2.60 (大阪飛腳 vs 浦和紅鑽)
+3.50 Gyeongnam FC 1.66 [+0.5/+1] 2.15 Daegu FC 1.79 (FC慶南 vs FC大邱)
+3.05 Hwaseong FC 1.97 [0/+0.5] 1.80 Seoul E-Land 1.96 (FC華城 vs 首爾衣戀)
