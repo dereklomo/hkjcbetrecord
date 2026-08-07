@@ -5,6 +5,7 @@
 > **執行規則：** `analysis-checklist.md`（唯一 checklist）。  
 > **硬規則：** `.github/skills/defensive-betting-analysis/SKILL.md`  
 > **冷檔：** 批次敘事 → `post-match/batches/` · 索引 → [`post-match/INDEX.md`](post-match/INDEX.md)  
+> **港外分差觀測（精簡）：** [`record/hk-external-gap-ledger.md`](record/hk-external-gap-ledger.md) — 校準用，**非**命中帳  
 > **Legacy 全文快照（只讀）：** [`post-match/batches/2026-07-archive-legacy.md`](post-match/batches/2026-07-archive-legacy.md)  
 > **禁止：** 把整份 legacy 當預設 context；cover 回寫；A′ 併入表 A WR。
 
@@ -15,6 +16,7 @@
 3. `post-match/INDEX.md` → **最近 2 批** `post-match/batches/*`
 4. 冷 batch / legacy — **僅** formal review、同分支重複失效、用戶點名歷史
 5. skill 硬規則 + **`match-card-dual`**（賽前 dual）
+6. **港外分差表** — 賽前分檔對照／賽後 append（formal review 時建議讀）
 
 **賽前 dual 輸出強制（08-05）：** **排名**（非 PASS · 信心%↓ · Track=表A/A′/lean）+ **PASS 理由表** + One-line + **`## Exec Gate` 五勾**（見 checklist §0-Output / §0-Exec Gate · match-card-dual Step 6）。  
 Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（外圍漏查、主客勝搞反等）。  
@@ -22,9 +24,9 @@ Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（�
 
 ## 給新 Agent 的摘要（熱）
 
-- **主目標：** 表 A Track B 勝率（W1–W6；可多腳；可空）
-- **A′：** 表 A 空時 0～1 腳可小注；獨立帳；路徑寬優先；原 Obs 已合併
-- **每次賽果：** ① append **本檔**表 A/A′（若有）+ 粗 WR/速查 ② 新建/append **batch 檔** ③ 更新 INDEX ④ checklist §9
+- **決策引擎 v0（現行）：** 每場 **0–100 分**；≥60 可出手／≥75 高信心／&lt;60 PASS；**第一 KPI=分數校準（K5）**；注碼用戶自控  
+- **舊表 A / A′ 命中帳：H1 凍結只讀** — **禁止**再 append 新腳進下方舊表分母  
+- **每次賽果：** ① batch §9 + **對齊分數／檔** 的校準反省 ② INDEX ③ 港外分差 ④（可選）本檔新增「校準分桶」小節；**不**續寫舊 A/A′  
 - **預設不改** skill 半贏=W 硬結算
 
 ## 路由
@@ -33,15 +35,17 @@ Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（�
 |------|------|
 | 正式命中 | 下方表 A |
 | 準表小注命中 | 下方表 A′ |
+| 港盤×外圍×賽果桶 | [`record/hk-external-gap-ledger.md`](record/hk-external-gap-ledger.md) |
 | 完整 PASS 逐場 B 帳 | legacy 表 B |
 | 最近批次 §9 / 賽果敘事 | INDEX → 最近 2 batch |
 | 07-10～早期 narrative | legacy 只讀 |
 
 ---
 
-## 常駐表 A · 正式 PLAY 命中帳
+## 常駐表 A · 正式 PLAY 命中帳（**H1 凍結只讀 · v0 起不續寫**）
 
-> 僅正式事前 `PLAY`。半贏=W、半輸=L、走=P（P 不進 WR 分母）。
+> **凍結：** 決策引擎 v0 後新腳 **不** append 本表。歷史只讀。  
+> 僅歷史正式事前 `PLAY`。半贏=W、半輸=L、走=P（P 不進 WR 分母）。
 
 | 日期批 | 場次 | 盤口 | 賽果 | Track B | 分支 | 備註 |
 |--------|------|------|------|---------|------|------|
@@ -81,11 +85,10 @@ Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（�
 
 ---
 
-## 常駐表 A′ · 準表 A 結算（**可小注 · 不進表 A WR**）
+## 常駐表 A′ · 準表 A 結算（**H1 凍結只讀 · v0 起不續寫**）
 
-> 賽前標 **準表 A′ / Soft PLAY**（**僅表 A 空** 時 0～1 腳）。半贏=W、半輸=L、走=P。  
-> **分結構／子帳計 WR**（`league` / `cup` / `euro-2leg` / `women` / `u20` / `semi`）；**禁止**併入表 A 粗 WR。  
-> 歷史：原「表 Obs」已遷移至此；舊 §1-max 誤標正式改 A′ 的腳備註寫明。
+> **凍結：** v0 後新腳 **不** append 本表。  
+> 歷史：賽前標 **準表 A′ / Soft PLAY**。半贏=W、半輸=L、走=P。分結構子帳；**禁止**併入表 A 粗 WR。
 
 | 日期批 | 場次 | 盤口 | 賽果 | Track B | 結構標籤 | 備註 |
 |--------|------|------|------|---------|----------|------|
@@ -95,9 +98,10 @@ Gate 未過 → **不得**定表 A／A′／帶力度 lean。防執行跳步（�
 | **08-02 卡1** | **Estudiantes LP vs Defensa** | **Est -0.5/-1** @1.78 | **3-0** | **W**（勝≥2 全贏半一） | **league** · ARG · path-narrow | 賽前 **A′ Soft**；表 A none；勿併表 A |
 | **08-02 卡2** | **Sydney Olympic vs APIA** | **Olympic +1/+1.5** @1.83 | **1-3** | **L**（負 2 穿 +1.25） | **semi** / npl-aus · path-wide | 賽前 **A′ Soft**；NPL 子帳；勿併表 A |
 | **08-02 卡3** | **Orenburg vs Zenit** | **Orenburg +1/+1.5** @1.93 | **0-3** | **L**（負 3 全輸） | **league** · RUS · path-wide | 賽前 **A′ Soft**；Zenit 穿；勿併表 A／勿與 euro-2leg dog 混算 |
+| **08-07 卡1** | **Bohemians vs Midtjylland** | **Bohemians +1/+1.5** | **0-2** | **L**（負 2 穿 +1.25） | **euro-2leg** · Strong-blast · path-wide | 賽前 **A′ Soft**；客 Strong ~1.28–1.38／港 1.22；爆破兌現；勿併表 A |
 
 **表 A′ 粗 WR（有 W/L；分結構）：**  
-- **euro-2leg dog +1／+0.75：** Gornik **W** + Inter Turku **W** = **2W0L**（n=2；**勿**併表 A；**引擎修後仍可 A′**）  
+- **euro-2leg dog +1／+0.75／+1.25：** Gornik **W** + Inter Turku **W** + **Bohemians L** = **2W1L**（n=3；**勿**併表 A；爆破檔記 L）  
 - **semi / npl dog +1／+1.25：** GCU **W** + Olympic **L** = **1W1L** → **禁 A′**（lean 觀察 WR）  
 - **league dog +1.25：** Orenburg **L**；Halmstad lean **L** → **禁 A′**（lean 觀察）  
 - **league ARG C -0.75：** Estudiantes **W** = **1W0L**（**差一截上盤**型 — 新引擎優先方向）  

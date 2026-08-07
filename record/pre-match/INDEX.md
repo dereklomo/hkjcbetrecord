@@ -46,8 +46,8 @@
 | **08-04** | [pre-match-2026-08-04-2.md](2026-08/pre-match-2026-08-04-2.md) | day/card #2 · **新引擎重析** | 表 A／A′ **none**；菲 dog lean only |
 | **08-05** | [pre-match-2026-08-05.md](2026-08/pre-match-2026-08-05.md) | day · **兩批合併一檔** | 表 A／A′ **none**；**已結清** → batch 08-05 |
 | **08-05 補** | [pre-match-2026-08-05-pending.md](2026-08/pre-match-2026-08-05-pending.md) | 補卡 · **20/24 已結** | lean **4W3L**（Brann 頂 L）；卡 A 4 場 + 芝溫 **pending** |
-| **08-07** | [pre-match-2026-08-07.md](2026-08/pre-match-2026-08-07.md) | day/card #1 · 歐戰 | 表 A **none**；**A′ Bohemians +1.25**；lean PAOK −0.75 |
-| **08-07** | [pre-match-2026-08-07-2.md](2026-08/pre-match-2026-08-07-2.md) | day/card #2 · 北美/亞 | 表 A／A′ **none**；lean Portland −0.75／Marinos +0.25 |
+| **08-07** | [pre-match-2026-08-07.md](2026-08/pre-match-2026-08-07.md) | day/card #1 · **已結** | A′ Bohemians **0-2 L**；lean mixed；→ batch 08-07 |
+| **08-07** | [pre-match-2026-08-07-2.md](2026-08/pre-match-2026-08-07-2.md) | day/card #2 · **LC 部分結** | Portland **W**·Austin **W**·Philly **L**；亞盤 pending |
 
 > **日期更正：** 08-01 兩卡 session 曾誤稱 07-20；**賽事日 = 2026-08-01**。  
 > 07-20 檔案仍為 **七月** 舊卡，勿與 08 月卡混淆。  

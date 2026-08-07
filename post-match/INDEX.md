@@ -18,6 +18,7 @@
 
 | 日期／批 | 檔案 | 表 A | 表 A′ | 備註 |
 |----------|------|------|-------|------|
+| **2026-08-07** | [batches/2026-08-07.md](batches/2026-08-07.md) | none | **Bohemians +1.25 L** | 卡1 结清；卡2 LC：Portland **W**·Austin **W**·Philly **L**；亚盘 pending |
 | **2026-08-06** | [batches/2026-08-06.md](batches/2026-08-06.md) | none | none | **部分**；LV 0-0 殺 0/−0.5 **L**；LAFC 1-1 +0.25 **W**；KuPS／Turku pending |
 | **2026-08-05** | [batches/2026-08-05.md](batches/2026-08-05.md) | none | none | 主卡17+補卡20；Ñublense **W**·Minnesota **L**；補 lean **4W3L**（Brann 頂 L）；卡A4場仍 pending |
 | **2026-08-04** | [batches/2026-08-04.md](batches/2026-08-04.md) | none | none | Halmstad 0-2 驗證 Strong 禁 dog A′；Celtic 1-0 殺 −2 |

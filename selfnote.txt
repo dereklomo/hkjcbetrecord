@@ -722,6 +722,25 @@ Inter Turku vs Vaduz
 1.63 Corinthians 1.96 [-0.5/-1] 1.81 Internacional 4.35
 1.41 New York City 1.76 [-1] 2.02 Santos Laguna 5.30
 
+Jagiellonia Bialystok 2-1 Rangers
+HJK Helsinki 1-1 Motherwell
+CFR Cluj 0-5 Tromso
+Hradec Kralove 0-1 Besiktas
+Goteborg 0-1 AA Gent
+Rakow Czestochowa 0-0 Hammarby
+Beitar Jerusalem 1-2 Austria Vienna
+PAOK 0-1 Anderlecht
+Ajax 3-1 Shelbourne
+Braga 1-0 Dinamo Minsk
+Bohemians 0-2 Midtjylland
+Bristol City 0-1 Walsall
+Benfica 6-1 Hearts
+Cape Verde Islands Women 1-1 Cameroon Women
+Mali Women 1-1 Ghana Women
+Union Santa Fe 2-1 Lanus
+Corinthians 2-1 Internacional
+New York City 2-0 Santos Laguna
+
 2.68 Philadelphia Union 1.76 [0/+0.5] 2.02 Cruz Azul 2.19 (費城聯 vs 藍十字)
 1.43 Chicago Fire 1.86 [-1] 1.90 Necaxa 4.95 (芝加哥火燄 vs 尼卡沙)
 2.08 Austin FC 1.90 [0/-0.5] 1.86 Tijuana 2.90 (FC奧斯汀 vs 迪祖亞拿)
@@ -734,3 +753,26 @@ Inter Turku vs Vaduz
 2.32 Gamba Osaka 1.78 [0] 1.99 Urawa Reds 2.60 (大阪飛腳 vs 浦和紅鑽)
 3.50 Gyeongnam FC 1.66 [+0.5/+1] 2.15 Daegu FC 1.79 (FC慶南 vs FC大邱)
 3.05 Hwaseong FC 1.97 [0/+0.5] 1.80 Seoul E-Land 1.96 (FC華城 vs 首爾衣戀)
+
+Philadelphia Union 0-1 Cruz Azul
+Chicago Fire 2-0 Necaxa
+Austin FC 2-0 Tijuana
+CF America 3-1 San Diego FC
+Portland Timbers 5-2 Puebla
+
+20260807:
+2.01 SJK Seinajoki 1.87 [0/-0.5] 1.89 Gnistan 2.86 (施拿祖基 vs 格尼斯坦)
+1.74 Sandefjord 2.09 [-0.5/-1] 1.70 KFUM Oslo 3.60 (辛迪夫佐特 vs KFUM奧斯陸)
+2.80 Sonderjyske 1.82 [0/+0.5] 1.95 Viborg 2.06 (桑德捷斯基 vs 域堡)
+1.99 Rheindorf Altach 1.81 [0/-0.5] 1.96 Tirol 3.30 (艾達治 vs 堤洛爾)
+2.41 Cambuur 1.89 [0] 1.87 Excelsior 2.38 (甘堡爾 vs 精英隊)
+2.26 Emmen 1.80 [0] 1.97 Roda 2.47 (安曼 vs 洛達)
+2.14 Vitesse 1.97 [0/-0.5] 1.80 RKC Waalwijk 2.72 (維迪斯 vs 華域克)
+2.12 Bochum 1.95 [0/-0.5] 1.82 Hertha Berlin 2.83 (波琴 vs 哈化柏林)
+1.88 Wolves 1.88 [-1.5/-2] 1.88 Port Vale 1.88 (狼隊 vs 維爾港)
+1.99 Middlesbrough 1.99 [-1] 1.77 Wrexham 1.77 (米杜士堡 vs 域斯咸)
+1.77 Estoril 1.77 [0/+0.5] 2.00 Famalicao 2.00 (艾斯杜尼 vs 法馬利卡奧)
+2.67 Cerro Largo 1.98 [0] 1.79 Juventud Las Piedras 2.42 (切洛拉高 vs 拿斯派達斯青年)
+1.40 Rosario Central 1.89 [-1] 1.87 Aldosivi 6.90 (羅沙里奧中央 vs 阿度斯維)
+1.25 Universidad Catolica 1.72 [-1/-1.5] 2.07 Cobresal 7.25 (天主教大學 vs 科布雷素)
+1.42 Independiente Rivadavia 1.96 [-1] 1.81 Estudiantes Rio Cuarto 6.50 (利華達維亞獨立 vs 里奧古亞圖學生隊)
