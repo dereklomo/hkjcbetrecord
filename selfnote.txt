@@ -760,7 +760,7 @@ Austin FC 2-0 Tijuana
 CF America 3-1 San Diego FC
 Portland Timbers 5-2 Puebla
 
-20260807:
+20260808:
 2.01 SJK Seinajoki 1.87 [0/-0.5] 1.89 Gnistan 2.86 (施拿祖基 vs 格尼斯坦)
 1.74 Sandefjord 2.09 [-0.5/-1] 1.70 KFUM Oslo 3.60 (辛迪夫佐特 vs KFUM奧斯陸)
 2.80 Sonderjyske 1.82 [0/+0.5] 1.95 Viborg 2.06 (桑德捷斯基 vs 域堡)
@@ -776,3 +776,23 @@ Portland Timbers 5-2 Puebla
 1.40 Rosario Central 1.89 [-1] 1.87 Aldosivi 6.90 (羅沙里奧中央 vs 阿度斯維)
 1.25 Universidad Catolica 1.72 [-1/-1.5] 2.07 Cobresal 7.25 (天主教大學 vs 科布雷素)
 1.42 Independiente Rivadavia 1.96 [-1] 1.81 Estudiantes Rio Cuarto 6.50 (利華達維亞獨立 vs 里奧古亞圖學生隊)
+
+1.76 Mexico U20 1.76 [-0.5/-1] 2.02 Canada U20 2.02 (墨西哥U20 vs 加拿大U20)
+1.92 Vancouver Whitecaps 1.92 [-1/-1.5] 1.84 Juarez 1.84 (溫哥華白帽 vs 祖亞雷斯)
+1.71 UNSW FC 1.71 [0/-0.5] 2.05 Sydney Olympic 2.05 (新南威爾斯大學FC vs 悉尼奧林匹克)
+2.16 Hokkaido Consadole Sapporo 1.98 [0/-0.5] 1.79 Tokushima Vortis 2.80 (北海道札幌岡薩多 vs 德島漩渦)
+1.78 Southern Districts Raiders 1.78 [0] 1.95 Western Sydney Wanderers B 1.95 (南區奇兵 vs 西悉尼流浪者B隊)
+1.73 Sutherland Sharks 1.73 [0/-0.5] 2.02 Sydney FC B 2.02 (薩瑟蘭鯊魚 vs FC悉尼B隊)
+1.78 Gold Coast Knights 1.78 [0/+0.5] 1.95 Peninsula Power 1.95 (黃金海岸騎士 vs 半島電力)
+1.94 Brisbane City 1.94 [-0.5/-1] 1.79 Gold Coast United 1.79 (布里斯班城 vs 黃金海岸聯)
+2.12 St George City 2.12 [0/+0.5] 1.66 Rockdale Ilinden 1.66 (聖佐治城 vs 洛克達爾以利亞日)
+1.82 Western Sydney Wanderers 1.82 [0/+0.5] 1.91 Melbourne Victory 1.91 (西悉尼流浪者 vs 墨爾本勝利)
+3.55 Fujieda MYFC 2.14 [0/+0.5] 1.67 Vegalta Sendai 1.81 (藤枝MYFC vs 仙台維加泰)
+1.86 Cerezo Osaka 1.72 [0/-0.5] 2.07 Fagiano Okayama 3.35 (大阪櫻花 vs 岡山綠雉)
+2.22 FC Tokyo 2.02 [0/-0.5] 1.76 Machida Zelvia 2.86 (FC東京 vs 町田澤維亞)
+1.86 Nagoya Grampus 1.72 [0/-0.5] 2.07 Shimizu S-Pulse 3.35 (名古屋鯨魚 vs 清水心跳)
+4.10 Avispa Fukuoka 1.66 [+0.5/+1] 2.15 Vissel Kobe 1.75 (福岡黃蜂 vs 神戶勝利船)
+1.50 Kashiwa Reysol 1.77 [-0.5/-1] 2.00 Mito Hollyhock 5.10 (柏雷素爾 vs 水戶蜀葵)
+1.91 Sanfrecce Hiroshima 1.91 [-1/-1.5] 1.85 JEF United Chiba 1.85 (廣島三箭 vs 千葉市原)
+1.67 Sagan Tosu 1.67 [0/-0.5] 2.14 Ventforet Kofu 2.14 (鳥棲砂岩 vs 甲府風林)
+1.88 Jeonbuk Motors 1.88 [-0.5/-1] 1.88 Jeju SK 1.88 (全北汽車 vs 濟州SK)

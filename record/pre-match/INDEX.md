@@ -48,6 +48,7 @@
 | **08-05 補** | [pre-match-2026-08-05-pending.md](2026-08/pre-match-2026-08-05-pending.md) | 補卡 · **20/24 已結** | lean **4W3L**（Brann 頂 L）；卡 A 4 場 + 芝溫 **pending** |
 | **08-07** | [pre-match-2026-08-07.md](2026-08/pre-match-2026-08-07.md) | day/card #1 · **已結** | A′ Bohemians **0-2 L**；lean mixed；→ batch 08-07 |
 | **08-07** | [pre-match-2026-08-07-2.md](2026-08/pre-match-2026-08-07-2.md) | day/card #2 · **LC 部分結** | Portland **W**·Austin **W**·Philly **L**；亞盤 pending |
+| **08-08** | [pre-match-2026-08-08.md](2026-08/pre-match-2026-08-08.md) | day · **兩批合併 · v0.1 五維** | 可出手 **Kashiwa −0.75 @65**；餘 PASS |
 
 > **日期更正：** 08-01 兩卡 session 曾誤稱 07-20；**賽事日 = 2026-08-01**。  
 > 07-20 檔案仍為 **七月** 舊卡，勿與 08 月卡混淆。  

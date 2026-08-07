@@ -1,6 +1,6 @@
 ---
 name: match-card-dual
-description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive scoring under analysis-checklist v0 (U2 single 0–100 score, tiers ≥60 actionable / ≥75 high-confidence / <60 PASS) and conditional streak-roll only when a ≥75 leg is draw-friendly (+0.25 or level). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
+description: 'Default pre-match workflow for this workspace: when the user pastes a football match card with odds, run defensive scoring under analysis-checklist v0.1 (U2 single 0–100 score from five equal dims: external, path, water, fundamentals, HK-external bucket; league tier label-only not in mean; tiers ≥60 actionable / ≥75 high-confidence / <60 PASS) and conditional streak-roll only when a ≥75 leg is draw-friendly (+0.25 or level). Use for 讓球 lines, 賽程+賠率, dual screen, 雙軌篩盤. Football only.'
 argument-hint: 'Preferred: HKJC multi-line card (FBxxxx · 聯賽 · 時間 · 主 [盤] ： 客 [盤] · 主水 · 客水). Also one-line compact. Optional StreakState m/5 or 連勝.'
 user-invocable: true
 ---
@@ -12,7 +12,7 @@ user-invocable: true
 **Default for this workspace** on schedule/card with odds:
 
 1. **Defensive scoring（always）** — `defensive-betting-analysis` + `analysis-checklist.md` **v0**  
-   - 每場 **一個 0–100 分**（F3 六維均分 + O2 覆寫）  
+   - 每場 **一個 0–100 分**（F3 **五維均分** + O2 覆寫；**賽事檔不進均分**）  
    - **&lt;60 → PASS**（仍記分供校準）  
    - **≥60 → 可出手**（用戶自決是否下、下多少）  
    - **≥75 → 高信心標籤**（非注碼指令）  
@@ -41,7 +41,7 @@ user-invocable: true
 4. `streak-roll-eval`（僅觸發時）  
 5. `post-match-review-grok.md`（熱；舊 A/A′ **只讀**；新校準分桶）  
 6. `post-match/INDEX.md` → **最近 2** batch  
-7. `record/hk-external-gap-ledger.md`（V6 港外桶）
+7. `record/hk-external-gap-ledger.md`（**V5** 港外桶）
 
 ## Workflow
 
@@ -59,10 +59,11 @@ user-invocable: true
 對每場：
 
 1. V1 硬否決？→ **分=0 → PASS**（見 checklist 0-V1）  
-2. 否則六維各 0–100，**公式分 = round(mean)**  
-   - V1 外圍 · V2 港路徑 · V3 水位／膠著 · V4 **基本面自行分析** · V5 賽事檔 · V6 港外桶  
+2. 否則 **五維** 各 0–100，**公式分 = round( (V1+V2+V3+V4+V5)/5 )**  
+   - **V1** 外圍 · **V2** 港路徑 · **V3** 水位／膠著 · **V4** 基本面自行分析 · **V5** 港外桶  
+   - **賽事／聯賽檔**（NPL／U20／盃等）→ **Why／標籤 only，不進均分**  
 3. O2 覆寫（升 ≤+10；過 60 若公式&lt;60 須理由+`override`）  
-4. 定檔：&lt;60 / ≥60 / ≥75  
+4. 定檔：&lt;60 / ≥60 / ≥75（門檻 **不變**）  
 
 **禁止：** 為填「可出手」硬抬分；incomplete 假 Med/Strong 過 60。
 
